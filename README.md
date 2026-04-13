@@ -1,6 +1,7 @@
 # Chia-An Lee's Personal Website
 
 [![Deploy to GitHub Pages](https://github.com/calee0219/calee0219.github.io/actions/workflows/deploy.yml/badge.svg)](https://github.com/calee0219/calee0219.github.io/actions/workflows/deploy.yml)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c11943eb-ef6a-40d1-bb10-49450273e165/deploy-status)](https://app.netlify.com/projects/vigilant-lumiere-7107af/deploys)
 
 This repository contains the source code for my personal website and blog, built with [Hugo](https://gohugo.io/) and the [HugoBlox](https://hugoblox.com/) framework.
 
