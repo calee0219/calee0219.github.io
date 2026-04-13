@@ -1,152 +1,54 @@
-# [The Academic CV That Gets You Hired](https://github.com/HugoBlox/hugo-theme-academic-cv)
+# Chia-An Lee's Personal Website
 
-[![Screenshot](.github/preview.webp)](https://hugoblox.com/templates/academic-cv/start/?utm_source=github&utm_medium=readme)
+[![Deploy to GitHub Pages](https://github.com/calee0219/calee0219.github.io/actions/workflows/deploy.yml/badge.svg)](https://github.com/calee0219/calee0219.github.io/actions/workflows/deploy.yml)
 
-<h1 align="center">The Portfolio That Works While You Sleep</h1>
+This repository contains the source code for my personal website and blog, built with [Hugo](https://gohugo.io/) and the [HugoBlox](https://hugoblox.com/) framework.
 
-<p align="center">
-  <strong>Your unfair advantage in academia.</strong><br/>
-  Stop sending PDFs into the void. Build a living portfolio that boosts citations and lands offers.<br/>
-  Trusted by 250,000+ researchers at <strong>MIT, Stanford, and Google</strong>.
-</p>
+🌐 **Live Site:** [https://calee0219.github.io/](https://calee0219.github.io/)
 
-<p align="center">
-  <a href="https://hugoblox.com/templates/academic-cv/start?utm_source=github&utm_medium=readme"><b>🚀 Launch Free (60s)</b></a>
-  &nbsp;•&nbsp;
-  <a href="https://hugoblox.com/templates/?open=academic-cv&loading=true&utm_source=github&utm_medium=readme">Live Demo</a>
-  &nbsp;•&nbsp;
-  <a href="https://marketplace.visualstudio.com/items?itemName=ownable.ownable"><b>Visual Editor</b></a>
-</p>
+## About Me
 
-<p align="center">
-  <a href="https://discord.gg/z8wNYzb"><img src="https://img.shields.io/discord/722225264733716590?label=Join%20Discord&style=social" alt="Discord"></a>
-  <a href="https://github.com/HugoBlox/hugo-theme-academic-cv"><img src="https://img.shields.io/github/stars/HugoBlox/hugo-theme-academic-cv?label=Star%20Academic%20CV&style=social" alt="GitHub Stars"></a>
-</p>
+I am Chia-An Lee, a Production Engineer at Meta and a former Master's student in Computer Science at National Yang Ming Chiao Tung University (NYCU). My interests include infrastructure, traditional networking, and mobile networking. I previously worked on developing the open-source 5G core network [free5GC](https://free5gc.org/).
 
----
+## Repository Structure
 
-## Why This Template?
+- `content/`: Markdown files for the website content
+  - `_index.md`: Homepage layout blocks
+  - `blog/`: Technical articles, travel logs, and personal thoughts
+  - `experience.md`: Work experience and education timeline
+  - `projects/`: Project showcases
+  - `publications/`: Academic papers and presentations
+- `data/authors/calee.yaml`: My profile, bio, skills, and experience data
+- `config/_default/`: Hugo configuration files (site settings, menus, languages)
+- `static/`: Static assets like PDFs and images
+- `assets/media/`: Site icons and avatars
 
-Most CVs are static PDFs that get lost in the pile. This is an **intelligent portfolio** that works 24/7 to advance your career.
+## Local Development
 
-- **🔮 Future-Proof:** Your content lives in simple **Markdown**. No database to break, no lock-in.
-- **🤖 AI-Ready:** Optimized for search engines and LLMs, so your work is found and cited.
-- **⚡ Zero Maintenance:** Auto-import citations from BibTeX and focus on research.
-- **✍️ Edit Visually:** Use **Ownable CMS** in VS Code — no coding needed. Full capabilities in Pro.
+To run this site locally, you'll need to install [Hugo](https://gohugo.io/getting-started/installing/) (extended version) and [Node.js/pnpm](https://pnpm.io/installation).
 
-<p align="center">
-  <a href="https://hugoblox.com/templates/academic-cv/start?utm_source=github&utm_medium=readme">
-    <img src="https://img.shields.io/badge/⚡️%20Get%20Your%20CV%20in%2060s-ff4655?style=for-the-badge" 
-    alt="Deploy this template" width="400">
-  </a>
-</p>
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/calee0219/calee0219.github.io.git
+   cd calee0219.github.io
+   ```
 
-![Ownable CMS in Action](https://raw.githubusercontent.com/HugoBlox/kit/main/.github/media/studio/slide-1.webp)
-*Ownable CMS: Drag-and-drop page builder inside VS Code.*
+2. Install dependencies:
+   ```bash
+   pnpm install
+   ```
 
-> "My citations went up 3x after switching to this template. The citation auto-sync feature is a lifesaver."
-> — **Dr. Zhang**, AI Research Scientist, Meta
+3. Start the Hugo development server:
+   ```bash
+   hugo server
+   ```
 
----
+4. Open your browser and navigate to `http://localhost:1313`
 
-## Who This Is For
+## Deployment
 
-- Students and grads applying to top labs and industry roles
-- Researchers who want a living, citable portfolio
-- Faculty/PIs showcasing publications, talks, and group news
+This site is automatically deployed to GitHub Pages using GitHub Actions. Any push to the `main` branch will trigger the `.github/workflows/deploy.yml` workflow, which builds the Hugo site and publishes the `public/` directory.
 
----
+## License
 
-## Features
-
-| Feature | Benefit |
-| :--- | :--- |
-| **Markdown, Jupyter, RStudio** | Write in the tools you already use. |
-| **Auto-Update Citations** | Drop in a BibTeX file; formatted lists generated automatically. |
-| **Visual Editor** | Drag-and-drop blocks to build pages in minutes. |
-| **Global CDN** | Blazing fast load times (100/100 Lighthouse scores). |
-| **Privacy First** | You own your data. Host for free on GitHub Pages. |
-
----
-
-## Notebook → Posts and Slides
-
-- Publish your actual `.ipynb` as beautiful long-form posts — code, outputs, and narrative kept intact.
-- Slides in Markdown with Reveal.js: math, syntax highlight, diagrams, speaker notes.
-- Coming soon: **Notebook → Slides (beta)**. Request early access in Discord.
-
-Learn more: docs on [Notebooks](https://docs.hugoblox.com/reference/markdown/#-notebooks) and [Slides](https://docs.hugoblox.com/guides/slides/).
-
----
-
-## Why Go Pro (from $8/m)
-
-- Enhanced Ownable CMS visual editor — save 10–20 hours setting up and polishing
-- Premium CV & Resumé designs — make an unforgettable first impression
-- Pro blocks, remove attribution, and priority support
-
----
-
-## Free vs Pro
-
-| Feature | Academic CV (Free) | Academic CV Pro & Resumé Pro |
-| --- | --- | --- |
-| Design | Professional & clean | Premium designs |
-| Layouts | Standard sections | Advanced timelines & layouts |
-| Courses/Lectures | Basic | Fully-Featured |
-| First Impression | Strong | Unforgettable |
-| Discord Support | Community | Priority |
-
-<p align="center">
-  <a href="https://hugoblox.com/pricing?utm_source=github&utm_medium=readme"><b>💎 Upgrade to Pro</b></a><br/>
-  <a href="https://hugoblox.com/templates/academic-cv-pro/start?utm_source=github&utm_medium=readme">✨ Deploy Academic CV Pro</a>
-  &nbsp;•&nbsp;
-  <a href="https://hugoblox.com/templates/resume-pro/start?utm_source=github&utm_medium=readme">📄 Deploy Resumé Pro</a>
-</p>
-
----
-
-## Get Started
-
-### Option 1: No-Code (Fastest)
-Launch a fully hosted site in your browser. No software to install.
-
-👉 [**Launch in Browser (Free)**](https://hugoblox.com/templates/academic-cv/start?utm_source=github&utm_medium=readme)
-
-### Option 2: Studio (Visual Editor)
-1) Install [Ownable CMS](https://marketplace.visualstudio.com/items?itemName=ownable.ownable) for VS Code  
-2) Open this project and edit visually
-
-### Option 3: CLI (Developers)
-1) Install [Hugo](https://docs.hugoblox.com/start/cli/)
-2) Create your site with the CLI:
-
-```bash
-npx hugoblox create site --template academic-cv
-```
-
----
-
-## FAQ
-
-- Do I need to know Hugo? No — you can edit visually or write Markdown.
-- Can I host for free? Yes — GitHub Pages/Netlify are supported.
-- Can I export/migrate later? Yes — your site is just files.
-- Can I cancel Pro anytime? Yes.
-
----
-
-## Community & Support
-
-- 💬 [**Discord Community**](https://discord.gg/z8wNYzb)
-- 📚 [**Documentation**](https://docs.hugoblox.com/?utm_source=github&utm_medium=readme)
-- 🐦 [**Follow on X**](https://x.com/MakeOwnable)
-- ⭐ [**Star on GitHub**](https://github.com/HugoBlox/kit)
-
----
-
-MIT © 2016-Present [George Cushen](https://georgecushen.com)
-
-<!--START_SECTION:news-->
-<!--Updated at 2026-04-12T01:26:19.942Z-->
-<!--END_SECTION:news-->
+The content of this website is licensed under a [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License](https://creativecommons.org/licenses/by-nc-nd/4.0/). The underlying HugoBlox theme is licensed under the MIT License.
