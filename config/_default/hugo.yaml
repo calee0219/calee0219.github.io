@@ -1,26 +1,27 @@
 # Configuration of Hugo
 # Guide: https://docs.hugoblox.com/tutorial/
 # Hugo Documentation: https://gohugo.io/getting-started/configuration/#all-configuration-settings
-# This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
-# Website name (set in params.yaml under hugoblox.branding.name)
-title: ''
+# Website name
+title: 'Chia-An Lee'
+
 # Website URL
-baseURL: 'https://example.com/'
+baseURL: 'https://calee0219.github.io/'
+
+# Enter a copyright notice to display in the site footer.
+copyright: 'Chia-An Lee'
 
 ############################
 ## LANGUAGE
 ############################
-
 defaultContentLanguage: en
-hasCJKLanguage: false
+hasCJKLanguage: true
 defaultContentLanguageInSubdir: false
 removePathAccents: true
 
 ############################
 ## PAGE OPTIONS
 ############################
-
 cascade:
   - target:
       path: /slides/**
@@ -30,9 +31,9 @@ cascade:
 ############################
 ## ADVANCED
 ############################
-
 build:
   writeStats: true
+
 enableGitInfo: false
 summaryLength: 30
 pagination:
@@ -42,24 +43,36 @@ enableRobotsTXT: true
 footnotereturnlinkcontents: <sup>^</sup>
 ignoreFiles: [".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "_cache$"]
 disableAliases: true
+
 outputs:
   home: [HTML, RSS, headers, redirects, backlinks]
   section: [HTML, RSS]
+
 imaging:
   resampleFilter: lanczos
   quality: 90
   anchor: smart
   hint: picture
+
 timeout: 600000
+
 taxonomies:
   author: authors
   tag: tags
   publication_type: publication_types
+
+permalinks:
+  authors: '/author/:slug/'
+  tags: '/tag/:slug/'
+  publication_types: '/publication-type/:slug/'
+
 markup:
   _merge: deep
   highlight:
     lineNos: false
+
 security:
   _merge: deep
+
 sitemap:
   _merge: deep
