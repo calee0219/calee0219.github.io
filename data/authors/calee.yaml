@@ -1,22 +1,28 @@
-schema: hugoblox/author/v1
-slug: calee
-is_owner: true
-name:
-  display: Chia-An Lee
-  given: Chia-An
-  family: Lee
-  alternate: '李家安'
-status:
-  icon: ""
-role: Master student in CS NYCU, major in networking
+# Display name
+title: Chia-An Lee
+
+# Full name (for SEO)
+first_name: Chia-An
+last_name: Lee
+
+# Is this the primary user of the site?
+superuser: true
+
+# Role/position
+role: Production Engineer at Meta
+
+# Bio
 bio: |
-  Chia-An Lee is a master student in National Yang Ming Chiao Tung University majoring in Computer Science at [WIRELab](http://wire.cs.nctu.edu.tw) which is lead by [Prof. Jyh-Cheng Chen](https://people.cs.nctu.edu.tw/~jcc/). Now, working on developing the open source core network [free5GC](https://free5gc.org/).
-  Used to be an TA in [NCTU CSCC](https://cscc.cs.nctu.edu.tw/). Interested in IT, SRE, Networking. Familiar with traditional networking and server management.
+  Chia-An Lee is a Production Engineer at [Meta](https://meta.com) based in London. He received his M.Eng. in Computer Science from [National Yang Ming Chiao Tung University](https://www.nycu.edu.tw/) (NYCU), where he worked at [WIRELab](http://wire.cs.nctu.edu.tw) under [Prof. Jyh-Cheng Chen](https://people.cs.nctu.edu.tw/~jcc/) on the open-source 5G core network [free5GC](https://free5gc.org/). He was previously a TA at [NCTU CSCC](https://cscc.cs.nctu.edu.tw/). His interests include infrastructure, SRE, and networking.
+
+# Affiliations
 affiliations:
   - name: National Yang Ming Chiao Tung University
     url: "https://www.nycu.edu.tw/"
   - name: free5GC
     url: "https://free5gc.org/"
+
+# Social links
 links:
   - icon: at-symbol
     url: mailto:calee@cs.nctu.edu.tw
@@ -27,19 +33,23 @@ links:
     url: https://www.linkedin.com/in/chia-an-lee-400956ba/
   - icon: academicons/cv
     url: files/calee_cv.pdf
+
+# Interests
 interests:
   - Infrastructure
   - Traditional Networking
   - Mobile Networking
+
+# Education
 education:
   - degree: MEng in Computer Science
     institution: National Yang Ming Chiao Tung University, Taiwan
-    start: 2019-09-01
-    end: 2021-07-16
+    year: "2019 - 2021"
   - degree: BSc in Computer Science
     institution: National Chiao Tung University, Taiwan
-    start: 2015-09-01
-    end: 2019-07-31
+    year: "2015 - 2019"
+
+# Experience (migrated from old experience widget)
 experience:
   - role: Production Engineer
     org: Meta
@@ -132,6 +142,8 @@ experience:
     start: 2017-05-01
     end: 2018-05-01
     summary: "Manage everything about IT for the TEDxNCTU event."
+
+# Skills
 skills:
   - name: Technical Skills
     items:
@@ -145,3 +157,6 @@ skills:
         level: 4
       - label: Python
         level: 4
+
+# Email
+email: "calee@cs.nctu.edu.tw"
