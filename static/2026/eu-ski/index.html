@@ -4,23 +4,37 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>2026 歐洲滑雪＋城市旅遊規劃</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⛷</text></svg>">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <!-- Global Currency Switcher (sticky) -->
+  <div class="currency-bar" id="currencyBar">
+    <span class="currency-label">貨幣 Currency</span>
+    <div class="currency-btns">
+      <button class="cur-btn active" data-cur="EUR">EUR €</button>
+      <button class="cur-btn" data-cur="NTD">NTD NT$</button>
+      <button class="cur-btn" data-cur="USD">USD $</button>
+      <button class="cur-btn" data-cur="GBP">GBP £</button>
+    </div>
+  </div>
+
   <!-- Hero Section -->
   <header class="hero">
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <h1>2026 歐洲滑雪＋城市旅遊</h1>
       <p class="hero-subtitle">奧地利滑雪 ✕ 中歐城市探索 ✕ 聖誕市集巡禮</p>
-      <p class="hero-desc">聖誕跨年黃金假期，帶台灣朋友暢遊歐洲的完整攻略</p>
+      <p class="hero-desc">聖誕跨年黃金假期，帶朋友暢遊歐洲的完整攻略</p>
       <nav class="hero-nav">
         <a href="#leave">請假攻略</a>
         <a href="#flights">機票分析</a>
         <a href="#ski">雪場比較</a>
+        <a href="#ski-school">滑雪學校</a>
         <a href="#cities">城市景點</a>
         <a href="#itinerary">行程方案</a>
         <a href="#map">互動地圖</a>
@@ -30,107 +44,205 @@
   </header>
 
   <main>
-    <!-- Leave Strategy Section -->
+    <!-- ==================== LEAVE STRATEGY ==================== -->
     <section id="leave" class="section">
       <div class="container">
         <h2 class="section-title">請假攻略：聖誕跨年黃金假期</h2>
-        <p class="section-intro">2026年起行憲紀念日（12/25）恢復放假，與聖誕節完美重疊。善用國定假日，最少請4天即可享受歐洲之旅。</p>
+        <p class="section-intro">2026年12/25（五）與2027年1/1（五）都是假日，中間只需請4天假即可享受10天連休。</p>
 
-        <div class="calendar-wrapper">
-          <div class="calendar-month" id="cal-dec"></div>
-          <div class="calendar-month" id="cal-jan"></div>
+        <div class="region-toggle">
+          <button class="region-btn active" data-section="leave" data-region="tw">台灣版</button>
+          <button class="region-btn" data-section="leave" data-region="us">美國版</button>
         </div>
 
-        <div class="leave-options">
-          <div class="leave-card best">
-            <div class="leave-badge">最推薦</div>
-            <h3>方案A：精省型</h3>
-            <div class="leave-stats">
-              <div class="stat"><span class="stat-num">5</span><span class="stat-label">天請假</span></div>
-              <div class="stat"><span class="stat-num">11</span><span class="stat-label">天連休</span></div>
-            </div>
-            <p>請假日：12/28（一）~ 12/31（四）+ 1/2（五）</p>
-            <p>連休期間：12/25（四）~ 1/4（日）</p>
-            <p class="leave-note">歐洲實際停留約 9-10 天，足夠完成滑雪5天 + 城市旅遊4天的行程。</p>
+        <!-- TW Leave -->
+        <div class="region-content active" data-section="leave" data-region="tw">
+          <div class="calendar-wrapper">
+            <div class="calendar-month" id="cal-dec-tw"></div>
+            <div class="calendar-month" id="cal-jan-tw"></div>
           </div>
-          <div class="leave-card">
-            <h3>方案B：豪華型</h3>
-            <div class="leave-stats">
-              <div class="stat"><span class="stat-num">8</span><span class="stat-label">天請假</span></div>
-              <div class="stat"><span class="stat-num">16</span><span class="stat-label">天連休</span></div>
+          <div class="leave-options">
+            <div class="leave-card best">
+              <div class="leave-badge">最推薦</div>
+              <h3>方案A：最佳CP值</h3>
+              <div class="leave-stats">
+                <div class="stat"><span class="stat-num">4</span><span class="stat-label">天請假</span></div>
+                <div class="stat"><span class="stat-num">10</span><span class="stat-label">天連休</span></div>
+              </div>
+              <p>請假：12/28（一）~ 12/31（四）</p>
+              <p>連休：12/25（五）~ 1/3（日）</p>
+              <p class="leave-note">12/25 行憲紀念日＋週末＋請假4天＋1/1 元旦＋週末＝完美10天。歐洲實際停留約8天，足夠滑雪5天＋城市3天。</p>
             </div>
-            <p>請假日：12/22-24 + 12/28-31 + 1/2</p>
-            <p>連休期間：12/20（六）~ 1/4（日）</p>
-            <p class="leave-note">可提早出發避開聖誕機票高峰，機票可能更便宜。完整體驗聖誕市集與跨年。</p>
+            <div class="leave-card">
+              <h3>方案B：豪華型</h3>
+              <div class="leave-stats">
+                <div class="stat"><span class="stat-num">8</span><span class="stat-label">天請假</span></div>
+                <div class="stat"><span class="stat-num">16</span><span class="stat-label">天連休</span></div>
+              </div>
+              <p>請假：12/21（一）~12/24（四）＋12/28（一）~12/31（四）</p>
+              <p>連休：12/19（六）~ 1/3（日）</p>
+              <p class="leave-note">提早出發可避開聖誕機票高峰，12/20出發機票通常比12/24便宜20-30%。有充裕時間深度遊覽多國。</p>
+            </div>
+            <div class="leave-card">
+              <h3>方案C：精省型</h3>
+              <div class="leave-stats">
+                <div class="stat"><span class="stat-num">4</span><span class="stat-label">天請假</span></div>
+                <div class="stat"><span class="stat-num">8</span><span class="stat-label">天連休</span></div>
+              </div>
+              <p>請假：12/28（一）~ 12/31（四）</p>
+              <p>連休：12/26（六）~ 1/3（日）<br><small>（12/25搭晚班機出發，12/26抵達歐洲）</small></p>
+              <p class="leave-note">同樣請4天假，但12/25當天搭機，歐洲停留約8天。行程較緊湊但可行。</p>
+            </div>
           </div>
-          <div class="leave-card">
-            <h3>方案C：極省型</h3>
-            <div class="leave-stats">
-              <div class="stat"><span class="stat-num">4</span><span class="stat-label">天請假</span></div>
-              <div class="stat"><span class="stat-num">8</span><span class="stat-label">天連休</span></div>
+        </div>
+
+        <!-- US Leave -->
+        <div class="region-content" data-section="leave" data-region="us">
+          <div class="calendar-wrapper">
+            <div class="calendar-month" id="cal-dec-us"></div>
+            <div class="calendar-month" id="cal-jan-us"></div>
+          </div>
+          <div class="leave-options">
+            <div class="leave-card best">
+              <div class="leave-badge">Best Value</div>
+              <h3>Option A: Best Value</h3>
+              <div class="leave-stats">
+                <div class="stat"><span class="stat-num">4</span><span class="stat-label">PTO Days</span></div>
+                <div class="stat"><span class="stat-num">10</span><span class="stat-label">Days Off</span></div>
+              </div>
+              <p>PTO: Dec 28 (Mon) ~ Dec 31 (Thu)</p>
+              <p>Off: Dec 25 (Fri) ~ Jan 3 (Sun)</p>
+              <p class="leave-note">Christmas Day (Fri) + Weekend + 4 PTO + New Year's Day (Fri) + Weekend = 10 consecutive days. Perfect for 5 days skiing + 3 days city touring.</p>
             </div>
-            <p>請假日：12/28（一）~ 12/31（四）</p>
-            <p>連休期間：12/25（四）~ 1/1（四）</p>
-            <p class="leave-note">最少請假天數，歐洲停留約6-7天（含飛行日），行程較緊湊但可行。</p>
+            <div class="leave-card">
+              <h3>Option B: Extended</h3>
+              <div class="leave-stats">
+                <div class="stat"><span class="stat-num">8</span><span class="stat-label">PTO Days</span></div>
+                <div class="stat"><span class="stat-num">16</span><span class="stat-label">Days Off</span></div>
+              </div>
+              <p>PTO: Dec 21-24 + Dec 28-31</p>
+              <p>Off: Dec 19 (Sat) ~ Jan 3 (Sun)</p>
+              <p class="leave-note">Depart earlier to avoid peak Christmas flight prices. Dec 20 departures are typically 20-30% cheaper than Dec 24.</p>
+            </div>
+            <div class="leave-card">
+              <h3>Option C: Compact</h3>
+              <div class="leave-stats">
+                <div class="stat"><span class="stat-num">4</span><span class="stat-label">PTO Days</span></div>
+                <div class="stat"><span class="stat-num">8</span><span class="stat-label">Days Off</span></div>
+              </div>
+              <p>PTO: Dec 28 (Mon) ~ Dec 31 (Thu)</p>
+              <p>Off: Dec 26 (Sat) ~ Jan 3 (Sun)<br><small>(Fly out Christmas evening, arrive Dec 26)</small></p>
+              <p class="leave-note">Same 4 PTO days. Take a Christmas evening flight, arrive in Europe Dec 26. Tight but workable for 5 ski + 3 city days.</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Flights Section -->
+    <!-- ==================== FLIGHTS ==================== -->
     <section id="flights" class="section section-alt">
       <div class="container">
-        <h2 class="section-title">機票分析：台灣飛奧地利</h2>
-        <p class="section-intro">以2026年聖誕旺季（12/20出發、1/3回程）為基準，比較不同航班選項。建議提早6個月以上預訂，並考慮不同城市進出（Open-jaw）以節省交通時間。</p>
+        <h2 class="section-title">機票分析</h2>
+        <p class="section-intro">聖誕旺季機票比較。建議提早6個月以上預訂，並考慮不同城市進出（Open-jaw）節省交通時間。</p>
 
-        <div class="flight-cards">
-          <div class="flight-card budget">
-            <div class="flight-type">精省轉機</div>
-            <div class="flight-price">~NT$ 37,000</div>
-            <div class="flight-airline">酷航 Scoot</div>
-            <div class="flight-route">台北 TPE → 新加坡 SIN → 維也納 VIE</div>
-            <div class="flight-duration">22-40 小時</div>
-            <ul class="flight-pros"><li>最便宜的選擇</li></ul>
-            <ul class="flight-cons"><li>轉機時間長</li><li>廉航無免費餐飲與托運行李</li></ul>
+        <div class="region-toggle">
+          <button class="region-btn active" data-section="flights" data-region="tw">從台灣出發</button>
+          <button class="region-btn" data-section="flights" data-region="us">從美國出發</button>
+        </div>
+
+        <!-- TW Flights -->
+        <div class="region-content active" data-section="flights" data-region="tw">
+          <div class="flight-cards">
+            <div class="flight-card budget">
+              <div class="flight-type">精省轉機</div>
+              <div class="flight-price" data-eur="1060" data-label="~">~<span class="price-val">€1,060</span></div>
+              <div class="flight-airline">酷航 Scoot</div>
+              <div class="flight-route">台北 TPE → 新加坡 SIN → 維也納 VIE</div>
+              <div class="flight-duration">22-40 小時</div>
+              <ul class="flight-pros"><li>最便宜的選擇</li></ul>
+              <ul class="flight-cons"><li>轉機時間長</li><li>廉航無免費餐飲與托運行李</li><li>需另購行李額（滑雪裝備重）</li></ul>
+            </div>
+            <div class="flight-card recommended">
+              <div class="flight-badge">CP值最高</div>
+              <div class="flight-type">傳統航空轉機</div>
+              <div class="flight-price" data-eur="1160" data-label="~">~<span class="price-val">€1,160</span></div>
+              <div class="flight-airline">中華航空 + 奧地利航空</div>
+              <div class="flight-route">台北 TPE → 曼谷 BKK → 維也納 VIE</div>
+              <div class="flight-duration">17-28 小時</div>
+              <ul class="flight-pros"><li>傳統航空服務品質</li><li>含免費餐飲與30kg行李</li><li>星空聯盟累積里程</li></ul>
+              <ul class="flight-cons"><li>需在曼谷轉機</li></ul>
+            </div>
+            <div class="flight-card premium">
+              <div class="flight-type">直飛省時</div>
+              <div class="flight-price" data-eur="1260" data-label="~">~<span class="price-val">€1,260</span></div>
+              <div class="flight-airline">長榮航空 EVA Air</div>
+              <div class="flight-route">台北 TPE → 維也納 VIE（直飛）</div>
+              <div class="flight-duration">13-14 小時</div>
+              <ul class="flight-pros"><li>直飛最省時</li><li>五星航空服務</li></ul>
+              <ul class="flight-cons"><li>價格較高</li><li>熱門日期易客滿</li></ul>
+            </div>
           </div>
-          <div class="flight-card recommended">
-            <div class="flight-badge">CP值最高</div>
-            <div class="flight-type">傳統航空轉機</div>
-            <div class="flight-price">~NT$ 40,500</div>
-            <div class="flight-airline">中華航空 + 奧地利航空</div>
-            <div class="flight-route">台北 TPE → 曼谷 BKK → 維也納 VIE</div>
-            <div class="flight-duration">17-28 小時</div>
-            <ul class="flight-pros"><li>傳統航空服務品質</li><li>含免費餐飲與行李</li></ul>
-            <ul class="flight-cons"><li>需在曼谷轉機</li></ul>
-          </div>
-          <div class="flight-card premium">
-            <div class="flight-type">直飛省時</div>
-            <div class="flight-price">~NT$ 44,100</div>
-            <div class="flight-airline">長榮航空 EVA Air</div>
-            <div class="flight-route">台北 TPE → 維也納 VIE（直飛）</div>
-            <div class="flight-duration">13-14 小時</div>
-            <ul class="flight-pros"><li>直飛最省時</li><li>五星航空服務</li></ul>
-            <ul class="flight-cons"><li>價格較高</li><li>熱門日期易客滿</li></ul>
+          <div class="flight-tips">
+            <h3>台灣出發省錢秘訣</h3>
+            <div class="tips-grid">
+              <div class="tip"><strong>Open-jaw 不同點進出</strong><br>例如「慕尼黑進、布拉格出」，省下回程交通，票價僅貴5-15%。</div>
+              <div class="tip"><strong>避開最貴日期</strong><br>12/23-24出發最貴，建議12/20或12/25出發；回程避開12/31-1/1。</div>
+              <div class="tip"><strong>提早預訂</strong><br>聖誕旺季建議提前6個月以上預訂，價格可便宜20-30%。</div>
+              <div class="tip"><strong>善用促銷</strong><br>土航、阿聯酋轉機常有好價。長榮/華航也有歐洲航線促銷。</div>
+            </div>
           </div>
         </div>
 
-        <div class="flight-tips">
-          <h3>省錢秘訣</h3>
-          <div class="tips-grid">
-            <div class="tip"><strong>Open-jaw 不同點進出</strong><br>例如「慕尼黑進、布拉格出」，省下回程交通時間與費用，票價僅貴5-15%。</div>
-            <div class="tip"><strong>避開最貴日期</strong><br>12/23-24出發最貴，建議12/20或12/25出發；回程避開12/31-1/1。</div>
-            <div class="tip"><strong>提早預訂</strong><br>聖誕旺季機票建議提前6個月以上預訂，價格可便宜20-30%。</div>
-            <div class="tip"><strong>善用促銷</strong><br>長榮/華航每年12月中會推出聖誕飛行促銷，關注官網與旅遊社群。</div>
+        <!-- US Flights -->
+        <div class="region-content" data-section="flights" data-region="us">
+          <div class="flight-cards">
+            <div class="flight-card budget">
+              <div class="flight-type">East Coast Direct</div>
+              <div class="flight-price" data-eur="900" data-label="~">~<span class="price-val">€900</span></div>
+              <div class="flight-airline">Austrian Airlines</div>
+              <div class="flight-route">New York JFK → Vienna VIE (Nonstop)</div>
+              <div class="flight-duration">8h 10min</div>
+              <ul class="flight-pros"><li>Only nonstop US-Vienna route</li><li>Short flight time</li></ul>
+              <ul class="flight-cons"><li>Only from JFK</li><li>Christmas peak prices surge</li></ul>
+            </div>
+            <div class="flight-card recommended">
+              <div class="flight-badge">Best Value</div>
+              <div class="flight-type">East Coast via Hub</div>
+              <div class="flight-price" data-eur="1100" data-label="~">~<span class="price-val">€1,100</span></div>
+              <div class="flight-airline">Lufthansa / Swiss / United</div>
+              <div class="flight-route">JFK/EWR → FRA/ZRH → VIE/MUC</div>
+              <div class="flight-duration">10-14 hours</div>
+              <ul class="flight-pros"><li>Multiple daily options</li><li>Open-jaw friendly</li></ul>
+              <ul class="flight-cons"><li>Requires connection</li></ul>
+            </div>
+            <div class="flight-card premium">
+              <div class="flight-type">West Coast</div>
+              <div class="flight-price" data-eur="1500" data-label="~">~<span class="price-val">€1,500</span></div>
+              <div class="flight-airline">Lufthansa / United / Condor</div>
+              <div class="flight-route">LAX/SFO → FRA/MUC → VIE</div>
+              <div class="flight-duration">13-16 hours</div>
+              <ul class="flight-pros"><li>Direct to Munich available</li></ul>
+              <ul class="flight-cons"><li>Higher prices from West Coast</li></ul>
+            </div>
+          </div>
+          <div class="flight-tips">
+            <h3>Tips for US Travelers</h3>
+            <div class="tips-grid">
+              <div class="tip"><strong>Open-jaw Tickets</strong><br>Fly into Munich (MUC), out of Prague (PRG) or Budapest (BUD). Saves backtracking.</div>
+              <div class="tip"><strong>East Coast Advantage</strong><br>JFK/EWR have the cheapest and most direct options to Austria.</div>
+              <div class="tip"><strong>Book 3-6 Months Ahead</strong><br>Christmas flights fill up fast. Set price alerts on Google Flights.</div>
+              <div class="tip"><strong>Budget Airlines</strong><br>Icelandair (via Reykjavik) or Aer Lingus (via Dublin) for budget connections.</div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Ski Resorts Section -->
+    <!-- ==================== SKI RESORTS ==================== -->
     <section id="ski" class="section">
       <div class="container">
         <h2 class="section-title">雪場比較：奧地利四大推薦</h2>
-        <p class="section-intro">從CP值最高的家庭友善雪場到傳奇級的專業滑雪勝地，以下四個雪場各有特色。所有價格為2025/2026旺季（12月20日至4月6日）成人6日纜車票價。</p>
+        <p class="section-intro">從CP值最高的家庭友善雪場到傳奇級專業滑雪勝地，以下四個雪場各有特色。價格為2025/2026旺季成人6日纜車票。</p>
 
         <div class="ski-comparison-table">
           <table>
@@ -138,564 +250,499 @@
               <tr>
                 <th>雪場</th>
                 <th>雪道總長</th>
-                <th>海拔範圍</th>
-                <th>6日票價</th>
-                <th>每公里成本</th>
-                <th>適合對象</th>
-                <th>CP值評分</th>
+                <th>海拔</th>
+                <th>6日票</th>
+                <th>每km成本</th>
+                <th>適合</th>
+                <th>CP值</th>
               </tr>
             </thead>
             <tbody>
               <tr class="highlight-row">
-                <td><strong>SkiWelt</strong><br><small>Wilder Kaiser</small></td>
-                <td>280 km</td>
+                <td><strong>SkiWelt</strong></td>
+                <td>275 km</td>
                 <td>620-1,957m</td>
-                <td>€372</td>
-                <td>€1.33/km</td>
-                <td>初中級 / 家庭</td>
+                <td class="price-cell" data-eur="372"><span class="price-val">€372</span></td>
+                <td class="price-cell" data-eur="1.35" data-unit="/km"><span class="price-val">€1.35</span>/km</td>
+                <td>初中級/家庭</td>
                 <td><span class="rating">★★★★★</span></td>
               </tr>
               <tr>
-                <td><strong>Saalbach</strong><br><small>Skicircus</small></td>
+                <td><strong>Saalbach</strong></td>
                 <td>270 km</td>
                 <td>830-2,096m</td>
-                <td>€425</td>
-                <td>€1.57/km</td>
-                <td>中級 / 派對族</td>
+                <td class="price-cell" data-eur="425"><span class="price-val">€425</span></td>
+                <td class="price-cell" data-eur="1.57" data-unit="/km"><span class="price-val">€1.57</span>/km</td>
+                <td>中級/派對族</td>
                 <td><span class="rating">★★★★☆</span></td>
               </tr>
               <tr>
-                <td><strong>Sölden</strong><br><small>冰川滑雪</small></td>
-                <td>144 km</td>
+                <td><strong>Sölden</strong></td>
+                <td>142 km</td>
                 <td>1,350-3,340m</td>
-                <td>€432</td>
-                <td>€3.00/km</td>
-                <td>中高級 / 風景控</td>
+                <td class="price-cell" data-eur="432"><span class="price-val">€432</span></td>
+                <td class="price-cell" data-eur="3.04" data-unit="/km"><span class="price-val">€3.04</span>/km</td>
+                <td>中高級/風景控</td>
                 <td><span class="rating">★★★☆☆</span></td>
               </tr>
               <tr>
-                <td><strong>St. Anton</strong><br><small>Arlberg</small></td>
+                <td><strong>St. Anton</strong></td>
                 <td>305 km</td>
                 <td>1,300-2,811m</td>
-                <td>€450</td>
-                <td>€1.48/km</td>
-                <td>中高級 / 專業</td>
+                <td class="price-cell" data-eur="450"><span class="price-val">€450</span></td>
+                <td class="price-cell" data-eur="1.48" data-unit="/km"><span class="price-val">€1.48</span>/km</td>
+                <td>中高級/專業</td>
                 <td><span class="rating">★★★★☆</span></td>
               </tr>
             </tbody>
           </table>
         </div>
 
-        <div class="ski-detail-cards">
-          <div class="ski-card" id="ski-skiwelt">
-            <div class="ski-card-header skiwelt">
-              <h3>SkiWelt Wilder Kaiser - Brixental</h3>
-              <span class="ski-tag best-value">CP值之王</span>
+        <!-- Piste Difficulty Comparison -->
+        <div class="piste-comparison">
+          <h3 class="piste-title">雪道難度分佈比較</h3>
+          <p class="piste-subtitle">藍道（初級）、紅道（中級）、黑道（高級）的長度與比例</p>
+          <div class="piste-cards">
+            <div class="piste-card">
+              <h4>SkiWelt <span>275 km</span></h4>
+              <div class="piste-bars">
+                <div class="piste-row"><span class="piste-label blue-label">藍 Blue</span><div class="piste-bar-bg"><div class="piste-bar blue-bar" style="width:42%"></div></div><span class="piste-val">115 km (42%)</span></div>
+                <div class="piste-row"><span class="piste-label red-label">紅 Red</span><div class="piste-bar-bg"><div class="piste-bar red-bar" style="width:44%"></div></div><span class="piste-val">121 km (44%)</span></div>
+                <div class="piste-row"><span class="piste-label black-label">黑 Black</span><div class="piste-bar-bg"><div class="piste-bar black-bar" style="width:14%"></div></div><span class="piste-val">39 km (14%)</span></div>
+              </div>
+              <p class="piste-verdict">初中級天堂，藍紅道佔86%</p>
             </div>
+            <div class="piste-card">
+              <h4>Saalbach <span>270 km</span></h4>
+              <div class="piste-bars">
+                <div class="piste-row"><span class="piste-label blue-label">藍 Blue</span><div class="piste-bar-bg"><div class="piste-bar blue-bar" style="width:52%"></div></div><span class="piste-val">140 km (52%)</span></div>
+                <div class="piste-row"><span class="piste-label red-label">紅 Red</span><div class="piste-bar-bg"><div class="piste-bar red-bar" style="width:41%"></div></div><span class="piste-val">112 km (41%)</span></div>
+                <div class="piste-row"><span class="piste-label black-label">黑 Black</span><div class="piste-bar-bg"><div class="piste-bar black-bar" style="width:7%"></div></div><span class="piste-val">18 km (7%)</span></div>
+              </div>
+              <p class="piste-verdict">最多藍道，初學者最友善</p>
+            </div>
+            <div class="piste-card">
+              <h4>Sölden <span>142 km</span></h4>
+              <div class="piste-bars">
+                <div class="piste-row"><span class="piste-label blue-label">藍 Blue</span><div class="piste-bar-bg"><div class="piste-bar blue-bar" style="width:47%"></div></div><span class="piste-val">67 km (47%)</span></div>
+                <div class="piste-row"><span class="piste-label red-label">紅 Red</span><div class="piste-bar-bg"><div class="piste-bar red-bar" style="width:34%"></div></div><span class="piste-val">48 km (34%)</span></div>
+                <div class="piste-row"><span class="piste-label black-label">黑 Black</span><div class="piste-bar-bg"><div class="piste-bar black-bar" style="width:19%"></div></div><span class="piste-val">27 km (19%)</span></div>
+              </div>
+              <p class="piste-verdict">黑道比例最高，挑戰性強</p>
+            </div>
+            <div class="piste-card">
+              <h4>St. Anton <span>305 km</span></h4>
+              <div class="piste-bars">
+                <div class="piste-row"><span class="piste-label blue-label">藍 Blue</span><div class="piste-bar-bg"><div class="piste-bar blue-bar" style="width:42%"></div></div><span class="piste-val">130 km (42%)</span></div>
+                <div class="piste-row"><span class="piste-label red-label">紅 Red</span><div class="piste-bar-bg"><div class="piste-bar red-bar" style="width:42%"></div></div><span class="piste-val">128 km (42%)</span></div>
+                <div class="piste-row"><span class="piste-label black-label">黑 Black</span><div class="piste-bar-bg"><div class="piste-bar black-bar" style="width:16%"></div></div><span class="piste-val">47 km (16%)</span></div>
+              </div>
+              <p class="piste-verdict">最大雪場，各級均衡＋豐富野雪</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ski Detail Cards -->
+        <div class="ski-detail-cards">
+          <div class="ski-card">
+            <div class="ski-card-header skiwelt"><h3>SkiWelt Wilder Kaiser - Brixental</h3><span class="ski-tag best-value">CP值之王</span></div>
             <div class="ski-card-body">
               <div class="ski-stats-row">
-                <div class="ski-stat"><span>280</span>km 雪道</div>
+                <div class="ski-stat"><span>275</span>km 雪道</div>
                 <div class="ski-stat"><span>90+</span>座纜車</div>
-                <div class="ski-stat"><span>€372</span>6日票</div>
+                <div class="ski-stat price-cell" data-eur="372"><span class="price-val">€372</span> /6日</div>
               </div>
-              <p>奧地利最大的相連雪場之一，以超高CP值聞名。280公里的雪道以藍線（初級）和紅線（中級）為主，非常適合初學者和家庭。雪場涵蓋 Ellmau、Söll、Hopfgarten 等9個村莊，每個村莊都有獨特的奧地利傳統風情。</p>
+              <p>奧地利最大的相連雪場之一，以超高CP值聞名。275公里雪道以藍線（42%）和紅線（44%）為主，非常適合初學者和家庭。涵蓋 Ellmau、Söll、Hopfgarten 等9個村莊。80%雪道有人造雪設備。</p>
               <div class="ski-pros-cons">
-                <div class="pros"><h4>優點</h4><ul><li>全奧地利主要雪場中最便宜（每公里僅€1.33）</li><li>面積廣大，5天滑不完</li><li>適合初中級與家庭旅遊</li><li>距慕尼黑僅1.5小時車程</li></ul></div>
-                <div class="cons"><h4>缺點</h4><ul><li>海拔較低（最高僅1,957m），聖誕期間雪況較受天氣影響</li><li>缺乏高難度黑線與野雪區域</li><li>Après-ski 氣氛較為平淡</li></ul></div>
+                <div class="pros"><h4>優點</h4><ul><li>全奧地利主要雪場中最便宜</li><li>面積廣大，5天滑不完</li><li>適合初中級與家庭旅遊</li><li>距慕尼黑僅1.5小時車程</li></ul></div>
+                <div class="cons"><h4>缺點</h4><ul><li>海拔較低（最高1,957m），雪況受天氣影響</li><li>黑道僅39km（14%），高手不夠刺激</li><li>Après-ski 氣氛較平淡</li></ul></div>
               </div>
             </div>
           </div>
-
-          <div class="ski-card" id="ski-saalbach">
-            <div class="ski-card-header saalbach">
-              <h3>Saalbach-Hinterglemm (Skicircus)</h3>
-              <span class="ski-tag">中級天堂</span>
-            </div>
+          <div class="ski-card">
+            <div class="ski-card-header saalbach"><h3>Saalbach-Hinterglemm (Skicircus)</h3><span class="ski-tag">中級天堂</span></div>
             <div class="ski-card-body">
               <div class="ski-stats-row">
                 <div class="ski-stat"><span>270</span>km 雪道</div>
                 <div class="ski-stat"><span>70</span>座纜車</div>
-                <div class="ski-stat"><span>€425</span>6日票</div>
+                <div class="ski-stat price-cell" data-eur="425"><span class="price-val">€425</span> /6日</div>
               </div>
-              <p>被譽為「奧地利最酷的滑雪馬戲團」，Saalbach 以現代化的纜車系統和豐富的中級雪道聞名。使用 Ski ALPIN CARD 還可滑到 Zell am See 和 Kitzsteinhorn 冰川。雪後派對（Après-ski）文化濃厚，是年輕人的最愛。</p>
+              <p>「奧地利最酷的滑雪馬戲團」，以現代化纜車和豐富藍道（52%）聞名。ALPIN CARD 可通用 Zell am See 和 Kitzsteinhorn 冰川。Après-ski 文化濃厚，年輕人最愛。90%雪道有人造雪設備。</p>
               <div class="ski-pros-cons">
-                <div class="pros"><h4>優點</h4><ul><li>中級滑雪者的天堂，紅線選擇豐富</li><li>現代化高速纜車，排隊時間短</li><li>Après-ski 氣氛極佳</li><li>ALPIN CARD 可通用 Zell am See 冰川</li></ul></div>
-                <div class="cons"><h4>缺點</h4><ul><li>價格中高（€425/6天）</li><li>聖誕旺季人潮較多</li><li>海拔不算特別高</li></ul></div>
+                <div class="pros"><h4>優點</h4><ul><li>藍道最多（140km），初學者最友善</li><li>現代化高速纜車，排隊短</li><li>Après-ski 氣氛極佳</li><li>ALPIN CARD 可通用冰川</li></ul></div>
+                <div class="cons"><h4>缺點</h4><ul><li>價格中高</li><li>黑道僅18km（7%），高手選擇少</li><li>聖誕旺季人潮多</li></ul></div>
               </div>
             </div>
           </div>
-
-          <div class="ski-card" id="ski-solden">
-            <div class="ski-card-header solden">
-              <h3>Sölden</h3>
-              <span class="ski-tag">冰川壯景</span>
-            </div>
+          <div class="ski-card">
+            <div class="ski-card-header solden"><h3>Sölden</h3><span class="ski-tag">冰川壯景</span></div>
             <div class="ski-card-body">
               <div class="ski-stats-row">
-                <div class="ski-stat"><span>144</span>km 雪道</div>
+                <div class="ski-stat"><span>142</span>km 雪道</div>
                 <div class="ski-stat"><span>31</span>座纜車</div>
-                <div class="ski-stat"><span>€432</span>6日票</div>
+                <div class="ski-stat price-cell" data-eur="432"><span class="price-val">€432</span> /6日</div>
               </div>
-              <p>奧地利唯一擁有三座3,000公尺以上山峰的雪場，Rettenbach 和 Tiefenbach 兩大冰川保證聖誕期間的絕佳雪況。007電影《乃乃幽靈》的拍攝地「ice Q」餐廳就在山頂，是雪場的標誌性景點。</p>
+              <p>奧地利唯一擁有三座3,000m以上山峰的雪場。Rettenbach 和 Tiefenbach 雙冰川保證聖誕絕佳雪況。007電影拍攝地「ice Q」餐廳在山頂。黑道比例19%為四大雪場最高。</p>
               <div class="ski-pros-cons">
-                <div class="pros"><h4>優點</h4><ul><li>雙冰川保證雪況，海拔最高達3,340m</li><li>007電影拍攝地，景觀壯麗</li><li>距因斯布魯克僅1小時</li></ul></div>
-                <div class="cons"><h4>缺點</h4><ul><li>雪道總長僅144km，相對較短</li><li>每公里成本€3.00，CP值較低</li><li>高海拔天氣多變，風大時纜車可能停運</li></ul></div>
+                <div class="pros"><h4>優點</h4><ul><li>雙冰川保證雪況，海拔達3,340m</li><li>007電影拍攝地，景觀壯麗</li><li>黑道比例最高（19%）</li><li>距因斯布魯克僅1小時</li></ul></div>
+                <div class="cons"><h4>缺點</h4><ul><li>雪道僅142km，較短</li><li>每km成本最高</li><li>高海拔天氣多變</li></ul></div>
               </div>
             </div>
           </div>
-
-          <div class="ski-card" id="ski-stanton">
-            <div class="ski-card-header stanton">
-              <h3>St. Anton am Arlberg</h3>
-              <span class="ski-tag legendary">傳奇雪場</span>
-            </div>
+          <div class="ski-card">
+            <div class="ski-card-header stanton"><h3>St. Anton am Arlberg</h3><span class="ski-tag legendary">傳奇雪場</span></div>
             <div class="ski-card-body">
               <div class="ski-stats-row">
                 <div class="ski-stat"><span>305</span>km 雪道</div>
                 <div class="ski-stat"><span>88</span>座纜車</div>
-                <div class="ski-stat"><span>€450</span>6日票</div>
+                <div class="ski-stat price-cell" data-eur="450"><span class="price-val">€450</span> /6日</div>
               </div>
-              <p>Arlberg 是奧地利最大的相連雪場，也是全球公認的頂級滑雪勝地之一。St. Anton 以其傳奇的 Après-ski 文化（尤其是 Mooservirt 酒吧）和豐富的野雪路線聞名。305公里的雪道涵蓋 St. Anton、Lech、Zürs 等多個村莊。</p>
+              <p>Arlberg 是奧地利最大相連雪場，全球頂級滑雪勝地。以傳奇 Après-ski 文化（Mooservirt 酒吧）和豐富野雪路線聞名。305km雪道涵蓋 St. Anton、Lech、Zürs 等村莊，各級均衡分佈。</p>
               <div class="ski-pros-cons">
-                <div class="pros"><h4>優點</h4><ul><li>奧地利最大相連雪場（305km）</li><li>傳奇 Après-ski 文化</li><li>豐富的野雪與進階雪道</li><li>每公里成本€1.48，大雪場中CP值不錯</li></ul></div>
-                <div class="cons"><h4>缺點</h4><ul><li>全奧地利最貴（€450/6天）</li><li>不適合純新手，地形偏中高難度</li><li>聖誕期間極度擁擠</li></ul></div>
+                <div class="pros"><h4>優點</h4><ul><li>奧地利最大相連雪場（305km）</li><li>傳奇 Après-ski 文化</li><li>47km黑道＋豐富野雪</li><li>各級雪道均衡，適合混合程度團體</li></ul></div>
+                <div class="cons"><h4>缺點</h4><ul><li>全奧地利最貴</li><li>野雪區需經驗，純新手慎選</li><li>聖誕期間極度擁擠</li></ul></div>
               </div>
             </div>
           </div>
         </div>
 
-        <div id="ski-map" class="map-container">
-          <h3>雪場位置地圖</h3>
-          <div id="skiMapView" style="height:450px;border-radius:12px;"></div>
+        <div class="map-container"><h3>雪場位置地圖</h3><div id="skiMapView" style="height:400px;border-radius:12px;"></div></div>
+      </div>
+    </section>
+
+    <!-- ==================== SKI SCHOOL ==================== -->
+    <section id="ski-school" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">滑雪學校：課程與費用</h2>
+        <p class="section-intro">奧地利擁有世界頂級的滑雪教學體系。無論是第一次踏上雪板的初學者，還是想精進技術的進階滑雪者，都能找到合適的課程。</p>
+
+        <!-- Skill Level Definitions -->
+        <div class="level-definitions">
+          <h3>滑雪程度定義</h3>
+          <div class="level-grid">
+            <div class="level-card level-green">
+              <div class="level-icon">●</div>
+              <h4>綠道 Green / Anfänger</h4>
+              <p class="level-en">Beginner</p>
+              <p>第一次滑雪或僅有1-2次經驗。正在學習基本站姿、煞車（雪犁/Pizza）和緩坡轉彎。需要在魔毯或初學者纜車區域練習。</p>
+              <p class="level-recommend">建議課程：團體初學者課程 3-5天</p>
+            </div>
+            <div class="level-card level-blue">
+              <div class="level-icon">●</div>
+              <h4>藍道 Blue / Leicht Fortgeschritten</h4>
+              <p class="level-en">Intermediate</p>
+              <p>能自信地以雪犁轉彎，正在學習平行轉彎（Parallel Turn）。可以在緩坡藍道上獨立滑行，但陡坡仍需雪犁輔助。</p>
+              <p class="level-recommend">建議課程：團體中級課程 3天 或 私人課 2-3小時</p>
+            </div>
+            <div class="level-card level-red">
+              <div class="level-icon">●</div>
+              <h4>紅道 Red / Fortgeschritten</h4>
+              <p class="level-en">Advanced</p>
+              <p>能在大多數雪道上平行轉彎。正在精進 Carving（刻滑）技術、速度控制和在較陡地形上的穩定性。可以應對中等難度的紅道。</p>
+              <p class="level-recommend">建議課程：私人課 2-3小時 或 進階技術團體課</p>
+            </div>
+            <div class="level-card level-black">
+              <div class="level-icon">●</div>
+              <h4>黑道 Black / Könner</h4>
+              <p class="level-en">Expert</p>
+              <p>能自信地在所有標記雪道上滑行。想挑戰野雪（Off-piste）、饅頭雪（Moguls）、陡坡和深雪。追求速度與風格的極致。</p>
+              <p class="level-recommend">建議課程：Freeride 私人課 或 Off-piste 導覽</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ski School Comparison Table -->
+        <div class="school-comparison">
+          <h3>各雪場滑雪學校費用比較（成人）</h3>
+          <div class="ski-comparison-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>課程類型</th>
+                  <th>SkiWelt</th>
+                  <th>Saalbach</th>
+                  <th>Sölden</th>
+                  <th>St. Anton</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>團體半天</strong><br><small>2.5-3hr/天</small></td>
+                  <td class="price-cell" data-eur="90"><span class="price-val">~€90</span>/天</td>
+                  <td class="price-cell" data-eur="95"><span class="price-val">€95</span>/天</td>
+                  <td class="price-cell" data-eur="90"><span class="price-val">€90</span>/天</td>
+                  <td class="price-cell" data-eur="110"><span class="price-val">~€110</span>/天</td>
+                </tr>
+                <tr>
+                  <td><strong>團體半天 5日</strong><br><small>最常見方案</small></td>
+                  <td class="price-cell" data-eur="290"><span class="price-val">~€290</span></td>
+                  <td class="price-cell" data-eur="315"><span class="price-val">€315</span></td>
+                  <td class="price-cell" data-eur="290"><span class="price-val">€290</span></td>
+                  <td class="price-cell" data-eur="360"><span class="price-val">~€360</span></td>
+                </tr>
+                <tr>
+                  <td><strong>團體全天</strong><br><small>4-5hr/天</small></td>
+                  <td class="price-cell" data-eur="100"><span class="price-val">~€100</span>/天</td>
+                  <td>-</td>
+                  <td class="price-cell" data-eur="100"><span class="price-val">€100</span>/天</td>
+                  <td class="price-cell" data-eur="130"><span class="price-val">~€130</span>/天</td>
+                </tr>
+                <tr>
+                  <td><strong>私人課 2hr</strong></td>
+                  <td class="price-cell" data-eur="190"><span class="price-val">~€190</span></td>
+                  <td class="price-cell" data-eur="204"><span class="price-val">€204</span></td>
+                  <td class="price-cell" data-eur="150"><span class="price-val">€150</span></td>
+                  <td class="price-cell" data-eur="250"><span class="price-val">~€250</span></td>
+                </tr>
+                <tr>
+                  <td><strong>私人課 半天</strong><br><small>3-4hr</small></td>
+                  <td class="price-cell" data-eur="280"><span class="price-val">~€280</span></td>
+                  <td class="price-cell" data-eur="300"><span class="price-val">~€300</span></td>
+                  <td class="price-cell" data-eur="240"><span class="price-val">€240</span></td>
+                  <td class="price-cell" data-eur="380"><span class="price-val">~€380</span></td>
+                </tr>
+                <tr>
+                  <td><strong>初學者套裝</strong><br><small>含租借+課程+初學纜車</small></td>
+                  <td class="price-cell" data-eur="428"><span class="price-val">~€428</span><br><small>5天課+7天租借</small></td>
+                  <td class="price-cell" data-eur="395"><span class="price-val">€395</span><br><small>4天課+4天租借+2天初學纜車</small></td>
+                  <td class="price-cell" data-eur="459"><span class="price-val">€459</span><br><small>5天課+6天租借</small></td>
+                  <td class="price-cell" data-eur="500"><span class="price-val">~€500</span><br><small>5天課+租借</small></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Ski School Recommendations -->
+        <div class="school-tips">
+          <h3>選課建議</h3>
+          <div class="tips-grid">
+            <div class="tip"><strong>初學者首選：團體課 3-5天</strong><br>團體課最划算，3天通常能學會基本轉彎。5天課程結束後可獨立滑藍道。建議搭配初學者套裝（含租借）最省。</div>
+            <div class="tip"><strong>中級進階：私人課 2-3小時</strong><br>已會基本轉彎但想突破瓶頸？2-3小時私人課比5天團體課更有效率。3-4人分攤費用，每人僅€50-80。</div>
+            <div class="tip"><strong>高手挑戰：Freeride 導覽</strong><br>Sölden 和 St. Anton 提供 Freeride 私人課（5hr ~€330），由專業嚮導帶領探索野雪路線。需有黑道以上程度。</div>
+            <div class="tip"><strong>省錢秘訣</strong><br>提前2-3個月線上預訂可享10-20%折扣。聖誕高峰期（12/25-1/1）價格上浮10-20%，建議避開12/25-27開課。私人課多人分攤最划算。</div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Cities Section -->
+    <!-- ==================== CITIES ==================== -->
     <section id="cities" class="section section-alt">
       <div class="container">
-        <h2 class="section-title">城市景點：中歐五大必訪</h2>
-        <p class="section-intro">從音樂之都維也納到溫泉之城布達佩斯，每座城市都有獨特的聖誕氛圍與文化體驗。以下包含各城市的當地名稱（鄉土名情）、必訪景點與聖誕市集資訊。</p>
-
+        <h2 class="section-title">城市景點：中歐必訪城市</h2>
+        <p class="section-intro">每座城市都有獨特的聖誕氛圍與文化體驗。以下包含各城市的當地名稱（鄉土名情）、必訪景點與聖誕市集資訊。</p>
         <div class="city-cards">
-          <!-- Vienna -->
-          <div class="city-card">
-            <div class="city-header vienna">
-              <h3>維也納</h3>
-              <span class="city-local-name">Wien</span>
-              <span class="city-country">奧地利 Österreich</span>
-            </div>
-            <div class="city-body">
-              <p class="city-desc">音樂之都，擁有華麗的哈布斯堡王朝宮殿、世界級歌劇院與濃厚的聖誕氣氛。維也納的咖啡館文化被列為UNESCO非物質文化遺產。</p>
-              <div class="city-attractions">
-                <h4>必訪景點</h4>
-                <div class="attraction-list">
-                  <div class="attraction">
-                    <strong>美泉宮</strong>
-                    <span class="local-name">Schloss Schönbrunn</span>
-                    <p>哈布斯堡王朝夏宮，UNESCO世界遺產，1,441間房間的巴洛克宮殿。聖誕市集在宮前廣場舉行（11/6-1/6）。</p>
-                  </div>
-                  <div class="attraction">
-                    <strong>聖史蒂芬大教堂</strong>
-                    <span class="local-name">Stephansdom</span>
-                    <p>維也納地標，哥德式建築傑作，南塔高136.4公尺，可登頂俯瞰全城。</p>
-                  </div>
-                  <div class="attraction">
-                    <strong>霍夫堡皇宮</strong>
-                    <span class="local-name">Hofburg</span>
-                    <p>哈布斯堡王朝冬宮，現為總統府。內含西西博物館與皇家銀器收藏。</p>
-                  </div>
-                  <div class="attraction">
-                    <strong>貝爾維第宮</strong>
-                    <span class="local-name">Schloss Belvedere</span>
-                    <p>巴洛克宮殿，收藏克林姆名畫《吻》(Der Kuss)。聖誕市集至12/31。</p>
-                  </div>
-                </div>
+          <div class="city-card"><div class="city-header vienna"><h3>維也納</h3><span class="city-local-name">Wien</span><span class="city-country">奧地利 Österreich</span></div>
+            <div class="city-body"><p class="city-desc">音樂之都，擁有華麗的哈布斯堡王朝宮殿、世界級歌劇院。咖啡館文化為UNESCO非物質文化遺產。</p>
+              <div class="attraction-list">
+                <div class="attraction"><strong>美泉宮</strong><span class="local-name">Schloss Schönbrunn</span><p>哈布斯堡夏宮，UNESCO世界遺產。聖誕市集在宮前廣場舉行。</p></div>
+                <div class="attraction"><strong>聖史蒂芬大教堂</strong><span class="local-name">Stephansdom</span><p>維也納地標，哥德式建築傑作。登南塔俯瞰全城。</p></div>
+                <div class="attraction"><strong>霍夫堡皇宮</strong><span class="local-name">Hofburg</span><p>哈布斯堡冬宮，內有西西公主博物館。</p></div>
+                <div class="attraction"><strong>納許市場</strong><span class="local-name">Naschmarkt</span><p>維也納最大露天市場，各國美食寶庫。</p></div>
               </div>
-              <div class="city-christmas">
-                <h4>聖誕市集</h4>
-                <p><strong>市政廳廣場聖誕市集</strong> (Christkindlmarkt am Rathausplatz)：維也納最大最著名，11月中至12/26。超過150個攤位，熱紅酒 (Glühwein) 與烤栗子飄香。</p>
-              </div>
-              <div class="city-meta">
-                <span>建議停留：2天</span>
-                <span>到薩爾茲堡：火車2.5小時 / €24起</span>
-              </div>
+              <div class="city-christmas"><h4>聖誕市集</h4><p>市政廳廣場 (Rathausplatz) 聖誕市集為全歐最大之一。美泉宮前也有市集至1月初。</p></div>
+              <div class="city-meta"><span>建議停留：1.5-2天</span><span>物價：中高</span></div>
             </div>
           </div>
-
-          <!-- Salzburg -->
-          <div class="city-card">
-            <div class="city-header salzburg">
-              <h3>薩爾茲堡</h3>
-              <span class="city-local-name">Salzburg</span>
-              <span class="city-country">奧地利 Österreich</span>
-            </div>
-            <div class="city-body">
-              <p class="city-desc">莫札特的故鄉與《乃乃真善美》拍攝地。舊城區被列為UNESCO世界遺產，是前往各大雪場的絕佳中繼站。</p>
-              <div class="city-attractions">
-                <h4>必訪景點</h4>
-                <div class="attraction-list">
-                  <div class="attraction">
-                    <strong>薩爾茲堡要塞</strong>
-                    <span class="local-name">Festung Hohensalzburg</span>
-                    <p>中歐最大保存完好的城堡，建於1077年，可搭纜車上山俯瞰全城。</p>
-                  </div>
-                  <div class="attraction">
-                    <strong>米拉貝爾宮</strong>
-                    <span class="local-name">Schloss Mirabell</span>
-                    <p>《真善美》經典場景「Do-Re-Mi」的拍攝地，巴洛克花園冬季別有風情。</p>
-                  </div>
-                  <div class="attraction">
-                    <strong>莫札特出生地</strong>
-                    <span class="local-name">Mozarts Geburtshaus</span>
-                    <p>蓋特萊德巷 (Getreidegasse) 9號，莫札特1756年出生的黃色小樓。</p>
-                  </div>
-                </div>
+          <div class="city-card"><div class="city-header salzburg"><h3>薩爾茲堡</h3><span class="city-local-name">Salzburg</span><span class="city-country">奧地利 Österreich</span></div>
+            <div class="city-body"><p class="city-desc">莫札特故鄉，《乃乃乃》電影取景地。舊城區為UNESCO世界遺產，前往各大雪場的中繼站。</p>
+              <div class="attraction-list">
+                <div class="attraction"><strong>薩爾茲堡要塞</strong><span class="local-name">Festung Hohensalzburg</span><p>中歐保存最完好的城堡之一，搭纜車登頂俯瞰全城。</p></div>
+                <div class="attraction"><strong>米拉貝爾宮</strong><span class="local-name">Schloss Mirabell</span><p>巴洛克花園，《乃乃乃》「Do-Re-Mi」拍攝地。</p></div>
+                <div class="attraction"><strong>莫札特出生地</strong><span class="local-name">Mozarts Geburtshaus</span><p>蓋特萊德巷9號，莫札特1756年出生的黃色小樓。</p></div>
               </div>
-              <div class="city-christmas">
-                <h4>聖誕市集</h4>
-                <p><strong>大教堂廣場聖誕市集</strong> (Salzburger Christkindlmarkt)：以薩爾茲堡大教堂為背景，氣氛莊嚴而溫馨。11月中至1月初。</p>
-              </div>
-              <div class="city-meta">
-                <span>建議停留：1天</span>
-                <span>到雪場：Kitzbühel 1hr20min / Zell am See 1hr15min</span>
-              </div>
+              <div class="city-christmas"><h4>聖誕市集</h4><p>大教堂廣場 (Domplatz) 聖誕市集被譽為全奧地利最有氣氛。</p></div>
+              <div class="city-meta"><span>建議停留：0.5-1天</span><span>物價：中</span><span>距雪場：1-1.5hr</span></div>
             </div>
           </div>
-
-          <!-- Prague -->
-          <div class="city-card">
-            <div class="city-header prague">
-              <h3>布拉格</h3>
-              <span class="city-local-name">Praha</span>
-              <span class="city-country">捷克 Česko</span>
-            </div>
-            <div class="city-body">
-              <p class="city-desc">百塔之城，充滿波希米亞浪漫風情。物價僅為奧地利的6-7折，是中歐旅遊CP值最高的首都之一。</p>
-              <div class="city-attractions">
-                <h4>必訪景點</h4>
-                <div class="attraction-list">
-                  <div class="attraction">
-                    <strong>布拉格城堡</strong>
-                    <span class="local-name">Pražský hrad</span>
-                    <p>世界最大的古城堡群，佔地7萬平方公尺，內含聖維特大教堂 (Katedrála sv. Víta)。</p>
-                  </div>
-                  <div class="attraction">
-                    <strong>查理大橋</strong>
-                    <span class="local-name">Karlův most</span>
-                    <p>14世紀石橋，橋上30座巴洛克雕像。建議清晨或夜晚造訪避開人潮。</p>
-                  </div>
-                  <div class="attraction">
-                    <strong>舊城廣場天文鐘</strong>
-                    <span class="local-name">Staroměstský orloj</span>
-                    <p>建於1410年的天文鐘，每整點有使徒人偶報時表演。廣場是聖誕市集中心。</p>
-                  </div>
-                </div>
+          <div class="city-card"><div class="city-header prague"><h3>布拉格</h3><span class="city-local-name">Praha</span><span class="city-country">捷克 Česko</span></div>
+            <div class="city-body"><p class="city-desc">百塔之城，歐洲保存最完整的中世紀城市景觀。物價比西歐便宜40-50%。捷克克朗 (CZK) 為貨幣。</p>
+              <div class="attraction-list">
+                <div class="attraction"><strong>布拉格城堡</strong><span class="local-name">Pražský hrad</span><p>世界最大古城堡群，含聖維特大教堂、黃金巷。</p></div>
+                <div class="attraction"><strong>查理大橋</strong><span class="local-name">Karlův most</span><p>1357年建造的哥德式石橋，30座巴洛克聖人雕像。清晨最美。</p></div>
+                <div class="attraction"><strong>舊城廣場天文鐘</strong><span class="local-name">Staroměstský orloj</span><p>1410年製造，每整點機械人偶表演必看。</p></div>
               </div>
-              <div class="city-christmas">
-                <h4>聖誕市集</h4>
-                <p><strong>舊城廣場聖誕市集</strong>：歐洲最美聖誕市集之一，11月底至1/6。巨大聖誕樹、捷克傳統烤肉串 (Trdelník) 與熱紅酒。</p>
-              </div>
-              <div class="city-meta">
-                <span>建議停留：2天</span>
-                <span>從維也納：火車4.5小時 / €15起</span>
-              </div>
+              <div class="city-christmas"><h4>聖誕市集</h4><p>舊城廣場市集營業至1/6，歐洲營業最久之一。必嘗 Trdelník（煙囪捲）。</p></div>
+              <div class="city-meta"><span>建議停留：1-2天</span><span>物價：低（西歐一半）</span></div>
             </div>
           </div>
-
-          <!-- Budapest -->
-          <div class="city-card">
-            <div class="city-header budapest">
-              <h3>布達佩斯</h3>
-              <span class="city-local-name">Budapest</span>
-              <span class="city-country">匈牙利 Magyarország</span>
-            </div>
-            <div class="city-body">
-              <p class="city-desc">多瑙河明珠，冬季必泡百年溫泉。物價為中歐首都中最划算，一頓正餐約台幣200-300元。</p>
-              <div class="city-attractions">
-                <h4>必訪景點</h4>
-                <div class="attraction-list">
-                  <div class="attraction">
-                    <strong>國會大廈</strong>
-                    <span class="local-name">Országház</span>
-                    <p>多瑙河畔新哥德式建築，匈牙利最大建築物，夜間燈光倒映河面極為壯觀。</p>
-                  </div>
-                  <div class="attraction">
-                    <strong>漁人堡</strong>
-                    <span class="local-name">Halászbástya</span>
-                    <p>俯瞰多瑙河與國會大廈的最佳觀景點，新羅馬式建築風格的白色城堡。</p>
-                  </div>
-                  <div class="attraction">
-                    <strong>塞切尼溫泉浴場</strong>
-                    <span class="local-name">Széchenyi fürdő</span>
-                    <p>歐洲最大溫泉浴場，新巴洛克建築。冬季在戶外溫泉池中泡湯，蒸氣繚繞，體驗獨特。聖誕節照常開放。</p>
-                  </div>
-                </div>
+          <div class="city-card"><div class="city-header budapest"><h3>布達佩斯</h3><span class="city-local-name">Budapest</span><span class="city-country">匈牙利 Magyarország</span></div>
+            <div class="city-body"><p class="city-desc">多瑙河明珠，以溫泉浴場聞名。滑雪後泡溫泉是絕佳享受。匈牙利福林 (HUF) 為貨幣。</p>
+              <div class="attraction-list">
+                <div class="attraction"><strong>國會大廈</strong><span class="local-name">Országház</span><p>新哥德式建築，多瑙河畔最壯觀地標。夜間燈光倒映河面極壯觀。</p></div>
+                <div class="attraction"><strong>漁人堡</strong><span class="local-name">Halászbástya</span><p>新羅馬式觀景台，俯瞰多瑙河與國會大廈全景。</p></div>
+                <div class="attraction"><strong>塞切尼溫泉浴場</strong><span class="local-name">Széchenyi fürdő</span><p>歐洲最大溫泉浴場之一，冬天蒸氣繚繞非常夢幻。</p></div>
               </div>
-              <div class="city-christmas">
-                <h4>聖誕市集</h4>
-                <p><strong>Vörösmarty 廣場聖誕市集</strong>：連續多年獲選歐洲最佳聖誕市集。匈牙利傳統煙囪蛋糕 (Kürtőskalács) 與熱紅酒。</p>
-              </div>
-              <div class="city-meta">
-                <span>建議停留：2天</span>
-                <span>從維也納：火車2.5小時 / €11起</span>
-              </div>
+              <div class="city-christmas"><h4>聖誕市集</h4><p>Vörösmarty 廣場市集最大，必嘗 Gulyás（燉牛肉）和 Forralt bor（熱紅酒）。</p></div>
+              <div class="city-meta"><span>建議停留：1-2天</span><span>物價：低</span></div>
             </div>
           </div>
-
-          <!-- Munich -->
-          <div class="city-card">
-            <div class="city-header munich">
-              <h3>慕尼黑</h3>
-              <span class="city-local-name">München</span>
-              <span class="city-country">德國 Deutschland</span>
-            </div>
-            <div class="city-body">
-              <p class="city-desc">巴伐利亞首府，長榮直飛的便利門戶。結合啤酒文化、皇家建築與聖誕市集，是進出歐洲滑雪的最佳起點之一。</p>
-              <div class="city-attractions">
-                <h4>必訪景點</h4>
-                <div class="attraction-list">
-                  <div class="attraction">
-                    <strong>瑪利亞廣場</strong>
-                    <span class="local-name">Marienplatz</span>
-                    <p>慕尼黑心臟地帶，新市政廳 (Neues Rathaus) 的鐘樓每日11點與12點有精彩的人偶表演。</p>
-                  </div>
-                  <div class="attraction">
-                    <strong>皇家啤酒屋</strong>
-                    <span class="local-name">Hofbräuhaus</span>
-                    <p>建於1589年的傳奇啤酒屋，可容納3,000人。必點一公升裝的巴伐利亞啤酒與豬腳。</p>
-                  </div>
-                  <div class="attraction">
-                    <strong>寧芬堡宮</strong>
-                    <span class="local-name">Schloss Nymphenburg</span>
-                    <p>巴伐利亞國王的夏宮，巴洛克建築與廣闊的宮殿花園。</p>
-                  </div>
-                </div>
+          <div class="city-card"><div class="city-header munich"><h3>慕尼黑</h3><span class="city-local-name">München</span><span class="city-country">德國 Deutschland</span></div>
+            <div class="city-body"><p class="city-desc">巴伐利亞首府，啤酒文化之都。歐洲重要航空樞紐，進入奧地利滑雪區的最佳門戶。</p>
+              <div class="attraction-list">
+                <div class="attraction"><strong>瑪利亞廣場</strong><span class="local-name">Marienplatz</span><p>慕尼黑心臟，新市政廳鐘琴每天11點和12點演奏。</p></div>
+                <div class="attraction"><strong>皇家啤酒屋</strong><span class="local-name">Hofbräuhaus</span><p>1589年創立，必嘗巴伐利亞白香腸配白啤酒。</p></div>
+                <div class="attraction"><strong>寧芬堡宮</strong><span class="local-name">Schloss Nymphenburg</span><p>巴伐利亞王室夏宮，巴洛克建築與廣闊花園。</p></div>
               </div>
-              <div class="city-christmas">
-                <h4>聖誕市集</h4>
-                <p><strong>瑪利亞廣場聖誕市集</strong> (Münchner Christkindlmarkt)：德國最著名的聖誕市集之一，新市政廳前的巨大聖誕樹與數百個攤位。</p>
-              </div>
-              <div class="city-meta">
-                <span>建議停留：1-2天</span>
-                <span>到雪場：SkiWelt 1.5hr / Kitzbühel 1hr40min</span>
-              </div>
+              <div class="city-christmas"><h4>聖誕市集</h4><p>瑪利亞廣場 Christkindlmarkt 是德國最古老聖誕市集之一。必嘗 Lebkuchen 和 Glühwein。</p></div>
+              <div class="city-meta"><span>建議停留：1天</span><span>物價：中高</span><span>距雪場：1.5-2hr</span></div>
             </div>
           </div>
         </div>
-
-        <!-- Additional Cities -->
         <div class="additional-cities">
-          <h3>順路加碼城市</h3>
+          <h3>其他順路城市</h3>
           <div class="mini-city-grid">
-            <div class="mini-city">
-              <h4>布拉提斯拉瓦 <span>Bratislava</span></h4>
-              <p class="mini-country">斯洛伐克 Slovensko</p>
-              <p>距維也納僅60km，火車1小時。歐洲最便宜首都之一，布拉提斯拉瓦城堡 (Bratislavský hrad) 俯瞰多瑙河，藍色教堂 (Modrý kostolík) 是IG打卡熱點。建議停留半天。</p>
-            </div>
-            <div class="mini-city">
-              <h4>哈修塔特 <span>Hallstatt</span></h4>
-              <p class="mini-country">奧地利 Österreich</p>
-              <p>UNESCO世界遺產，被稱為「世界最美小鎮」。冬季湖畔薄霧繚繞更有童話感。從薩爾茲堡搭火車+渡船約2.5小時。建議停留半天至1天。</p>
-            </div>
-            <div class="mini-city">
-              <h4>因斯布魯克 <span>Innsbruck</span></h4>
-              <p class="mini-country">奧地利 Österreich</p>
-              <p>阿爾卑斯山城，黃金屋頂 (Goldenes Dachl) 是城市地標。北山纜車 (Nordkettenbahnen) 可從市區直達2,300m高山。前往 St. Anton 或 Sölden 的必經之地。</p>
-            </div>
-            <div class="mini-city">
-              <h4>瓦杜茲 <span>Vaduz</span></h4>
-              <p class="mini-country">列支敦斯登 Liechtenstein</p>
-              <p>世界第六小國的首都。瓦杜茲城堡 (Schloss Vaduz) 是國家象徵。從奧地利 Feldkirch 搭公車僅30分鐘，可順路蒐集一個國家的護照章。</p>
-            </div>
+            <div class="mini-city"><h4>布拉提斯拉瓦 <span>Bratislava</span></h4><p class="mini-country">斯洛伐克 Slovensko</p><p>距維也納僅60km，火車1小時。歐洲最便宜首都之一。布拉提斯拉瓦城堡 (Bratislavský hrad) 俯瞰多瑙河。藍色教堂 (Modrý kostolík) 必拍。可從維也納當日來回。</p></div>
+            <div class="mini-city"><h4>哈修塔特 <span>Hallstatt</span></h4><p class="mini-country">奧地利 Österreich</p><p>UNESCO世界遺產，「世界最美小鎮」。湖畔彩色木屋冬季更夢幻。鹽礦 (Salzwelten) 和天空步道 (Skywalk) 必訪。從薩爾茲堡約1.5小時。</p></div>
+            <div class="mini-city"><h4>因斯布魯克 <span>Innsbruck</span></h4><p class="mini-country">奧地利 Österreich</p><p>阿爾卑斯山城，黃金屋頂 (Goldenes Dachl) 為地標。北山纜車 (Nordkettenbahnen) 從市區直達2,300m。前往 St. Anton 或 Sölden 必經之地。</p></div>
+            <div class="mini-city"><h4>瓦杜茲 <span>Vaduz</span></h4><p class="mini-country">列支敦斯登 Liechtenstein</p><p>世界第六小國首都。瓦杜茲城堡 (Schloss Vaduz) 為國家象徵。從奧地利 Feldkirch 搭公車僅30分鐘，順路蒐集護照章。</p></div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Itinerary Section -->
+    <!-- ==================== ITINERARY ==================== -->
     <section id="itinerary" class="section">
       <div class="container">
-        <h2 class="section-title">行程方案：三種路線任你選</h2>
-        <p class="section-intro">根據不同的假期長度與預算，提供三種精心設計的行程方案。所有方案均以「不走回頭路」為原則，搭配 Open-jaw 機票最為划算。</p>
-
+        <h2 class="section-title">行程方案</h2>
+        <p class="section-intro">根據不同假期長度與預算，提供三種行程方案。所有方案以「不走回頭路」為原則，搭配 Open-jaw 機票最划算。</p>
         <div class="itinerary-tabs">
-          <button class="tab-btn active" data-tab="route1">方案A：經典三國 (11天)</button>
-          <button class="tab-btn" data-tab="route2">方案B：深度五國 (14天)</button>
-          <button class="tab-btn" data-tab="route3">方案C：精省雙城 (9天)</button>
+          <button class="tab-btn active" data-tab="route1">方案A：經典三國 (10天)</button>
+          <button class="tab-btn" data-tab="route2">方案B：深度五國 (16天)</button>
+          <button class="tab-btn" data-tab="route3">方案C：精省雙城 (8天)</button>
         </div>
-
         <div class="itinerary-content">
           <div class="itinerary-panel active" id="route1">
-            <div class="route-header">
-              <h3>方案A：經典三國滑雪之旅</h3>
-              <div class="route-meta">
-                <span class="route-days">11天</span>
-                <span class="route-leave">請假5天</span>
-                <span class="route-countries">德國 → 奧地利 → 捷克</span>
-              </div>
-            </div>
-            <div class="route-flow">
-              <div class="route-arrow">慕尼黑 MUC 進 → 布拉格 PRG 出</div>
-            </div>
+            <div class="route-header"><h3>方案A：經典三國滑雪之旅</h3><div class="route-meta"><span class="route-days">10天（請假4天）</span><span class="route-leave">12/25~1/3</span><span class="route-countries">德國 → 奧地利 → 捷克</span></div></div>
+            <div class="route-flow"><div class="route-arrow">慕尼黑 MUC 進 → 布拉格 PRG 出</div></div>
             <div class="timeline">
-              <div class="timeline-item flight-day"><div class="day">D1</div><div class="content"><strong>12/25 (四)</strong> 台北 → 慕尼黑（直飛約13hr）<br>抵達後前往市區，逛瑪利亞廣場聖誕市集</div></div>
-              <div class="timeline-item city-day"><div class="day">D2</div><div class="content"><strong>12/26 (五)</strong> 慕尼黑一日遊<br>寧芬堡宮、皇家啤酒屋、英國花園。下午搭火車前往薩爾茲堡（1.5hr）</div></div>
-              <div class="timeline-item city-day"><div class="day">D3</div><div class="content"><strong>12/27 (六)</strong> 薩爾茲堡半日 → 前往雪場<br>上午遊覽要塞與舊城區，下午搭巴士前往雪場（約1-1.5hr）</div></div>
-              <div class="timeline-item ski-day"><div class="day">D4</div><div class="content"><strong>12/28 (日)</strong> 滑雪 Day 1</div></div>
-              <div class="timeline-item ski-day"><div class="day">D5</div><div class="content"><strong>12/29 (一)</strong> 滑雪 Day 2</div></div>
-              <div class="timeline-item ski-day"><div class="day">D6</div><div class="content"><strong>12/30 (二)</strong> 滑雪 Day 3</div></div>
-              <div class="timeline-item ski-day"><div class="day">D7</div><div class="content"><strong>12/31 (三)</strong> 滑雪 Day 4 + 跨年派對<br>白天滑雪，晚上在雪場小鎮迎接新年</div></div>
-              <div class="timeline-item ski-day"><div class="day">D8</div><div class="content"><strong>1/1 (四)</strong> 滑雪 Day 5<br>下午收拾行李，搭車前往維也納（2.5-3hr）</div></div>
-              <div class="timeline-item city-day"><div class="day">D9</div><div class="content"><strong>1/2 (五)</strong> 維也納一日遊<br>美泉宮、聖史蒂芬大教堂、霍夫堡皇宮、納許市場</div></div>
-              <div class="timeline-item city-day"><div class="day">D10</div><div class="content"><strong>1/3 (六)</strong> 維也納 → 布拉格（火車4.5hr）<br>下午抵達布拉格，傍晚漫步查理大橋與舊城廣場</div></div>
-              <div class="timeline-item flight-day"><div class="day">D11</div><div class="content"><strong>1/4 (日)</strong> 布拉格半日 → 飛回台北<br>上午遊覽布拉格城堡，下午前往機場</div></div>
+              <div class="timeline-item flight-day"><div class="day">D1</div><div class="content"><strong>12/25 (五)</strong> 台北 → 慕尼黑（直飛約13hr）<br>傍晚抵達，前往市區入住</div></div>
+              <div class="timeline-item city-day"><div class="day">D2</div><div class="content"><strong>12/26 (六)</strong> 慕尼黑一日遊<br>瑪利亞廣場、皇家啤酒屋。下午搭火車前往薩爾茲堡（1.5hr）</div></div>
+              <div class="timeline-item city-day"><div class="day">D3</div><div class="content"><strong>12/27 (日)</strong> 薩爾茲堡半日 → 前往雪場<br>上午遊覽要塞與舊城，下午搭巴士前往雪場（1-1.5hr）</div></div>
+              <div class="timeline-item ski-day"><div class="day">D4</div><div class="content"><strong>12/28 (一)</strong> 滑雪 Day 1</div></div>
+              <div class="timeline-item ski-day"><div class="day">D5</div><div class="content"><strong>12/29 (二)</strong> 滑雪 Day 2</div></div>
+              <div class="timeline-item ski-day"><div class="day">D6</div><div class="content"><strong>12/30 (三)</strong> 滑雪 Day 3</div></div>
+              <div class="timeline-item ski-day"><div class="day">D7</div><div class="content"><strong>12/31 (四)</strong> 滑雪 Day 4 + 跨年派對</div></div>
+              <div class="timeline-item ski-day"><div class="day">D8</div><div class="content"><strong>1/1 (五)</strong> 滑雪 Day 5<br>下午搭車前往維也納（2.5-3hr）</div></div>
+              <div class="timeline-item city-day"><div class="day">D9</div><div class="content"><strong>1/2 (六)</strong> 維也納 → 布拉格（火車4hr）<br>上午快速遊覽維也納，下午搭火車前往布拉格</div></div>
+              <div class="timeline-item flight-day"><div class="day">D10</div><div class="content"><strong>1/3 (日)</strong> 布拉格半日 → 飛回台北</div></div>
             </div>
           </div>
-
           <div class="itinerary-panel" id="route2">
-            <div class="route-header">
-              <h3>方案B：深度五國探索之旅</h3>
-              <div class="route-meta">
-                <span class="route-days">14天</span>
-                <span class="route-leave">請假8天</span>
-                <span class="route-countries">德國 → 奧地利 → 匈牙利 → 斯洛伐克 → 捷克</span>
-              </div>
-            </div>
-            <div class="route-flow">
-              <div class="route-arrow">慕尼黑 MUC 進 → 布拉格 PRG 出</div>
-            </div>
+            <div class="route-header"><h3>方案B：深度五國探索之旅</h3><div class="route-meta"><span class="route-days">16天（請假8天）</span><span class="route-leave">12/19~1/3</span><span class="route-countries">德國 → 奧地利 → 匈牙利 → 斯洛伐克 → 捷克</span></div></div>
+            <div class="route-flow"><div class="route-arrow">慕尼黑 MUC 進 → 布拉格 PRG 出</div></div>
             <div class="timeline">
-              <div class="timeline-item flight-day"><div class="day">D1</div><div class="content"><strong>12/22 (一)</strong> 台北 → 慕尼黑</div></div>
-              <div class="timeline-item city-day"><div class="day">D2</div><div class="content"><strong>12/23 (二)</strong> 慕尼黑一日遊 + 聖誕市集</div></div>
-              <div class="timeline-item city-day"><div class="day">D3</div><div class="content"><strong>12/24 (三)</strong> 慕尼黑 → 薩爾茲堡 → 雪場<br>聖誕夜在雪場小鎮度過</div></div>
-              <div class="timeline-item ski-day"><div class="day">D4-8</div><div class="content"><strong>12/25-29</strong> 滑雪 5天<br>聖誕節在雪場享受白色聖誕</div></div>
-              <div class="timeline-item city-day"><div class="day">D9</div><div class="content"><strong>12/30 (二)</strong> 雪場 → 維也納（2.5-3hr）<br>下午遊覽維也納</div></div>
-              <div class="timeline-item city-day"><div class="day">D10</div><div class="content"><strong>12/31 (三)</strong> 維也納跨年<br>美泉宮、霍夫堡。晚上在市政廳廣場跨年派對</div></div>
-              <div class="timeline-item city-day"><div class="day">D11</div><div class="content"><strong>1/1 (四)</strong> 維也納 → 布達佩斯（火車2.5hr）<br>下午抵達，傍晚泡塞切尼溫泉</div></div>
-              <div class="timeline-item city-day"><div class="day">D12</div><div class="content"><strong>1/2 (五)</strong> 布達佩斯一日遊<br>國會大廈、漁人堡、中央市場、多瑙河夜景遊船</div></div>
-              <div class="timeline-item city-day"><div class="day">D13</div><div class="content"><strong>1/3 (六)</strong> 布達佩斯 → 布拉提斯拉瓦（2.5hr）→ 布拉格（4hr）<br>途經斯洛伐克首都半日遊</div></div>
-              <div class="timeline-item flight-day"><div class="day">D14</div><div class="content"><strong>1/4 (日)</strong> 布拉格半日 → 飛回台北</div></div>
+              <div class="timeline-item flight-day"><div class="day">D1</div><div class="content"><strong>12/19 (六)</strong> 台北 → 慕尼黑（提早出發，機票較便宜）</div></div>
+              <div class="timeline-item city-day"><div class="day">D2</div><div class="content"><strong>12/20 (日)</strong> 慕尼黑一日遊＋聖誕市集</div></div>
+              <div class="timeline-item city-day"><div class="day">D3</div><div class="content"><strong>12/21 (一)</strong> 慕尼黑 → 薩爾茲堡 → 雪場</div></div>
+              <div class="timeline-item ski-day"><div class="day">D4-8</div><div class="content"><strong>12/22-26</strong> 滑雪5天（含白色聖誕）</div></div>
+              <div class="timeline-item city-day"><div class="day">D9</div><div class="content"><strong>12/27 (日)</strong> 雪場 → 維也納（2.5-3hr）</div></div>
+              <div class="timeline-item city-day"><div class="day">D10</div><div class="content"><strong>12/28 (一)</strong> 維也納一日遊</div></div>
+              <div class="timeline-item city-day"><div class="day">D11</div><div class="content"><strong>12/29 (二)</strong> 維也納 → 布達佩斯（火車2.5hr）</div></div>
+              <div class="timeline-item city-day"><div class="day">D12</div><div class="content"><strong>12/30 (三)</strong> 布達佩斯一日遊</div></div>
+              <div class="timeline-item city-day"><div class="day">D13</div><div class="content"><strong>12/31 (四)</strong> 布達佩斯跨年（多瑙河畔煙火）</div></div>
+              <div class="timeline-item city-day"><div class="day">D14</div><div class="content"><strong>1/1 (五)</strong> 布達佩斯 → 布拉提斯拉瓦半日遊</div></div>
+              <div class="timeline-item city-day"><div class="day">D15</div><div class="content"><strong>1/2 (六)</strong> 布拉提斯拉瓦 → 布拉格（4hr）</div></div>
+              <div class="timeline-item flight-day"><div class="day">D16</div><div class="content"><strong>1/3 (日)</strong> 布拉格半日 → 飛回台北</div></div>
             </div>
           </div>
-
           <div class="itinerary-panel" id="route3">
-            <div class="route-header">
-              <h3>方案C：精省雙城滑雪之旅</h3>
-              <div class="route-meta">
-                <span class="route-days">9天</span>
-                <span class="route-leave">請假4天</span>
-                <span class="route-countries">奧地利 → 匈牙利</span>
-              </div>
-            </div>
-            <div class="route-flow">
-              <div class="route-arrow">維也納 VIE 進出</div>
-            </div>
+            <div class="route-header"><h3>方案C：精省雙城滑雪之旅</h3><div class="route-meta"><span class="route-days">8天（請假4天）</span><span class="route-leave">12/26~1/2</span><span class="route-countries">奧地利</span></div></div>
+            <div class="route-flow"><div class="route-arrow">維也納 VIE 進出（來回票最便宜）</div></div>
             <div class="timeline">
-              <div class="timeline-item flight-day"><div class="day">D1</div><div class="content"><strong>12/25 (四)</strong> 台北 → 維也納（直飛14hr）<br>傍晚抵達，入住休息</div></div>
-              <div class="timeline-item city-day"><div class="day">D2</div><div class="content"><strong>12/26 (五)</strong> 維也納一日遊<br>美泉宮、聖史蒂芬大教堂、霍夫堡皇宮</div></div>
-              <div class="timeline-item city-day"><div class="day">D3</div><div class="content"><strong>12/27 (六)</strong> 維也納 → 雪場<br>上午搭火車前往雪場（2-3hr），下午安頓</div></div>
-              <div class="timeline-item ski-day"><div class="day">D4</div><div class="content"><strong>12/28 (日)</strong> 滑雪 Day 1</div></div>
-              <div class="timeline-item ski-day"><div class="day">D5</div><div class="content"><strong>12/29 (一)</strong> 滑雪 Day 2</div></div>
-              <div class="timeline-item ski-day"><div class="day">D6</div><div class="content"><strong>12/30 (二)</strong> 滑雪 Day 3</div></div>
-              <div class="timeline-item ski-day"><div class="day">D7</div><div class="content"><strong>12/31 (三)</strong> 滑雪 Day 4 + 跨年<br>在雪場小鎮跨年</div></div>
-              <div class="timeline-item ski-day"><div class="day">D8</div><div class="content"><strong>1/1 (四)</strong> 滑雪 Day 5<br>下午搭車回維也納</div></div>
-              <div class="timeline-item flight-day"><div class="day">D9</div><div class="content"><strong>1/2 (五)</strong> 維也納 → 台北<br>上午逛納許市場採購伴手禮，下午飛回台灣</div></div>
+              <div class="timeline-item flight-day"><div class="day">D1</div><div class="content"><strong>12/26 (六)</strong> 台北 → 維也納（12/25晚班機出發）</div></div>
+              <div class="timeline-item city-day"><div class="day">D2</div><div class="content"><strong>12/27 (日)</strong> 維也納半日 → 前往雪場</div></div>
+              <div class="timeline-item ski-day"><div class="day">D3</div><div class="content"><strong>12/28 (一)</strong> 滑雪 Day 1</div></div>
+              <div class="timeline-item ski-day"><div class="day">D4</div><div class="content"><strong>12/29 (二)</strong> 滑雪 Day 2</div></div>
+              <div class="timeline-item ski-day"><div class="day">D5</div><div class="content"><strong>12/30 (三)</strong> 滑雪 Day 3</div></div>
+              <div class="timeline-item ski-day"><div class="day">D6</div><div class="content"><strong>12/31 (四)</strong> 滑雪 Day 4 + 跨年</div></div>
+              <div class="timeline-item ski-day"><div class="day">D7</div><div class="content"><strong>1/1 (五)</strong> 滑雪 Day 5 → 回維也納</div></div>
+              <div class="timeline-item flight-day"><div class="day">D8</div><div class="content"><strong>1/2 (六)</strong> 維也納 → 台北</div></div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Interactive Map Section -->
+    <!-- ==================== MAP ==================== -->
     <section id="map" class="section section-alt">
       <div class="container">
         <h2 class="section-title">互動地圖</h2>
-        <p class="section-intro">點擊地圖上的標記查看各城市與雪場的詳細資訊。藍色標記為城市，白色標記為雪場。</p>
-        <div class="map-views">
-          <div class="map-view-main">
-            <div id="mainMap" style="height:550px;border-radius:12px;"></div>
-          </div>
-        </div>
+        <p class="section-intro">藍色標記為城市，白色標記為雪場。點擊查看詳細資訊。</p>
+        <div id="mainMap" style="height:550px;border-radius:12px;margin-bottom:2rem;"></div>
         <div class="transport-table">
           <h3>城市間交通時間與費用</h3>
           <table>
-            <thead>
-              <tr><th>路線</th><th>交通方式</th><th>時間</th><th>費用（約）</th></tr>
-            </thead>
+            <thead><tr><th>路線</th><th>交通方式</th><th>時間</th><th>費用</th></tr></thead>
             <tbody>
-              <tr><td>維也納 → 薩爾茲堡</td><td>ÖBB 火車</td><td>2.5 小時</td><td>€24-36</td></tr>
-              <tr><td>薩爾茲堡 → 因斯布魯克</td><td>ÖBB 火車</td><td>2 小時</td><td>€20-30</td></tr>
-              <tr><td>維也納 → 布達佩斯</td><td>RegioJet / ÖBB</td><td>2.5-3 小時</td><td>€11-20</td></tr>
-              <tr><td>維也納 → 布拉提斯拉瓦</td><td>火車 / 渡船</td><td>1 小時</td><td>€10-15</td></tr>
-              <tr><td>維也納 → 布拉格</td><td>RegioJet / ÖBB</td><td>4-4.5 小時</td><td>€15-30</td></tr>
-              <tr><td>維也納 → 慕尼黑</td><td>DB / ÖBB 火車</td><td>4-4.5 小時</td><td>€24-40</td></tr>
-              <tr><td>慕尼黑 → 因斯布魯克</td><td>DB 火車</td><td>2 小時</td><td>€15-25</td></tr>
-              <tr><td>薩爾茲堡 → 雪場</td><td>巴士 / 火車</td><td>1-1.5 小時</td><td>€13-25</td></tr>
-              <tr><td>布達佩斯 → 布拉提斯拉瓦</td><td>火車</td><td>2.5 小時</td><td>€10-15</td></tr>
-              <tr><td>布拉提斯拉瓦 → 布拉格</td><td>RegioJet 巴士</td><td>4 小時</td><td>€10-20</td></tr>
+              <tr><td>維也納 → 薩爾茲堡</td><td>ÖBB 火車</td><td>2.5 hr</td><td class="price-cell" data-eur="30"><span class="price-val">€24-36</span></td></tr>
+              <tr><td>薩爾茲堡 → 因斯布魯克</td><td>ÖBB 火車</td><td>2 hr</td><td class="price-cell" data-eur="25"><span class="price-val">€20-30</span></td></tr>
+              <tr><td>維也納 → 布達佩斯</td><td>RegioJet</td><td>2.5-3 hr</td><td class="price-cell" data-eur="15"><span class="price-val">€11-20</span></td></tr>
+              <tr><td>維也納 → 布拉提斯拉瓦</td><td>火車/渡船</td><td>1 hr</td><td class="price-cell" data-eur="12"><span class="price-val">€10-15</span></td></tr>
+              <tr><td>維也納 → 布拉格</td><td>RegioJet</td><td>4-4.5 hr</td><td class="price-cell" data-eur="22"><span class="price-val">€15-30</span></td></tr>
+              <tr><td>維也納 → 慕尼黑</td><td>DB/ÖBB 火車</td><td>4-4.5 hr</td><td class="price-cell" data-eur="32"><span class="price-val">€24-40</span></td></tr>
+              <tr><td>慕尼黑 → 因斯布魯克</td><td>DB 火車</td><td>2 hr</td><td class="price-cell" data-eur="20"><span class="price-val">€15-25</span></td></tr>
+              <tr><td>薩爾茲堡 → 雪場</td><td>巴士/火車</td><td>1-1.5 hr</td><td class="price-cell" data-eur="19"><span class="price-val">€13-25</span></td></tr>
             </tbody>
           </table>
         </div>
       </div>
     </section>
 
-    <!-- Budget Section -->
+    <!-- ==================== BUDGET ==================== -->
     <section id="budget" class="section">
       <div class="container">
         <h2 class="section-title">預算估算</h2>
-        <p class="section-intro">以下為一人預估費用（新台幣），根據不同方案與消費等級提供參考。實際價格會因預訂時間、匯率與個人消費習慣而異。</p>
-
+        <p class="section-intro">一人預估費用（以歐元為基準，可用上方貨幣切換鈕轉換）。</p>
         <div class="budget-cards">
           <div class="budget-card">
-            <h3>精省型（方案C / 9天）</h3>
-            <div class="budget-total">NT$ 85,000 - 105,000</div>
+            <h3>精省型（方案C / 8天）</h3>
+            <div class="budget-total" data-eur-low="2100" data-eur-high="2700"><span class="price-val">€2,100 ~ €2,700</span></div>
             <table class="budget-table">
-              <tr><td>機票（轉機）</td><td>NT$ 37,000-42,000</td></tr>
-              <tr><td>纜車票（5天 SkiWelt）</td><td>NT$ 13,000</td></tr>
-              <tr><td>住宿（8晚，混合型）</td><td>NT$ 16,000-24,000</td></tr>
-              <tr><td>交通（火車/巴士）</td><td>NT$ 3,000-5,000</td></tr>
-              <tr><td>餐飲</td><td>NT$ 8,000-12,000</td></tr>
-              <tr><td>雪具租借（5天）</td><td>NT$ 5,000-7,000</td></tr>
-              <tr><td>門票/其他</td><td>NT$ 3,000-5,000</td></tr>
+              <tr><td>機票（轉機）</td><td class="price-cell" data-eur="1060"><span class="price-val">~€1,060</span></td></tr>
+              <tr><td>纜車票 5天 SkiWelt</td><td class="price-cell" data-eur="372"><span class="price-val">€372</span></td></tr>
+              <tr><td>住宿 7晚（混合型）</td><td class="price-cell" data-eur="420"><span class="price-val">€350-500</span></td></tr>
+              <tr><td>交通（火車/巴士）</td><td class="price-cell" data-eur="70"><span class="price-val">€50-90</span></td></tr>
+              <tr><td>餐飲</td><td class="price-cell" data-eur="210"><span class="price-val">€170-250</span></td></tr>
+              <tr><td>雪具租借 5天</td><td class="price-cell" data-eur="150"><span class="price-val">€120-180</span></td></tr>
+              <tr><td>門票/其他</td><td class="price-cell" data-eur="70"><span class="price-val">€50-90</span></td></tr>
             </table>
           </div>
           <div class="budget-card recommended">
             <div class="budget-badge">推薦</div>
-            <h3>標準型（方案A / 11天）</h3>
-            <div class="budget-total">NT$ 105,000 - 135,000</div>
+            <h3>標準型（方案A / 10天）</h3>
+            <div class="budget-total" data-eur-low="2700" data-eur-high="3600"><span class="price-val">€2,700 ~ €3,600</span></div>
             <table class="budget-table">
-              <tr><td>機票（Open-jaw 轉機）</td><td>NT$ 38,000-45,000</td></tr>
-              <tr><td>纜車票（5天 Saalbach）</td><td>NT$ 15,000</td></tr>
-              <tr><td>住宿（10晚，混合型）</td><td>NT$ 22,000-32,000</td></tr>
-              <tr><td>交通（火車/巴士）</td><td>NT$ 5,000-8,000</td></tr>
-              <tr><td>餐飲</td><td>NT$ 12,000-18,000</td></tr>
-              <tr><td>雪具租借（5天）</td><td>NT$ 5,000-7,000</td></tr>
-              <tr><td>門票/其他</td><td>NT$ 5,000-8,000</td></tr>
+              <tr><td>機票（Open-jaw 轉機）</td><td class="price-cell" data-eur="1200"><span class="price-val">~€1,200</span></td></tr>
+              <tr><td>纜車票 5天 Saalbach</td><td class="price-cell" data-eur="425"><span class="price-val">€425</span></td></tr>
+              <tr><td>住宿 9晚（混合型）</td><td class="price-cell" data-eur="600"><span class="price-val">€500-700</span></td></tr>
+              <tr><td>交通（火車/巴士）</td><td class="price-cell" data-eur="130"><span class="price-val">€100-160</span></td></tr>
+              <tr><td>餐飲</td><td class="price-cell" data-eur="320"><span class="price-val">€260-380</span></td></tr>
+              <tr><td>雪具租借 5天</td><td class="price-cell" data-eur="150"><span class="price-val">€120-180</span></td></tr>
+              <tr><td>門票/其他</td><td class="price-cell" data-eur="110"><span class="price-val">€80-140</span></td></tr>
             </table>
           </div>
           <div class="budget-card">
-            <h3>豪華型（方案B / 14天）</h3>
-            <div class="budget-total">NT$ 135,000 - 180,000</div>
+            <h3>豪華型（方案B / 16天）</h3>
+            <div class="budget-total" data-eur-low="4000" data-eur-high="5400"><span class="price-val">€4,000 ~ €5,400</span></div>
             <table class="budget-table">
-              <tr><td>機票（Open-jaw 直飛）</td><td>NT$ 44,000-55,000</td></tr>
-              <tr><td>纜車票（5天 St. Anton）</td><td>NT$ 16,000</td></tr>
-              <tr><td>住宿（13晚，中等）</td><td>NT$ 30,000-45,000</td></tr>
-              <tr><td>交通（火車/巴士）</td><td>NT$ 8,000-12,000</td></tr>
-              <tr><td>餐飲</td><td>NT$ 18,000-25,000</td></tr>
-              <tr><td>雪具租借（5天）</td><td>NT$ 5,000-7,000</td></tr>
-              <tr><td>門票/其他</td><td>NT$ 8,000-12,000</td></tr>
+              <tr><td>機票（Open-jaw 直飛）</td><td class="price-cell" data-eur="1400"><span class="price-val">~€1,400</span></td></tr>
+              <tr><td>纜車票 5天 St. Anton</td><td class="price-cell" data-eur="450"><span class="price-val">€450</span></td></tr>
+              <tr><td>住宿 15晚（中等）</td><td class="price-cell" data-eur="1050"><span class="price-val">€900-1,200</span></td></tr>
+              <tr><td>交通（火車/巴士）</td><td class="price-cell" data-eur="240"><span class="price-val">€200-280</span></td></tr>
+              <tr><td>餐飲</td><td class="price-cell" data-eur="530"><span class="price-val">€440-620</span></td></tr>
+              <tr><td>雪具租借 5天</td><td class="price-cell" data-eur="150"><span class="price-val">€120-180</span></td></tr>
+              <tr><td>門票/其他</td><td class="price-cell" data-eur="180"><span class="price-val">€140-220</span></td></tr>
             </table>
           </div>
         </div>
-
         <div class="budget-tips">
           <h3>省錢小撇步</h3>
           <div class="tips-grid">
-            <div class="tip"><strong>住宿</strong>：雪場選擇公寓式住宿（Ferienwohnung）可自炊，比飯店便宜40-50%。城市選青旅或Airbnb。</div>
-            <div class="tip"><strong>餐飲</strong>：超市自煮是最省的方式。奧地利的 SPAR、BILLA 超市食材豐富。布達佩斯和布拉格餐廳價格僅奧地利的一半。</div>
-            <div class="tip"><strong>交通</strong>：提早預訂 ÖBB（奧地利國鐵）和 RegioJet 的 Sparschiene 優惠票，最低€9.90起。</div>
-            <div class="tip"><strong>雪具</strong>：在雪場當地租借比在台灣帶過去方便且划算。提前網路預訂通常有10-20%折扣。</div>
+            <div class="tip"><strong>住宿</strong>：雪場選公寓式住宿（Ferienwohnung）可自炊，比飯店便宜40-50%。城市選青旅或Airbnb。</div>
+            <div class="tip"><strong>餐飲</strong>：超市自煮最省。奧地利 SPAR、BILLA 食材豐富。布達佩斯和布拉格餐廳僅奧地利一半價。</div>
+            <div class="tip"><strong>交通</strong>：提早預訂 ÖBB 和 RegioJet 的 Sparschiene 優惠票，最低€9.90起。</div>
+            <div class="tip"><strong>雪具</strong>：在雪場當地租借比帶過去方便。提前網路預訂通常有10-20%折扣。</div>
           </div>
         </div>
       </div>
@@ -705,7 +752,7 @@
   <footer>
     <div class="container">
       <p>2026 歐洲滑雪＋城市旅遊規劃 | 資料更新：2026年4月</p>
-      <p>價格僅供參考，實際以各官方網站公告為準。地圖資料來源：OpenStreetMap</p>
+      <p>價格僅供參考，實際以各官方網站公告為準。地圖：OpenStreetMap</p>
     </div>
   </footer>
 
