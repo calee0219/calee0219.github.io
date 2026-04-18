@@ -316,9 +316,40 @@ if (mainMapEl) {
       .bindPopup(`<strong>${r.name}</strong><br>${r.country}<br>${r.tag}<br>每日花費: ${r.daily}`);
   });
 
-  // North American budget ski resort markers (separate world map not needed, but add to popup info)
-  // Note: NA resorts are too far to show on the same European map, so we don't add markers for them.
-  // They are displayed in their own section with detailed cards.
+  // Asia ski resort markers (Japan & Korea - shown on a separate mini-map or as info)
+  // Note: Asia resorts are too far for the European map. We'll create a mini Asia map.
+
+  // Create Asia mini map if container exists
+  const asiaMapEl = document.getElementById('asiaMapView');
+  if (asiaMapEl) {
+    const asiaMap = L.map('asiaMapView').setView([37.5, 137], 5);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap'
+    }).addTo(asiaMap);
+
+    const asiaResorts = [
+      { name: 'Niseko ニセコ', lat: 42.862, lng: 140.305, country: '🇯🇵 北海道', tag: '粉雪聖地', daily: '€180/天' },
+      { name: 'Hakuba 白馬', lat: 36.698, lng: 137.832, country: '🇯🇵 長野', tag: '奧運聖地', daily: '€156/天' },
+      { name: 'Nozawa Onsen 野沢温泉', lat: 36.921, lng: 138.626, country: '🇯🇵 長野', tag: '🏆 最佳CP值', daily: '€120/天' },
+      { name: 'Furano 富良野', lat: 43.339, lng: 142.383, country: '🇯🇵 北海道', tag: '家庭首選', daily: '€108/天' },
+      { name: 'Myoko 妙高高原', lat: 36.867, lng: 138.180, country: '🇯🇵 新潟', tag: '隱藏寶石', daily: '€100/天' },
+      { name: 'Yongpyong 龍平', lat: 37.644, lng: 128.680, country: '🇰🇷 平昌', tag: '奧運場地', daily: '€128/天' },
+      { name: 'High1 하이원', lat: 37.204, lng: 128.838, country: '🇰🇷 旌善', tag: 'Ski-in/out', daily: '€117/天' },
+      { name: 'Phoenix 피닉스', lat: 37.583, lng: 128.326, country: '🇰🇷 平昌', tag: '均衡選擇', daily: '€108/天' },
+      { name: 'Vivaldi 비발디', lat: 37.647, lng: 127.686, country: '🇰🇷 洪川', tag: '離首爾最近', daily: '€91/天' }
+    ];
+    asiaResorts.forEach(r => {
+      const color = r.country.includes('🇯🇵') ? '#dc2626' : '#2563eb';
+      L.marker([r.lat, r.lng], { icon: createIcon(color, r.country.includes('🇯🇵') ? '🗾' : '🇰🇷') })
+        .addTo(asiaMap)
+        .bindPopup(`<strong>${r.name}</strong><br>${r.country}<br>${r.tag}<br>每日花費: ${r.daily}`);
+    });
+
+    // Add Taipei marker
+    L.marker([25.033, 121.565], { icon: createIcon('#f59e0b', '✈️') })
+      .addTo(asiaMap)
+      .bindPopup('<strong>台北 Taipei</strong><br>出發地');
+  }
 
   // Route lines
   const routeA = [[48.135, 11.582], [47.809, 13.055], [47.505, 12.215], [48.208, 16.373], [50.075, 14.437]];
