@@ -299,6 +299,23 @@ if (mainMapEl) {
       .bindPopup(`<strong>${r.name}</strong><br>${r.tag}`);
   });
 
+  // Budget ski resorts markers
+  const budgetResorts = [
+    { name: 'Bansko 班斯科', lat: 41.836, lng: 23.488, country: '🇧🇬 保加利亞', tag: '最佳CP值', daily: '€121/天' },
+    { name: 'Jasná 亞斯納', lat: 48.996, lng: 19.586, country: '🇸🇰 斯洛伐克', tag: '進階推薦', daily: '€165/天' },
+    { name: 'Grandvalira', lat: 42.556, lng: 1.672, country: '🇦🇩 安道爾', tag: '最大雪場', daily: '€174/天' },
+    { name: 'Borovets 博羅維茨', lat: 42.268, lng: 23.607, country: '🇧🇬 保加利亞', tag: '初學者友善', daily: '€110/天' },
+    { name: 'Zakopane 扎科帕內', lat: 49.299, lng: 19.951, country: '🇵🇱 波蘭', tag: '纜車最便宜', daily: '€110/天' },
+    { name: 'Poiana Brașov', lat: 45.594, lng: 25.555, country: '🇷🇴 羅馬尼亞', tag: '最美風景', daily: '€117/天' },
+    { name: 'Kranjska Gora', lat: 46.484, lng: 13.786, country: '🇸🇮 斯洛維尼亞', tag: '近布萊德湖', daily: '€150/天' },
+    { name: 'Gudauri 古道里', lat: 42.458, lng: 44.471, country: '🇬🇪 喬治亞', tag: '全歐最便宜', daily: '€88/天' }
+  ];
+  budgetResorts.forEach(r => {
+    L.marker([r.lat, r.lng], { icon: createIcon('#27ae60', '💰') })
+      .addTo(mainMap)
+      .bindPopup(`<strong>${r.name}</strong><br>${r.country}<br>${r.tag}<br>每日花費: ${r.daily}`);
+  });
+
   // Route lines
   const routeA = [[48.135, 11.582], [47.809, 13.055], [47.505, 12.215], [48.208, 16.373], [50.075, 14.437]];
   L.polyline(routeA, { color: '#2563eb', weight: 2, opacity: 0.5, dashArray: '8, 8' }).addTo(mainMap).bindPopup('方案A：經典三國路線');
