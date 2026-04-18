@@ -907,3 +907,119 @@ tr.austria-ref td {
     padding: 0.4rem 0.3rem;
   }
 }
+
+/* ==================== NORTH AMERICA SECTION ==================== */
+.insight-box {
+  background: linear-gradient(135deg, #e8f4f8, #f0f7ff);
+  border-radius: 16px;
+  padding: 2rem;
+  margin: 2rem 0;
+  border-left: 4px solid #2196F3;
+}
+.insight-box h3 {
+  color: #1565C0;
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+}
+.insight-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  text-align: center;
+}
+.insight-item {
+  background: white;
+  border-radius: 12px;
+  padding: 1.2rem 0.8rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.insight-number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1565C0;
+  margin-bottom: 0.3rem;
+}
+.insight-desc {
+  font-size: 0.85rem;
+  color: #555;
+  line-height: 1.4;
+}
+.pass-comparison {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+.pass-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.pass-card h4 {
+  color: #1565C0;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+.pass-price {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #e65100;
+  margin-bottom: 0.5rem;
+}
+.pass-card p {
+  font-size: 0.85rem;
+  color: #555;
+  line-height: 1.5;
+}
+.na-row { background: #f0f7ff; }
+.na-row:hover { background: #e3f0fc; }
+.expensive-row { background: #fff3e0 !important; }
+.expensive-row:hover { background: #ffe0b2 !important; }
+.savings { color: #2e7d32; font-weight: 600; }
+.increase { color: #c62828; font-weight: 600; }
+.brian-bg { background: linear-gradient(135deg, #e65100, #ff8f00); }
+.cooper-bg { background: linear-gradient(135deg, #1565C0, #42a5f5); }
+.powder-bg { background: linear-gradient(135deg, #4a148c, #7c43bd); }
+.bridger-bg { background: linear-gradient(135deg, #2e7d32, #66bb6a); }
+.msa-bg { background: linear-gradient(135deg, #0d47a1, #1976d2); }
+.red-bg { background: linear-gradient(135deg, #b71c1c, #e53935); }
+.piste-dot.green { color: #2e7d32; }
+.resort-badge.biggest {
+  background: #7c43bd;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .insight-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  .pass-comparison {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .insight-number {
+    font-size: 1.5rem;
+  }
+  .insight-box {
+    padding: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .insight-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+  }
+  .insight-number {
+    font-size: 1.3rem;
+  }
+  .insight-desc {
+    font-size: 0.75rem;
+  }
+  .pass-price {
+    font-size: 1.3rem;
+  }
+}

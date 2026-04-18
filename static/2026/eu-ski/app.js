@@ -316,6 +316,10 @@ if (mainMapEl) {
       .bindPopup(`<strong>${r.name}</strong><br>${r.country}<br>${r.tag}<br>每日花費: ${r.daily}`);
   });
 
+  // North American budget ski resort markers (separate world map not needed, but add to popup info)
+  // Note: NA resorts are too far to show on the same European map, so we don't add markers for them.
+  // They are displayed in their own section with detailed cards.
+
   // Route lines
   const routeA = [[48.135, 11.582], [47.809, 13.055], [47.505, 12.215], [48.208, 16.373], [50.075, 14.437]];
   L.polyline(routeA, { color: '#2563eb', weight: 2, opacity: 0.5, dashArray: '8, 8' }).addTo(mainMap).bindPopup('方案A：經典三國路線');
