@@ -1,0 +1,649 @@
+/* ===== Reset & Base ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  font-family: 'Noto Sans TC', 'Inter', sans-serif;
+  color: #1a1a2e;
+  background: #f8f9fa;
+  line-height: 1.7;
+}
+a { color: #2563eb; text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; }
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+/* ===== Hero ===== */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 40%, #2d6a9f 70%, #4a90c4 100%);
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(ellipse at 30% 50%, rgba(255,255,255,0.05) 0%, transparent 60%),
+              radial-gradient(ellipse at 70% 30%, rgba(100,180,255,0.08) 0%, transparent 50%);
+  animation: heroFloat 20s ease-in-out infinite;
+}
+@keyframes heroFloat {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-2%, 2%); }
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: #fff;
+  padding: 40px 24px;
+}
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin-bottom: 16px;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+}
+.hero-subtitle {
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
+  font-weight: 300;
+  opacity: 0.9;
+  margin-bottom: 8px;
+}
+.hero-desc {
+  font-size: 1rem;
+  opacity: 0.7;
+  margin-bottom: 40px;
+}
+.hero-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+.hero-nav a {
+  color: #fff;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.25);
+  padding: 10px 22px;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s;
+  backdrop-filter: blur(4px);
+}
+.hero-nav a:hover {
+  background: rgba(255,255,255,0.25);
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
+/* ===== Sections ===== */
+.section { padding: 80px 0; }
+.section-alt { background: #f0f4f8; }
+.section-title {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 16px;
+  color: #0f172a;
+}
+.section-intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 48px;
+  color: #475569;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+/* ===== Calendar ===== */
+.calendar-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+.calendar-month {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+.cal-title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+}
+.cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+  text-align: center;
+}
+.cal-header { font-weight: 600; font-size: 0.8rem; color: #64748b; padding: 4px 0; }
+.cal-day {
+  padding: 8px 4px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  position: relative;
+}
+.cal-day.empty { visibility: hidden; }
+.cal-day.weekend { color: #dc2626; }
+.cal-day.holiday { background: #fef2f2; color: #dc2626; font-weight: 600; }
+.cal-day.leave { background: #fef9c3; color: #854d0e; font-weight: 500; }
+.cal-day.vacation { background: #dbeafe; color: #1e40af; }
+.cal-day.ski { background: #e0f2fe; color: #0369a1; }
+.cal-day.flight { background: #f3e8ff; color: #7c3aed; }
+.cal-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 12px;
+  font-size: 0.8rem;
+}
+.cal-legend span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.cal-legend-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+/* ===== Leave Cards ===== */
+.leave-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+.leave-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+  border: 2px solid transparent;
+  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.leave-card:hover { transform: translateY(-4px); box-shadow: 0 8px 30px rgba(0,0,0,0.1); }
+.leave-card.best { border-color: #2563eb; }
+.leave-badge {
+  position: absolute;
+  top: -12px;
+  right: 24px;
+  background: #2563eb;
+  color: #fff;
+  padding: 4px 16px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.leave-card h3 { font-size: 1.3rem; margin-bottom: 16px; }
+.leave-stats {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 16px;
+}
+.stat { text-align: center; }
+.stat-num { display: block; font-size: 2.5rem; font-weight: 700; color: #2563eb; line-height: 1; }
+.stat-label { font-size: 0.85rem; color: #64748b; }
+.leave-card p { margin-bottom: 8px; font-size: 0.95rem; color: #334155; }
+.leave-note { font-size: 0.85rem !important; color: #64748b !important; margin-top: 12px !important; padding-top: 12px; border-top: 1px solid #e2e8f0; }
+
+/* ===== Flight Cards ===== */
+.flight-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+.flight-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+  position: relative;
+  border-top: 4px solid #e2e8f0;
+  transition: transform 0.3s;
+}
+.flight-card:hover { transform: translateY(-4px); }
+.flight-card.budget { border-top-color: #22c55e; }
+.flight-card.recommended { border-top-color: #2563eb; }
+.flight-card.premium { border-top-color: #8b5cf6; }
+.flight-badge {
+  position: absolute;
+  top: -14px;
+  right: 24px;
+  background: #2563eb;
+  color: #fff;
+  padding: 4px 16px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.flight-type { font-size: 0.85rem; color: #64748b; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 4px; }
+.flight-price { font-size: 2rem; font-weight: 700; color: #0f172a; margin-bottom: 8px; }
+.flight-airline { font-size: 1.1rem; font-weight: 600; margin-bottom: 4px; }
+.flight-route { font-size: 0.9rem; color: #475569; margin-bottom: 4px; }
+.flight-duration { font-size: 0.9rem; color: #64748b; margin-bottom: 16px; }
+.flight-pros, .flight-cons { list-style: none; margin-bottom: 8px; }
+.flight-pros li::before { content: '✓ '; color: #22c55e; font-weight: 700; }
+.flight-cons li::before { content: '✗ '; color: #ef4444; font-weight: 700; }
+.flight-pros li, .flight-cons li { font-size: 0.9rem; margin-bottom: 4px; }
+
+.flight-tips { background: #fff; border-radius: 16px; padding: 32px; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+.flight-tips h3 { font-size: 1.3rem; margin-bottom: 20px; }
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+.tip {
+  padding: 16px;
+  background: #f8fafc;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  border-left: 3px solid #2563eb;
+}
+
+/* ===== Ski Section ===== */
+.ski-comparison-table {
+  overflow-x: auto;
+  margin-bottom: 40px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+}
+.ski-comparison-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.ski-comparison-table th {
+  background: #0f172a;
+  color: #fff;
+  padding: 14px 16px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.ski-comparison-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 0.9rem;
+}
+.ski-comparison-table tr:last-child td { border-bottom: none; }
+.highlight-row { background: #f0f9ff; }
+.rating { color: #f59e0b; letter-spacing: 2px; }
+
+.ski-detail-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(540px, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+.ski-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+  transition: transform 0.3s;
+}
+.ski-card:hover { transform: translateY(-4px); }
+.ski-card-header {
+  padding: 24px 28px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.ski-card-header h3 { font-size: 1.2rem; }
+.ski-card-header.skiwelt { background: linear-gradient(135deg, #059669, #10b981); }
+.ski-card-header.saalbach { background: linear-gradient(135deg, #2563eb, #3b82f6); }
+.ski-card-header.solden { background: linear-gradient(135deg, #7c3aed, #8b5cf6); }
+.ski-card-header.stanton { background: linear-gradient(135deg, #dc2626, #ef4444); }
+.ski-tag {
+  background: rgba(255,255,255,0.25);
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.ski-tag.best-value { background: #fbbf24; color: #78350f; }
+.ski-tag.legendary { background: #fbbf24; color: #78350f; }
+.ski-card-body { padding: 24px 28px; }
+.ski-stats-row {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+.ski-stat {
+  background: #f8fafc;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  color: #475569;
+}
+.ski-stat span { font-weight: 700; color: #0f172a; font-size: 1.1rem; margin-right: 4px; }
+.ski-card-body > p { font-size: 0.95rem; color: #334155; margin-bottom: 16px; line-height: 1.7; }
+.ski-pros-cons { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.pros h4, .cons h4 { font-size: 0.9rem; margin-bottom: 8px; }
+.pros h4 { color: #059669; }
+.cons h4 { color: #dc2626; }
+.pros ul, .cons ul { list-style: none; }
+.pros li, .cons li { font-size: 0.85rem; margin-bottom: 6px; padding-left: 16px; position: relative; }
+.pros li::before { content: '✓'; position: absolute; left: 0; color: #059669; font-weight: 700; }
+.cons li::before { content: '✗'; position: absolute; left: 0; color: #dc2626; font-weight: 700; }
+
+/* ===== City Cards ===== */
+.city-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+.city-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+  transition: transform 0.3s;
+}
+.city-card:hover { transform: translateY(-4px); }
+.city-header {
+  padding: 24px 28px;
+  color: #fff;
+  position: relative;
+}
+.city-header h3 { font-size: 1.4rem; font-weight: 700; }
+.city-local-name { display: block; font-size: 1.1rem; opacity: 0.85; font-weight: 300; margin-top: 2px; }
+.city-country { display: block; font-size: 0.8rem; opacity: 0.7; margin-top: 4px; }
+.city-header.vienna { background: linear-gradient(135deg, #7c3aed, #a78bfa); }
+.city-header.salzburg { background: linear-gradient(135deg, #059669, #34d399); }
+.city-header.prague { background: linear-gradient(135deg, #dc2626, #f87171); }
+.city-header.budapest { background: linear-gradient(135deg, #d97706, #fbbf24); }
+.city-header.munich { background: linear-gradient(135deg, #2563eb, #60a5fa); }
+.city-body { padding: 24px 28px; }
+.city-desc { font-size: 0.95rem; color: #334155; margin-bottom: 20px; line-height: 1.7; }
+.city-attractions h4, .city-christmas h4 { font-size: 1rem; font-weight: 600; margin-bottom: 12px; color: #0f172a; }
+.attraction-list { margin-bottom: 20px; }
+.attraction {
+  padding: 12px 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+.attraction:last-child { border-bottom: none; }
+.attraction strong { font-size: 0.95rem; }
+.local-name { display: block; font-size: 0.8rem; color: #64748b; font-style: italic; margin-bottom: 4px; }
+.attraction p { font-size: 0.85rem; color: #475569; line-height: 1.6; }
+.city-christmas { background: #fef2f2; border-radius: 10px; padding: 16px; margin-bottom: 16px; }
+.city-christmas p { font-size: 0.9rem; color: #334155; }
+.city-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 0.85rem;
+  color: #64748b;
+  padding-top: 12px;
+  border-top: 1px solid #e2e8f0;
+}
+
+/* ===== Additional Cities ===== */
+.additional-cities { margin-top: 20px; }
+.additional-cities h3 { font-size: 1.4rem; font-weight: 700; margin-bottom: 20px; text-align: center; }
+.mini-city-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+.mini-city {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  transition: transform 0.3s;
+}
+.mini-city:hover { transform: translateY(-3px); }
+.mini-city h4 { font-size: 1.1rem; margin-bottom: 4px; }
+.mini-city h4 span { font-weight: 300; color: #64748b; font-size: 0.9rem; }
+.mini-country { font-size: 0.8rem; color: #64748b; margin-bottom: 8px; }
+.mini-city p:last-child { font-size: 0.9rem; color: #334155; line-height: 1.6; }
+
+/* ===== Itinerary ===== */
+.itinerary-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+.tab-btn {
+  padding: 12px 24px;
+  border: 2px solid #e2e8f0;
+  background: #fff;
+  border-radius: 30px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-family: inherit;
+}
+.tab-btn:hover { border-color: #2563eb; color: #2563eb; }
+.tab-btn.active { background: #2563eb; color: #fff; border-color: #2563eb; }
+.itinerary-panel { display: none; }
+.itinerary-panel.active { display: block; }
+.route-header {
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+}
+.route-header h3 { font-size: 1.4rem; margin-bottom: 12px; }
+.route-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.route-meta span {
+  background: #f1f5f9;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+.route-days { background: #dbeafe !important; color: #1e40af; }
+.route-leave { background: #fef9c3 !important; color: #854d0e; }
+.route-countries { background: #f0fdf4 !important; color: #166534; }
+.route-flow {
+  text-align: center;
+  margin-bottom: 24px;
+}
+.route-arrow {
+  display: inline-block;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  color: #fff;
+  padding: 10px 28px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* Timeline */
+.timeline { position: relative; padding-left: 60px; }
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 28px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: #e2e8f0;
+}
+.timeline-item {
+  position: relative;
+  margin-bottom: 16px;
+  padding: 16px 24px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.04);
+  border-left: 4px solid #e2e8f0;
+}
+.timeline-item.ski-day { border-left-color: #0ea5e9; background: #f0f9ff; }
+.timeline-item.city-day { border-left-color: #8b5cf6; background: #faf5ff; }
+.timeline-item.flight-day { border-left-color: #f59e0b; background: #fffbeb; }
+.day {
+  position: absolute;
+  left: -52px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  background: #2563eb;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  z-index: 1;
+}
+.timeline-item .content { font-size: 0.9rem; line-height: 1.6; }
+.timeline-item .content strong { color: #0f172a; }
+
+/* ===== Map ===== */
+.map-container { margin-bottom: 24px; }
+.map-container h3 { font-size: 1.2rem; margin-bottom: 12px; text-align: center; }
+.map-views { margin-bottom: 40px; }
+
+/* ===== Transport Table ===== */
+.transport-table {
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+}
+.transport-table h3 { font-size: 1.3rem; margin-bottom: 20px; }
+.transport-table table { width: 100%; border-collapse: collapse; }
+.transport-table th {
+  background: #f8fafc;
+  padding: 12px 16px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-bottom: 2px solid #e2e8f0;
+}
+.transport-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 0.9rem;
+}
+
+/* ===== Budget ===== */
+.budget-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+.budget-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+  position: relative;
+  border: 2px solid transparent;
+  transition: transform 0.3s;
+}
+.budget-card:hover { transform: translateY(-4px); }
+.budget-card.recommended { border-color: #2563eb; }
+.budget-badge {
+  position: absolute;
+  top: -12px;
+  right: 24px;
+  background: #2563eb;
+  color: #fff;
+  padding: 4px 16px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.budget-card h3 { font-size: 1.2rem; margin-bottom: 8px; }
+.budget-total {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #2563eb;
+  margin-bottom: 20px;
+}
+.budget-table { width: 100%; }
+.budget-table tr td { padding: 8px 0; font-size: 0.9rem; border-bottom: 1px solid #f1f5f9; }
+.budget-table tr td:last-child { text-align: right; font-weight: 500; }
+
+.budget-tips { background: #fff; border-radius: 16px; padding: 32px; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+.budget-tips h3 { font-size: 1.3rem; margin-bottom: 20px; }
+
+/* ===== Footer ===== */
+footer {
+  background: #0f172a;
+  color: #94a3b8;
+  padding: 40px 0;
+  text-align: center;
+  font-size: 0.85rem;
+}
+footer p { margin-bottom: 8px; }
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .calendar-wrapper { grid-template-columns: 1fr; }
+  .ski-detail-cards { grid-template-columns: 1fr; }
+  .ski-pros-cons { grid-template-columns: 1fr; }
+  .city-cards { grid-template-columns: 1fr; }
+  .timeline { padding-left: 48px; }
+  .day { left: -42px; width: 30px; height: 30px; font-size: 0.7rem; }
+  .section { padding: 48px 0; }
+}
+@media (max-width: 480px) {
+  .hero-nav a { padding: 8px 14px; font-size: 0.8rem; }
+  .leave-stats { flex-direction: column; gap: 12px; }
+  .flight-cards { grid-template-columns: 1fr; }
+  .budget-cards { grid-template-columns: 1fr; }
+}
+
+/* ===== Scroll Reveal Animation ===== */
+.reveal {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .reveal.animate-ready {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  .reveal.animate-ready.revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
