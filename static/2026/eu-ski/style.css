@@ -1,12 +1,14 @@
 /* ===== Reset & Base ===== */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; font-size: 16px; scroll-padding-top: 56px; }
+html { scroll-behavior: smooth; font-size: 16px; scroll-padding-top: 56px; overflow-x: hidden; }
 body {
   font-family: 'Noto Sans TC', 'Inter', sans-serif;
   color: #1a1a2e;
   background: #f8f9fa;
   line-height: 1.7;
   padding-top: 44px;
+  overflow-x: hidden;
+  word-break: break-word;
 }
 a { color: #2563eb; text-decoration: none; }
 a:hover { text-decoration: underline; }
@@ -63,6 +65,7 @@ img { max-width: 100%; }
   justify-content: center;
   background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 40%, #2d6a9f 70%, #4a90c4 100%);
   overflow: hidden;
+  width: 100%;
 }
 .hero::before {
   content: '';
@@ -84,15 +87,17 @@ img { max-width: 100%; }
 .hero-content {
   position: relative; z-index: 1;
   text-align: center; color: #fff; padding: 40px 24px;
+  max-width: 100%; box-sizing: border-box;
 }
 .hero h1 {
-  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-size: clamp(1.15rem, 5vw, 3.5rem);
   font-weight: 700; letter-spacing: 0.02em;
   margin-bottom: 16px;
   text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+  word-break: keep-all;
 }
-.hero-subtitle { font-size: clamp(1rem, 2.5vw, 1.4rem); font-weight: 300; opacity: 0.9; margin-bottom: 8px; }
-.hero-desc { font-size: 1rem; opacity: 0.7; margin-bottom: 40px; }
+.hero-subtitle { font-size: clamp(0.85rem, 2.5vw, 1.4rem); font-weight: 300; opacity: 0.9; margin-bottom: 8px; }
+.hero-desc { font-size: clamp(0.8rem, 2vw, 1rem); opacity: 0.7; margin-bottom: 40px; }
 .hero-nav { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
 .hero-nav a {
   color: #fff;
@@ -108,9 +113,10 @@ img { max-width: 100%; }
 .section { padding: 80px 0; }
 .section-alt { background: #f0f4f8; }
 .section-title {
-  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-size: clamp(1.2rem, 3vw, 2.2rem);
   font-weight: 700; text-align: center;
   margin-bottom: 16px; color: #0f172a;
+  word-break: keep-all;
 }
 .section-intro {
   text-align: center; max-width: 800px;
@@ -492,9 +498,51 @@ footer {
 }
 footer p { margin-bottom: 8px; }
 
+/* ===== Grading Note ===== */
+.grading-note {
+  background: #fffbeb; border: 1px solid #fbbf24;
+  border-radius: 12px; padding: 16px 20px;
+  margin-bottom: 24px; font-size: 0.9rem;
+  line-height: 1.7; color: #78350f;
+}
+.grading-note strong { color: #92400e; }
+
+/* ===== Piste Maps ===== */
+.piste-maps { margin-bottom: 40px; }
+.piste-map-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;
+}
+.piste-map-card {
+  background: #fff; border-radius: 14px; overflow: hidden;
+  box-shadow: 0 2px 14px rgba(0,0,0,0.06);
+  transition: transform 0.3s;
+}
+.piste-map-card:hover { transform: translateY(-3px); }
+.piste-map-card h4 {
+  padding: 14px 18px; font-size: 0.95rem;
+  font-weight: 600; color: #0f172a;
+  border-bottom: 1px solid #f1f5f9;
+}
+.piste-map-card img {
+  width: 100%; height: auto; display: block;
+  cursor: zoom-in;
+}
+.piste-map-card a { display: block; }
+
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
+  body { padding-top: 70px; }
+  .currency-bar {
+    flex-direction: column; gap: 4px;
+    padding: 6px 12px;
+  }
+  .currency-label { font-size: 0.7rem; }
+  .currency-btns { flex-wrap: wrap; justify-content: center; gap: 4px; }
+  .cur-btn { padding: 4px 10px; font-size: 0.72rem; }
   .calendar-wrapper { grid-template-columns: 1fr; }
+  .cal-day { padding: 6px 2px; font-size: 0.8rem; }
+  .cal-header { font-size: 0.7rem; }
+  .cal-title { font-size: 1rem; }
   .ski-detail-cards { grid-template-columns: 1fr; }
   .ski-pros-cons { grid-template-columns: 1fr; }
   .city-cards { grid-template-columns: 1fr; }
@@ -503,13 +551,43 @@ footer p { margin-bottom: 8px; }
   .section { padding: 48px 0; }
   .piste-row { flex-wrap: wrap; }
   .piste-val { width: auto; text-align: left; }
+  .piste-map-grid { grid-template-columns: 1fr; }
+  .region-toggle { flex-wrap: wrap; }
+  .region-btn { padding: 8px 20px; font-size: 0.85rem; }
+  .container { padding: 0 16px; }
+  .grading-note { font-size: 0.82rem; padding: 12px 14px; }
+  .ski-card-body { padding: 18px 16px; }
+  .ski-stats-row { gap: 12px; }
+  .ski-stat { padding: 8px 12px; font-size: 0.8rem; }
+  .level-grid { grid-template-columns: 1fr 1fr; }
+  .mini-city-grid { grid-template-columns: 1fr; }
+  .tips-grid { grid-template-columns: 1fr; }
+  .transport-table { padding: 16px; overflow-x: auto; }
+  .transport-table table { min-width: 500px; }
 }
 @media (max-width: 480px) {
-  .hero-nav a { padding: 8px 14px; font-size: 0.8rem; }
+  body { padding-top: 64px; }
+  .currency-bar { padding: 5px 8px; }
+  .cur-btn { padding: 3px 8px; font-size: 0.68rem; }
+  .hero-nav { gap: 6px; padding: 0 4px; }
+  .hero-nav a { padding: 7px 14px; font-size: 0.78rem; flex: 0 0 auto; }
+  .hero h1 { font-size: 1.2rem; }
+  .hero-subtitle { font-size: 0.82rem; }
+  .hero-desc { font-size: 0.78rem; }
+  .hero-content { padding: 30px 16px; }
   .leave-stats { flex-direction: column; gap: 12px; }
   .flight-cards { grid-template-columns: 1fr; }
   .budget-cards { grid-template-columns: 1fr; }
-  .currency-bar { flex-direction: column; gap: 6px; }
+  .piste-cards { grid-template-columns: 1fr; }
+  .level-grid { grid-template-columns: 1fr; }
+  .section-title { font-size: 1.3rem; }
+  .section-intro { font-size: 0.9rem; }
+  .leave-card { padding: 20px; }
+  .flight-card { padding: 20px; }
+  .ski-card-header { padding: 16px; }
+  .ski-card-header h3 { font-size: 1rem; }
+  .city-header { padding: 16px; }
+  .city-body { padding: 16px; }
 }
 
 /* ===== Scroll Reveal ===== */

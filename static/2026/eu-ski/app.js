@@ -1,7 +1,7 @@
 // ===== Currency Conversion =====
 const RATES = { EUR: 1, NTD: 35, USD: 1.08, GBP: 0.86 };
 const SYMBOLS = { EUR: '€', NTD: 'NT$', USD: '$', GBP: '£' };
-let currentCurrency = 'EUR';
+let currentCurrency = 'NTD';
 
 function formatPrice(eurVal, cur) {
   const converted = eurVal * RATES[cur];
@@ -338,3 +338,6 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 revealElements.forEach(el => observer.observe(el));
+
+// Initialize prices with default currency (NTD)
+updateAllPrices();
