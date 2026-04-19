@@ -1248,3 +1248,162 @@ tr.austria-ref td {
   .snow-table { font-size: 0.8rem; }
   .snow-table th, .snow-table td { padding: 8px 10px; }
 }
+
+/* ====== ACCOMMODATION SECTION ====== */
+.accom-type-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+.accom-type-card { background: #fff; border-radius: 12px; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,.08); position: relative; border: 2px solid transparent; }
+.accom-type-card.accom-recommended { border-color: #2563eb; }
+.accom-badge { position: absolute; top: -12px; right: 16px; background: #2563eb; color: #fff; padding: 4px 12px; border-radius: 20px; font-size: .85rem; font-weight: 600; }
+.accom-icon { font-size: 2.5rem; margin-bottom: .5rem; }
+.accom-type-card h4 { margin: 0 0 .75rem; color: #1a1a2e; font-size: 1.1rem; }
+.accom-price { font-weight: 700; color: #2563eb; margin-bottom: .75rem; font-size: 1rem; }
+.accom-pros, .accom-cons { font-size: .9rem; margin-bottom: .5rem; line-height: 1.5; }
+.accom-tip { font-size: .85rem; color: #666; margin-top: .75rem; padding-top: .75rem; border-top: 1px solid #eee; }
+.sio-comparison { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 1.5rem 0; }
+.sio-card { background: #fff; border-radius: 12px; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,.08); }
+.sio-card h4 { margin: 0 0 .75rem; font-size: 1.15rem; }
+.sio-card ul { list-style: none; padding: 0; margin: .75rem 0; }
+.sio-card li { padding: .3rem 0; font-size: .9rem; }
+.sio-verdict { font-size: .85rem; color: #666; padding-top: .75rem; border-top: 1px solid #eee; font-style: italic; }
+.sio-note { background: #fffbeb; border-left: 4px solid #f59e0b; padding: 1rem 1.25rem; border-radius: 0 8px 8px 0; margin: 1.5rem 0; font-size: .95rem; }
+.city-accom-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+.city-accom-card { background: #fff; border-radius: 12px; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,.08); }
+.city-accom-card h4 { margin: 0 0 1rem; font-size: 1.15rem; }
+.city-area { margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #f0f0f0; }
+.city-area:last-of-type { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.area-badge { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: .75rem; font-weight: 600; margin-bottom: .25rem; }
+.area-badge.best { background: #dbeafe; color: #1d4ed8; }
+.area-badge.value { background: #dcfce7; color: #166534; }
+.area-badge.budget { background: #fef3c7; color: #92400e; }
+.city-area strong { display: block; margin: .25rem 0; }
+.city-area p { font-size: .9rem; color: #555; margin: 0; }
+.city-area span { font-weight: 600; color: #2563eb; }
+.accom-tips-box { background: linear-gradient(135deg, #eff6ff, #dbeafe); border-radius: 12px; padding: 2rem; margin-top: 2rem; }
+.accom-tips-box h4 { margin: 0 0 1.25rem; font-size: 1.2rem; }
+.accom-tips-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem; }
+.tip-item strong { display: block; margin-bottom: .25rem; font-size: 1rem; }
+.tip-item p { font-size: .9rem; color: #555; margin: 0; }
+
+/* ====== CHRISTMAS MARKETS SECTION ====== */
+.xmas-city-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+.xmas-city-card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,.08); }
+.xmas-city-header { padding: 1.25rem 1.5rem; color: #fff; display: flex; justify-content: space-between; align-items: center; }
+.xmas-city-header h3 { margin: 0; font-size: 1.2rem; color: #fff; }
+.xmas-count { background: rgba(255,255,255,.2); padding: 4px 10px; border-radius: 16px; font-size: .8rem; }
+.xmas-city-body { padding: 1.25rem 1.5rem; }
+.xmas-market { padding: .75rem 0; border-bottom: 1px solid #f0f0f0; }
+.xmas-market:last-of-type { border-bottom: none; }
+.xmas-market strong { font-size: .95rem; }
+.xmas-market p { font-size: .85rem; color: #666; margin: .25rem 0 0; }
+.xmas-tag { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: .7rem; font-weight: 600; margin-left: .5rem; vertical-align: middle; }
+.xmas-tag.xmas-must { background: #fee2e2; color: #dc2626; }
+.xmas-tag.xmas-local { background: #dcfce7; color: #166534; }
+.xmas-special { background: #fef3c7; border-radius: 8px; padding: 1rem !important; margin: .5rem 0; }
+.xmas-must-try { background: #f8f9fa; border-radius: 8px; padding: .75rem 1rem; margin-top: .75rem; font-size: .9rem; }
+.xmas-food-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem; margin: 2rem 0; }
+.xmas-food-card { background: #fff; border-radius: 12px; padding: 1.25rem; box-shadow: 0 2px 8px rgba(0,0,0,.08); text-align: center; }
+.food-emoji { font-size: 2.5rem; margin-bottom: .5rem; }
+.xmas-food-card h4 { margin: 0 0 .25rem; font-size: 1rem; }
+.food-origin { font-size: .8rem; color: #888; margin: 0 0 .5rem; }
+.xmas-food-card p { font-size: .85rem; color: #555; }
+.food-price { font-weight: 700; color: #2563eb; margin-top: .5rem; }
+
+/* ====== FOOD GUIDE SECTION ====== */
+.section-desc { text-align: center; color: #64748b; font-size: 1rem; margin-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto; }
+.sub-section-h3 { font-size: 1.3rem; font-weight: 700; margin: 2.5rem 0 1rem; color: #0f172a; }
+.hutte-intro { background: linear-gradient(135deg, #fef3c7, #fde68a); border-radius: 12px; padding: 1.5rem 2rem; margin: 1.5rem 0; font-size: 1rem; line-height: 1.7; }
+.hutte-food-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+.hutte-food-card { background: #fff; border-radius: 12px; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,.08); position: relative; }
+.hutte-rank { position: absolute; top: 12px; right: 12px; background: #f59e0b; color: #fff; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: .8rem; }
+.hutte-food-card h4 { margin: 0 0 .75rem; font-size: 1.1rem; color: #1a1a2e; }
+.hutte-food-card h4 small { font-weight: 400; color: #666; font-size: .85rem; }
+.hutte-food-card p { font-size: .9rem; color: #555; line-height: 1.5; }
+.hutte-price { font-weight: 700; color: #2563eb; margin-top: .75rem; }
+.hutte-drinks { background: #fff; border-radius: 12px; padding: 1.5rem 2rem; box-shadow: 0 2px 8px rgba(0,0,0,.08); margin: 2rem 0; }
+.hutte-drinks h4 { margin: 0 0 1rem; }
+.drink-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.25rem; }
+.drink-item { padding: .75rem; background: #f8f9fa; border-radius: 8px; }
+.drink-item strong { font-size: .95rem; }
+.drink-item small { color: #666; display: block; margin: .25rem 0; }
+.drink-item div { font-weight: 600; color: #2563eb; margin-top: .25rem; }
+.country-food-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+.country-food-card { background: #fff; border-radius: 12px; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,.08); }
+.country-food-card h4 { margin: 0 0 1rem; font-size: 1.1rem; }
+.food-list { list-style: none; padding: 0; margin: 0; }
+.food-list li { padding: .4rem 0; font-size: .9rem; border-bottom: 1px solid #f0f0f0; }
+.food-list li:last-child { border-bottom: none; }
+.budget-food-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin: 2rem 0; }
+.budget-food-card { border-radius: 12px; padding: 1.5rem; }
+.budget-food-card h4 { margin: 0 0 .5rem; font-size: 1.1rem; }
+.budget-food-price { font-size: 1.3rem; font-weight: 700; color: #2563eb; margin-bottom: 1rem; }
+.budget-food-card ul { padding-left: 1.25rem; margin: 0; }
+.budget-food-card li { font-size: .9rem; padding: .25rem 0; }
+.budget-save { background: #dcfce7; }
+.budget-mid { background: #dbeafe; }
+.budget-full { background: #fef3c7; }
+
+/* ====== SKI TIPS SECTION ====== */
+.level-banner { background: #fff; border-radius: 12px; padding: 2rem; box-shadow: 0 2px 8px rgba(0,0,0,.08); margin: 1.5rem 0; }
+.level-bar { display: flex; height: 40px; border-radius: 8px; overflow: hidden; margin-bottom: .5rem; }
+.level-segment { display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 600; font-size: .85rem; }
+.level-green { background: #22c55e; }
+.level-blue { background: #3b82f6; }
+.level-red { background: #ef4444; }
+.level-black { background: #1a1a2e; }
+.level-arrow { text-align: center; color: #2563eb; font-weight: 700; margin: .5rem 0; margin-left: 15%; }
+.level-banner p { font-size: .95rem; color: #555; margin: .75rem 0 0; }
+.skill-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+.skill-card { background: #fff; border-radius: 12px; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,.08); position: relative; border-left: 4px solid #2563eb; }
+.skill-num { position: absolute; top: 12px; right: 12px; background: #2563eb; color: #fff; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; }
+.skill-card h4 { margin: 0 0 .75rem; font-size: 1.05rem; padding-right: 40px; }
+.skill-card p { font-size: .9rem; color: #555; line-height: 1.6; }
+.skill-tip { background: #eff6ff; border-radius: 8px; padding: .75rem 1rem; margin-top: .75rem; font-size: .85rem; }
+.progression-timeline { background: #fff; border-radius: 12px; padding: 2rem; box-shadow: 0 2px 8px rgba(0,0,0,.08); margin: 2rem 0; }
+.progression-timeline h4 { margin: 0 0 1.25rem; }
+.timeline-bar { display: flex; height: 60px; border-radius: 8px; overflow: hidden; }
+.timeline-stage { display: flex; flex-direction: column; align-items: center; justify-content: center; color: #fff; }
+.timeline-stage:nth-child(1) { background: #22c55e; }
+.timeline-stage:nth-child(2) { background: #3b82f6; }
+.timeline-stage:nth-child(3) { background: #f59e0b; }
+.timeline-stage:nth-child(4) { background: #ef4444; }
+.stage-label { font-weight: 600; font-size: .8rem; }
+.stage-days { font-size: .75rem; opacity: .9; }
+.timeline-note { font-size: .85rem; color: #888; margin-top: .75rem; }
+.sb-friendly-box { background: #fff; border-radius: 12px; padding: 2rem; box-shadow: 0 2px 8px rgba(0,0,0,.08); margin: 2rem 0; }
+.sb-friendly-box h4 { margin: 0 0 1.25rem; }
+.sb-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
+.sb-item { padding: 1rem; border-radius: 8px; text-align: center; }
+.sb-item strong { display: block; margin-bottom: .25rem; }
+.sb-rating { color: #f59e0b; font-size: 1.1rem; margin-bottom: .25rem; }
+.sb-item small { color: #666; font-size: .8rem; }
+.sb-great { background: #dcfce7; }
+.sb-good { background: #dbeafe; }
+.altitude-box { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 2rem 0; }
+.altitude-info, .altitude-tips { background: #fff; border-radius: 12px; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,.08); }
+.altitude-info h4, .altitude-tips h4 { margin: 0 0 1rem; }
+.altitude-levels { display: flex; flex-direction: column; gap: .75rem; }
+.alt-level { padding: .75rem 1rem; border-radius: 8px; }
+.alt-level strong { display: block; font-size: .95rem; }
+.alt-level small { color: #666; font-size: .8rem; }
+.alt-safe { background: #dcfce7; }
+.alt-caution { background: #fef3c7; }
+.alt-warning { background: #fee2e2; }
+.altitude-tips ul { padding-left: 1.25rem; margin: 0; }
+.altitude-tips li { padding: .4rem 0; font-size: .9rem; }
+.altitude-reassure { background: #eff6ff; border-radius: 8px; padding: 1rem; margin-top: 1rem; font-size: .9rem; }
+
+/* ====== MOBILE RESPONSIVE FOR NEW SECTIONS ====== */
+@media (max-width: 768px) {
+  .sio-comparison { grid-template-columns: 1fr; }
+  .altitude-box { grid-template-columns: 1fr; }
+  .budget-food-grid { grid-template-columns: 1fr; }
+  .xmas-city-grid { grid-template-columns: 1fr; }
+  .level-segment { font-size: .7rem; }
+  .timeline-bar { flex-direction: column; height: auto; }
+  .timeline-stage { height: 50px; width: 100%; }
+  .stage-label, .stage-days { font-size: .85rem; }
+  .sub-section-h3 { font-size: 1.1rem; }
+  .hutte-intro { padding: 1rem 1.25rem; font-size: .9rem; }
+  .accom-type-grid { grid-template-columns: 1fr; }
+  .city-accom-grid { grid-template-columns: 1fr; }
+}
