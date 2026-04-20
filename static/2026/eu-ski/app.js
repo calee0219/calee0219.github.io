@@ -393,3 +393,39 @@ revealElements.forEach(el => observer.observe(el));
 
 // Initialize prices with default currency (NTD)
 updateAllPrices();
+
+
+// ===== Language Toggle =====
+let currentLang = 'zh';
+
+function switchLanguage(lang) {
+  currentLang = lang;
+  
+  // Update all elements with data-zh / data-en attributes
+  document.querySelectorAll('[data-zh][data-en]').forEach(el => {
+    const text = el.getAttribute('data-' + lang);
+    if (text) {
+      // Check if element has child nodes that should be preserved (like price-val spans)
+      const priceVal = el.querySelector('.price-val');
+      if (priceVal) {
+        // Don't replace innerHTML for price cells
+        return;
+      }
+      el.textContent = text;
+    }
+  });
+  
+  // Update html lang attribute
+  document.documentElement.lang = lang === 'zh' ? 'zh-Hant' : 'en';
+  
+  // Update active button
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+  document.querySelector(`.lang-btn[data-lang="${lang}"]`)?.classList.add('active');
+}
+
+// Language button event listeners
+document.querySelectorAll('.lang-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    switchLanguage(btn.dataset.lang);
+  });
+});
