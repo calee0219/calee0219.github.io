@@ -7,15 +7,16 @@
 <title data-en="2026 Europe Ski + City Travel Planning" data-zh="2026 歐洲滑雪＋城市旅遊規劃 | Europe Ski + City Travel">2026 歐洲滑雪＋城市旅遊規劃 | Europe Ski + City Travel</title>
 <link href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;text y='.9em' font-size='90'&gt;⛷&lt;/text&gt;&lt;/svg&gt;" rel="icon"/>
 <link href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com" rel="preconnect">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
 <link href="favicon.svg" rel="icon" type="image/svg+xml"/>
 <link href="favicon.ico" rel="icon" type="image/x-icon"/>
 <link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
 <link href="favicon-192.png" rel="icon" sizes="192x192" type="image/png"/>
 <link href="favicon-32.png" rel="icon" sizes="32x32" type="image/png"/>
 <link href="style.css" rel="stylesheet"/>
-</link></head>
+</link><link href="redesign.css" rel="stylesheet"/>
+</head>
 <body>
 <!-- Global Currency Switcher (sticky) -->
 <div class="currency-bar" id="currencyBar">
@@ -32,7 +33,7 @@
 <button class="lang-btn active" data-lang="zh">中文</button>
 <button class="lang-btn" data-lang="en">EN</button>
 </div>
-</div>
+</div><nav class="category-bar" id="categoryBar"><div class="category-bar-inner"><button class="cat-tab active" data-category="all" data-en="All" data-zh="全部">全部</button><button class="cat-tab" data-category="planning" data-en="📋 Planning" data-zh="📋 行前準備">📋 行前準備</button><button class="cat-tab" data-category="skiing" data-en="⛷️ Skiing" data-zh="⛷️ 滑雪攻略">⛷️ 滑雪攻略</button><button class="cat-tab" data-category="travel" data-en="🏙️ City &amp; Travel" data-zh="🏙️ 城市旅遊">🏙️ 城市旅遊</button><button class="cat-tab" data-category="logistics" data-en="💰 Budget &amp; Itinerary" data-zh="💰 預算行程">💰 預算行程</button></div></nav>
 <!-- Hero Section -->
 <header class="hero">
 <div class="hero-overlay"></div>
@@ -40,29 +41,45 @@
 <h1 data-en="2026 Europe Ski + City Travel" data-zh="2026 歐洲滑雪＋城市旅遊">2026 歐洲滑雪＋城市旅遊</h1>
 <p class="hero-subtitle" data-en="Austria Skiing ✕ Central Europe Cities ✕ Christmas Markets" data-zh="奧地利滑雪 ✕ 中歐城市探索 ✕ 聖誕市集巡禮">奧地利滑雪 ✕ 中歐城市探索 ✕ 聖誕市集巡禮</p>
 <p class="hero-desc" data-en="The ultimate guide for a Christmas &amp; New Year ski holiday in Europe with friends" data-zh="聖誕跨年黃金假期，帶朋友暢遊歐洲的完整攻略">聖誕跨年黃金假期，帶朋友暢遊歐洲的完整攻略</p>
-<nav class="hero-nav">
-<a data-en="Leave Plan" data-zh="請假攻略" href="#leave">請假攻略</a>
-<a data-en="Flights" data-zh="機票分析" href="#flights">機票分析</a>
-<a data-en="Ski Resorts" data-zh="雪場比較" href="#ski">雪場比較</a>
-<a data-en="Budget EU" data-zh="歐洲平價" href="#budget-ski">歐洲平價</a>
-<a data-en="Budget NA" data-zh="北美平價" href="#na-ski">北美平價</a>
-<a data-en="Ski School" data-zh="滑雪學校" href="#ski-school">滑雪學校</a>
-<a data-en="Ski Tips" data-zh="滑雪進階" href="#ski-tips">滑雪進階</a>
-<a data-en="Cities" data-zh="城市景點" href="#cities">城市景點</a>
-<a data-en="Xmas Markets" data-zh="聖誕市集" href="#christmas-markets">聖誕市集</a>
-<a data-en="Food Guide" data-zh="美食指南" href="#food-guide">美食指南</a>
-<a data-en="Hotels" data-zh="住宿比較" href="#accommodation">住宿比較</a>
-<a data-en="Itineraries" data-zh="行程方案" href="#itinerary">行程方案</a>
-<a data-en="Map" data-zh="互動地圖" href="#map">互動地圖</a>
-<a data-en="Budget" data-zh="預算估算" href="#budget">預算估算</a>
-</nav>
+<nav class="hero-nav hero-nav-categories"><a class="hero-cat-btn" data-category="planning" data-en="📋 Planning" data-zh="📋 行前準備" href="#cat-planning">📋 行前準備</a><a class="hero-cat-btn" data-category="skiing" data-en="⛷️ Skiing" data-zh="⛷️ 滑雪攻略" href="#cat-skiing">⛷️ 滑雪攻略</a><a class="hero-cat-btn" data-category="travel" data-en="🏙️ City &amp; Travel" data-zh="🏙️ 城市旅遊" href="#cat-travel">🏙️ 城市旅遊</a><a class="hero-cat-btn" data-category="logistics" data-en="💰 Budget &amp; Itinerary" data-zh="💰 預算行程" href="#cat-logistics">💰 預算行程</a></nav>
 </div>
 </header>
 <main>
 <!-- ==================== LEAVE STRATEGY ==================== -->
-<section class="section" id="leave">
-<div class="container">
-<h2 class="section-title" data-en="Leave Strategy: Christmas &amp; New Year Holiday" data-zh="請假攻略：聖誕跨年黃金假期">請假攻略：聖誕跨年黃金假期</h2>
+
+<!-- ==================== FLIGHTS ==================== -->
+
+<!-- ==================== SKI RESORTS ==================== -->
+
+<!-- ==================== SKI SCHOOL ==================== -->
+
+<!-- ==================== BUDGET EUROPEAN SKI RESORTS ==================== -->
+
+<!-- ==================== NORTH AMERICA BUDGET SKI ==================== -->
+
+<!-- ==================== CITIES ==================== -->
+<!-- ====== ASIA SKI SECTION ====== -->
+
+<!-- ====== SKI PROGRESSION TIPS SECTION ====== -->
+
+
+<!-- ==================== ITINERARY ==================== -->
+<!-- ====== SNOW CONDITIONS SECTION ====== -->
+
+<!-- ====== CHRISTMAS MARKETS SECTION ====== -->
+
+<!-- ====== FOOD GUIDE SECTION ====== -->
+
+<!-- ====== ACCOMMODATION SECTION ====== -->
+
+
+<!-- ==================== MAP ==================== -->
+
+<!-- ==================== BUDGET ==================== -->
+
+<div class="category-group" data-category="planning" id="cat-planning"><div class="category-header"><h2 class="category-title" data-en="📋 Planning" data-zh="📋 行前準備">📋 行前準備</h2></div><section class="section collapsible-section collapsed" id="leave">
+<div class="container"><div class="section-toggle-bar" data-target="leave"><span class="toggle-chevron">▸</span><span class="toggle-title" data-en="Leave Strategy: Christmas &amp; New Year Holiday" data-zh="請假攻略：聖誕跨年黃金假期">請假攻略：聖誕跨年黃金假期</span></div><div class="section-collapsible-content">
+
 <p class="section-intro" data-en="Both Dec 25, 2026 (Fri) and Jan 1, 2027 (Fri) are holidays. Only 4 days of PTO needed for 10 consecutive days off." data-zh="2026年12/25（五）與2027年1/1（五）都是假日，中間只需請4天假即可享受10天連休。">2026年12/25（五）與2027年1/1（五）都是假日，中間只需請4天假即可享受10天連休。</p>
 <div class="region-toggle">
 <button class="region-btn active" data-en="Taiwan" data-region="tw" data-section="leave" data-zh="台灣版">台灣版</button>
@@ -148,12 +165,10 @@
 </div>
 </div>
 </div>
-</div>
-</section>
-<!-- ==================== FLIGHTS ==================== -->
-<section class="section section-alt" id="flights">
-<div class="container">
-<h2 class="section-title" data-en="Flight Analysis" data-zh="機票分析">機票分析</h2>
+</div></div>
+</section><section class="section section-alt collapsible-section collapsed" id="flights">
+<div class="container"><div class="section-toggle-bar" data-target="flights"><span class="toggle-chevron">▸</span><span class="toggle-title" data-en="Flight Analysis" data-zh="機票分析">機票分析</span></div><div class="section-collapsible-content">
+
 <p class="section-intro" data-en="Christmas peak season flight comparison. Book 6+ months in advance and consider open-jaw tickets to save transit time." data-zh="聖誕旺季機票比較。建議提早6個月以上預訂，並考慮不同城市進出（Open-jaw）節省交通時間。">聖誕旺季機票比較。建議提早6個月以上預訂，並考慮不同城市進出（Open-jaw）節省交通時間。</p>
 <div class="region-toggle">
 <button class="region-btn active" data-en="From Taiwan" data-region="tw" data-section="flights" data-zh="從台灣出發">從台灣出發</button>
@@ -243,12 +258,10 @@
 </div>
 </div>
 </div>
-</div>
-</section>
-<!-- ==================== SKI RESORTS ==================== -->
-<section class="section" id="ski">
-<div class="container">
-<h2 class="section-title" data-en="Ski Resort Comparison: Austria's Four Top Recommendations" data-zh="雪場比較：奧地利四大推薦">雪場比較：奧地利四大推薦</h2>
+</div></div>
+</section></div><div class="category-group" data-category="skiing" id="cat-skiing"><div class="category-header"><h2 class="category-title" data-en="⛷️ Skiing" data-zh="⛷️ 滑雪攻略">⛷️ 滑雪攻略</h2></div><section class="section collapsible-section collapsed" id="ski">
+<div class="container"><div class="section-toggle-bar" data-target="ski"><span class="toggle-chevron">▸</span><span class="toggle-title" data-en="Ski Resort Comparison: Austria's Four Top Recommendations" data-zh="雪場比較：奧地利四大推薦">雪場比較：奧地利四大推薦</span></div><div class="section-collapsible-content">
+
 <p class="section-intro" data-en="From the best value family-friendly resorts to legendary professional ski destinations, the following four resorts each have unique features. Prices are for 2025/2026 peak season adult 6-day lift passes." data-zh="從CP值最高的家庭友善雪場到傳奇級專業滑雪勝地，以下四個雪場各有特色。價格為2025/2026旺季成人6日纜車票。">從CP值最高的家庭友善雪場到傳奇級專業滑雪勝地，以下四個雪場各有特色。價格為2025/2026旺季成人6日纜車票。</p>
 <div class="ski-comparison-table">
 <table>
@@ -436,12 +449,10 @@
 </div>
 </div>
 <div class="map-container"><h3 data-en="Ski resort location map" data-zh="雪場位置地圖">雪場位置地圖</h3><div id="skiMapView" style="height:400px;border-radius:12px;"></div></div>
-</div>
-</section>
-<!-- ==================== SKI SCHOOL ==================== -->
-<section class="section section-alt" id="ski-school">
-<div class="container">
-<h2 class="section-title" data-en="Ski school: courses and fees" data-zh="滑雪學校：課程與費用">滑雪學校：課程與費用</h2>
+</div></div>
+</section><section class="section section-alt collapsible-section collapsed" id="ski-school">
+<div class="container"><div class="section-toggle-bar" data-target="ski-school"><span class="toggle-chevron">▸</span><span class="toggle-title" data-en="Ski school: courses and fees" data-zh="滑雪學校：課程與費用">滑雪學校：課程與費用</span></div><div class="section-collapsible-content">
+
 <p class="section-intro" data-en="Austria has a world-class ski instruction system. Whether you are a first-time beginner or an advanced skier looking to improve, you can find suitable courses." data-zh="奧地利擁有世界頂級的滑雪教學體系。無論是第一次踏上雪板的初學者，還是想精進技術的進階滑雪者，都能找到合適的課程。">奧地利擁有世界頂級的滑雪教學體系。無論是第一次踏上雪板的初學者，還是想精進技術的進階滑雪者，都能找到合適的課程。</p>
 <!-- Skill Level Definitions -->
 <div class="level-definitions">
@@ -548,12 +559,10 @@
 <div class="tip" data-en="Money-saving tip: book online 2-3 months in advance for 10-20% discount. Christmas peak (12/25-1/1) prices rise 10-20%, recommend avoiding lessons 12/25-27. Private lessons are most cost-effective when shared." data-zh="省錢秘訣提前2-3個月線上預訂可享10-20%折扣。聖誕高峰期（12/25-1/1）價格上浮10-20%，建議避開12/25-27開課。私人課多人分攤最划算。"><strong data-en="Money-saving tips" data-zh="省錢秘訣">省錢秘訣</strong><br/>提前2-3個月線上預訂可享10-20%折扣。聖誕高峰期（12/25-1/1）價格上浮10-20%，建議避開12/25-27開課。私人課多人分攤最划算。</div>
 </div>
 </div>
-</div>
-</section>
-<!-- ==================== BUDGET EUROPEAN SKI RESORTS ==================== -->
-<section class="section" id="budget-ski">
-<div class="container">
-<h2 class="section-title" data-en="Budget European Ski Resorts: Beyond Austria" data-zh="歐洲平價雪場：跳脫奧地利的選擇">歐洲平價雪場：跳脫奧地利的選擇</h2>
+</div></div>
+</section><section class="section collapsible-section collapsed" id="budget-ski">
+<div class="container"><div class="section-toggle-bar" data-target="budget-ski"><span class="toggle-chevron">▸</span><span class="toggle-title" data-en="Budget European Ski Resorts: Beyond Austria" data-zh="歐洲平價雪場：跳脫奧地利的選擇">歐洲平價雪場：跳脫奧地利的選擇</span></div><div class="section-collapsible-content">
+
 <p class="section-intro" data-en="Austrian resorts are world-class but pricey. On a budget? Europe has many high-value alternatives. Comparing daily costs (lift + stay + food), the cheapest options are half the price of Austria!" data-zh="奧地利雪場設施一流但價格較高。如果預算有限，歐洲還有許多CP值極高的滑雪勝地。以下比較涵蓋東歐、安道爾、斯洛維尼亞等地，從每日總花費（纜車＋住宿＋餐飲）來看，最便宜的選項只要奧地利的一半！">奧地利雪場設施一流但價格較高。如果預算有限，歐洲還有許多CP值極高的滑雪勝地。以下比較涵蓋東歐、安道爾、斯洛維尼亞等地，從每日總花費（纜車＋住宿＋餐飲）來看，最便宜的選項只要奧地利的一半！</p>
 <!-- Total Daily Cost Comparison Chart -->
 <div class="budget-chart-container">
@@ -870,12 +879,10 @@
 </div>
 </div>
 </div>
-</div>
-</section>
-<!-- ==================== NORTH AMERICA BUDGET SKI ==================== -->
-<section class="section section-alt" id="na-ski">
-<div class="container">
-<h2 class="section-title" data-en="Budget North American Resorts: US &amp; Canada" data-zh="北美平價雪場：美國＆加拿大的選擇">北美平價雪場：美國＆加拿大的選擇</h2>
+</div></div>
+</section><section class="section section-alt collapsible-section collapsed" id="na-ski">
+<div class="container"><div class="section-toggle-bar" data-target="na-ski"><span class="toggle-chevron">▸</span><span class="toggle-title" data-en="Budget North American Resorts: US &amp; Canada" data-zh="北美平價雪場：美國＆加拿大的選擇">北美平價雪場：美國＆加拿大的選擇</span></div><div class="section-collapsible-content">
+
 <p class="section-intro" data-en="North American large ski resorts (Vail, Whistler) day passes often cost US$200-300, but there are still many high value-for-money options. Below compares affordable resorts in the US and Canada, with a cross-continental comparison to Europe." data-zh="北美大型雪場（Vail、Whistler）日票動輒 US$200-300，但仍有許多高CP值的選擇。以下比較美國與加拿大的平價雪場，並與歐洲做跨洲對比。">北美大型雪場（Vail、Whistler）日票動輒 US$200-300，但仍有許多高CP值的選擇。以下比較美國與加拿大的平價雪場，並與歐洲做跨洲對比。</p>
 <!-- Key Insight Box -->
 <div class="insight-box">
@@ -1192,13 +1199,10 @@
 </div>
 </div>
 </div>
-</div>
-</section>
-<!-- ==================== CITIES ==================== -->
-<!-- ====== ASIA SKI SECTION ====== -->
-<section class="section" id="asia-ski">
-<div class="container">
-<h2 class="section-title" data-en="Asian ski resorts: choices in Japan &amp; Korea" data-zh="亞洲雪場：日本＆韓國的選擇">亞洲雪場：日本＆韓國的選擇</h2>
+</div></div>
+</section><section class="section collapsible-section collapsed" id="asia-ski">
+<div class="container"><div class="section-toggle-bar" data-target="asia-ski"><span class="toggle-chevron">▸</span><span class="toggle-title" data-en="Asian ski resorts: choices in Japan &amp; Korea" data-zh="亞洲雪場：日本＆韓國的選擇">亞洲雪場：日本＆韓國的選擇</span></div><div class="section-collapsible-content">
+
 <p class="section-subtitle" data-en="Closest powder snow paradise to Taiwan, flight time only 2.5~4 hours" data-zh="離台灣最近的粉雪天堂，飛行時間僅 2.5~4 小時">離台灣最近的粉雪天堂，飛行時間僅 2.5~4 小時</p>
 <!-- Group Level Banner -->
 <div class="group-level-banner">
@@ -1780,12 +1784,10 @@
 </div>
 </div>
 </div>
-</div>
-</section>
-<!-- ====== SKI PROGRESSION TIPS SECTION ====== -->
-<section class="section section-alt" id="ski-tips">
-<div class="container">
-<h2 class="section-title" data-en="Ski Progression Guide" data-zh="滑雪進階攻略">滑雪進階攻略</h2>
+</div></div>
+</section><section class="section section-alt collapsible-section collapsed" id="ski-tips">
+<div class="container"><div class="section-toggle-bar" data-target="ski-tips"><span class="toggle-chevron">▸</span><span class="toggle-title" data-en="Ski Progression Guide" data-zh="滑雪進階攻略">滑雪進階攻略</span></div><div class="section-collapsible-content">
+
 <p class="section-desc" data-en="Skill improvement from Blue run to Red run, Ski vs Snowboard comparison, altitude sickness prevention" data-zh="從藍道到紅道的技術提升、Ski vs Snowboard 比較、高山症預防">從藍道到紅道的技術提升、Ski vs Snowboard 比較、高山症預防</p>
 <h3 class="sub-section-h3" data-en="📊 Your level: Blue run to Red run" data-zh="📊 你們的程度：藍道～紅道">📊 你們的程度：藍道～紅道</h3>
 <div class="level-banner">
@@ -1973,86 +1975,10 @@
 <p class="altitude-reassure" data-en="💡 Good news: most Austrian ski bases are at 1,000-1,500m, only briefly reaching 2,500m+ at peaks, with low risk. Taiwanese who have climbed Hehuan Mountain (3,417m) will have no problem." data-zh="💡好消息：大部分奧地利雪場基地在 1,000-1,500m，只有滑到山頂時才會短暫到 2,500m+，不會長時間停留，風險較低。台灣人如果有爬過合歡山（3,417m），這裡完全沒問題。">💡 <strong data-en="Good news:" data-zh="好消息：">好消息：</strong>大部分奧地利雪場基地在 1,000-1,500m，只有滑到山頂時才會短暫到 2,500m+，不會長時間停留，風險較低。台灣人如果有爬過合歡山（3,417m），這裡完全沒問題。</p>
 </div>
 </div>
-</div>
-</section>
-<section class="section section-alt" id="cities">
-<div class="container">
-<h2 class="section-title" data-en="City attractions: must-visit cities in Central Europe" data-zh="城市景點：中歐必訪城市">城市景點：中歐必訪城市</h2>
-<p class="section-intro" data-en="Each city has a unique Christmas atmosphere and cultural experience. Below includes local names, must-visit spots, and Christmas market info." data-zh="每座城市都有獨特的聖誕氛圍與文化體驗。以下包含各城市的當地名稱（鄉土名情）、必訪景點與聖誕市集資訊。">每座城市都有獨特的聖誕氛圍與文化體驗。以下包含各城市的當地名稱（鄉土名情）、必訪景點與聖誕市集資訊。</p>
-<div class="city-cards">
-<div class="city-card"><div class="city-header vienna"><h3 data-en="Vienna" data-zh="維也納">維也納</h3><span class="city-local-name">Wien</span><span class="city-country" data-en="Austria Österreich" data-zh="奧地利 Österreich">奧地利 Österreich</span></div>
-<div class="city-body"><p class="city-desc" data-en="City of music, with magnificent Habsburg palaces and world-class opera house. Café culture is a UNESCO intangible cultural heritage." data-zh="音樂之都，擁有華麗的哈布斯堡王朝宮殿、世界級歌劇院。咖啡館文化為UNESCO非物質文化遺產。">音樂之都，擁有華麗的哈布斯堡王朝宮殿、世界級歌劇院。咖啡館文化為UNESCO非物質文化遺產。</p>
-<div class="attraction-list">
-<div class="attraction"><strong data-en="Schönbrunn Palace" data-zh="美泉宮">美泉宮</strong><span class="local-name">Schloss Schönbrunn</span><p data-en="Habsburg Summer Palace, UNESCO World Heritage. Christmas market held at the palace square." data-zh="哈布斯堡夏宮，UNESCO世界遺產。聖誕市集在宮前廣場舉行。">哈布斯堡夏宮，UNESCO世界遺產。聖誕市集在宮前廣場舉行。</p></div>
-<div class="attraction"><strong data-en="St. Stephen's Cathedral" data-zh="聖史蒂芬大教堂">聖史蒂芬大教堂</strong><span class="local-name">Stephansdom</span><p data-en="Vienna landmark, Gothic architectural masterpiece. Climb the south tower for city views." data-zh="維也納地標，哥德式建築傑作。登南塔俯瞰全城。">維也納地標，哥德式建築傑作。登南塔俯瞰全城。</p></div>
-<div class="attraction"><strong data-en="Hofburg Palace" data-zh="霍夫堡皇宮">霍夫堡皇宮</strong><span class="local-name">Hofburg</span><p data-en="Habsburg Winter Palace, houses the Princess Sisi Museum." data-zh="哈布斯堡冬宮，內有西西公主博物館。">哈布斯堡冬宮，內有西西公主博物館。</p></div>
-<div class="attraction"><strong data-en="Naschmarkt" data-zh="納許市場">納許市場</strong><span class="local-name">Naschmarkt</span><p data-en="Vienna's largest open-air market, a treasure trove of international cuisine." data-zh="維也納最大露天市場，各國美食寶庫。">維也納最大露天市場，各國美食寶庫。</p></div>
-</div>
-<div class="city-christmas"><h4 data-en="Christmas market" data-zh="聖誕市集">聖誕市集</h4><p data-en="Rathausplatz Christmas market is one of Europe's largest. Market in front of Schönbrunn Palace runs until early January." data-zh="市政廳廣場 (Rathausplatz) 聖誕市集為全歐最大之一。美泉宮前也有市集至1月初。">市政廳廣場 (Rathausplatz) 聖誕市集為全歐最大之一。美泉宮前也有市集至1月初。</p></div>
-<div class="city-meta"><span data-en="Recommended stay: 1.5-2 days" data-zh="建議停留：1.5-2天">建議停留：1.5-2天</span><span data-en="Cost of living: upper-mid" data-zh="物價：中高">物價：中高</span></div>
-</div>
-</div>
-<div class="city-card"><div class="city-header salzburg"><h3 data-en="Salzburg" data-zh="薩爾茲堡">薩爾茲堡</h3><span class="city-local-name">Salzburg</span><span class="city-country" data-en="Austria Österreich" data-zh="奧地利 Österreich">奧地利 Österreich</span></div>
-<div class="city-body"><p class="city-desc" data-en="Mozart's hometown, filming location of the movie 'Nanni Nanni Nanni'. Old town is a UNESCO World Heritage site, transit hub to major ski resorts." data-zh="莫札特故鄉，《乃乃乃》電影取景地。舊城區為UNESCO世界遺產，前往各大雪場的中繼站。">莫札特故鄉，《乃乃乃》電影取景地。舊城區為UNESCO世界遺產，前往各大雪場的中繼站。</p>
-<div class="attraction-list">
-<div class="attraction"><strong data-en="Salzburg Fortress" data-zh="薩爾茲堡要塞">薩爾茲堡要塞</strong><span class="local-name">Festung Hohensalzburg</span><p data-en="One of Central Europe's best-preserved castles, take the lift to the top for a city view." data-zh="中歐保存最完好的城堡之一，搭纜車登頂俯瞰全城。">中歐保存最完好的城堡之一，搭纜車登頂俯瞰全城。</p></div>
-<div class="attraction"><strong data-en="Mirabell Palace" data-zh="米拉貝爾宮">米拉貝爾宮</strong><span class="local-name">Schloss Mirabell</span><p data-en="Baroque garden, filming location of “Do-Re-Mi” from “The Sound of Music.”" data-zh="巴洛克花園，《乃乃乃》「Do-Re-Mi」拍攝地。">巴洛克花園，《乃乃乃》「Do-Re-Mi」拍攝地。</p></div>
-<div class="attraction"><strong data-en="Mozart's birthplace" data-zh="莫札特出生地">莫札特出生地</strong><span class="local-name">Mozarts Geburtshaus</span><p data-en="No. 9 Getreidegasse, Mozart's yellow birth house from 1756." data-zh="蓋特萊德巷9號，莫札特1756年出生的黃色小樓。">蓋特萊德巷9號，莫札特1756年出生的黃色小樓。</p></div>
-</div>
-<div class="city-christmas"><h4 data-en="Christmas market" data-zh="聖誕市集">聖誕市集</h4><p data-en="Cathedral Square (Domplatz) Christmas Market is acclaimed as the most atmospheric in all Austria." data-zh="大教堂廣場 (Domplatz) 聖誕市集被譽為全奧地利最有氣氛。">大教堂廣場 (Domplatz) 聖誕市集被譽為全奧地利最有氣氛。</p></div>
-<div class="city-meta"><span data-en="Recommended stay: 0.5-1 days" data-zh="建議停留：0.5-1天">建議停留：0.5-1天</span><span data-en="Price level: medium" data-zh="物價：中">物價：中</span><span data-en="Distance to resort: 1-1.5hr" data-zh="距雪場：1-1.5hr">距雪場：1-1.5hr</span></div>
-</div>
-</div>
-<div class="city-card"><div class="city-header prague"><h3 data-en="Prague" data-zh="布拉格">布拉格</h3><span class="city-local-name">Praha</span><span class="city-country" data-en="Czech Republic" data-zh="捷克 Česko">捷克 Česko</span></div>
-<div class="city-body"><p class="city-desc" data-en="City of a hundred towers, Europe's best-preserved medieval cityscape. Prices are 40-50% cheaper than Western Europe. Currency: Czech koruna (CZK)." data-zh="百塔之城，歐洲保存最完整的中世紀城市景觀。物價比西歐便宜40-50%。捷克克朗 (CZK) 為貨幣。">百塔之城，歐洲保存最完整的中世紀城市景觀。物價比西歐便宜40-50%。捷克克朗 (CZK) 為貨幣。</p>
-<div class="attraction-list">
-<div class="attraction"><strong data-en="Prague Castle" data-zh="布拉格城堡">布拉格城堡</strong><span class="local-name">Pražský hrad</span><p data-en="World's largest ancient castle complex, including St. Vitus Cathedral and Golden Lane." data-zh="世界最大古城堡群，含聖維特大教堂、黃金巷。">世界最大古城堡群，含聖維特大教堂、黃金巷。</p></div>
-<div class="attraction"><strong data-en="Charles Bridge" data-zh="查理大橋">查理大橋</strong><span class="local-name">Karlův most</span><p data-en="Gothic stone bridge built in 1357, 30 Baroque saint statues. Most beautiful at dawn." data-zh="1357年建造的哥德式石橋，30座巴洛克聖人雕像。清晨最美。">1357年建造的哥德式石橋，30座巴洛克聖人雕像。清晨最美。</p></div>
-<div class="attraction"><strong data-en="Old Town Square Astronomical Clock" data-zh="舊城廣場天文鐘">舊城廣場天文鐘</strong><span class="local-name">Staroměstský orloj</span><p data-en="Built in 1410, must-see mechanical doll show every hour." data-zh="1410年製造，每整點機械人偶表演必看。">1410年製造，每整點機械人偶表演必看。</p></div>
-</div>
-<div class="city-christmas"><h4 data-en="Christmas market" data-zh="聖誕市集">聖誕市集</h4><p data-en="Old Town Square market open until 1/6, one of Europe's longest-running. Must-try Trdelník (chimney cake)." data-zh="舊城廣場市集營業至1/6，歐洲營業最久之一。必嘗 Trdelník（煙囪捲）。">舊城廣場市集營業至1/6，歐洲營業最久之一。必嘗 Trdelník（煙囪捲）。</p></div>
-<div class="city-meta"><span data-en="Recommended stay: 1-2 days" data-zh="建議停留：1-2天">建議停留：1-2天</span><span data-en="Cost of living: Low (half of Western Europe)" data-zh="物價：低（西歐一半）">物價：低（西歐一半）</span></div>
-</div>
-</div>
-<div class="city-card"><div class="city-header budapest"><h3 data-en="Budapest" data-zh="布達佩斯">布達佩斯</h3><span class="city-local-name">Budapest</span><span class="city-country" data-en="Hungary Magyarország" data-zh="匈牙利 Magyarország">匈牙利 Magyarország</span></div>
-<div class="city-body"><p class="city-desc" data-en="Danube Pearl, famous for thermal baths. Soaking in hot springs after skiing is a great treat. Currency is Hungarian Forint (HUF)." data-zh="多瑙河明珠，以溫泉浴場聞名。滑雪後泡溫泉是絕佳享受。匈牙利福林 (HUF) 為貨幣。">多瑙河明珠，以溫泉浴場聞名。滑雪後泡溫泉是絕佳享受。匈牙利福林 (HUF) 為貨幣。</p>
-<div class="attraction-list">
-<div class="attraction"><strong data-en="Parliament Building" data-zh="國會大廈">國會大廈</strong><span class="local-name">Országház</span><p data-en="Neo-Gothic architecture, the most spectacular landmark by the Danube. Night lights reflecting on the river are stunning." data-zh="新哥德式建築，多瑙河畔最壯觀地標。夜間燈光倒映河面極壯觀。">新哥德式建築，多瑙河畔最壯觀地標。夜間燈光倒映河面極壯觀。</p></div>
-<div class="attraction"><strong data-en="Fisherman's Bastion" data-zh="漁人堡">漁人堡</strong><span class="local-name">Halászbástya</span><p data-en="New Romanesque viewpoint overlooking the Danube and Parliament building panorama." data-zh="新羅馬式觀景台，俯瞰多瑙河與國會大廈全景。">新羅馬式觀景台，俯瞰多瑙河與國會大廈全景。</p></div>
-<div class="attraction"><strong data-en="Széchenyi Thermal Bath" data-zh="塞切尼溫泉浴場">塞切尼溫泉浴場</strong><span class="local-name">Széchenyi fürdő</span><p data-en="One of Europe's largest thermal spas, winter steam creates a magical atmosphere." data-zh="歐洲最大溫泉浴場之一，冬天蒸氣繚繞非常夢幻。">歐洲最大溫泉浴場之一，冬天蒸氣繚繞非常夢幻。</p></div>
-</div>
-<div class="city-christmas"><h4 data-en="Christmas market" data-zh="聖誕市集">聖誕市集</h4><p data-en="Vörösmarty Square market is the largest, must try Gulyás (stewed beef) and Forralt bor (mulled wine)." data-zh="Vörösmarty 廣場市集最大，必嘗 Gulyás（燉牛肉）和 Forralt bor（熱紅酒）。">Vörösmarty 廣場市集最大，必嘗 Gulyás（燉牛肉）和 Forralt bor（熱紅酒）。</p></div>
-<div class="city-meta"><span data-en="Recommended stay: 1-2 days" data-zh="建議停留：1-2天">建議停留：1-2天</span><span data-en="Cost of living: low" data-zh="物價：低">物價：低</span></div>
-</div>
-</div>
-<div class="city-card"><div class="city-header munich"><h3 data-en="Munich" data-zh="慕尼黑">慕尼黑</h3><span class="city-local-name">München</span><span class="city-country" data-en="Germany Deutschland" data-zh="德國 Deutschland">德國 Deutschland</span></div>
-<div class="city-body"><p class="city-desc" data-en="Bavaria's capital, beer culture city. Major European aviation hub, best gateway to Austrian ski areas." data-zh="巴伐利亞首府，啤酒文化之都。歐洲重要航空樞紐，進入奧地利滑雪區的最佳門戶。">巴伐利亞首府，啤酒文化之都。歐洲重要航空樞紐，進入奧地利滑雪區的最佳門戶。</p>
-<div class="attraction-list">
-<div class="attraction"><strong data-en="Maria Square" data-zh="瑪利亞廣場">瑪利亞廣場</strong><span class="local-name">Marienplatz</span><p data-en="Munich's heart, New Town Hall Glockenspiel plays daily at 11am and 12pm." data-zh="慕尼黑心臟，新市政廳鐘琴每天11點和12點演奏。">慕尼黑心臟，新市政廳鐘琴每天11點和12點演奏。</p></div>
-<div class="attraction"><strong data-en="Royal Beer Hall" data-zh="皇家啤酒屋">皇家啤酒屋</strong><span class="local-name">Hofbräuhaus</span><p data-en="Founded in 1589, must try Bavarian white sausage with wheat beer." data-zh="1589年創立，必嘗巴伐利亞白香腸配白啤酒。">1589年創立，必嘗巴伐利亞白香腸配白啤酒。</p></div>
-<div class="attraction"><strong data-en="Nymphenburg Palace" data-zh="寧芬堡宮">寧芬堡宮</strong><span class="local-name">Schloss Nymphenburg</span><p data-en="Bavarian royal summer palace, Baroque architecture with vast gardens." data-zh="巴伐利亞王室夏宮，巴洛克建築與廣闊花園。">巴伐利亞王室夏宮，巴洛克建築與廣闊花園。</p></div>
-</div>
-<div class="city-christmas"><h4 data-en="Christmas market" data-zh="聖誕市集">聖誕市集</h4><p data-en="Maria Square Christkindlmarkt is one of Germany’s oldest Christmas markets. Must-try Lebkuchen and Glühwein." data-zh="瑪利亞廣場 Christkindlmarkt 是德國最古老聖誕市集之一。必嘗 Lebkuchen 和 Glühwein。">瑪利亞廣場 Christkindlmarkt 是德國最古老聖誕市集之一。必嘗 Lebkuchen 和 Glühwein。</p></div>
-<div class="city-meta"><span data-en="Recommended stay: 1 day" data-zh="建議停留：1天">建議停留：1天</span><span data-en="Cost of living: upper-mid" data-zh="物價：中高">物價：中高</span><span data-en="Distance to ski area: 1.5-2 hours" data-zh="距雪場：1.5-2hr">距雪場：1.5-2hr</span></div>
-</div>
-</div>
-</div>
-<div class="additional-cities">
-<h3 data-en="Other nearby cities" data-zh="其他順路城市">其他順路城市</h3>
-<div class="mini-city-grid">
-<div class="mini-city"><h4 data-en="Bratislava" data-zh="布拉提斯拉瓦Bratislava">布拉提斯拉瓦 <span>Bratislava</span></h4><p class="mini-country" data-en="Slovakia Slovensko" data-zh="斯洛伐克 Slovensko">斯洛伐克 Slovensko</p><p data-en="Only 60km from Vienna, 1-hour train. One of Europe's cheapest capitals. Bratislavský hrad overlooks the Danube. Modrý kostolík is a must-see. Day trip from Vienna possible." data-zh="距維也納僅60km，火車1小時。歐洲最便宜首都之一。布拉提斯拉瓦城堡 (Bratislavský hrad) 俯瞰多瑙河。藍色教堂 (Modrý kostolík) 必拍。可從維也納當日來回。">距維也納僅60km，火車1小時。歐洲最便宜首都之一。布拉提斯拉瓦城堡 (Bratislavský hrad) 俯瞰多瑙河。藍色教堂 (Modrý kostolík) 必拍。可從維也納當日來回。</p></div>
-<div class="mini-city"><h4 data-en="Hallstatt" data-zh="哈修塔特Hallstatt">哈修塔特 <span>Hallstatt</span></h4><p class="mini-country" data-en="Austria Österreich" data-zh="奧地利 Österreich">奧地利 Österreich</p><p data-en="UNESCO World Heritage, “world’s most beautiful small town.” Colorful lakeside wooden houses look even more magical in winter. Salt mine (Salzwelten) and Skywalk are must-visits. About 1.5 hours from Salzburg." data-zh="UNESCO世界遺產，「世界最美小鎮」。湖畔彩色木屋冬季更夢幻。鹽礦 (Salzwelten) 和天空步道 (Skywalk) 必訪。從薩爾茲堡約1.5小時。">UNESCO世界遺產，「世界最美小鎮」。湖畔彩色木屋冬季更夢幻。鹽礦 (Salzwelten) 和天空步道 (Skywalk) 必訪。從薩爾茲堡約1.5小時。</p></div>
-<div class="mini-city"><h4 data-en="Innsbruck" data-zh="因斯布魯克Innsbruck">因斯布魯克 <span>Innsbruck</span></h4><p class="mini-country" data-en="Austria Österreich" data-zh="奧地利 Österreich">奧地利 Österreich</p><p data-en="Alpine town, Golden Roof (Goldenes Dachl) landmark. Nordkettenbahnen lift goes from city to 2,300m. Gateway to St. Anton or Sölden." data-zh="阿爾卑斯山城，黃金屋頂 (Goldenes Dachl) 為地標。北山纜車 (Nordkettenbahnen) 從市區直達2,300m。前往 St. Anton 或 Sölden 必經之地。">阿爾卑斯山城，黃金屋頂 (Goldenes Dachl) 為地標。北山纜車 (Nordkettenbahnen) 從市區直達2,300m。前往 St. Anton 或 Sölden 必經之地。</p></div>
-<div class="mini-city"><h4 data-en="Vaduz" data-zh="瓦杜茲Vaduz">瓦杜茲 <span>Vaduz</span></h4><p class="mini-country" data-en="Liechtenstein" data-zh="列支敦斯登 Liechtenstein">列支敦斯登 Liechtenstein</p><p data-en="The sixth smallest country capital in the world. Vaduz Castle (Schloss Vaduz) is a national symbol. Only 30 minutes by bus from Feldkirch, Austria, good for collecting passport stamps along the way." data-zh="世界第六小國首都。瓦杜茲城堡 (Schloss Vaduz) 為國家象徵。從奧地利 Feldkirch 搭公車僅30分鐘，順路蒐集護照章。">世界第六小國首都。瓦杜茲城堡 (Schloss Vaduz) 為國家象徵。從奧地利 Feldkirch 搭公車僅30分鐘，順路蒐集護照章。</p></div>
-</div>
-</div>
-</div>
-</section>
-<!-- ==================== ITINERARY ==================== -->
-<!-- ====== SNOW CONDITIONS SECTION ====== -->
-<section class="section section-alt" id="snow-conditions">
-<div class="container">
-<h2 class="section-title" data-en="Christmas &amp; New Year Snow Conditions" data-zh="聖誕跨年雪況分析">聖誕跨年雪況分析</h2>
+</div></div>
+</section><section class="section section-alt collapsible-section collapsed" id="snow-conditions">
+<div class="container"><div class="section-toggle-bar" data-target="snow-conditions"><span class="toggle-chevron">▸</span><span class="toggle-title" data-en="Christmas &amp; New Year Snow Conditions" data-zh="聖誕跨年雪況分析">聖誕跨年雪況分析</span></div><div class="section-collapsible-content">
+
 <p class="section-intro" data-en="Historical snow conditions, snow depth, and reliability comparisons for late December to early January across regions, helping you choose the least risky ski resorts." data-zh="12月下旬～1月初各地區的歷史雪況、積雪深度與可靠度比較，幫助你選擇最不會「踩雷」的雪場。">12月下旬～1月初各地區的歷史雪況、積雪深度與可靠度比較，幫助你選擇最不會「踩雷」的雪場。</p>
 <!-- Snow Reliability Ranking -->
 <div class="snow-ranking">
@@ -2284,12 +2210,82 @@
 </div>
 </div>
 </div>
+</div></div>
+</section></div><div class="category-group" data-category="travel" id="cat-travel"><div class="category-header"><h2 class="category-title" data-en="🏙️ City &amp; Travel" data-zh="🏙️ 城市旅遊">🏙️ 城市旅遊</h2></div><section class="section section-alt collapsible-section collapsed" id="cities">
+<div class="container"><div class="section-toggle-bar" data-target="cities"><span class="toggle-chevron">▸</span><span class="toggle-title" data-en="City attractions: must-visit cities in Central Europe" data-zh="城市景點：中歐必訪城市">城市景點：中歐必訪城市</span></div><div class="section-collapsible-content">
+
+<p class="section-intro" data-en="Each city has a unique Christmas atmosphere and cultural experience. Below includes local names, must-visit spots, and Christmas market info." data-zh="每座城市都有獨特的聖誕氛圍與文化體驗。以下包含各城市的當地名稱（鄉土名情）、必訪景點與聖誕市集資訊。">每座城市都有獨特的聖誕氛圍與文化體驗。以下包含各城市的當地名稱（鄉土名情）、必訪景點與聖誕市集資訊。</p>
+<div class="city-cards">
+<div class="city-card"><div class="city-header vienna"><h3 data-en="Vienna" data-zh="維也納">維也納</h3><span class="city-local-name">Wien</span><span class="city-country" data-en="Austria Österreich" data-zh="奧地利 Österreich">奧地利 Österreich</span></div>
+<div class="city-body"><p class="city-desc" data-en="City of music, with magnificent Habsburg palaces and world-class opera house. Café culture is a UNESCO intangible cultural heritage." data-zh="音樂之都，擁有華麗的哈布斯堡王朝宮殿、世界級歌劇院。咖啡館文化為UNESCO非物質文化遺產。">音樂之都，擁有華麗的哈布斯堡王朝宮殿、世界級歌劇院。咖啡館文化為UNESCO非物質文化遺產。</p>
+<div class="attraction-list">
+<div class="attraction"><strong data-en="Schönbrunn Palace" data-zh="美泉宮">美泉宮</strong><span class="local-name">Schloss Schönbrunn</span><p data-en="Habsburg Summer Palace, UNESCO World Heritage. Christmas market held at the palace square." data-zh="哈布斯堡夏宮，UNESCO世界遺產。聖誕市集在宮前廣場舉行。">哈布斯堡夏宮，UNESCO世界遺產。聖誕市集在宮前廣場舉行。</p></div>
+<div class="attraction"><strong data-en="St. Stephen's Cathedral" data-zh="聖史蒂芬大教堂">聖史蒂芬大教堂</strong><span class="local-name">Stephansdom</span><p data-en="Vienna landmark, Gothic architectural masterpiece. Climb the south tower for city views." data-zh="維也納地標，哥德式建築傑作。登南塔俯瞰全城。">維也納地標，哥德式建築傑作。登南塔俯瞰全城。</p></div>
+<div class="attraction"><strong data-en="Hofburg Palace" data-zh="霍夫堡皇宮">霍夫堡皇宮</strong><span class="local-name">Hofburg</span><p data-en="Habsburg Winter Palace, houses the Princess Sisi Museum." data-zh="哈布斯堡冬宮，內有西西公主博物館。">哈布斯堡冬宮，內有西西公主博物館。</p></div>
+<div class="attraction"><strong data-en="Naschmarkt" data-zh="納許市場">納許市場</strong><span class="local-name">Naschmarkt</span><p data-en="Vienna's largest open-air market, a treasure trove of international cuisine." data-zh="維也納最大露天市場，各國美食寶庫。">維也納最大露天市場，各國美食寶庫。</p></div>
 </div>
-</section>
-<!-- ====== CHRISTMAS MARKETS SECTION ====== -->
-<section class="section section-alt" id="christmas-markets">
-<div class="container">
-<h2 class="section-title" data-en="Christmas Market Special Zone" data-zh="聖誕市集專區">聖誕市集專區</h2>
+<div class="city-christmas"><h4 data-en="Christmas market" data-zh="聖誕市集">聖誕市集</h4><p data-en="Rathausplatz Christmas market is one of Europe's largest. Market in front of Schönbrunn Palace runs until early January." data-zh="市政廳廣場 (Rathausplatz) 聖誕市集為全歐最大之一。美泉宮前也有市集至1月初。">市政廳廣場 (Rathausplatz) 聖誕市集為全歐最大之一。美泉宮前也有市集至1月初。</p></div>
+<div class="city-meta"><span data-en="Recommended stay: 1.5-2 days" data-zh="建議停留：1.5-2天">建議停留：1.5-2天</span><span data-en="Cost of living: upper-mid" data-zh="物價：中高">物價：中高</span></div>
+</div>
+</div>
+<div class="city-card"><div class="city-header salzburg"><h3 data-en="Salzburg" data-zh="薩爾茲堡">薩爾茲堡</h3><span class="city-local-name">Salzburg</span><span class="city-country" data-en="Austria Österreich" data-zh="奧地利 Österreich">奧地利 Österreich</span></div>
+<div class="city-body"><p class="city-desc" data-en="Mozart's hometown, filming location of the movie 'Nanni Nanni Nanni'. Old town is a UNESCO World Heritage site, transit hub to major ski resorts." data-zh="莫札特故鄉，《乃乃乃》電影取景地。舊城區為UNESCO世界遺產，前往各大雪場的中繼站。">莫札特故鄉，《乃乃乃》電影取景地。舊城區為UNESCO世界遺產，前往各大雪場的中繼站。</p>
+<div class="attraction-list">
+<div class="attraction"><strong data-en="Salzburg Fortress" data-zh="薩爾茲堡要塞">薩爾茲堡要塞</strong><span class="local-name">Festung Hohensalzburg</span><p data-en="One of Central Europe's best-preserved castles, take the lift to the top for a city view." data-zh="中歐保存最完好的城堡之一，搭纜車登頂俯瞰全城。">中歐保存最完好的城堡之一，搭纜車登頂俯瞰全城。</p></div>
+<div class="attraction"><strong data-en="Mirabell Palace" data-zh="米拉貝爾宮">米拉貝爾宮</strong><span class="local-name">Schloss Mirabell</span><p data-en="Baroque garden, filming location of “Do-Re-Mi” from “The Sound of Music.”" data-zh="巴洛克花園，《乃乃乃》「Do-Re-Mi」拍攝地。">巴洛克花園，《乃乃乃》「Do-Re-Mi」拍攝地。</p></div>
+<div class="attraction"><strong data-en="Mozart's birthplace" data-zh="莫札特出生地">莫札特出生地</strong><span class="local-name">Mozarts Geburtshaus</span><p data-en="No. 9 Getreidegasse, Mozart's yellow birth house from 1756." data-zh="蓋特萊德巷9號，莫札特1756年出生的黃色小樓。">蓋特萊德巷9號，莫札特1756年出生的黃色小樓。</p></div>
+</div>
+<div class="city-christmas"><h4 data-en="Christmas market" data-zh="聖誕市集">聖誕市集</h4><p data-en="Cathedral Square (Domplatz) Christmas Market is acclaimed as the most atmospheric in all Austria." data-zh="大教堂廣場 (Domplatz) 聖誕市集被譽為全奧地利最有氣氛。">大教堂廣場 (Domplatz) 聖誕市集被譽為全奧地利最有氣氛。</p></div>
+<div class="city-meta"><span data-en="Recommended stay: 0.5-1 days" data-zh="建議停留：0.5-1天">建議停留：0.5-1天</span><span data-en="Price level: medium" data-zh="物價：中">物價：中</span><span data-en="Distance to resort: 1-1.5hr" data-zh="距雪場：1-1.5hr">距雪場：1-1.5hr</span></div>
+</div>
+</div>
+<div class="city-card"><div class="city-header prague"><h3 data-en="Prague" data-zh="布拉格">布拉格</h3><span class="city-local-name">Praha</span><span class="city-country" data-en="Czech Republic" data-zh="捷克 Česko">捷克 Česko</span></div>
+<div class="city-body"><p class="city-desc" data-en="City of a hundred towers, Europe's best-preserved medieval cityscape. Prices are 40-50% cheaper than Western Europe. Currency: Czech koruna (CZK)." data-zh="百塔之城，歐洲保存最完整的中世紀城市景觀。物價比西歐便宜40-50%。捷克克朗 (CZK) 為貨幣。">百塔之城，歐洲保存最完整的中世紀城市景觀。物價比西歐便宜40-50%。捷克克朗 (CZK) 為貨幣。</p>
+<div class="attraction-list">
+<div class="attraction"><strong data-en="Prague Castle" data-zh="布拉格城堡">布拉格城堡</strong><span class="local-name">Pražský hrad</span><p data-en="World's largest ancient castle complex, including St. Vitus Cathedral and Golden Lane." data-zh="世界最大古城堡群，含聖維特大教堂、黃金巷。">世界最大古城堡群，含聖維特大教堂、黃金巷。</p></div>
+<div class="attraction"><strong data-en="Charles Bridge" data-zh="查理大橋">查理大橋</strong><span class="local-name">Karlův most</span><p data-en="Gothic stone bridge built in 1357, 30 Baroque saint statues. Most beautiful at dawn." data-zh="1357年建造的哥德式石橋，30座巴洛克聖人雕像。清晨最美。">1357年建造的哥德式石橋，30座巴洛克聖人雕像。清晨最美。</p></div>
+<div class="attraction"><strong data-en="Old Town Square Astronomical Clock" data-zh="舊城廣場天文鐘">舊城廣場天文鐘</strong><span class="local-name">Staroměstský orloj</span><p data-en="Built in 1410, must-see mechanical doll show every hour." data-zh="1410年製造，每整點機械人偶表演必看。">1410年製造，每整點機械人偶表演必看。</p></div>
+</div>
+<div class="city-christmas"><h4 data-en="Christmas market" data-zh="聖誕市集">聖誕市集</h4><p data-en="Old Town Square market open until 1/6, one of Europe's longest-running. Must-try Trdelník (chimney cake)." data-zh="舊城廣場市集營業至1/6，歐洲營業最久之一。必嘗 Trdelník（煙囪捲）。">舊城廣場市集營業至1/6，歐洲營業最久之一。必嘗 Trdelník（煙囪捲）。</p></div>
+<div class="city-meta"><span data-en="Recommended stay: 1-2 days" data-zh="建議停留：1-2天">建議停留：1-2天</span><span data-en="Cost of living: Low (half of Western Europe)" data-zh="物價：低（西歐一半）">物價：低（西歐一半）</span></div>
+</div>
+</div>
+<div class="city-card"><div class="city-header budapest"><h3 data-en="Budapest" data-zh="布達佩斯">布達佩斯</h3><span class="city-local-name">Budapest</span><span class="city-country" data-en="Hungary Magyarország" data-zh="匈牙利 Magyarország">匈牙利 Magyarország</span></div>
+<div class="city-body"><p class="city-desc" data-en="Danube Pearl, famous for thermal baths. Soaking in hot springs after skiing is a great treat. Currency is Hungarian Forint (HUF)." data-zh="多瑙河明珠，以溫泉浴場聞名。滑雪後泡溫泉是絕佳享受。匈牙利福林 (HUF) 為貨幣。">多瑙河明珠，以溫泉浴場聞名。滑雪後泡溫泉是絕佳享受。匈牙利福林 (HUF) 為貨幣。</p>
+<div class="attraction-list">
+<div class="attraction"><strong data-en="Parliament Building" data-zh="國會大廈">國會大廈</strong><span class="local-name">Országház</span><p data-en="Neo-Gothic architecture, the most spectacular landmark by the Danube. Night lights reflecting on the river are stunning." data-zh="新哥德式建築，多瑙河畔最壯觀地標。夜間燈光倒映河面極壯觀。">新哥德式建築，多瑙河畔最壯觀地標。夜間燈光倒映河面極壯觀。</p></div>
+<div class="attraction"><strong data-en="Fisherman's Bastion" data-zh="漁人堡">漁人堡</strong><span class="local-name">Halászbástya</span><p data-en="New Romanesque viewpoint overlooking the Danube and Parliament building panorama." data-zh="新羅馬式觀景台，俯瞰多瑙河與國會大廈全景。">新羅馬式觀景台，俯瞰多瑙河與國會大廈全景。</p></div>
+<div class="attraction"><strong data-en="Széchenyi Thermal Bath" data-zh="塞切尼溫泉浴場">塞切尼溫泉浴場</strong><span class="local-name">Széchenyi fürdő</span><p data-en="One of Europe's largest thermal spas, winter steam creates a magical atmosphere." data-zh="歐洲最大溫泉浴場之一，冬天蒸氣繚繞非常夢幻。">歐洲最大溫泉浴場之一，冬天蒸氣繚繞非常夢幻。</p></div>
+</div>
+<div class="city-christmas"><h4 data-en="Christmas market" data-zh="聖誕市集">聖誕市集</h4><p data-en="Vörösmarty Square market is the largest, must try Gulyás (stewed beef) and Forralt bor (mulled wine)." data-zh="Vörösmarty 廣場市集最大，必嘗 Gulyás（燉牛肉）和 Forralt bor（熱紅酒）。">Vörösmarty 廣場市集最大，必嘗 Gulyás（燉牛肉）和 Forralt bor（熱紅酒）。</p></div>
+<div class="city-meta"><span data-en="Recommended stay: 1-2 days" data-zh="建議停留：1-2天">建議停留：1-2天</span><span data-en="Cost of living: low" data-zh="物價：低">物價：低</span></div>
+</div>
+</div>
+<div class="city-card"><div class="city-header munich"><h3 data-en="Munich" data-zh="慕尼黑">慕尼黑</h3><span class="city-local-name">München</span><span class="city-country" data-en="Germany Deutschland" data-zh="德國 Deutschland">德國 Deutschland</span></div>
+<div class="city-body"><p class="city-desc" data-en="Bavaria's capital, beer culture city. Major European aviation hub, best gateway to Austrian ski areas." data-zh="巴伐利亞首府，啤酒文化之都。歐洲重要航空樞紐，進入奧地利滑雪區的最佳門戶。">巴伐利亞首府，啤酒文化之都。歐洲重要航空樞紐，進入奧地利滑雪區的最佳門戶。</p>
+<div class="attraction-list">
+<div class="attraction"><strong data-en="Maria Square" data-zh="瑪利亞廣場">瑪利亞廣場</strong><span class="local-name">Marienplatz</span><p data-en="Munich's heart, New Town Hall Glockenspiel plays daily at 11am and 12pm." data-zh="慕尼黑心臟，新市政廳鐘琴每天11點和12點演奏。">慕尼黑心臟，新市政廳鐘琴每天11點和12點演奏。</p></div>
+<div class="attraction"><strong data-en="Royal Beer Hall" data-zh="皇家啤酒屋">皇家啤酒屋</strong><span class="local-name">Hofbräuhaus</span><p data-en="Founded in 1589, must try Bavarian white sausage with wheat beer." data-zh="1589年創立，必嘗巴伐利亞白香腸配白啤酒。">1589年創立，必嘗巴伐利亞白香腸配白啤酒。</p></div>
+<div class="attraction"><strong data-en="Nymphenburg Palace" data-zh="寧芬堡宮">寧芬堡宮</strong><span class="local-name">Schloss Nymphenburg</span><p data-en="Bavarian royal summer palace, Baroque architecture with vast gardens." data-zh="巴伐利亞王室夏宮，巴洛克建築與廣闊花園。">巴伐利亞王室夏宮，巴洛克建築與廣闊花園。</p></div>
+</div>
+<div class="city-christmas"><h4 data-en="Christmas market" data-zh="聖誕市集">聖誕市集</h4><p data-en="Maria Square Christkindlmarkt is one of Germany’s oldest Christmas markets. Must-try Lebkuchen and Glühwein." data-zh="瑪利亞廣場 Christkindlmarkt 是德國最古老聖誕市集之一。必嘗 Lebkuchen 和 Glühwein。">瑪利亞廣場 Christkindlmarkt 是德國最古老聖誕市集之一。必嘗 Lebkuchen 和 Glühwein。</p></div>
+<div class="city-meta"><span data-en="Recommended stay: 1 day" data-zh="建議停留：1天">建議停留：1天</span><span data-en="Cost of living: upper-mid" data-zh="物價：中高">物價：中高</span><span data-en="Distance to ski area: 1.5-2 hours" data-zh="距雪場：1.5-2hr">距雪場：1.5-2hr</span></div>
+</div>
+</div>
+</div>
+<div class="additional-cities">
+<h3 data-en="Other nearby cities" data-zh="其他順路城市">其他順路城市</h3>
+<div class="mini-city-grid">
+<div class="mini-city"><h4 data-en="Bratislava" data-zh="布拉提斯拉瓦Bratislava">布拉提斯拉瓦 <span>Bratislava</span></h4><p class="mini-country" data-en="Slovakia Slovensko" data-zh="斯洛伐克 Slovensko">斯洛伐克 Slovensko</p><p data-en="Only 60km from Vienna, 1-hour train. One of Europe's cheapest capitals. Bratislavský hrad overlooks the Danube. Modrý kostolík is a must-see. Day trip from Vienna possible." data-zh="距維也納僅60km，火車1小時。歐洲最便宜首都之一。布拉提斯拉瓦城堡 (Bratislavský hrad) 俯瞰多瑙河。藍色教堂 (Modrý kostolík) 必拍。可從維也納當日來回。">距維也納僅60km，火車1小時。歐洲最便宜首都之一。布拉提斯拉瓦城堡 (Bratislavský hrad) 俯瞰多瑙河。藍色教堂 (Modrý kostolík) 必拍。可從維也納當日來回。</p></div>
+<div class="mini-city"><h4 data-en="Hallstatt" data-zh="哈修塔特Hallstatt">哈修塔特 <span>Hallstatt</span></h4><p class="mini-country" data-en="Austria Österreich" data-zh="奧地利 Österreich">奧地利 Österreich</p><p data-en="UNESCO World Heritage, “world’s most beautiful small town.” Colorful lakeside wooden houses look even more magical in winter. Salt mine (Salzwelten) and Skywalk are must-visits. About 1.5 hours from Salzburg." data-zh="UNESCO世界遺產，「世界最美小鎮」。湖畔彩色木屋冬季更夢幻。鹽礦 (Salzwelten) 和天空步道 (Skywalk) 必訪。從薩爾茲堡約1.5小時。">UNESCO世界遺產，「世界最美小鎮」。湖畔彩色木屋冬季更夢幻。鹽礦 (Salzwelten) 和天空步道 (Skywalk) 必訪。從薩爾茲堡約1.5小時。</p></div>
+<div class="mini-city"><h4 data-en="Innsbruck" data-zh="因斯布魯克Innsbruck">因斯布魯克 <span>Innsbruck</span></h4><p class="mini-country" data-en="Austria Österreich" data-zh="奧地利 Österreich">奧地利 Österreich</p><p data-en="Alpine town, Golden Roof (Goldenes Dachl) landmark. Nordkettenbahnen lift goes from city to 2,300m. Gateway to St. Anton or Sölden." data-zh="阿爾卑斯山城，黃金屋頂 (Goldenes Dachl) 為地標。北山纜車 (Nordkettenbahnen) 從市區直達2,300m。前往 St. Anton 或 Sölden 必經之地。">阿爾卑斯山城，黃金屋頂 (Goldenes Dachl) 為地標。北山纜車 (Nordkettenbahnen) 從市區直達2,300m。前往 St. Anton 或 Sölden 必經之地。</p></div>
+<div class="mini-city"><h4 data-en="Vaduz" data-zh="瓦杜茲Vaduz">瓦杜茲 <span>Vaduz</span></h4><p class="mini-country" data-en="Liechtenstein" data-zh="列支敦斯登 Liechtenstein">列支敦斯登 Liechtenstein</p><p data-en="The sixth smallest country capital in the world. Vaduz Castle (Schloss Vaduz) is a national symbol. Only 30 minutes by bus from Feldkirch, Austria, good for collecting passport stamps along the way." data-zh="世界第六小國首都。瓦杜茲城堡 (Schloss Vaduz) 為國家象徵。從奧地利 Feldkirch 搭公車僅30分鐘，順路蒐集護照章。">世界第六小國首都。瓦杜茲城堡 (Schloss Vaduz) 為國家象徵。從奧地利 Feldkirch 搭公車僅30分鐘，順路蒐集護照章。</p></div>
+</div>
+</div>
+</div></div>
+</section><section class="section section-alt collapsible-section collapsed" id="christmas-markets">
+<div class="container"><div class="section-toggle-bar" data-target="christmas-markets"><span class="toggle-chevron">▸</span><span class="toggle-title" data-en="Christmas Market Special Zone" data-zh="聖誕市集專區">聖誕市集專區</span></div><div class="section-collapsible-content">
+
 <p class="section-desc" data-en="European Christmas markets are one of the biggest highlights of winter travel, with aromas of mulled wine, grilled sausages, and gingerbread filling medieval squares" data-zh="歐洲聖誕市集是冬季旅行的最大亮點之一，熱紅酒、烤香腸、薑餅的香氣瀰漫在中世紀廣場上">歐洲聖誕市集是冬季旅行的最大亮點之一，熱紅酒、烤香腸、薑餅的香氣瀰漫在中世紀廣場上</p>
 <div class="xmas-city-grid">
 <div class="xmas-city-card">
@@ -2478,12 +2474,10 @@
 <div class="food-price" data-eur="5" data-eur-max="8">NT$175~280</div>
 </div>
 </div>
-</div>
-</section>
-<!-- ====== FOOD GUIDE SECTION ====== -->
-<section class="section" id="food-guide">
-<div class="container">
-<h2 class="section-title" data-en="Food guide" data-zh="美食指南">美食指南</h2>
+</div></div>
+</section><section class="section collapsible-section collapsed" id="food-guide">
+<div class="container"><div class="section-toggle-bar" data-target="food-guide"><span class="toggle-chevron">▸</span><span class="toggle-title" data-en="Food guide" data-zh="美食指南">美食指南</span></div><div class="section-collapsible-content">
+
 <p class="section-desc" data-en="Complete guide from ski resort mountain huts to city restaurants for Central European winter cuisine" data-zh="從雪場山頂小屋到城市餐廳，中歐冬季美食完全攻略">從雪場山頂小屋到城市餐廳，中歐冬季美食完全攻略</p>
 <h3 class="sub-section-h3" data-en="🏔️ Austrian mountain hut (Hütte) culture" data-zh="🏔️ 奧地利山頂小屋 Hütte 文化">🏔️ 奧地利山頂小屋 Hütte 文化</h3>
 <div class="hutte-intro">
@@ -2625,12 +2619,10 @@
 </ul>
 </div>
 </div>
-</div>
-</section>
-<!-- ====== ACCOMMODATION SECTION ====== -->
-<section class="section" id="accommodation">
-<div class="container">
-<h2 class="section-title" data-en="Accommodation In-Depth Comparison" data-zh="住宿深度比較">住宿深度比較</h2>
+</div></div>
+</section></div><div class="category-group" data-category="logistics" id="cat-logistics"><div class="category-header"><h2 class="category-title" data-en="💰 Budget &amp; Itinerary" data-zh="💰 預算行程">💰 預算行程</h2></div><section class="section collapsible-section collapsed" id="accommodation">
+<div class="container"><div class="section-toggle-bar" data-target="accommodation"><span class="toggle-chevron">▸</span><span class="toggle-title" data-en="Accommodation In-Depth Comparison" data-zh="住宿深度比較">住宿深度比較</span></div><div class="section-collapsible-content">
+
 <p class="section-desc" data-en="Ski resort accommodation analysis + best city stay areas recommended, Christmas peak season price reference" data-zh="雪場住宿類型解析＋城市最佳住宿區域推薦，聖誕旺季價格參考">雪場住宿類型解析＋城市最佳住宿區域推薦，聖誕旺季價格參考</p>
 <h3 class="sub-section-h3" data-en="🏔️ Ski resort accommodation comparison" data-zh="🏔️ 雪場住宿類型比較">🏔️ 雪場住宿類型比較</h3>
 <div class="accom-type-grid">
@@ -2831,11 +2823,10 @@
 </div>
 </div>
 </div>
-</div>
-</section>
-<section class="section" id="itinerary">
-<div class="container">
-<h2 class="section-title" data-en="Itinerary Options" data-zh="行程方案">行程方案</h2>
+</div></div>
+</section><section class="section collapsible-section collapsed" id="itinerary">
+<div class="container"><div class="section-toggle-bar" data-target="itinerary"><span class="toggle-chevron">▸</span><span class="toggle-title" data-en="Itinerary Options" data-zh="行程方案">行程方案</span></div><div class="section-collapsible-content">
+
 <p class="section-intro" data-en="Based on different holiday lengths and budgets, three itinerary options are provided. All plans follow the principle of 'no backtracking' and are most cost-effective with open-jaw tickets." data-zh="根據不同假期長度與預算，提供三種行程方案。所有方案以「不走回頭路」為原則，搭配 Open-jaw 機票最划算。">根據不同假期長度與預算，提供三種行程方案。所有方案以「不走回頭路」為原則，搭配 Open-jaw 機票最划算。</p>
 <div class="itinerary-tabs">
 <button class="tab-btn active" data-en="Plan A: Classic 3 Countries (10 days)" data-tab="route1" data-zh="方案A：經典三國 (10天)">方案A：經典三國 (10天)</button>
@@ -2892,12 +2883,10 @@
 </div>
 </div>
 </div>
-</div>
-</section>
-<!-- ==================== MAP ==================== -->
-<section class="section section-alt" id="map">
-<div class="container">
-<h2 class="section-title" data-en="Interactive Map" data-zh="互動地圖">互動地圖</h2>
+</div></div>
+</section><section class="section section-alt collapsible-section collapsed" id="map">
+<div class="container"><div class="section-toggle-bar" data-target="map"><span class="toggle-chevron">▸</span><span class="toggle-title" data-en="Interactive Map" data-zh="互動地圖">互動地圖</span></div><div class="section-collapsible-content">
+
 <p class="section-intro" data-en="Blue marks cities, white marks ski resorts. Click for details." data-zh="藍色標記為城市，白色標記為雪場。點擊查看詳細資訊。">藍色標記為城市，白色標記為雪場。點擊查看詳細資訊。</p>
 <div id="mainMap" style="height:550px;border-radius:12px;margin-bottom:2rem;"></div>
 <div class="transport-table">
@@ -2916,12 +2905,10 @@
 </tbody>
 </table>
 </div>
-</div>
-</section>
-<!-- ==================== BUDGET ==================== -->
-<section class="section" id="budget">
-<div class="container">
-<h2 class="section-title" data-en="Budget Estimate" data-zh="預算估算">預算估算</h2>
+</div></div>
+</section><section class="section collapsible-section collapsed" id="budget">
+<div class="container"><div class="section-toggle-bar" data-target="budget"><span class="toggle-chevron">▸</span><span class="toggle-title" data-en="Budget Estimate" data-zh="預算估算">預算估算</span></div><div class="section-collapsible-content">
+
 <p class="section-intro" data-en="Estimated cost per person (in euros, currency can be switched using the button above)." data-zh="一人預估費用（以歐元為基準，可用上方貨幣切換鈕轉換）。">一人預估費用（以歐元為基準，可用上方貨幣切換鈕轉換）。</p>
 <div class="budget-cards">
 <div class="budget-card">
@@ -2974,9 +2961,8 @@
 <div class="tip" data-en="Ski gear: renting locally at the resort is more convenient than bringing your own. Booking online in advance usually offers 10-20% discount." data-zh="雪具：在雪場當地租借比帶過去方便。提前網路預訂通常有10-20%折扣。"><strong data-en="Ski equipment" data-zh="雪具">雪具</strong>：在雪場當地租借比帶過去方便。提前網路預訂通常有10-20%折扣。</div>
 </div>
 </div>
-</div>
-</section>
-</main>
+</div></div>
+</section></div></main>
 <footer>
 <div class="container">
 <p data-en="2026 Europe Ski + City Tour Planning | Data updated: April 2026" data-zh="2026 歐洲滑雪＋城市旅遊規劃 | 資料更新：2026年4月">2026 歐洲滑雪＋城市旅遊規劃 | 資料更新：2026年4月</p>
@@ -2985,5 +2971,6 @@
 </footer>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="app.js"></script>
+<script src="redesign.js"></script>
 </body>
 </html>

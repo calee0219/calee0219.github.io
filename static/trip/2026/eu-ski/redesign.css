@@ -1,0 +1,258 @@
+/* ===== REDESIGN: Category Tab Bar ===== */
+.category-bar {
+  position: fixed;
+  top: 44px;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid #e2e8f0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease;
+}
+.category-bar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  height: 48px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.category-bar-inner::-webkit-scrollbar { display: none; }
+
+.cat-tab {
+  padding: 8px 20px;
+  border: none;
+  background: transparent;
+  color: #64748b;
+  font-size: 0.88rem;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 24px;
+  white-space: nowrap;
+  transition: all 0.25s ease;
+  font-family: inherit;
+  flex-shrink: 0;
+}
+.cat-tab:hover {
+  color: #0f172a;
+  background: #f1f5f9;
+}
+.cat-tab.active {
+  background: #0f172a;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Adjust body padding for two sticky bars */
+body {
+  padding-top: 92px !important;
+}
+html {
+  scroll-padding-top: 100px !important;
+}
+
+/* ===== REDESIGN: Category Groups ===== */
+.category-group {
+  margin-bottom: 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+.category-group:last-child {
+  border-bottom: none;
+}
+.category-header {
+  padding: 48px 24px 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.category-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #0f172a;
+  letter-spacing: -0.01em;
+  position: relative;
+  padding-left: 0;
+}
+
+/* ===== REDESIGN: Collapsible Sections ===== */
+.section-toggle-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 20px 0;
+  cursor: pointer;
+  user-select: none;
+  border-bottom: 1px solid #e2e8f0;
+  transition: all 0.2s ease;
+}
+.section-toggle-bar:hover {
+  color: #2563eb;
+}
+.section-toggle-bar:hover .toggle-title {
+  color: #2563eb;
+}
+.toggle-chevron {
+  font-size: 1.2rem;
+  color: #94a3b8;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+  width: 24px;
+  text-align: center;
+}
+.toggle-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1e293b;
+  transition: color 0.2s ease;
+}
+
+/* Collapsed state (default) */
+.collapsible-section.collapsed .section-collapsible-content {
+  display: none;
+}
+.collapsible-section.collapsed .toggle-chevron {
+  transform: rotate(0deg);
+}
+
+/* Expanded state */
+.collapsible-section:not(.collapsed) .section-collapsible-content {
+  display: block;
+  animation: slideDown 0.3s ease;
+}
+.collapsible-section:not(.collapsed) .toggle-chevron {
+  transform: rotate(90deg);
+  color: #2563eb;
+}
+.collapsible-section:not(.collapsed) .toggle-title {
+  color: #2563eb;
+}
+.collapsible-section:not(.collapsed) .section-toggle-bar {
+  border-bottom-color: #2563eb;
+  margin-bottom: 24px;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    max-height: none;
+    transform: translateY(0);
+  }
+}
+
+/* Override original section padding for collapsible layout */
+.collapsible-section.section {
+  padding: 0 0 24px 0;
+}
+.collapsible-section .container {
+  padding-top: 0;
+}
+
+/* Section intro (now inside collapsible content) */
+.section-collapsible-content > .section-intro {
+  margin-top: 0;
+}
+
+/* ===== REDESIGN: Hero Simplification ===== */
+.hero {
+  min-height: 70vh !important;
+}
+.hero-nav-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+.hero-cat-btn {
+  color: #fff !important;
+  background: rgba(255,255,255,0.12) !important;
+  border: 1px solid rgba(255,255,255,0.25) !important;
+  padding: 14px 32px !important;
+  border-radius: 30px !important;
+  font-size: 1.05rem !important;
+  font-weight: 600 !important;
+  transition: all 0.3s !important;
+  backdrop-filter: blur(4px) !important;
+  letter-spacing: 0.02em;
+}
+.hero-cat-btn:hover {
+  background: rgba(255,255,255,0.25) !important;
+  text-decoration: none !important;
+  transform: translateY(-3px) !important;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2) !important;
+}
+
+/* ===== REDESIGN: Category filtering ===== */
+.category-group.hidden {
+  display: none;
+}
+
+/* ===== REDESIGN: Progress indicator ===== */
+.section-count-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #e2e8f0;
+  color: #64748b;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 2px 10px;
+  border-radius: 12px;
+  margin-left: 12px;
+}
+
+/* ===== RESPONSIVE: Category Bar ===== */
+@media (max-width: 768px) {
+  body { padding-top: 110px !important; }
+  html { scroll-padding-top: 118px !important; }
+  
+  .category-bar { top: 70px; }
+  .category-bar-inner {
+    padding: 0 12px;
+    height: 44px;
+    gap: 4px;
+  }
+  .cat-tab {
+    padding: 6px 14px;
+    font-size: 0.82rem;
+  }
+  
+  .category-header { padding: 32px 16px 12px; }
+  .category-title { font-size: 1.3rem; }
+  
+  .section-toggle-bar { padding: 16px 0; }
+  .toggle-title { font-size: 1.1rem; }
+  
+  .hero { min-height: 60vh !important; }
+  .hero-cat-btn {
+    padding: 10px 20px !important;
+    font-size: 0.9rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  body { padding-top: 100px !important; }
+  html { scroll-padding-top: 108px !important; }
+  
+  .category-bar { top: 64px; }
+  .category-bar-inner { height: 40px; }
+  .cat-tab {
+    padding: 5px 12px;
+    font-size: 0.78rem;
+  }
+  
+  .hero-nav-categories { gap: 8px; }
+  .hero-cat-btn {
+    padding: 8px 16px !important;
+    font-size: 0.82rem !important;
+  }
+}
