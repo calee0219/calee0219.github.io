@@ -216,6 +216,32 @@ body {
     color: var(--gray-700);
 }
 
+.lang-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 2px solid var(--primary-light);
+    background: transparent;
+    color: var(--primary-light);
+    font-size: 0.8rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition);
+    flex-shrink: 0;
+    margin-left: 0.5rem;
+    font-family: 'Inter', 'Noto Sans TC', sans-serif;
+    letter-spacing: 0;
+}
+
+.lang-toggle:hover {
+    background: var(--primary-light);
+    color: white;
+    transform: scale(1.05);
+}
+
 /* ===== Sections ===== */
 .section {
     padding: 5rem 0;
