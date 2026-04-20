@@ -369,6 +369,16 @@ const translations = {
     'info.hotel.airbnb': { zh: '浦佐民宿（Airbnb）', en: 'Urasa Guesthouse (Airbnb)' },
     'info.instructor': { zh: '📱 教練聯繫', en: '📱 Instructor Contacts' },
 
+    // ===== Trip Series =====
+    'series.title': { zh: '滑雪旅行系列', en: 'Ski Trip Series' },
+    'series.2024.title': { zh: '福島滑雪之旅', en: 'Fukushima Ski Trip' },
+    'series.2024.desc': { zh: 'Fukushima · Aizu · Nikko · Tokyo', en: 'Fukushima · Aizu · Nikko · Tokyo' },
+    'series.2024.meta': { zh: '9 天 · 8 人 · Listel Ski Fantasia', en: '9 Days · 8 People · Listel Ski Fantasia' },
+    'series.2025.title': { zh: '新潟滑雪團', en: 'Niigata Ski Trip' },
+    'series.2025.desc': { zh: 'Naeba · Joetsu Kokusai · Echigo-Yuzawa · Tokyo', en: 'Naeba · Joetsu Kokusai · Echigo-Yuzawa · Tokyo' },
+    'series.2025.meta': { zh: '11 天 · 9 人 · 苗場 + 上越國際', en: '11 Days · 9 People · Naeba + Joetsu Kokusai' },
+    'series.current': { zh: '目前', en: 'Current' },
+
     // ===== Footer =====
     'footer.main': { zh: '🗾 2025-26 日本滑雪團 — 苗場 · 上越國際 · 越後湯澤 · 東京', en: '🗾 2025-26 Japan Ski Trip — Naeba · Joetsu Kokusai · Echigo-Yuzawa · Tokyo' },
     'footer.note': { zh: '本頁面整理自團隊 Notion 籌備文件，僅供團員參考使用', en: 'This page is compiled from the team\'s Notion planning documents, for team members\' reference only' },

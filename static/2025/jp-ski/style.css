@@ -1058,3 +1058,117 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+/* ===== Trip Series Navigation ===== */
+.trip-series {
+    padding: 4rem 0 2rem;
+    background: linear-gradient(180deg, var(--snow) 0%, var(--ice) 100%);
+}
+
+.trip-series-title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 2rem;
+    letter-spacing: 0.05em;
+}
+
+.trip-series-cards {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.trip-series-card {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 1.25rem 1.75rem;
+    border-radius: var(--radius);
+    background: white;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    text-decoration: none;
+    color: inherit;
+    min-width: 320px;
+    max-width: 420px;
+    flex: 1;
+    position: relative;
+}
+
+.trip-card-past:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+}
+
+.trip-card-current {
+    border: 2px solid var(--primary-light);
+    background: var(--ice);
+}
+
+.trip-card-year {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--primary-light);
+    font-family: 'Inter', sans-serif;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.trip-card-info h4 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--gray-800);
+    margin-bottom: 0.2rem;
+}
+
+.trip-card-info p {
+    font-size: 0.85rem;
+    color: var(--gray-600);
+    margin-bottom: 0.2rem;
+    font-family: 'Inter', 'Noto Sans TC', sans-serif;
+    letter-spacing: 0.02em;
+}
+
+.trip-card-meta {
+    font-size: 0.78rem;
+    color: var(--gray-500);
+}
+
+.trip-card-arrow {
+    font-size: 1.4rem;
+    color: var(--primary-light);
+    margin-left: auto;
+    flex-shrink: 0;
+    transition: var(--transition);
+}
+
+.trip-card-past:hover .trip-card-arrow {
+    transform: translateX(4px);
+}
+
+.trip-card-badge {
+    position: absolute;
+    top: -10px;
+    right: 16px;
+    background: var(--primary-light);
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 2px 10px;
+    border-radius: 20px;
+    letter-spacing: 0.05em;
+}
+
+@media (max-width: 768px) {
+    .trip-series-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .trip-series-card {
+        min-width: 280px;
+        max-width: 100%;
+    }
+}
