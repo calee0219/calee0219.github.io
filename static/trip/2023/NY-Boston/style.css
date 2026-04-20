@@ -73,7 +73,7 @@ img { max-width: 100%; }
 .hero {
   position: relative; min-height: 100vh;
   display: flex; align-items: center; justify-content: center;
-  background: linear-gradient(135deg, #0f172a 0%, #1e293b 30%, #334155 60%, #1e3a5f 100%);
+  background: url('/trip/images/ny-boston.webp') center/cover no-repeat;
   overflow: hidden;
 }
 .hero-particles {
@@ -468,4 +468,12 @@ img { max-width: 100%; }
 .animate-in.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 1;
 }

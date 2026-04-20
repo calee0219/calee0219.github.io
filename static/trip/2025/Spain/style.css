@@ -39,7 +39,7 @@ a:hover { color: var(--blue-tile); }
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 30%, #0f3460 60%, #533483 100%);
+    background: url('/trip/images/spain.webp') center/cover no-repeat;
     overflow: hidden;
 }
 
@@ -47,10 +47,7 @@ a:hover { color: var(--blue-tile); }
     content: '';
     position: absolute;
     inset: 0;
-    background:
-        radial-gradient(circle at 20% 80%, rgba(196,89,60,0.3) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(46,107,138,0.3) 0%, transparent 50%),
-        radial-gradient(circle at 50% 50%, rgba(196,153,59,0.15) 0%, transparent 60%);
+    background: rgba(0,0,0,0.45);
 }
 
 .hero-overlay {

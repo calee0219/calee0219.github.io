@@ -54,7 +54,7 @@ ul { list-style: none; }
   position: absolute;
   inset: 0;
   background: url('images/kiroro-snow.jpg') center/cover;
-  opacity: .25;
+  opacity: .4;
 }
 .hero-overlay {
   position: absolute;

@@ -58,7 +58,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #1a365d 0%, #2c5282 30%, #c53030 70%, #9b2c2c 100%);
+    background: url('/trip/images/napoli.webp') center/cover no-repeat;
     overflow: hidden;
 }
 
@@ -69,9 +69,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background:
-        radial-gradient(ellipse at 20% 50%, rgba(214, 158, 46, 0.15) 0%, transparent 50%),
-        radial-gradient(ellipse at 80% 50%, rgba(197, 48, 48, 0.2) 0%, transparent 50%);
+    background: rgba(0,0,0,0.45);
     z-index: 1;
 }
 
@@ -244,6 +242,49 @@ body {
     position: relative;
 }
 
+/* ===== Language Toggle ===== */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.lang-toggle {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 2px solid rgba(255,255,255,0.6);
+    background: rgba(255,255,255,0.1);
+    color: var(--color-white);
+    font-size: 0.8rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-body);
+    letter-spacing: 0;
+    line-height: 1;
+}
+
+.lang-toggle:hover {
+    background: rgba(255,255,255,0.25);
+    border-color: rgba(255,255,255,0.9);
+    transform: scale(1.05);
+}
+
+.main-nav.scrolled .lang-toggle {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+    background: transparent;
+}
+
+.main-nav.scrolled .lang-toggle:hover {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
 .nav-links a::after {
     content: '';
     position: absolute;
@@ -270,7 +311,7 @@ body {
     font-weight: 700;
     color: var(--color-primary);
     text-align: center;
-    margin-bottom: 8px;
+    margin-bottom: 40px;
 }
 
 .section-subtitle {
@@ -1159,6 +1200,16 @@ body {
 
     .nav-links a {
         color: var(--color-primary) !important;
+    }
+
+    .nav-right {
+        gap: 8px;
+    }
+
+    .lang-toggle {
+        width: 34px;
+        height: 34px;
+        font-size: 0.75rem;
     }
 
     .overview-grid {
