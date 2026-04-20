@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -671,15 +671,15 @@
 
   <div class="stats" id="statsBar">
     <div class="stat">
-      <div class="stat-num" id="statTrips">10</div>
+      <div class="stat-num" id="statTrips">11</div>
       <div class="stat-label" id="statTripsLabel">Trips</div>
     </div>
     <div class="stat">
-      <div class="stat-num" id="statCountries">9</div>
+      <div class="stat-num" id="statCountries">10</div>
       <div class="stat-label" id="statCountriesLabel">Countries</div>
     </div>
     <div class="stat">
-      <div class="stat-num" id="statDays">89</div>
+      <div class="stat-num" id="statDays">90</div>
       <div class="stat-label" id="statDaysLabel">Days</div>
     </div>
     <div class="stat">
@@ -710,8 +710,8 @@
       <button class="view-btn" data-view="list" onclick="setView('list')" title="List view">&#9776;</button>
     </div>
     <div class="lang-toggle">
-      <button class="lang-btn active" data-lang="en" onclick="setLang('en')">EN</button>
-      <button class="lang-btn" data-lang="zh" onclick="setLang('zh')">中文</button>
+      <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
+      <button class="lang-btn active" data-lang="zh" onclick="setLang('zh')">中文</button>
     </div>
   </div>
 
@@ -752,7 +752,7 @@
         id: 'fukushima-ski-2024',
         url: '/trip/2024/2324-jp-ski/',
         flag: '\u{1f1ef}\u{1f1f5}',
-        image: '',
+        image: '/trip/images/fukushima-ski.webp',
         banner_gradient: 'linear-gradient(135deg, #1a237e 0%, #302b63 30%, #667eea 60%, #f0f9ff 100%)',
         banner_emoji: '\u{1f3d4}\ufe0f',
         date: '2024-01-13',
@@ -783,7 +783,7 @@
         id: 'jp-kiroro-2025',
         url: '/trip/2025/2425-jp-ski/',
         flag: '\u{1f1ef}\u{1f1f5}',
-        image: '/trip/images/jp-ski.webp',
+        image: '/trip/images/jp-kiroro.webp',
         banner_gradient: 'linear-gradient(135deg, #1e3a5f 0%, #1d4ed8 30%, #93c5fd 60%, #f0f9ff 100%)',
         banner_emoji: '\u26f7\ufe0f',
         date: '2025-01-02',
@@ -1000,7 +1000,7 @@
         id: 'napoli-2025',
         url: '/trip/2025/Napoli/',
         flag: '\u{1f1ee}\u{1f1f9}',
-        image: '',
+        image: '/trip/images/napoli.webp',
         banner_gradient: 'linear-gradient(135deg, #7c2d12 0%, #b91c1c 30%, #f59e0b 60%, #fef3c7 100%)',
         banner_emoji: '\u{1f355}',
         date: '2025-11-29',
@@ -1008,7 +1008,7 @@
         duration: 4,
         year: 2025,
         season: 'autumn',
-        status: 'planning',
+        status: 'completed',
         type: 'city',
         continent: 'Europe',
         countries: ['Italy'],
@@ -1017,14 +1017,14 @@
           subtitle: 'Naples \u00b7 Pompeii \u00b7 Caserta Palace \u00b7 Pizza',
           date_str: 'Nov 29 \u2013 Dec 2, 2025',
           tags: ['City', 'History', 'Food'],
-          status_str: 'Planning',
+          status_str: 'Completed',
         },
         zh: {
           title: '2025 \u62ff\u5761\u91cc',
           subtitle: '\u62ff\u5761\u91cc \u00b7 \u9f90\u8c9d \u00b7 \u5361\u585e\u5854\u738b\u5bae \u00b7 \u62ab\u85a9',
           date_str: '2025.11.29 \u2013 12.02',
           tags: ['\u57ce\u5e02', '\u6b77\u53f2', '\u7f8e\u98df'],
-          status_str: '\u898f\u5283\u4e2d',
+          status_str: '\u5df2\u5b8c\u6210',
         }
       },
       {
@@ -1055,6 +1055,37 @@
           subtitle: '\u5967\u5730\u5229\u6ed1\u96ea \u00b7 \u8056\u8a95\u5e02\u96c6 \u00b7 \u4e2d\u6b50\u57ce\u5e02',
           date_str: '2026.12 \u2013 2027.01',
           tags: ['\u6ed1\u96ea', '\u8056\u8a95\u5e02\u96c6', '\u57ce\u5e02'],
+          status_str: '\u898f\u5283\u4e2d',
+        }
+      },
+      {
+        id: 'bluebell-2026',
+        url: '/trip/2026/bluebell/',
+        flag: '\u{1f1ec}\u{1f1e7}',
+        image: '/trip/images/bluebell.webp',
+        banner_gradient: 'linear-gradient(135deg, #4c1d95 0%, #7c3aed 30%, #a78bfa 60%, #ede9fe 100%)',
+        banner_emoji: '\u{1f338}',
+        date: '2026-04-18',
+        date_end: '2026-05-31',
+        duration: 1,
+        year: 2026,
+        season: 'spring',
+        status: 'planning',
+        type: 'nature',
+        continent: 'Europe',
+        countries: ['UK'],
+        en: {
+          title: 'London Bluebell Hikes 2026',
+          subtitle: 'Ashridge Estate \u00b7 Sevenoaks \u00b7 Wendover \u00b7 Day Trips from London',
+          date_str: 'Apr \u2013 May 2026',
+          tags: ['Hiking', 'Nature', 'Bluebell'],
+          status_str: 'Planning',
+        },
+        zh: {
+          title: '2026 \u85cd\u9234\u82b1\u5065\u884c',
+          subtitle: 'Ashridge Estate \u00b7 Sevenoaks \u00b7 Wendover \u00b7 \u502b\u6566\u51fa\u767c\u4e00\u65e5\u904a',
+          date_str: '2026.04 \u2013 05',
+          tags: ['\u5065\u884c', '\u81ea\u7136', '\u85cd\u9234\u82b1'],
           status_str: '\u898f\u5283\u4e2d',
         }
       }
@@ -1182,6 +1213,7 @@
       'USA': '\u7f8e\u570b', 'Japan': '\u65e5\u672c', 'Spain': '\u897f\u73ed\u7259',
       'Austria': '\u5967\u5730\u5229', 'Germany': '\u5fb7\u570b', 'Czech Republic': '\u6377\u514b',
       'Italy': '\u7fa9\u5927\u5229',
+      'UK': '\u82f1\u570b',
     };
 
     const continentI18n = {
@@ -1190,7 +1222,7 @@
       'Asia': 'continentAsia',
     };
 
-    let currentLang = 'en';
+    let currentLang = 'zh';
     let currentView = 'grid'; // 'grid' or 'list'
 
     // Multi-select filter state

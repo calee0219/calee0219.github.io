@@ -63,7 +63,7 @@ img { max-width: 100%; }
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 40%, #2d6a9f 70%, #4a90c4 100%);
+  background: url('/trip/images/eu-ski.webp') center/cover no-repeat;
   overflow: hidden;
   width: 100%;
 }
@@ -72,8 +72,7 @@ img { max-width: 100%; }
   position: absolute;
   top: -50%; left: -50%;
   width: 200%; height: 200%;
-  background: radial-gradient(ellipse at 30% 50%, rgba(255,255,255,0.05) 0%, transparent 60%),
-              radial-gradient(ellipse at 70% 30%, rgba(100,180,255,0.08) 0%, transparent 50%);
+  background: rgba(0,0,0,0.45);
   animation: heroFloat 20s ease-in-out infinite;
 }
 @keyframes heroFloat {

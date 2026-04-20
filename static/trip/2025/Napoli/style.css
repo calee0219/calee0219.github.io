@@ -58,7 +58,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #1a365d 0%, #2c5282 30%, #c53030 70%, #9b2c2c 100%);
+    background: url('/trip/images/napoli.webp') center/cover no-repeat;
     overflow: hidden;
 }
 
@@ -69,9 +69,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background:
-        radial-gradient(ellipse at 20% 50%, rgba(214, 158, 46, 0.15) 0%, transparent 50%),
-        radial-gradient(ellipse at 80% 50%, rgba(197, 48, 48, 0.2) 0%, transparent 50%);
+    background: rgba(0,0,0,0.45);
     z-index: 1;
 }
 
