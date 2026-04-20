@@ -163,7 +163,7 @@ a:hover { color: var(--blue-tile); }
     color: var(--charcoal);
 }
 
-.nav-links { display: flex; gap: 0.5rem; }
+.nav-links { display: flex; gap: 0.5rem; align-items: center; }
 .nav-links a {
     padding: 0.4rem 0.8rem;
     font-size: 0.9rem;
@@ -192,6 +192,33 @@ a:hover { color: var(--blue-tile); }
     height: 2px;
     background: var(--charcoal);
     transition: all 0.3s;
+}
+
+/* ===== Language Toggle ===== */
+.lang-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.3rem 0.75rem;
+    border: 2px solid var(--terracotta);
+    border-radius: 50px;
+    background: transparent;
+    color: var(--terracotta);
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    margin-left: 0.5rem;
+}
+.lang-toggle:hover {
+    background: var(--terracotta);
+    color: #fff;
+}
+.lang-toggle-mobile {
+    display: none;
 }
 
 /* ===== Sections ===== */
@@ -579,6 +606,8 @@ a:hover { color: var(--blue-tile); }
     }
     .nav-links.open { display: flex; }
     .nav-links a { padding: 0.7rem 1rem; }
+    .nav-links .lang-toggle { display: none; }
+    .lang-toggle-mobile { display: inline-flex; }
 
     .timeline { padding-left: 70px; }
     .timeline::before { left: 50px; }
