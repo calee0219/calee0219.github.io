@@ -175,17 +175,38 @@ const markers = [
     }
 ];
 
-// Add markers to map
+// Store marker layers for language updates
+const markerLayers = [];
 const markerGroup = L.featureGroup();
 
+function getMarkerPopupContent(m, lang) {
+    const mapTrans = i18n.mapTranslations[m.title];
+    if (mapTrans && lang) {
+        const title = lang === 'zh' ? mapTrans.zh : mapTrans.en;
+        const desc = lang === 'zh' ? mapTrans.descZh : mapTrans.descEn;
+        return `<h4>${title}</h4><p>${desc}</p>`;
+    }
+    return `<h4>${m.title}</h4><p>${m.desc}</p>`;
+}
+
+// Add markers to map
 markers.forEach(m => {
+    const lang = (typeof i18n !== 'undefined') ? i18n.currentLang : 'en';
     const marker = L.marker([m.lat, m.lng], {
         icon: createMarker(m.type)
-    }).bindPopup(`<h4>${m.title}</h4><p>${m.desc}</p>`);
+    }).bindPopup(getMarkerPopupContent(m, lang));
+    markerLayers.push({ marker, data: m });
     markerGroup.addLayer(marker);
 });
 
 markerGroup.addTo(map);
+
+// Function to update map language (called by i18n)
+window.updateMapLanguage = function(lang) {
+    markerLayers.forEach(({ marker, data }) => {
+        marker.setPopupContent(getMarkerPopupContent(data, lang));
+    });
+};
 
 // Draw route lines
 // Day 2: Naples -> Caserta
@@ -250,4 +271,11 @@ document.querySelectorAll('.overview-card, .food-card, .tip-card, .spot-card, .t
     el.style.transform = 'translateY(20px)';
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     observer.observe(el);
+});
+
+// ===== Initialize i18n =====
+document.addEventListener('DOMContentLoaded', () => {
+    if (typeof i18n !== 'undefined') {
+        i18n.init();
+    }
 });
