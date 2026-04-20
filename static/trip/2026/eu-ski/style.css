@@ -1463,3 +1463,95 @@ tr.austria-ref td {
     align-self: center;
   }
 }
+
+/* Trip Series Navigation */
+.trip-series-section {
+    padding: 4rem 2rem 2rem;
+    background: linear-gradient(180deg, #f8f9fa 0%, #e3f2fd 100%);
+    text-align: center;
+}
+.trip-series-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1a237e;
+    margin-bottom: 2rem;
+    letter-spacing: 0.05em;
+}
+.trip-series-cards {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.trip-series-card {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 1.25rem 1.75rem;
+    border-radius: 12px;
+    min-width: 280px;
+    max-width: 420px;
+    flex: 1;
+    text-align: left;
+}
+.trip-card-current {
+    background: #e3f2fd;
+    border: 2px solid #667eea;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+    position: relative;
+}
+.trip-card-link {
+    background: white;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+.trip-card-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+}
+.trip-card-year {
+    font-size: 1.6rem;
+    font-weight: 800;
+    font-family: 'Inter', sans-serif;
+    line-height: 1;
+    flex-shrink: 0;
+    min-width: 70px;
+}
+.trip-card-current .trip-card-year { color: #667eea; }
+.trip-card-link .trip-card-year { color: #2b6cb0; }
+.trip-card-info h4 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #1a1a2e;
+    margin: 0 0 0.2rem;
+}
+.trip-card-info p {
+    font-size: 0.85rem;
+    color: #4a4a6a;
+    margin: 0 0 0.2rem;
+}
+.trip-card-meta {
+    font-size: 0.78rem;
+    color: #999;
+}
+.trip-card-badge {
+    position: absolute;
+    top: -10px;
+    right: 16px;
+    background: #667eea;
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 2px 10px;
+    border-radius: 20px;
+}
+.trip-card-arrow {
+    font-size: 1.4rem;
+    color: #2b6cb0;
+    margin-left: auto;
+    flex-shrink: 0;
+}
