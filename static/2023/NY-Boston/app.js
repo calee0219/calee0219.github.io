@@ -238,4 +238,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initMap();
   createParticles();
   initScrollAnimations();
+  // Initialize i18n translation system
+  if (typeof i18n !== 'undefined') {
+    i18n.init();
+  }
 });

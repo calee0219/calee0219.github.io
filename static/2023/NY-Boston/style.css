@@ -49,6 +49,26 @@ img { max-width: 100%; }
   transition: all 0.3s;
 }
 
+/* Language Toggle */
+.lang-toggle {
+  background: transparent;
+  border: 1.5px solid #60a5fa;
+  color: #60a5fa;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.25s;
+  letter-spacing: 0.05em;
+  margin-left: 8px;
+  flex-shrink: 0;
+}
+.lang-toggle:hover {
+  background: #60a5fa;
+  color: #0f172a;
+}
+
 /* ===== Hero ===== */
 .hero {
   position: relative; min-height: 100vh;
@@ -389,6 +409,7 @@ img { max-width: 100%; }
     box-shadow: 0 8px 20px rgba(0,0,0,0.2);
   }
   .nav-toggle { display: flex; }
+  .lang-toggle { margin-left: auto; margin-right: 12px; }
   .hero-stats { gap: 24px; }
   .stat-num { font-size: 2rem; }
   .food-grid { grid-template-columns: 1fr; }
