@@ -86,11 +86,11 @@
       letter-spacing: 0.05em;
     }
 
-    /* Controls */
-    .controls {
+    /* Top controls: Group + Search + Language */
+    .controls-top {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 1rem 1.5rem;
+      padding: 1rem 1.5rem 0.5rem;
       display: flex;
       flex-wrap: wrap;
       gap: 0.75rem;
@@ -160,6 +160,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 0.5rem;
+      align-items: center;
     }
     .filter-section-label {
       font-size: 0.7rem;
@@ -175,6 +176,7 @@
       background: var(--border);
       margin: 0 0.5rem;
       align-self: stretch;
+      min-height: 1.5rem;
     }
     .filter-tag {
       background: var(--bg-card);
@@ -195,6 +197,120 @@
       background: var(--tag-bg);
       color: var(--tag-text);
       border-color: var(--accent);
+    }
+
+    /* Dropdown multi-select */
+    .dropdown-multi {
+      position: relative;
+      display: inline-block;
+    }
+    .dropdown-toggle {
+      background: var(--bg-card);
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.4rem 2rem 0.4rem 0.75rem;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: border-color 0.2s;
+      white-space: nowrap;
+      min-width: 140px;
+      text-align: left;
+      position: relative;
+    }
+    .dropdown-toggle::after {
+      content: '\25BC';
+      font-size: 0.6rem;
+      position: absolute;
+      right: 0.6rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+    }
+    .dropdown-toggle:hover { border-color: var(--accent); }
+    .dropdown-toggle.open {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.2);
+    }
+    .dropdown-toggle .selected-count {
+      background: var(--accent);
+      color: #0f172a;
+      border-radius: 10px;
+      padding: 0 0.4rem;
+      font-size: 0.7rem;
+      font-weight: 600;
+      margin-left: 0.3rem;
+    }
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: calc(100% + 4px);
+      left: 0;
+      min-width: 200px;
+      max-height: 300px;
+      overflow-y: auto;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+      z-index: 100;
+      padding: 0.25rem 0;
+    }
+    .dropdown-menu.open { display: block; }
+    .dropdown-menu-group-label {
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 0.5rem 0.75rem 0.25rem;
+      border-top: 1px solid var(--border);
+    }
+    .dropdown-menu-group-label:first-child { border-top: none; }
+    .dropdown-menu-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.4rem 0.75rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .dropdown-menu-item:hover {
+      background: var(--bg-card-hover);
+      color: var(--text);
+    }
+    .dropdown-menu-item.selected {
+      color: var(--tag-text);
+      background: rgba(30, 58, 95, 0.5);
+    }
+    .dropdown-menu-item .check {
+      width: 16px;
+      height: 16px;
+      border: 1.5px solid var(--border);
+      border-radius: 3px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      flex-shrink: 0;
+      transition: all 0.15s;
+    }
+    .dropdown-menu-item.selected .check {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #0f172a;
+    }
+
+    /* Sort controls (below filters) */
+    .controls-sort {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0.5rem 1.5rem 0.75rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      align-items: center;
     }
 
     /* Trip grid */
@@ -335,6 +451,51 @@
       font-size: 0.7rem;
     }
 
+    /* Active filter summary */
+    .active-filters-summary {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem 0.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      align-items: center;
+    }
+    .active-filter-chip {
+      background: var(--tag-bg);
+      color: var(--tag-text);
+      border: 1px solid var(--accent);
+      border-radius: 20px;
+      padding: 0.2rem 0.6rem;
+      font-size: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+    .active-filter-chip .chip-remove {
+      cursor: pointer;
+      opacity: 0.7;
+      font-size: 0.85rem;
+      line-height: 1;
+    }
+    .active-filter-chip .chip-remove:hover {
+      opacity: 1;
+    }
+    .clear-all-btn {
+      background: transparent;
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 0.2rem 0.6rem;
+      font-size: 0.75rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .clear-all-btn:hover {
+      border-color: var(--accent);
+      color: var(--text);
+    }
+
     /* Empty state */
     .empty-state {
       text-align: center;
@@ -358,7 +519,8 @@
     @media (max-width: 768px) {
       .header h1 { font-size: 1.6rem; }
       .stats { gap: 1.5rem; }
-      .controls { flex-direction: column; align-items: stretch; }
+      .controls-top { flex-direction: column; align-items: stretch; }
+      .controls-sort { flex-direction: column; align-items: stretch; }
       .lang-toggle { margin-left: 0; justify-content: center; }
       .search-input { width: 100%; }
       .trip-grid { grid-template-columns: 1fr; }
@@ -366,6 +528,9 @@
       .filter-tags { gap: 0.35rem; }
       .filter-divider { display: none; }
       .filter-section-label { width: 100%; margin-top: 0.25rem; }
+      .dropdown-multi { width: 100%; }
+      .dropdown-toggle { width: 100%; }
+      .dropdown-menu { width: 100%; }
     }
   </style>
 </head>
@@ -395,17 +560,8 @@
     </div>
   </div>
 
-  <div class="controls">
-    <div class="control-group">
-      <span class="control-label" id="sortLabel">Sort</span>
-      <select id="sortSelect">
-        <option value="date-desc">Newest First</option>
-        <option value="date-asc">Oldest First</option>
-        <option value="duration-desc">Longest First</option>
-        <option value="duration-asc">Shortest First</option>
-        <option value="name-asc">Name A&rarr;Z</option>
-      </select>
-    </div>
+  <!-- Top row: Group + Search + Language -->
+  <div class="controls-top">
     <div class="control-group">
       <span class="control-label" id="groupLabel">Group</span>
       <select id="groupSelect">
@@ -414,7 +570,7 @@
         <option value="season">By Season</option>
         <option value="type">By Type</option>
         <option value="status">By Status</option>
-        <option value="continent">By Continent</option>
+        <option value="continent" selected>By Continent</option>
         <option value="country">By Country</option>
       </select>
     </div>
@@ -427,10 +583,28 @@
     </div>
   </div>
 
-  <!-- Type & Status filters -->
+  <!-- Filter row 1: Type + Status + Year (pill tags) -->
   <div class="filter-tags" id="filterTagsType"></div>
-  <!-- Continent & Country filters -->
+
+  <!-- Filter row 2: Region dropdown multi-select -->
   <div class="filter-tags" id="filterTagsGeo"></div>
+
+  <!-- Active filters summary -->
+  <div class="active-filters-summary" id="activeFiltersSummary"></div>
+
+  <!-- Sort row (below filters) -->
+  <div class="controls-sort">
+    <div class="control-group">
+      <span class="control-label" id="sortLabel">Sort</span>
+      <select id="sortSelect">
+        <option value="date-desc">Newest First</option>
+        <option value="date-asc">Oldest First</option>
+        <option value="duration-desc">Longest First</option>
+        <option value="duration-asc">Shortest First</option>
+        <option value="name-asc">Name A&rarr;Z</option>
+      </select>
+    </div>
+  </div>
 
   <div class="trip-container" id="tripContainer"></div>
 
@@ -452,6 +626,7 @@
         date: '2024-08-17',
         date_end: '2024-08-26',
         duration: 10,
+        year: 2024,
         season: 'summer',
         status: 'completed',
         type: 'city',
@@ -482,6 +657,7 @@
         date: '2024-11-03',
         date_end: '2024-11-10',
         duration: 8,
+        year: 2024,
         season: 'autumn',
         status: 'completed',
         type: 'nature',
@@ -512,6 +688,7 @@
         date: '2023-11-21',
         date_end: '2023-11-28',
         duration: 8,
+        year: 2023,
         season: 'autumn',
         status: 'completed',
         type: 'city',
@@ -542,6 +719,7 @@
         date: '2023-11-03',
         date_end: '2023-11-14',
         duration: 12,
+        year: 2023,
         season: 'autumn',
         status: 'completed',
         type: 'city',
@@ -572,6 +750,7 @@
         date: '2025-12-24',
         date_end: '2026-01-04',
         duration: 11,
+        year: 2025,
         season: 'winter',
         status: 'completed',
         type: 'ski',
@@ -602,6 +781,7 @@
         date: '2025-05-17',
         date_end: '2025-05-21',
         duration: 5,
+        year: 2025,
         season: 'spring',
         status: 'completed',
         type: 'city',
@@ -632,6 +812,7 @@
         date: '2026-12-25',
         date_end: '2027-01-03',
         duration: 10,
+        year: 2026,
         season: 'winter',
         status: 'planning',
         type: 'ski',
@@ -681,14 +862,17 @@
         groupContinent: 'By Continent',
         groupCountry: 'By Country',
         filterTypeLabel: 'Type',
-        filterAll: 'All',
+        filterStatusLabel: 'Status',
+        filterYearLabel: 'Year',
         filterCity: 'City',
         filterSki: 'Ski',
         filterNature: 'Nature',
         filterCompleted: 'Completed',
         filterPlanning: 'Planning',
         filterGeoLabel: 'Region',
-        filterAllRegions: 'All Regions',
+        regionDropdownLabel: 'Select Regions...',
+        regionContinentGroup: 'Continents',
+        regionCountryGroup: 'Countries',
         emptyTitle: 'No trips found',
         emptyDesc: 'Try adjusting your filters or search terms.',
         seasonSpring: 'Spring',
@@ -704,6 +888,8 @@
         continentEurope: 'Europe',
         continentNorthAmerica: 'North America',
         continentAsia: 'Asia',
+        activeFilters: 'Active filters:',
+        clearAll: 'Clear all',
       },
       zh: {
         pageTitle: '旅行規劃 & 歷史',
@@ -730,14 +916,17 @@
         groupContinent: '依洲別',
         groupCountry: '依國家',
         filterTypeLabel: '類型',
-        filterAll: '全部',
+        filterStatusLabel: '狀態',
+        filterYearLabel: '年份',
         filterCity: '城市',
         filterSki: '滑雪',
         filterNature: '自然',
         filterCompleted: '已完成',
         filterPlanning: '規劃中',
         filterGeoLabel: '地區',
-        filterAllRegions: '全部地區',
+        regionDropdownLabel: '選擇地區...',
+        regionContinentGroup: '洲別',
+        regionCountryGroup: '國家',
         emptyTitle: '找不到旅程',
         emptyDesc: '請嘗試調整篩選條件或搜尋關鍵字。',
         seasonSpring: '春季',
@@ -753,6 +942,8 @@
         continentEurope: '歐洲',
         continentNorthAmerica: '北美洲',
         continentAsia: '亞洲',
+        activeFilters: '篩選條件：',
+        clearAll: '清除全部',
       }
     };
 
@@ -770,17 +961,27 @@
     };
 
     let currentLang = 'en';
-    let activeTypeFilter = 'all';
-    let activeGeoFilter = 'all'; // 'all', continent name, or country name
 
-    // ===== Derive unique continents & countries =====
+    // Multi-select filter state
+    let activeTypeFilters = new Set();
+    let activeStatusFilters = new Set();
+    let activeYearFilters = new Set();
+    let activeGeoFilters = new Set();
+
+    // Dropdown open state
+    let geoDropdownOpen = false;
+
+    // ===== Derive unique values =====
     function getUniqueContinents() {
-      return [...new Set(trips.map(t => t.continent))];
+      return [...new Set(trips.map(t => t.continent))].sort();
     }
     function getUniqueCountries() {
       const all = [];
       trips.forEach(t => t.countries.forEach(c => { if (!all.includes(c)) all.push(c); }));
       return all.sort();
+    }
+    function getUniqueYears() {
+      return [...new Set(trips.map(t => t.year))].sort((a, b) => b - a);
     }
 
     // ===== LANGUAGE =====
@@ -794,7 +995,7 @@
       render();
     }
 
-    function t(key) {
+    function tr(key) {
       return i18n[currentLang][key] || key;
     }
 
@@ -804,94 +1005,238 @@
     }
 
     function translateContinent(name) {
-      if (continentI18n[name]) return t(continentI18n[name]);
+      if (continentI18n[name]) return tr(continentI18n[name]);
       return name;
     }
 
     function updateUI() {
-      document.getElementById('pageTitle').textContent = t('pageTitle');
-      document.getElementById('pageDesc').textContent = t('pageDesc');
-      document.getElementById('backLink').textContent = t('backLink');
-      document.getElementById('sortLabel').textContent = t('sortLabel');
-      document.getElementById('groupLabel').textContent = t('groupLabel');
-      document.getElementById('searchInput').placeholder = t('searchPlaceholder');
-      document.getElementById('statTripsLabel').textContent = t('statTripsLabel');
-      document.getElementById('statCountriesLabel').textContent = t('statCountriesLabel');
-      document.getElementById('statDaysLabel').textContent = t('statDaysLabel');
-      document.getElementById('statCitiesLabel').textContent = t('statCitiesLabel');
-      document.getElementById('footerText').textContent = t('footerText');
+      document.getElementById('pageTitle').textContent = tr('pageTitle');
+      document.getElementById('pageDesc').textContent = tr('pageDesc');
+      document.getElementById('backLink').textContent = tr('backLink');
+      document.getElementById('sortLabel').textContent = tr('sortLabel');
+      document.getElementById('groupLabel').textContent = tr('groupLabel');
+      document.getElementById('searchInput').placeholder = tr('searchPlaceholder');
+      document.getElementById('statTripsLabel').textContent = tr('statTripsLabel');
+      document.getElementById('statCountriesLabel').textContent = tr('statCountriesLabel');
+      document.getElementById('statDaysLabel').textContent = tr('statDaysLabel');
+      document.getElementById('statCitiesLabel').textContent = tr('statCitiesLabel');
+      document.getElementById('footerText').textContent = tr('footerText');
 
       const sortSelect = document.getElementById('sortSelect');
-      sortSelect.options[0].text = t('sortDateDesc');
-      sortSelect.options[1].text = t('sortDateAsc');
-      sortSelect.options[2].text = t('sortDurDesc');
-      sortSelect.options[3].text = t('sortDurAsc');
-      sortSelect.options[4].text = t('sortName');
+      sortSelect.options[0].text = tr('sortDateDesc');
+      sortSelect.options[1].text = tr('sortDateAsc');
+      sortSelect.options[2].text = tr('sortDurDesc');
+      sortSelect.options[3].text = tr('sortDurAsc');
+      sortSelect.options[4].text = tr('sortName');
 
       const groupSelect = document.getElementById('groupSelect');
-      groupSelect.options[0].text = t('groupNone');
-      groupSelect.options[1].text = t('groupYear');
-      groupSelect.options[2].text = t('groupSeason');
-      groupSelect.options[3].text = t('groupType');
-      groupSelect.options[4].text = t('groupStatus');
-      groupSelect.options[5].text = t('groupContinent');
-      groupSelect.options[6].text = t('groupCountry');
+      groupSelect.options[0].text = tr('groupNone');
+      groupSelect.options[1].text = tr('groupYear');
+      groupSelect.options[2].text = tr('groupSeason');
+      groupSelect.options[3].text = tr('groupType');
+      groupSelect.options[4].text = tr('groupStatus');
+      groupSelect.options[5].text = tr('groupContinent');
+      groupSelect.options[6].text = tr('groupCountry');
 
       renderFilterTags();
+      renderGeoDropdown();
+      renderActiveFiltersSummary();
     }
 
-    // ===== FILTER TAGS =====
+    // ===== FILTER TAGS (Type + Status + Year as pill tags) =====
     function renderFilterTags() {
-      // Type & Status filters
       const typeContainer = document.getElementById('filterTagsType');
       const typeFilters = [
-        { key: 'all', label: t('filterAll') },
-        { key: 'city', label: t('filterCity') },
-        { key: 'ski', label: t('filterSki') },
-        { key: 'nature', label: t('filterNature') },
-        { key: 'completed', label: t('filterCompleted') },
-        { key: 'planning', label: t('filterPlanning') },
+        { key: 'city', label: tr('filterCity') },
+        { key: 'ski', label: tr('filterSki') },
+        { key: 'nature', label: tr('filterNature') },
       ];
-      typeContainer.innerHTML =
-        `<span class="filter-section-label">${t('filterTypeLabel')}</span>` +
-        typeFilters.map(f =>
-          `<span class="filter-tag ${activeTypeFilter === f.key ? 'active' : ''}" onclick="setTypeFilter('${f.key}')">${f.label}</span>`
-        ).join('');
+      const statusFilters = [
+        { key: 'completed', label: tr('filterCompleted') },
+        { key: 'planning', label: tr('filterPlanning') },
+      ];
+      const years = getUniqueYears();
 
-      // Geo filters (Continent + Country)
+      typeContainer.innerHTML =
+        `<span class="filter-section-label">${tr('filterTypeLabel')}</span>` +
+        typeFilters.map(f =>
+          `<span class="filter-tag ${activeTypeFilters.has(f.key) ? 'active' : ''}" onclick="toggleTypeFilter('${f.key}')">${f.label}</span>`
+        ).join('') +
+        `<span class="filter-divider"></span>` +
+        `<span class="filter-section-label">${tr('filterStatusLabel')}</span>` +
+        statusFilters.map(f =>
+          `<span class="filter-tag ${activeStatusFilters.has(f.key) ? 'active' : ''}" onclick="toggleStatusFilter('${f.key}')">${f.label}</span>`
+        ).join('') +
+        `<span class="filter-divider"></span>` +
+        `<span class="filter-section-label">${tr('filterYearLabel')}</span>` +
+        years.map(y =>
+          `<span class="filter-tag ${activeYearFilters.has(y) ? 'active' : ''}" onclick="toggleYearFilter(${y})">${y}</span>`
+        ).join('');
+    }
+
+    // ===== GEO DROPDOWN MULTI-SELECT =====
+    function renderGeoDropdown() {
       const geoContainer = document.getElementById('filterTagsGeo');
       const continents = getUniqueContinents();
       const countries = getUniqueCountries();
+      const selectedCount = activeGeoFilters.size;
 
-      let geoHtml = `<span class="filter-section-label">${t('filterGeoLabel')}</span>`;
-      geoHtml += `<span class="filter-tag ${activeGeoFilter === 'all' ? 'active' : ''}" onclick="setGeoFilter('all')">${t('filterAllRegions')}</span>`;
-      geoHtml += `<span class="filter-divider"></span>`;
+      let toggleLabel = tr('regionDropdownLabel');
+      if (selectedCount > 0) {
+        // Show first selected item + count
+        const firstKey = [...activeGeoFilters][0];
+        const firstName = firstKey.startsWith('continent:')
+          ? translateContinent(firstKey.replace('continent:', ''))
+          : translateCountry(firstKey.replace('country:', ''));
+        toggleLabel = selectedCount === 1
+          ? firstName
+          : `${firstName} +${selectedCount - 1}`;
+      }
 
-      // Continents
+      let menuHtml = '';
+      // Continents group
+      menuHtml += `<div class="dropdown-menu-group-label">${tr('regionContinentGroup')}</div>`;
       continents.forEach(c => {
-        geoHtml += `<span class="filter-tag ${activeGeoFilter === 'continent:' + c ? 'active' : ''}" onclick="setGeoFilter('continent:${c}')">${translateContinent(c)}</span>`;
+        const key = 'continent:' + c;
+        const selected = activeGeoFilters.has(key);
+        menuHtml += `<div class="dropdown-menu-item ${selected ? 'selected' : ''}" onclick="event.stopPropagation(); toggleGeoFilter('${key}')">
+          <span class="check">${selected ? '✓' : ''}</span>
+          <span>${translateContinent(c)}</span>
+        </div>`;
       });
-
-      geoHtml += `<span class="filter-divider"></span>`;
-
-      // Countries
+      // Countries group
+      menuHtml += `<div class="dropdown-menu-group-label">${tr('regionCountryGroup')}</div>`;
       countries.forEach(c => {
-        geoHtml += `<span class="filter-tag ${activeGeoFilter === 'country:' + c ? 'active' : ''}" onclick="setGeoFilter('country:${c}')">${translateCountry(c)}</span>`;
+        const key = 'country:' + c;
+        const selected = activeGeoFilters.has(key);
+        menuHtml += `<div class="dropdown-menu-item ${selected ? 'selected' : ''}" onclick="event.stopPropagation(); toggleGeoFilter('country:${c}')">
+          <span class="check">${selected ? '✓' : ''}</span>
+          <span>${translateCountry(c)}</span>
+        </div>`;
       });
 
-      geoContainer.innerHTML = geoHtml;
+      geoContainer.innerHTML =
+        `<span class="filter-section-label">${tr('filterGeoLabel')}</span>` +
+        `<div class="dropdown-multi" id="geoDropdown">
+          <div class="dropdown-toggle ${geoDropdownOpen ? 'open' : ''}" onclick="toggleGeoDropdown()">
+            ${toggleLabel}
+            ${selectedCount > 0 ? `<span class="selected-count">${selectedCount}</span>` : ''}
+          </div>
+          <div class="dropdown-menu ${geoDropdownOpen ? 'open' : ''}">
+            ${menuHtml}
+          </div>
+        </div>`;
     }
 
-    function setTypeFilter(filter) {
-      activeTypeFilter = filter;
+    function toggleGeoDropdown() {
+      geoDropdownOpen = !geoDropdownOpen;
+      renderGeoDropdown();
+    }
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(e) {
+      if (geoDropdownOpen && !e.target.closest('#geoDropdown')) {
+        geoDropdownOpen = false;
+        renderGeoDropdown();
+      }
+    });
+
+    function toggleTypeFilter(key) {
+      if (activeTypeFilters.has(key)) activeTypeFilters.delete(key);
+      else activeTypeFilters.add(key);
       renderFilterTags();
+      renderActiveFiltersSummary();
       render();
     }
 
-    function setGeoFilter(filter) {
-      activeGeoFilter = filter;
+    function toggleStatusFilter(key) {
+      if (activeStatusFilters.has(key)) activeStatusFilters.delete(key);
+      else activeStatusFilters.add(key);
       renderFilterTags();
+      renderActiveFiltersSummary();
       render();
+    }
+
+    function toggleYearFilter(year) {
+      if (activeYearFilters.has(year)) activeYearFilters.delete(year);
+      else activeYearFilters.add(year);
+      renderFilterTags();
+      renderActiveFiltersSummary();
+      render();
+    }
+
+    function toggleGeoFilter(key) {
+      if (activeGeoFilters.has(key)) activeGeoFilters.delete(key);
+      else activeGeoFilters.add(key);
+      renderGeoDropdown();
+      renderActiveFiltersSummary();
+      render();
+    }
+
+    function clearAllFilters() {
+      activeTypeFilters.clear();
+      activeStatusFilters.clear();
+      activeYearFilters.clear();
+      activeGeoFilters.clear();
+      geoDropdownOpen = false;
+      renderFilterTags();
+      renderGeoDropdown();
+      renderActiveFiltersSummary();
+      render();
+    }
+
+    function removeFilter(category, key) {
+      if (category === 'type') activeTypeFilters.delete(key);
+      else if (category === 'status') activeStatusFilters.delete(key);
+      else if (category === 'year') activeYearFilters.delete(parseInt(key));
+      else if (category === 'geo') activeGeoFilters.delete(key);
+      renderFilterTags();
+      renderGeoDropdown();
+      renderActiveFiltersSummary();
+      render();
+    }
+
+    // ===== ACTIVE FILTERS SUMMARY =====
+    function renderActiveFiltersSummary() {
+      const container = document.getElementById('activeFiltersSummary');
+      const hasFilters = activeTypeFilters.size > 0 || activeStatusFilters.size > 0 || activeYearFilters.size > 0 || activeGeoFilters.size > 0;
+
+      if (!hasFilters) {
+        container.innerHTML = '';
+        return;
+      }
+
+      const filterLabelMap = {
+        'city': tr('filterCity'),
+        'ski': tr('filterSki'),
+        'nature': tr('filterNature'),
+        'completed': tr('filterCompleted'),
+        'planning': tr('filterPlanning'),
+      };
+
+      let html = `<span class="filter-section-label">${tr('activeFilters')}</span>`;
+
+      activeTypeFilters.forEach(key => {
+        html += `<span class="active-filter-chip">${filterLabelMap[key]} <span class="chip-remove" onclick="removeFilter('type','${key}')">&times;</span></span>`;
+      });
+      activeStatusFilters.forEach(key => {
+        html += `<span class="active-filter-chip">${filterLabelMap[key]} <span class="chip-remove" onclick="removeFilter('status','${key}')">&times;</span></span>`;
+      });
+      activeYearFilters.forEach(year => {
+        html += `<span class="active-filter-chip">${year} <span class="chip-remove" onclick="removeFilter('year','${year}')">&times;</span></span>`;
+      });
+      activeGeoFilters.forEach(key => {
+        let label;
+        if (key.startsWith('continent:')) {
+          label = translateContinent(key.replace('continent:', ''));
+        } else {
+          label = translateCountry(key.replace('country:', ''));
+        }
+        html += `<span class="active-filter-chip">${label} <span class="chip-remove" onclick="removeFilter('geo','${key}')">&times;</span></span>`;
+      });
+
+      html += `<button class="clear-all-btn" onclick="clearAllFilters()">${tr('clearAll')}</button>`;
+      container.innerHTML = html;
     }
 
     // ===== SORTING =====
@@ -909,27 +1254,33 @@
       });
     }
 
-    // ===== FILTERING =====
+    // ===== FILTERING (AND across categories, OR within category) =====
     function filterTrips(list) {
       const search = document.getElementById('searchInput').value.toLowerCase();
       return list.filter(trip => {
-        // Type / status filter
-        if (activeTypeFilter !== 'all') {
-          if (activeTypeFilter === 'completed' && trip.status !== 'completed') return false;
-          if (activeTypeFilter === 'planning' && trip.status !== 'planning') return false;
-          if (activeTypeFilter === 'city' && trip.type !== 'city') return false;
-          if (activeTypeFilter === 'ski' && trip.type !== 'ski') return false;
-          if (activeTypeFilter === 'nature' && trip.type !== 'nature') return false;
+        // Type filter
+        if (activeTypeFilters.size > 0) {
+          if (!activeTypeFilters.has(trip.type)) return false;
+        }
+        // Status filter
+        if (activeStatusFilters.size > 0) {
+          if (!activeStatusFilters.has(trip.status)) return false;
+        }
+        // Year filter
+        if (activeYearFilters.size > 0) {
+          if (!activeYearFilters.has(trip.year)) return false;
         }
         // Geo filter
-        if (activeGeoFilter !== 'all') {
-          if (activeGeoFilter.startsWith('continent:')) {
-            const continent = activeGeoFilter.replace('continent:', '');
-            if (trip.continent !== continent) return false;
-          } else if (activeGeoFilter.startsWith('country:')) {
-            const country = activeGeoFilter.replace('country:', '');
-            if (!trip.countries.includes(country)) return false;
+        if (activeGeoFilters.size > 0) {
+          let geoMatch = false;
+          for (const gf of activeGeoFilters) {
+            if (gf.startsWith('continent:')) {
+              if (trip.continent === gf.replace('continent:', '')) { geoMatch = true; break; }
+            } else if (gf.startsWith('country:')) {
+              if (trip.countries.includes(gf.replace('country:', ''))) { geoMatch = true; break; }
+            }
           }
+          if (!geoMatch) return false;
         }
         // Search
         if (search) {
@@ -938,7 +1289,8 @@
             trip.en.subtitle, trip.zh.subtitle,
             ...trip.countries,
             trip.continent,
-            ...trip.en.tags, ...trip.zh.tags
+            ...trip.en.tags, ...trip.zh.tags,
+            trip.year.toString()
           ].join(' ').toLowerCase();
           if (!haystack.includes(search)) return false;
         }
@@ -956,18 +1308,18 @@
         let keys = [];
         switch (groupVal) {
           case 'year':
-            keys = [new Date(trip.date).getFullYear().toString()];
+            keys = [trip.year.toString()];
             break;
           case 'season':
-            const seasonMap = { spring: t('seasonSpring'), summer: t('seasonSummer'), autumn: t('seasonAutumn'), winter: t('seasonWinter') };
+            const seasonMap = { spring: tr('seasonSpring'), summer: tr('seasonSummer'), autumn: tr('seasonAutumn'), winter: tr('seasonWinter') };
             keys = [seasonMap[trip.season] || trip.season];
             break;
           case 'type':
-            const typeMap = { city: t('typeCity'), ski: t('typeSki'), nature: t('typeNature') };
+            const typeMap = { city: tr('typeCity'), ski: tr('typeSki'), nature: tr('typeNature') };
             keys = [typeMap[trip.type] || trip.type];
             break;
           case 'status':
-            keys = [trip.status === 'completed' ? t('statusCompleted') : t('statusPlanning')];
+            keys = [trip.status === 'completed' ? tr('statusCompleted') : tr('statusPlanning')];
             break;
           case 'continent':
             keys = [translateContinent(trip.continent)];
@@ -1018,7 +1370,7 @@
             <div class="card-subtitle">${data.subtitle}</div>
             <div class="card-meta">
               <span class="meta-item"><span class="meta-icon">📅</span> ${data.date_str}</span>
-              <span class="meta-item"><span class="meta-icon">⏱️</span> ${trip.duration} ${t('days')}</span>
+              <span class="meta-item"><span class="meta-icon">⏱️</span> ${trip.duration} ${tr('days')}</span>
               <span class="meta-item"><span class="meta-icon">📍</span> ${countriesDisplay}</span>
             </div>
             <div class="card-tags">
@@ -1039,8 +1391,8 @@
         container.innerHTML = `
           <div class="empty-state">
             <div class="empty-state-icon">🔍</div>
-            <h3>${t('emptyTitle')}</h3>
-            <p>${t('emptyDesc')}</p>
+            <h3>${tr('emptyTitle')}</h3>
+            <p>${tr('emptyDesc')}</p>
           </div>
         `;
         return;
