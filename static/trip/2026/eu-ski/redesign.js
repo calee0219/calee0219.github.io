@@ -146,6 +146,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // ===== REDESIGN: Auto-expand comparison sections for survey stage =====
+  const comparisonSections = ['flights', 'ski', 'budget-ski', 'na-ski', 'asia-ski', 'accommodation', 'itinerary', 'budget'];
+  comparisonSections.forEach(id => {
+    const section = document.getElementById(id);
+    if (section && section.classList.contains('collapsed')) {
+      section.classList.remove('collapsed');
+    }
+  });
+
   // ===== REDESIGN: Expand All / Collapse All keyboard shortcut =====
   document.addEventListener('keydown', (e) => {
     // Alt+E to expand all, Alt+C to collapse all
