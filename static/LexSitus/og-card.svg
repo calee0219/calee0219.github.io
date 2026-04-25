@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f6f3ec"/>
+  <!-- Subtle grid -->
+  <g stroke="#171615" stroke-width="0.5" opacity="0.07">
+    <line x1="0" y1="80" x2="1200" y2="80"/>
+    <line x1="0" y1="550" x2="1200" y2="550"/>
+    <line x1="80" y1="0" x2="80" y2="630"/>
+    <line x1="1120" y1="0" x2="1120" y2="630"/>
+  </g>
+  <!-- Top coord rail -->
+  <g fill="#6b6764" font-family="ui-monospace, JetBrains Mono, monospace" font-size="12" letter-spacing="3">
+    <text x="80" y="60">LAT 51.5074°N · LON 0.1278°W · LONDON</text>
+    <text x="1120" y="60" text-anchor="end">§ LEX SITUS · 4D SPATIAL REGISTRY</text>
+  </g>
+  <!-- Mark on the left -->
+  <g transform="translate(120,180) scale(3.6)" fill="none" stroke="#171615" stroke-width="2.2" stroke-linecap="square" stroke-linejoin="miter">
+    <polyline points="40,0 76,20 40,40 4,20 40,0"/>
+    <line x1="40" y1="40" x2="40" y2="80"/>
+    <line x1="4" y1="20" x2="4" y2="60"/>
+    <line x1="4" y1="60" x2="40" y2="80"/>
+    <line x1="76" y1="20" x2="76" y2="60"/>
+    <line x1="76" y1="60" x2="40" y2="80"/>
+  </g>
+  <circle cx="338" cy="403" r="8" fill="#B94A3A"/>
+  <!-- Wordmark + tagline on the right -->
+  <g fill="#171615" font-family="Playfair Display, Georgia, serif">
+    <text x="500" y="290" font-size="92" font-weight="700" letter-spacing="2">Lex Situs</text>
+    <text x="500" y="350" font-size="28" font-weight="500" fill="#6b6764" font-style="italic">Every building is a lawsuit waiting to happen.</text>
+  </g>
+  <line x1="500" y1="385" x2="600" y2="385" stroke="#B94A3A" stroke-width="3"/>
+  <text x="500" y="430" fill="#171615" font-family="ui-monospace, JetBrains Mono, monospace" font-size="18" letter-spacing="3">4D SPATIAL REGISTRY · EST. 2026</text>
+  <!-- Bottom rail -->
+  <g fill="#6b6764" font-family="ui-monospace, JetBrains Mono, monospace" font-size="12" letter-spacing="3">
+    <text x="80" y="595">UK BUILDING SAFETY ACT · 30-YEAR LIABILITY WINDOW</text>
+    <text x="1120" y="595" text-anchor="end">LEXSITUS.SITE</text>
+  </g>
+</svg>

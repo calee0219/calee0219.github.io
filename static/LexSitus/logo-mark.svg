@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Lex Situs mark">
+  <title>Lex Situs</title>
+  <!-- Solid background tile so favicon reads on any browser tab colour -->
+  <rect width="64" height="64" fill="#171615"/>
+  <g fill="none" stroke="#f6f3ec" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter">
+    <!-- Isometric cube simplified -->
+    <polyline points="32,10 52,22 32,34 12,22 32,10"/>
+    <line x1="32" y1="34" x2="32" y2="54"/>
+    <line x1="12" y1="22" x2="12" y2="42"/>
+    <line x1="12" y1="42" x2="32" y2="54"/>
+    <line x1="52" y1="22" x2="52" y2="42"/>
+    <line x1="52" y1="42" x2="32" y2="54"/>
+  </g>
+  <!-- Fiducial dot -->
+  <circle cx="44" cy="44" r="3.2" fill="#B94A3A"/>
+</svg>

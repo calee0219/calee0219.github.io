@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 96" role="img" aria-label="Lex Situs — 4D Spatial Registry">
+  <title>Lex Situs</title>
+  <g transform="translate(8,8)" fill="none" stroke="#171615" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter">
+    <!-- Isometric cube — top, left, right faces only -->
+    <!-- top rhombus -->
+    <polyline points="40,0 76,20 40,40 4,20 40,0" />
+    <!-- vertical center -->
+    <line x1="40" y1="40" x2="40" y2="80" />
+    <!-- left bottom edge -->
+    <line x1="4" y1="20" x2="4" y2="60" />
+    <line x1="4" y1="60" x2="40" y2="80" />
+    <!-- right bottom edge -->
+    <line x1="76" y1="20" x2="76" y2="60" />
+    <line x1="76" y1="60" x2="40" y2="80" />
+  </g>
+  <!-- Fiducial AprilTag dot (terracotta) -->
+  <circle cx="60" cy="62" r="3.2" fill="#B94A3A" />
+  <!-- Wordmark -->
+  <g transform="translate(108,0)" fill="#171615">
+    <text x="0" y="48" font-family="Playfair Display, Georgia, serif" font-size="32" font-weight="600" letter-spacing="2">LEX SITUS</text>
+    <text x="0" y="72" font-family="JetBrains Mono, ui-monospace, monospace" font-size="9" letter-spacing="2.4" fill="#6b6764">4D SPATIAL REGISTRY · EST. 2026</text>
+  </g>
+</svg>
