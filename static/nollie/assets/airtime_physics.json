@@ -1,0 +1,219 @@
+{
+  "table1_pop_to_air_height_flat": [
+    {
+      "v0": 1.0,
+      "t_air": 0.2038735983690112,
+      "h_max": 5.09683995922528,
+      "omega_180": 882.9000000000001,
+      "omega_360": 1765.8000000000002,
+      "omega_540": 2648.7000000000003,
+      "omega_720": 3531.6000000000004
+    },
+    {
+      "v0": 1.5,
+      "t_air": 0.3058103975535168,
+      "h_max": 11.46788990825688,
+      "omega_180": 588.6,
+      "omega_360": 1177.2,
+      "omega_540": 1765.8000000000002,
+      "omega_720": 2354.4
+    },
+    {
+      "v0": 2.0,
+      "t_air": 0.4077471967380224,
+      "h_max": 20.38735983690112,
+      "omega_180": 441.45000000000005,
+      "omega_360": 882.9000000000001,
+      "omega_540": 1324.3500000000001,
+      "omega_720": 1765.8000000000002
+    },
+    {
+      "v0": 2.5,
+      "t_air": 0.509683995922528,
+      "h_max": 31.855249745157998,
+      "omega_180": 353.16,
+      "omega_360": 706.32,
+      "omega_540": 1059.48,
+      "omega_720": 1412.64
+    },
+    {
+      "v0": 3.0,
+      "t_air": 0.6116207951070336,
+      "h_max": 45.87155963302752,
+      "omega_180": 294.3,
+      "omega_360": 588.6,
+      "omega_540": 882.9000000000001,
+      "omega_720": 1177.2
+    },
+    {
+      "v0": 3.5,
+      "t_air": 0.7135575942915392,
+      "h_max": 62.43628950050968,
+      "omega_180": 252.25714285714287,
+      "omega_360": 504.51428571428573,
+      "omega_540": 756.7714285714286,
+      "omega_720": 1009.0285714285715
+    },
+    {
+      "v0": 4.0,
+      "t_air": 0.8154943934760448,
+      "h_max": 81.54943934760448,
+      "omega_180": 220.72500000000002,
+      "omega_360": 441.45000000000005,
+      "omega_540": 662.1750000000001,
+      "omega_720": 882.9000000000001
+    }
+  ],
+  "table2_slope_correction": [
+    {
+      "slope_deg": 0,
+      "cos_theta": 1.0,
+      "airtime_factor": 1.0,
+      "height_factor": 1.0
+    },
+    {
+      "slope_deg": 12,
+      "cos_theta": 0.9781476007338057,
+      "airtime_factor": 1.0223405948650293,
+      "height_factor": 1.0223405948650293
+    },
+    {
+      "slope_deg": 18,
+      "cos_theta": 0.9510565162951535,
+      "airtime_factor": 1.0514622242382672,
+      "height_factor": 1.0514622242382672
+    },
+    {
+      "slope_deg": 22,
+      "cos_theta": 0.9271838545667874,
+      "airtime_factor": 1.0785347426775833,
+      "height_factor": 1.0785347426775833
+    },
+    {
+      "slope_deg": 25,
+      "cos_theta": 0.9063077870366499,
+      "airtime_factor": 1.1033779189624917,
+      "height_factor": 1.1033779189624917
+    },
+    {
+      "slope_deg": 30,
+      "cos_theta": 0.8660254037844387,
+      "airtime_factor": 1.1547005383792515,
+      "height_factor": 1.1547005383792515
+    },
+    {
+      "slope_deg": 35,
+      "cos_theta": 0.8191520442889918,
+      "airtime_factor": 1.220774588761456,
+      "height_factor": 1.220774588761456
+    }
+  ],
+  "table3_trick_requirements": [
+    {
+      "trick": "Nollie 180",
+      "deg": 180,
+      "omega_competent_dps": 540,
+      "omega_advanced_dps": 720,
+      "t_min_competent_s": 0.333,
+      "t_min_advanced_s": 0.25,
+      "v0_competent_flat_ms": 1.64,
+      "v0_advanced_flat_ms": 1.23,
+      "h_competent_flat_cm": 13.6,
+      "h_advanced_flat_cm": 7.7,
+      "v0_competent_25slope_ms": 1.48,
+      "v0_advanced_25slope_ms": 1.11,
+      "h_competent_25slope_cm": 11.2
+    },
+    {
+      "trick": "Nollie 360",
+      "deg": 360,
+      "omega_competent_dps": 720,
+      "omega_advanced_dps": 1080,
+      "t_min_competent_s": 0.5,
+      "t_min_advanced_s": 0.333,
+      "v0_competent_flat_ms": 2.45,
+      "v0_advanced_flat_ms": 1.64,
+      "h_competent_flat_cm": 30.7,
+      "h_advanced_flat_cm": 13.6,
+      "v0_competent_25slope_ms": 2.22,
+      "v0_advanced_25slope_ms": 1.48,
+      "h_competent_25slope_cm": 25.2
+    },
+    {
+      "trick": "Nollie 540",
+      "deg": 540,
+      "omega_competent_dps": 900,
+      "omega_advanced_dps": 1200,
+      "t_min_competent_s": 0.6,
+      "t_min_advanced_s": 0.45,
+      "v0_competent_flat_ms": 2.94,
+      "v0_advanced_flat_ms": 2.21,
+      "h_competent_flat_cm": 44.1,
+      "h_advanced_flat_cm": 24.8,
+      "v0_competent_25slope_ms": 2.67,
+      "v0_advanced_25slope_ms": 2.0,
+      "h_competent_25slope_cm": 36.3
+    },
+    {
+      "trick": "Nollie 720",
+      "deg": 720,
+      "omega_competent_dps": 1080,
+      "omega_advanced_dps": 1440,
+      "t_min_competent_s": 0.667,
+      "t_min_advanced_s": 0.5,
+      "v0_competent_flat_ms": 3.27,
+      "v0_advanced_flat_ms": 2.45,
+      "h_competent_flat_cm": 54.5,
+      "h_advanced_flat_cm": 30.7,
+      "v0_competent_25slope_ms": 2.96,
+      "v0_advanced_25slope_ms": 2.22,
+      "h_competent_25slope_cm": 44.8
+    },
+    {
+      "trick": "Nollie 900",
+      "deg": 900,
+      "omega_competent_dps": 1200,
+      "omega_advanced_dps": 1500,
+      "t_min_competent_s": 0.75,
+      "t_min_advanced_s": 0.6,
+      "v0_competent_flat_ms": 3.68,
+      "v0_advanced_flat_ms": 2.94,
+      "h_competent_flat_cm": 69.0,
+      "h_advanced_flat_cm": 44.1,
+      "v0_competent_25slope_ms": 3.33,
+      "v0_advanced_25slope_ms": 2.67,
+      "h_competent_25slope_cm": 56.7
+    }
+  ],
+  "user_estimate_for_3388_3390": {
+    "scene": "室內 Snowzone 約 18° 室內坡",
+    "observed_pop_height_cm_estimate": "8~14 cm (略低於成熟業餘水平)",
+    "observed_v0_ms_estimate": "1.3~1.7 m/s",
+    "implied_t_air_s": "0.27~0.35 s (平地等效)",
+    "implied_t_air_on_18deg": "0.28~0.37 s",
+    "needed_for_360_competent": {
+      "t_air_needed_s": 0.5,
+      "v0_needed_flat_ms": 2.45,
+      "v0_needed_18slope_ms": 2.33,
+      "h_needed_cm": 30.6
+    },
+    "needed_for_720_competent": {
+      "t_air_needed_s": 0.667,
+      "v0_needed_flat_ms": 3.27,
+      "v0_needed_18slope_ms": 3.11,
+      "h_needed_cm": 54.5
+    },
+    "gap_to_360_x": "你的 v0 約是 360 所需的 55-69%",
+    "gap_to_720_x": "你的 v0 約是 720 所需的 41-52% — 高度差約 1 倍以上",
+    "comment": "在 18° 室內坡的條件下 720 並非不可能,但需要把 pop 速度 v0 從目前 ~1.5 m/s 提升到 ~3.1 m/s — 這是 2 倍以上的爆發力差距,單靠技術微調無法達成,需要結合: (1) 更深的 loading 蹲深(腿驅動距離 +50%以上) (2) 更乾淨的 pop 釋放時序(目前提早洩力) (3) 起跳同步收身(reduce I) 提高 ω,等效於降低需要的滯空"
+  },
+  "constants": {
+    "g": 9.81,
+    "notes": [
+      "h_max 假設為 CoM 上升高度 (起跳瞬間到峰頂)",
+      "斜坡修正使用 1/cosθ 近似 (參考雪上跳台分析)",
+      "ω_competent / ω_advanced 為實務觀察區間,並非絕對下限",
+      "訓練實務中,完成一個 trick 至少需要 1.1×t_min_competent 的滯空緩衝"
+    ]
+  }
+}
