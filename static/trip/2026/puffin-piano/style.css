@@ -651,3 +651,67 @@ img {
     right: 8px;
   }
 }
+
+/* ===== NAVIGATION LINKS ===== */
+.nav-links {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.8rem;
+  padding: 5px 12px;
+  border-radius: 20px;
+  background: var(--color-bg);
+  color: var(--color-info);
+  text-decoration: none;
+  border: 1px solid var(--color-border);
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  background: var(--color-info);
+  color: white;
+  border-color: var(--color-info);
+}
+
+.nav-link.apple {
+  color: #333;
+}
+
+.nav-link.apple:hover {
+  background: #333;
+  color: white;
+  border-color: #333;
+}
+
+/* ===== REST STOP ===== */
+.rest-stop {
+  margin-top: 12px;
+  padding: 10px 16px;
+  background: #f0f7ff;
+  border-radius: 8px;
+  border-left: 3px solid var(--color-info);
+}
+
+.rest-stop-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-info);
+  margin-bottom: 4px;
+}
+
+.rest-stop-info {
+  font-size: 0.82rem;
+  color: var(--color-text-light);
+}
+
+.rest-stop .nav-links {
+  margin-top: 6px;
+}
