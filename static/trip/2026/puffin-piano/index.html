@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Puffin & Kawai CA701 之旅 | Yorkshire Coast Road Trip</title>
+  <meta name="description" content="兩天一夜公路旅行：Bempton Cliffs 看 Puffin、海邊露營看星空日出、York 小逛、Norwich 搬鋼琴" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Serif+Display&family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Language Toggle -->
+  <div class="lang-toggle">
+    <button class="lang-btn active" data-lang="zh">中文</button>
+    <button class="lang-btn" data-lang="en">EN</button>
+  </div>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>
+        <span data-zh="Puffin & Kawai CA701 之旅" data-en="Puffin & Kawai CA701 Road Trip">Puffin & Kawai CA701 之旅</span>
+      </h1>
+      <p class="hero-subtitle">
+        <span data-zh="Yorkshire 海岸 · 露營觀星 · 海上日出 · Norwich 搬琴" data-en="Yorkshire Coast · Stargazing Camp · Sunrise · Piano Pickup">Yorkshire 海岸 · 露營觀星 · 海上日出 · Norwich 搬琴</span>
+      </p>
+      <p class="hero-date">
+        <span data-zh="2026年5月23-24日（週六-週日）" data-en="23–24 May 2026 (Sat–Sun)">2026年5月23-24日（週六-週日）</span>
+      </p>
+    </div>
+  </header>
+
+  <!-- Trip Overview -->
+  <section class="section overview">
+    <div class="container">
+      <h2><span data-zh="行程總覽" data-en="Trip Overview">行程總覽</span></h2>
+      <div class="overview-grid">
+        <div class="overview-card">
+          <div class="overview-icon">🚐</div>
+          <div class="overview-label"><span data-zh="車輛" data-en="Vehicle">車輛</span></div>
+          <div class="overview-value">Peugeot Expert 5.8m³</div>
+          <div class="overview-detail"><span data-zh="National · King's Cross St Pancras" data-en="National · King's Cross St Pancras">National · King's Cross St Pancras</span></div>
+        </div>
+        <div class="overview-card">
+          <div class="overview-icon">📏</div>
+          <div class="overview-label"><span data-zh="總里程" data-en="Total Distance">總里程</span></div>
+          <div class="overview-value">~580 miles</div>
+          <div class="overview-detail"><span data-zh="約 930 公里" data-en="Approx. 930 km">約 930 公里</span></div>
+        </div>
+        <div class="overview-card">
+          <div class="overview-icon">🐧</div>
+          <div class="overview-label"><span data-zh="主要目的" data-en="Main Goals">主要目的</span></div>
+          <div class="overview-value"><span data-zh="看 Puffin + 搬鋼琴" data-en="See Puffins + Pick Up Piano">看 Puffin + 搬鋼琴</span></div>
+          <div class="overview-detail">Bempton Cliffs + Kawai CA701</div>
+        </div>
+        <div class="overview-card">
+          <div class="overview-icon">⛺</div>
+          <div class="overview-label"><span data-zh="住宿" data-en="Accommodation">住宿</span></div>
+          <div class="overview-value"><span data-zh="海邊露營" data-en="Coastal Camping">海邊露營</span></div>
+          <div class="overview-detail"><span data-zh="觀星 + 日出" data-en="Stargazing + Sunrise">觀星 + 日出</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Route Map Section -->
+  <section class="section route-section">
+    <div class="container">
+      <h2><span data-zh="路線圖" data-en="Route Map">路線圖</span></h2>
+      <div class="route-map-wrapper">
+        <iframe 
+          src="https://www.google.com/maps/d/embed?mid=1_placeholder&ehbc=2E312F" 
+          width="100%" 
+          height="480" 
+          style="border:0; border-radius: 12px;" 
+          allowfullscreen="" 
+          loading="lazy"
+          id="routeMap">
+        </iframe>
+        <div class="route-fallback">
+          <div class="route-stops">
+            <div class="route-stop">
+              <div class="stop-marker">A</div>
+              <div class="stop-info">
+                <strong>King's Cross St Pancras</strong>
+                <span data-zh="08:00 取車" data-en="08:00 Pick up van">08:00 取車</span>
+              </div>
+            </div>
+            <div class="route-line"></div>
+            <div class="route-stop">
+              <div class="stop-marker">B</div>
+              <div class="stop-info">
+                <strong>Finchley</strong>
+                <span data-zh="08:30 接朋友" data-en="08:30 Pick up friend">08:30 接朋友</span>
+              </div>
+            </div>
+            <div class="route-line long"></div>
+            <div class="route-stop">
+              <div class="stop-marker">C</div>
+              <div class="stop-info">
+                <strong>Bempton Cliffs (RSPB)</strong>
+                <span data-zh="~13:00 看 Puffin" data-en="~13:00 Puffin watching">~13:00 看 Puffin</span>
+              </div>
+            </div>
+            <div class="route-line"></div>
+            <div class="route-stop optional">
+              <div class="stop-marker">D</div>
+              <div class="stop-info">
+                <strong>North York Moors</strong>
+                <span class="tag-optional"><span data-zh="選擇性" data-en="Optional">選擇性</span></span>
+                <span data-zh="Hole of Horcum 健行" data-en="Hole of Horcum hike">Hole of Horcum 健行</span>
+              </div>
+            </div>
+            <div class="route-line"></div>
+            <div class="route-stop">
+              <div class="stop-marker">E</div>
+              <div class="stop-info">
+                <strong>Wold Farm Campsite</strong>
+                <span data-zh="露營・觀星・日出" data-en="Camp · Stargaze · Sunrise">露營・觀星・日出</span>
+              </div>
+            </div>
+            <div class="route-line"></div>
+            <div class="route-stop">
+              <div class="stop-marker">F</div>
+              <div class="stop-info">
+                <strong>York</strong>
+                <span data-zh="小逛 1.5h" data-en="Quick visit 1.5h">小逛 1.5h</span>
+              </div>
+            </div>
+            <div class="route-line long"></div>
+            <div class="route-stop">
+              <div class="stop-marker">G</div>
+              <div class="stop-info">
+                <strong>Norwich</strong>
+                <span data-zh="音樂節 + 搬鋼琴" data-en="Festival + Piano pickup">音樂節 + 搬鋼琴</span>
+              </div>
+            </div>
+            <div class="route-line long"></div>
+            <div class="route-stop">
+              <div class="stop-marker">H</div>
+              <div class="stop-info">
+                <strong>London</strong>
+                <span data-zh="~20:00 回到倫敦" data-en="~20:00 Back in London">~20:00 回到倫敦</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Day 1 -->
+  <section class="section day-section" id="day1">
+    <div class="container">
+      <div class="day-header">
+        <h2><span data-zh="Day 1 — 5月23日（週六）" data-en="Day 1 — 23 May (Saturday)">Day 1 — 5月23日（週六）</span></h2>
+        <p class="day-theme"><span data-zh="公路旅行 · Puffin · 露營觀星" data-en="Road Trip · Puffins · Stargazing Camp">公路旅行 · Puffin · 露營觀星</span></p>
+      </div>
+
+      <!-- Timeline -->
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-time">08:00</div>
+          <div class="timeline-content">
+            <h3><span data-zh="取車出發" data-en="Pick Up Van">取車出發</span></h3>
+            <p><span data-zh="King's Cross St Pancras，National 租車取 Peugeot Expert (5.8m³)。這台廂型車空間足夠裝下鋼琴和露營裝備。" data-en="King's Cross St Pancras, National car rental. Peugeot Expert (5.8m³) — spacious enough for the piano and camping gear.">King's Cross St Pancras，National 租車取 Peugeot Expert (5.8m³)。這台廂型車空間足夠裝下鋼琴和露營裝備。</span></p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-time">08:30</div>
+          <div class="timeline-content">
+            <h3><span data-zh="Finchley 接朋友" data-en="Pick Up Friend at Finchley">Finchley 接朋友</span></h3>
+            <p><span data-zh="從 King's Cross 往北約 20 分鐘車程。" data-en="About 20 minutes north from King's Cross.">從 King's Cross 往北約 20 分鐘車程。</span></p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-time">09:00–13:00</div>
+          <div class="timeline-content">
+            <h3><span data-zh="北上 Bempton Cliffs" data-en="Drive North to Bempton Cliffs">北上 Bempton Cliffs</span></h3>
+            <p><span data-zh="沿 A1(M) / M1 北上，約 4 小時車程（213 英里）。建議中途在 Doncaster 或 Ferrybridge 服務站休息。" data-en="Via A1(M)/M1 northbound, approx. 4 hours (213 miles). Suggest a break at Doncaster or Ferrybridge services.">沿 A1(M) / M1 北上，約 4 小時車程（213 英里）。建議中途在 Doncaster 或 Ferrybridge 服務站休息。</span></p>
+            <div class="drive-info">
+              <span class="drive-badge">🚐 213 mi / 4h</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item highlight">
+          <div class="timeline-time">13:00–15:30</div>
+          <div class="timeline-content">
+            <h3><span data-zh="🐧 Bempton Cliffs — 看 Puffin！" data-en="🐧 Bempton Cliffs — Puffin Watching!">🐧 Bempton Cliffs — 看 Puffin！</span></h3>
+            <p><span data-zh="RSPB Bempton Cliffs 是英格蘭最大的海鳥棲息地，5月下旬正是觀賞 Puffin 的最佳時期。沿著 Cliff Top Trail（2英里）可以近距離觀察 Puffin、Gannet、Kittiwake 等約50萬隻海鳥。" data-en="RSPB Bempton Cliffs is England's largest seabird colony. Late May is prime Puffin season. The 2-mile Cliff Top Trail offers close views of Puffins, Gannets, Kittiwakes — around 500,000 seabirds.">RSPB Bempton Cliffs 是英格蘭最大的海鳥棲息地，5月下旬正是觀賞 Puffin 的最佳時期。沿著 Cliff Top Trail（2英里）可以近距離觀察 Puffin、Gannet、Kittiwake 等約50萬隻海鳥。</span></p>
+            <div class="info-box">
+              <div class="info-item"><strong><span data-zh="地址" data-en="Address">地址</span>:</strong> Cliff Lane, Bridlington, YO15 1JF</div>
+              <div class="info-item"><strong><span data-zh="步道" data-en="Trail">步道</span>:</strong> Cliff Top Trail — 2 miles, ~1.5h</div>
+              <div class="info-item"><strong><span data-zh="最佳季節" data-en="Best Season">最佳季節</span>:</strong> <span data-zh="4月至7月中" data-en="April to mid-July">4月至7月中</span> ✓</div>
+              <div class="info-item"><strong><span data-zh="設施" data-en="Facilities">設施</span>:</strong> <span data-zh="遊客中心、咖啡廳、廁所、免費停車" data-en="Visitor centre, café, toilets, free parking">遊客中心、咖啡廳、廁所、免費停車</span></div>
+            </div>
+            <img src="images/puffin-flowers.jpg" alt="Puffins at Bempton Cliffs" class="section-image" loading="lazy" />
+          </div>
+        </div>
+
+        <div class="timeline-item optional-item">
+          <div class="timeline-time">15:30–18:00</div>
+          <div class="timeline-content">
+            <div class="optional-badge"><span data-zh="⚡ 選擇性行程" data-en="⚡ Optional">⚡ 選擇性行程</span></div>
+            <h3><span data-zh="North York Moors — Hole of Horcum" data-en="North York Moors — Hole of Horcum">North York Moors — Hole of Horcum</span></h3>
+            <p><span data-zh="如果體力和時間允許，可以開車 45 分鐘到 Hole of Horcum，這是一個壯觀的 400 英尺深天然山谷。短程環形步道約 2-2.5 小時（5英里）。" data-en="If energy and time permit, drive 45 min to Hole of Horcum — a spectacular 400ft natural amphitheatre. Short circular walk ~2-2.5h (5 miles).">如果體力和時間允許，可以開車 45 分鐘到 Hole of Horcum，這是一個壯觀的 400 英尺深天然山谷。短程環形步道約 2-2.5 小時（5英里）。</span></p>
+            <img src="images/hole-of-horcum.jpg" alt="Hole of Horcum" class="section-image" loading="lazy" />
+            <div class="alternative-box">
+              <h4><span data-zh="替代方案：Flamborough Head 步道" data-en="Alternative: Flamborough Head Walk">替代方案：Flamborough Head 步道</span></h4>
+              <p><span data-zh="如果不想開遠，Flamborough Head 到 North Landing 的海岸步道只有 1.5-2 英里，輕鬆好走，風景壯麗，就在露營地旁邊。" data-en="If you prefer not to drive far, the Flamborough Head to North Landing coastal path is just 1.5–2 miles, easy and stunning — right next to the campsite.">如果不想開遠，Flamborough Head 到 North Landing 的海岸步道只有 1.5-2 英里，輕鬆好走，風景壯麗，就在露營地旁邊。</span></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-time">18:00–22:00</div>
+          <div class="timeline-content">
+            <h3><span data-zh="⛺ 海邊露營 — Wold Farm" data-en="⛺ Coastal Camping — Wold Farm">⛺ 海邊露營 — Wold Farm</span></h3>
+            <p><span data-zh="Wold Farm 位於 Flamborough Head，面向北海（東面），可以直接從營地看到海景。晚上光害低，適合觀星；隔天清晨面東看日出。營地還有私人通道直達白堊懸崖，早上可以看 Puffin 和海豹。" data-en="Wold Farm sits on Flamborough Head, facing the North Sea (east). Sea views from your pitch, low light pollution for stargazing, and east-facing for sunrise. Private access to chalk cliffs for morning Puffin and seal viewing.">Wold Farm 位於 Flamborough Head，面向北海（東面），可以直接從營地看到海景。晚上光害低，適合觀星；隔天清晨面東看日出。營地還有私人通道直達白堊懸崖，早上可以看 Puffin 和海豹。</span></p>
+            <img src="images/camping-coast.jpg" alt="Coastal camping with sea view" class="section-image" loading="lazy" />
+            <div class="info-box">
+              <div class="info-item"><strong><span data-zh="營地" data-en="Campsite">營地</span>:</strong> Wold Farm Caravan and Camping Site</div>
+              <div class="info-item"><strong><span data-zh="位置" data-en="Location">位置</span>:</strong> Flamborough Head, near Bridlington</div>
+              <div class="info-item"><strong><span data-zh="特色" data-en="Features">特色</span>:</strong> <span data-zh="海景營位、私人懸崖通道、Puffin 棲息地" data-en="Sea view pitches, private cliff access, Puffin colony">海景營位、私人懸崖通道、Puffin 棲息地</span></div>
+              <div class="info-item"><strong><span data-zh="日落" data-en="Sunset">日落</span>:</strong> ~21:12</div>
+              <div class="info-item"><strong><span data-zh="活動" data-en="Activities">活動</span>:</strong> <span data-zh="測試露營裝備、觀星、聽海浪" data-en="Test camping gear, stargaze, listen to waves">測試露營裝備、觀星、聽海浪</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Day 2 -->
+  <section class="section day-section" id="day2">
+    <div class="container">
+      <div class="day-header">
+        <h2><span data-zh="Day 2 — 5月24日（週日）" data-en="Day 2 — 24 May (Sunday)">Day 2 — 5月24日（週日）</span></h2>
+        <p class="day-theme"><span data-zh="日出 · 海豹 · York · Norwich · 搬鋼琴" data-en="Sunrise · Seals · York · Norwich · Piano">日出 · 海豹 · York · Norwich · 搬鋼琴</span></p>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item highlight">
+          <div class="timeline-time">04:51</div>
+          <div class="timeline-content">
+            <h3><span data-zh="🌅 海上日出" data-en="🌅 Sunrise Over the Sea">🌅 海上日出</span></h3>
+            <p><span data-zh="日出方向約 55° 東北方，從營地或懸崖邊直接觀賞北海日出。五月底的日出非常早，光線柔和美麗。" data-en="Sunrise direction ~55° NE. Watch the North Sea sunrise from your pitch or the cliff edge. Late May sunrise is early with beautiful soft light.">日出方向約 55° 東北方，從營地或懸崖邊直接觀賞北海日出。五月底的日出非常早，光線柔和美麗。</span></p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-time">05:00–07:30</div>
+          <div class="timeline-content">
+            <h3><span data-zh="🦭 海豹 + 🐧 Puffin（晨光）" data-en="🦭 Seals + 🐧 Puffins (Morning Light)">🦭 海豹 + 🐧 Puffin（晨光）</span></h3>
+            <p><span data-zh="清晨是觀賞海鳥和海豹的最佳時間。Flamborough Head 的懸崖上全年都可以看到灰海豹，而 Puffin 在早晨光線下特別上相。從營地的私人步道即可到達觀賞點。" data-en="Early morning is the best time for seabirds and seals. Grey seals are visible year-round from Flamborough Head cliffs, and Puffins look stunning in morning light. Access via the campsite's private path.">清晨是觀賞海鳥和海豹的最佳時間。Flamborough Head 的懸崖上全年都可以看到灰海豹，而 Puffin 在早晨光線下特別上相。從營地的私人步道即可到達觀賞點。</span></p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-time">07:30–08:30</div>
+          <div class="timeline-content">
+            <h3><span data-zh="收拾營地" data-en="Pack Up Camp">收拾營地</span></h3>
+            <p><span data-zh="收帳篷、整理裝備，準備出發。" data-en="Take down tent, pack gear, prepare to depart.">收帳篷、整理裝備，準備出發。</span></p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-time">08:30–10:30</div>
+          <div class="timeline-content">
+            <h3><span data-zh="🏰 York 小逛" data-en="🏰 Quick Visit to York">🏰 York 小逛</span></h3>
+            <p><span data-zh="從 Flamborough 開車約 45 分鐘到 York。快速逛一下 York Minster、The Shambles 和城牆，控制在 1.5 小時內。" data-en="About 45 min drive from Flamborough. Quick tour of York Minster, The Shambles, and city walls — keep it under 1.5 hours.">從 Flamborough 開車約 45 分鐘到 York。快速逛一下 York Minster、The Shambles 和城牆，控制在 1.5 小時內。</span></p>
+            <img src="images/york-minster.jpg" alt="York Minster" class="section-image" loading="lazy" />
+            <div class="drive-info">
+              <span class="drive-badge">🚐 40 mi / 45 min</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-time">10:30–14:00</div>
+          <div class="timeline-content">
+            <h3><span data-zh="開往 Norwich" data-en="Drive to Norwich">開往 Norwich</span></h3>
+            <p><span data-zh="York 到 Norwich 約 175 英里，車程約 3.5 小時。這是今天最長的一段路，建議中途休息一次。" data-en="York to Norwich is about 175 miles, ~3.5 hours drive. This is the longest leg today — suggest one rest stop.">York 到 Norwich 約 175 英里，車程約 3.5 小時。這是今天最長的一段路，建議中途休息一次。</span></p>
+            <div class="drive-info">
+              <span class="drive-badge">🚐 175 mi / 3.5h</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-time">14:00–14:30</div>
+          <div class="timeline-content">
+            <h3><span data-zh="🎵 放朋友去音樂節" data-en="🎵 Drop Friend at Festival">🎵 放朋友去音樂節</span></h3>
+            <p><span data-zh="Norfolk & Norwich Festival 2026（5/8-5/24），5月24日正好是最後一天！Norwich Jazz Festival 也同步進行中。" data-en="Norfolk & Norwich Festival 2026 (8–24 May) — May 24 is the final day! Norwich Jazz Festival also running concurrently.">Norfolk & Norwich Festival 2026（5/8-5/24），5月24日正好是最後一天！Norwich Jazz Festival 也同步進行中。</span></p>
+            <img src="images/norwich.jpg" alt="Norwich" class="section-image" loading="lazy" />
+          </div>
+        </div>
+
+        <div class="timeline-item highlight">
+          <div class="timeline-time">14:30–16:00</div>
+          <div class="timeline-content">
+            <h3><span data-zh="🎹 搬鋼琴 — Kawai CA701" data-en="🎹 Pick Up Piano — Kawai CA701">🎹 搬鋼琴 — Kawai CA701</span></h3>
+            <p><span data-zh="前往 22 Teal Drive, NR8 5FQ 取二手 Kawai CA701。鋼琴箱尺寸 159×70×65cm，重約 89.5kg，Peugeot Expert 的貨廂（286×163×140cm）完全放得下。" data-en="Head to 22 Teal Drive, NR8 5FQ for the second-hand Kawai CA701. Box dimensions 159×70×65cm, ~89.5kg — fits easily in the Peugeot Expert cargo area (286×163×140cm).">前往 22 Teal Drive, NR8 5FQ 取二手 Kawai CA701。鋼琴箱尺寸 159×70×65cm，重約 89.5kg，Peugeot Expert 的貨廂（286×163×140cm）完全放得下。</span></p>
+            <img src="images/kawai-ca701.jpg" alt="Kawai CA701 Digital Piano" class="section-image piano-image" loading="lazy" />
+            <div class="info-box">
+              <div class="info-item"><strong><span data-zh="地址" data-en="Address">地址</span>:</strong> 22 Teal Drive, NR8 5FQ, Norwich</div>
+              <div class="info-item"><strong><span data-zh="鋼琴" data-en="Piano">鋼琴</span>:</strong> Kawai CA701（<span data-zh="二手" data-en="Second-hand">二手</span>）</div>
+              <div class="info-item"><strong><span data-zh="箱子尺寸" data-en="Box Size">箱子尺寸</span>:</strong> 159 × 70 × 65 cm</div>
+              <div class="info-item"><strong><span data-zh="重量" data-en="Weight">重量</span>:</strong> ~89.5 kg</div>
+              <div class="info-item"><strong><span data-zh="車廂空間" data-en="Van Cargo">車廂空間</span>:</strong> 286 × 163 × 140 cm ✓</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item optional-item">
+          <div class="timeline-time">16:00–17:00</div>
+          <div class="timeline-content">
+            <div class="optional-badge"><span data-zh="⚡ 選擇性行程" data-en="⚡ Optional">⚡ 選擇性行程</span></div>
+            <h3><span data-zh="🦭 Horsey Gap 看海豹" data-en="🦭 Horsey Gap Seal Watching">🦭 Horsey Gap 看海豹</span></h3>
+            <p><span data-zh="距離 Norwich 僅 32 分鐘車程（22英里）。即使在夏天，海灘上或海岸線旁也能看到海豹。有觀景台可以從沙丘上觀賞。如果時間充裕且鋼琴已上車，這是個很棒的加分行程。" data-en="Only 32 min (22 miles) from Norwich. Even in summer, seals can be seen on the beach or along the shoreline. Viewing platforms on the dunes. A great bonus if time allows after loading the piano.">距離 Norwich 僅 32 分鐘車程（22英里）。即使在夏天，海灘上或海岸線旁也能看到海豹。有觀景台可以從沙丘上觀賞。如果時間充裕且鋼琴已上車，這是個很棒的加分行程。</span></p>
+            <div class="info-box">
+              <div class="info-item"><strong><span data-zh="地點" data-en="Location">地點</span>:</strong> Horsey Gap, NR29 4EQ</div>
+              <div class="info-item"><strong><span data-zh="距離" data-en="Distance">距離</span>:</strong> <span data-zh="Norwich 出發 32 分鐘" data-en="32 min from Norwich">Norwich 出發 32 分鐘</span></div>
+              <div class="info-item"><strong><span data-zh="注意" data-en="Note">注意</span>:</strong> <span data-zh="夏季海豹數量較少但仍可見" data-en="Fewer seals in summer but still visible">夏季海豹數量較少但仍可見</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-time">17:00–17:30</div>
+          <div class="timeline-content">
+            <h3><span data-zh="接朋友" data-en="Pick Up Friend">接朋友</span></h3>
+            <p><span data-zh="回 Norwich 市區接朋友，準備回程。" data-en="Return to Norwich city centre to pick up friend, prepare for the drive home.">回 Norwich 市區接朋友，準備回程。</span></p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-time">17:30–20:00</div>
+          <div class="timeline-content">
+            <h3><span data-zh="🏠 開車回倫敦" data-en="🏠 Drive Back to London">🏠 開車回倫敦</span></h3>
+            <p><span data-zh="Norwich 到倫敦約 115 英里，走 A11/M11 約 2.5 小時。預計晚上 8 點左右到達。" data-en="Norwich to London is about 115 miles via A11/M11, ~2.5 hours. ETA around 8 PM.">Norwich 到倫敦約 115 英里，走 A11/M11 約 2.5 小時。預計晚上 8 點左右到達。</span></p>
+            <div class="drive-info">
+              <span class="drive-badge">🚐 115 mi / 2.5h</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Feasibility Analysis -->
+  <section class="section analysis-section" id="analysis">
+    <div class="container">
+      <h2><span data-zh="可行性分析與建議" data-en="Feasibility Analysis & Recommendations">可行性分析與建議</span></h2>
+      
+      <div class="analysis-grid">
+        <div class="analysis-card good">
+          <h3><span data-zh="✅ 完全可行" data-en="✅ Fully Feasible">✅ 完全可行</span></h3>
+          <ul>
+            <li><span data-zh="5月下旬是看 Puffin 的最佳時期（4月-7月中）" data-en="Late May is prime Puffin season (April–mid July)">5月下旬是看 Puffin 的最佳時期（4月-7月中）</span></li>
+            <li><span data-zh="Kawai CA701 箱子完美適配 Peugeot Expert 貨廂" data-en="Kawai CA701 box fits perfectly in Peugeot Expert cargo">Kawai CA701 箱子完美適配 Peugeot Expert 貨廂</span></li>
+            <li><span data-zh="Norfolk & Norwich Festival 最後一天正好是 5/24" data-en="Norfolk & Norwich Festival final day is exactly 5/24">Norfolk & Norwich Festival 最後一天正好是 5/24</span></li>
+            <li><span data-zh="Wold Farm 營地面東，可看日出和星空" data-en="Wold Farm campsite faces east — sunrise and stargazing">Wold Farm 營地面東，可看日出和星空</span></li>
+            <li><span data-zh="5月底日照超長（04:51-21:12），時間充裕" data-en="Late May has very long daylight (04:51–21:12)">5月底日照超長（04:51-21:12），時間充裕</span></li>
+          </ul>
+        </div>
+
+        <div class="analysis-card warning">
+          <h3><span data-zh="⚠️ 需注意" data-en="⚠️ Points to Watch">⚠️ 需注意</span></h3>
+          <ul>
+            <li><span data-zh="Day 2 總駕駛時間約 7 小時（含 York→Norwich 3.5h）" data-en="Day 2 total driving ~7 hours (incl. York→Norwich 3.5h)">Day 2 總駕駛時間約 7 小時（含 York→Norwich 3.5h）</span></li>
+            <li><span data-zh="鋼琴重 89.5kg，需要至少兩人搬運" data-en="Piano weighs 89.5kg — need at least 2 people to carry">鋼琴重 89.5kg，需要至少兩人搬運</span></li>
+            <li><span data-zh="5月海豹數量較少（最佳為10-1月）" data-en="Fewer seals in May (best Oct–Jan)">5月海豹數量較少（最佳為10-1月）</span></li>
+            <li><span data-zh="Wold Farm 需確認是否接受當天預訂" data-en="Confirm Wold Farm accepts same-day bookings">Wold Farm 需確認是否接受當天預訂</span></li>
+          </ul>
+        </div>
+
+        <div class="analysis-card suggestion">
+          <h3><span data-zh="💡 建議取捨" data-en="💡 Suggested Trade-offs">💡 建議取捨</span></h3>
+          <ul>
+            <li><span data-zh="North York Moors 標記為選擇性 — 如果下午到 Bempton 已經很累，改走 Flamborough Head 短步道即可" data-en="Mark North York Moors as optional — if tired after arriving at Bempton, do the short Flamborough Head walk instead">North York Moors 標記為選擇性 — 如果下午到 Bempton 已經很累，改走 Flamborough Head 短步道即可</span></li>
+            <li><span data-zh="York 停留控制在 1.5 小時內，不要貪心" data-en="Keep York visit under 1.5 hours — don't be greedy">York 停留控制在 1.5 小時內，不要貪心</span></li>
+            <li><span data-zh="Horsey Gap 海豹為加分項目 — 如果搬完琴已經很晚就跳過" data-en="Horsey Gap seals are a bonus — skip if it's late after loading piano">Horsey Gap 海豹為加分項目 — 如果搬完琴已經很晚就跳過</span></li>
+            <li><span data-zh="如果 Day 2 太趕，可考慮跳過 York 直接去 Norwich（省 2h）" data-en="If Day 2 is too tight, consider skipping York and going directly to Norwich (saves 2h)">如果 Day 2 太趕，可考慮跳過 York 直接去 Norwich（省 2h）</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Time Budget Table -->
+      <div class="time-table-wrapper">
+        <h3><span data-zh="時間預算表" data-en="Time Budget">時間預算表</span></h3>
+        <table class="time-table">
+          <thead>
+            <tr>
+              <th><span data-zh="路段" data-en="Segment">路段</span></th>
+              <th><span data-zh="距離" data-en="Distance">距離</span></th>
+              <th><span data-zh="車程" data-en="Drive Time">車程</span></th>
+              <th><span data-zh="停留" data-en="Stay">停留</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>King's Cross → Finchley</td>
+              <td>7 mi</td>
+              <td>20 min</td>
+              <td>10 min</td>
+            </tr>
+            <tr>
+              <td>Finchley → Bempton Cliffs</td>
+              <td>213 mi</td>
+              <td>4h</td>
+              <td>2.5h</td>
+            </tr>
+            <tr class="optional-row">
+              <td>Bempton → Hole of Horcum <span class="tag-optional"><span data-zh="選擇性" data-en="Optional">選擇性</span></span></td>
+              <td>35 mi</td>
+              <td>45 min</td>
+              <td>2h</td>
+            </tr>
+            <tr>
+              <td><span data-zh="→ Wold Farm 露營地" data-en="→ Wold Farm Campsite">→ Wold Farm 露營地</span></td>
+              <td>5–35 mi</td>
+              <td>10–45 min</td>
+              <td><span data-zh="過夜" data-en="Overnight">過夜</span></td>
+            </tr>
+            <tr>
+              <td>Wold Farm → York</td>
+              <td>40 mi</td>
+              <td>45 min</td>
+              <td>1.5h</td>
+            </tr>
+            <tr>
+              <td>York → Norwich</td>
+              <td>175 mi</td>
+              <td>3.5h</td>
+              <td>2h</td>
+            </tr>
+            <tr>
+              <td>Norwich → London</td>
+              <td>115 mi</td>
+              <td>2.5h</td>
+              <td>—</td>
+            </tr>
+            <tr class="total-row">
+              <td><strong><span data-zh="總計" data-en="Total">總計</span></strong></td>
+              <td><strong>~580 mi</strong></td>
+              <td><strong>~12h</strong></td>
+              <td><strong>~8.5h</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Packing & Prep -->
+  <section class="section prep-section" id="prep">
+    <div class="container">
+      <h2><span data-zh="行前準備" data-en="Preparation Checklist">行前準備</span></h2>
+      <div class="prep-grid">
+        <div class="prep-card">
+          <h3><span data-zh="🚐 車輛相關" data-en="🚐 Vehicle">🚐 車輛相關</span></h3>
+          <ul>
+            <li><span data-zh="確認 National 租車預訂（08:00 取車）" data-en="Confirm National rental booking (08:00 pickup)">確認 National 租車預訂（08:00 取車）</span></li>
+            <li><span data-zh="準備搬運鋼琴的毯子/保護墊" data-en="Prepare blankets/padding for piano transport">準備搬運鋼琴的毯子/保護墊</span></li>
+            <li><span data-zh="綑綁帶固定鋼琴" data-en="Ratchet straps to secure piano">綑綁帶固定鋼琴</span></li>
+          </ul>
+        </div>
+        <div class="prep-card">
+          <h3><span data-zh="⛺ 露營裝備" data-en="⛺ Camping Gear">⛺ 露營裝備</span></h3>
+          <ul>
+            <li><span data-zh="帳篷（測試裝備！）" data-en="Tent (testing gear!)">帳篷（測試裝備！）</span></li>
+            <li><span data-zh="睡袋 + 睡墊" data-en="Sleeping bag + mat">睡袋 + 睡墊</span></li>
+            <li><span data-zh="頭燈 / 營燈" data-en="Headlamp / lantern">頭燈 / 營燈</span></li>
+            <li><span data-zh="爐具 + 食物" data-en="Stove + food">爐具 + 食物</span></li>
+          </ul>
+        </div>
+        <div class="prep-card">
+          <h3><span data-zh="📷 觀鳥裝備" data-en="📷 Birdwatching Gear">📷 觀鳥裝備</span></h3>
+          <ul>
+            <li><span data-zh="望遠鏡 / 雙筒望遠鏡" data-en="Binoculars / telescope">望遠鏡 / 雙筒望遠鏡</span></li>
+            <li><span data-zh="相機 + 長焦鏡頭" data-en="Camera + telephoto lens">相機 + 長焦鏡頭</span></li>
+            <li><span data-zh="防風外套（懸崖上風大）" data-en="Windproof jacket (cliffs are windy)">防風外套（懸崖上風大）</span></li>
+          </ul>
+        </div>
+        <div class="prep-card">
+          <h3><span data-zh="📋 預訂事項" data-en="📋 Bookings">📋 預訂事項</span></h3>
+          <ul>
+            <li><span data-zh="Wold Farm 營地預訂" data-en="Book Wold Farm campsite">Wold Farm 營地預訂</span></li>
+            <li><span data-zh="確認鋼琴賣家取貨時間" data-en="Confirm piano pickup time with seller">確認鋼琴賣家取貨時間</span></li>
+            <li><span data-zh="Norfolk & Norwich Festival 門票（如需要）" data-en="NNF tickets (if needed)">Norfolk & Norwich Festival 門票（如需要）</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p><span data-zh="Puffin & Kawai CA701 之旅 — 2026年5月23-24日" data-en="Puffin & Kawai CA701 Road Trip — 23–24 May 2026">Puffin & Kawai CA701 之旅 — 2026年5月23-24日</span></p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
