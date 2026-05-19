@@ -9,6 +9,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Serif+Display&family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 </head>
 <body>
   <!-- Language Toggle -->
@@ -57,6 +59,12 @@
           <div class="overview-detail">Bempton Cliffs + Kawai CA701</div>
         </div>
         <div class="overview-card">
+          <div class="overview-icon">👥</div>
+          <div class="overview-label"><span data-zh="成員" data-en="Members">成員</span></div>
+          <div class="overview-value"><span data-zh="3 人" data-en="3 People">3 人</span></div>
+          <div class="overview-detail"><span data-zh="可輪流開車" data-en="Can take turns driving">可輪流開車</span></div>
+        </div>
+        <div class="overview-card">
           <div class="overview-icon">⛺</div>
           <div class="overview-label"><span data-zh="住宿" data-en="Accommodation">住宿</span></div>
           <div class="overview-value"><span data-zh="海邊露營" data-en="Coastal Camping">海邊露營</span></div>
@@ -71,15 +79,7 @@
     <div class="container">
       <h2><span data-zh="路線圖" data-en="Route Map">路線圖</span></h2>
       <div class="route-map-wrapper">
-        <iframe 
-          src="https://www.google.com/maps/d/embed?mid=1_placeholder&ehbc=2E312F" 
-          width="100%" 
-          height="480" 
-          style="border:0; border-radius: 12px;" 
-          allowfullscreen="" 
-          loading="lazy"
-          id="routeMap">
-        </iframe>
+        <div id="leafletMap" style="width:100%; height:480px; border-radius:12px; z-index:1;"></div>
         <div class="route-fallback">
           <div class="route-stops">
             <div class="route-stop">
@@ -94,7 +94,7 @@
               <div class="stop-marker">B</div>
               <div class="stop-info">
                 <strong>Finchley</strong>
-                <span data-zh="08:30 接朋友" data-en="08:30 Pick up friend">08:30 接朋友</span>
+                <span data-zh="08:30 接朋友" data-en="08:30 Pick up friends">08:30 接朋友</span>
               </div>
             </div>
             <div class="route-line long"></div>
@@ -173,8 +173,8 @@
         <div class="timeline-item">
           <div class="timeline-time">08:30</div>
           <div class="timeline-content">
-            <h3><span data-zh="Finchley 接朋友" data-en="Pick Up Friend at Finchley">Finchley 接朋友</span></h3>
-            <p><span data-zh="從 King's Cross 往北約 20 分鐘車程。" data-en="About 20 minutes north from King's Cross.">從 King's Cross 往北約 20 分鐘車程。</span></p>
+            <h3><span data-zh="Finchley 接朋友" data-en="Pick Up Friends at Finchley">Finchley 接朋友</span></h3>
+            <p><span data-zh="從 King's Cross 往北約 20 分鐘車程，接另外兩位同行夥伴。三人同行可以輪流開車，長途比較不累。" data-en="About 20 minutes north from King's Cross. Pick up the other two travel companions. Three people can take turns driving on the long journey.">從 King's Cross 往北約 20 分鐘車程，接另外兩位同行夥伴。三人同行可以輪流開車，長途比較不累。</span></p>
           </div>
         </div>
 
@@ -375,7 +375,7 @@
           <h3><span data-zh="⚠️ 需注意" data-en="⚠️ Points to Watch">⚠️ 需注意</span></h3>
           <ul>
             <li><span data-zh="Day 2 總駕駛時間約 7 小時（含 York→Norwich 3.5h）" data-en="Day 2 total driving ~7 hours (incl. York→Norwich 3.5h)">Day 2 總駕駛時間約 7 小時（含 York→Norwich 3.5h）</span></li>
-            <li><span data-zh="鋼琴重 89.5kg，需要至少兩人搬運" data-en="Piano weighs 89.5kg — need at least 2 people to carry">鋼琴重 89.5kg，需要至少兩人搬運</span></li>
+            <li><span data-zh="鋼琴重 89.5kg，三人搬運剛好" data-en="Piano weighs 89.5kg — 3 people is ideal for carrying">鋼琴重 89.5kg，三人搬運剛好</span></li>
             <li><span data-zh="5月海豹數量較少（最佳為10-1月）" data-en="Fewer seals in May (best Oct–Jan)">5月海豹數量較少（最佳為10-1月）</span></li>
             <li><span data-zh="Wold Farm 需確認是否接受當天預訂" data-en="Confirm Wold Farm accepts same-day bookings">Wold Farm 需確認是否接受當天預訂</span></li>
           </ul>
@@ -509,5 +509,6 @@
   </footer>
 
   <script src="app.js"></script>
+  <script src="map.js"></script>
 </body>
 </html>
