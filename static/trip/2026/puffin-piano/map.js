@@ -19,7 +19,7 @@
 
   // Define waypoints with coordinates
   const stops = [
-    { id: 'A', name: "King's Cross St Pancras", desc: '08:00 取車', lat: 51.5320, lng: -0.1240, day: 1 },
+    { id: 'A', name: 'Marylebone (Enterprise)', desc: '08:00 取車', lat: 51.5225, lng: -0.1580, day: 1 },
     { id: 'B', name: 'Finchley', desc: '08:30 接朋友', lat: 51.5912, lng: -0.1647, day: 1 },
     { id: 'C', name: 'York', desc: '12:00 午餐+逛街 2.5h', lat: 53.9600, lng: -1.0873, day: 1 },
     { id: 'D', name: 'North York Moors (Hole of Horcum)', desc: '選擇性 — 健行', lat: 54.3167, lng: -0.8500, day: 1, optional: true },
@@ -40,9 +40,9 @@
   ];
 
   // Route polylines (approximate road routes)
-  // Day 1: King's Cross → Finchley → York → Whitby → Robin Hood's Bay → Wold Farm
+  // Day 1: Marylebone → Finchley → York → Whitby → Robin Hood's Bay → Wold Farm
   const day1MainRoute = [
-    [51.5320, -0.1240], // King's Cross
+    [51.5225, -0.1580], // Marylebone
     [51.5912, -0.1647], // Finchley
     [51.65, -0.20],     // M1 start
     [51.85, -0.35],     // M1
