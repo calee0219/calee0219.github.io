@@ -25,7 +25,7 @@
     { id: 'D', name: 'North York Moors (Hole of Horcum)', desc: '選擇性 — 健行', lat: 54.3167, lng: -0.8500, day: 1, optional: true },
     { id: 'E', name: 'Whitby', desc: '199 階梯 + Abbey', lat: 54.4885, lng: -0.6132, day: 1 },
     { id: 'F', name: "Robin Hood's Bay", desc: '漁村散步', lat: 54.4334, lng: -0.5334, day: 1 },
-    { id: 'G', name: 'Wold Farm Campsite', desc: '露營・觀星・日出', lat: 54.1150, lng: -0.1150, day: 1 },
+    { id: 'G', name: 'Grange Farm (Grange Getaway)', desc: '露營・觀星・日出', lat: 54.0850, lng: -0.1700, day: 1 },
     { id: 'H', name: 'Bempton Cliffs (RSPB)', desc: '🐧 清晨 Puffin + 🦭 海豹', lat: 54.1452, lng: -0.1632, day: 2 },
     { id: 'I', name: 'Norwich', desc: '搬鋼琴 + 接朋友', lat: 52.6309, lng: 1.2974, day: 2 },
     { id: 'J', name: 'Horsey Gap', desc: '🦭 看海豹 + Windpump', lat: 52.7490, lng: 1.6560, day: 2 },
@@ -40,7 +40,7 @@
   ];
 
   // Route polylines (approximate road routes)
-  // Day 1: Marylebone → Finchley → York → Whitby → Robin Hood's Bay → Wold Farm
+  // Day 1: Marylebone → Finchley → York → Whitby → Robin Hood's Bay → Grange Farm
   const day1MainRoute = [
     [51.5225, -0.1580], // Marylebone
     [51.5912, -0.1647], // Finchley
@@ -74,7 +74,7 @@
     [54.4885, -0.6132], // Whitby
   ];
 
-  // Whitby → Robin Hood's Bay → Wold Farm
+  // Whitby → Robin Hood's Bay → Grange Farm
   const coastRoute = [
     [54.4885, -0.6132], // Whitby
     [54.4334, -0.5334], // Robin Hood's Bay
@@ -82,18 +82,18 @@
     [54.35, -0.35],     // A171
     [54.30, -0.25],     // A165
     [54.20, -0.15],     // A165
-    [54.1150, -0.1150], // Wold Farm
+    [54.0850, -0.1700], // Grange Farm
   ];
 
-  // Day 2: Wold Farm → Bempton → Norwich → Horsey Gap → Bury St Edmunds → London
+  // Day 2: Grange Farm → Bempton → Norwich → Horsey Gap → Bury St Edmunds → London
   const day2ToBempton = [
-    [54.1150, -0.1150], // Wold Farm
+    [54.0850, -0.1700], // Grange Farm
     [54.1452, -0.1632], // Bempton Cliffs
   ];
 
   const day2ToNorwich = [
-    [54.1452, -0.1632], // Bempton (back to Wold Farm then south)
-    [54.1150, -0.1150], // Wold Farm
+    [54.1452, -0.1632], // Bempton (back to Grange Farm then south)
+    [54.0850, -0.1700], // Grange Farm
     [54.00, -0.10],     // A165 south
     [53.80, -0.20],     // A164/A15
     [53.50, -0.30],     // A15
