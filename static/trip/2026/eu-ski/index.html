@@ -8,16 +8,16 @@
 <link href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;text y='.9em' font-size='90'&gt;⛷&lt;/text&gt;&lt;/svg&gt;" rel="icon"/>
 <link href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="favicon.svg" rel="icon" type="image/svg+xml"/>
 <link href="favicon.ico" rel="icon" type="image/x-icon"/>
-<link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
 <link href="favicon-192.png" rel="icon" sizes="192x192" type="image/png"/>
 <link href="favicon-32.png" rel="icon" sizes="32x32" type="image/png"/>
 <link href="style.css" rel="stylesheet"/>
 </link><link href="redesign.css" rel="stylesheet"/>
 <link href="comparison.css" rel="stylesheet"/>
-</head>
+<link href="three_resort.css" rel="stylesheet"/></head>
 <body>
 <!-- Global Currency Switcher (sticky) -->
 <div class="currency-bar" id="currencyBar">
@@ -47,40 +47,23 @@
 </header>
 <main>
 <!-- ==================== LEAVE STRATEGY ==================== -->
-
 <!-- ==================== FLIGHTS ==================== -->
-
 <!-- ==================== SKI RESORTS ==================== -->
-
 <!-- ==================== SKI SCHOOL ==================== -->
-
 <!-- ==================== BUDGET EUROPEAN SKI RESORTS ==================== -->
-
 <!-- ==================== NORTH AMERICA BUDGET SKI ==================== -->
-
 <!-- ==================== CITIES ==================== -->
 <!-- ====== ASIA SKI SECTION ====== -->
-
 <!-- ====== SKI PROGRESSION TIPS SECTION ====== -->
-
-
 <!-- ==================== ITINERARY ==================== -->
 <!-- ====== SNOW CONDITIONS SECTION ====== -->
-
 <!-- ====== CHRISTMAS MARKETS SECTION ====== -->
-
 <!-- ====== FOOD GUIDE SECTION ====== -->
-
 <!-- ====== ACCOMMODATION SECTION ====== -->
-
-
 <!-- ==================== MAP ==================== -->
-
 <!-- ==================== BUDGET ==================== -->
-
 <div class="category-group" data-category="planning" id="cat-planning"><div class="category-header"><h2 class="category-title" data-en="📋 Planning" data-zh="📋 行前準備">📋 行前準備</h2></div><section class="section collapsible-section collapsed" id="leave">
 <div class="container"><div class="section-toggle-bar" data-target="leave"><span class="toggle-chevron">▸</span><span class="toggle-title" data-en="Leave Strategy: Christmas &amp; New Year Holiday" data-zh="請假攻略：聖誕跨年黃金假期">請假攻略：聖誕跨年黃金假期</span></div><div class="section-collapsible-content">
-
 <p class="section-intro" data-en="Both Dec 25, 2026 (Fri) and Jan 1, 2027 (Fri) are holidays. Only 4 days of PTO needed for 10 consecutive days off." data-zh="2026年12/25（五）與2027年1/1（五）都是假日，中間只需請4天假即可享受10天連休。">2026年12/25（五）與2027年1/1（五）都是假日，中間只需請4天假即可享受10天連休。</p>
 <div class="region-toggle">
 <button class="region-btn active" data-en="Taiwan" data-region="tw" data-section="leave" data-zh="台灣版">台灣版</button>
@@ -169,7 +152,6 @@
 </div></div>
 </section><section class="section section-alt collapsible-section collapsed" id="flights">
 <div class="container"><div class="section-toggle-bar" data-target="flights"><span class="toggle-chevron">▸</span><span class="toggle-title" data-en="Flight Analysis" data-zh="機票分析">機票分析</span></div><div class="section-collapsible-content">
-
 <p class="section-intro" data-en="Christmas peak season flight comparison. Book 6+ months in advance and consider open-jaw tickets to save transit time." data-zh="聖誕旺季機票比較。建議提早6個月以上預訂，並考慮不同城市進出（Open-jaw）節省交通時間。">聖誕旺季機票比較。建議提早6個月以上預訂，並考慮不同城市進出（Open-jaw）節省交通時間。</p>
 <div class="region-toggle">
 <button class="region-btn active" data-en="From Taiwan" data-region="tw" data-section="flights" data-zh="從台灣出發">從台灣出發</button>
@@ -260,9 +242,384 @@
 </div>
 </div>
 </div></div>
-</section></div><div class="category-group" data-category="skiing" id="cat-skiing"><div class="category-header"><h2 class="category-title" data-en="⛷️ Skiing" data-zh="⛷️ 滑雪攻略">⛷️ 滑雪攻略</h2></div><section class="section collapsible-section collapsed" id="ski">
+</section></div><div class="category-group" data-category="skiing" id="cat-skiing"><div class="category-header"><h2 class="category-title" data-en="⛷️ Skiing" data-zh="⛷️ 滑雪攻略">⛷️ 滑雪攻略</h2></div><section class="section collapsible-section three-resort-section" data-category="skiing" id="three-resort-compare"><div class="container"><div class="section-toggle-bar" data-target="three-resort-compare"><span class="toggle-chevron">▸</span><span class="toggle-title" data-en="🎿 Three Resort Deep Comparison" data-zh="🎿 三大候選雪場深度比較">🎿 三大候選雪場深度比較</span></div><div class="section-collapsible-content">
+<!-- Resort Cards Side by Side -->
+<div class="resort-cards-row">
+<div class="resort-card chamonix-card">
+<div class="resort-card-header" style="background: linear-gradient(135deg, #1a237e, #3949ab);">
+<h3>🇫🇷 Chamonix Mont-Blanc</h3>
+<span class="resort-subtitle" data-en="France・Extreme Skiing Mecca" data-zh="法國・極限滑雪聖地">法國・極限滑雪聖地</span>
+</div>
+<div class="resort-card-body">
+<div class="resort-stat"><span class="stat-label" data-en="Altitude" data-zh="海拔">海拔</span><span class="stat-value">1,080 - 3,842m</span></div>
+<div class="resort-stat"><span class="stat-label" data-en="Pistes" data-zh="雪道">雪道</span><span class="stat-value">152km</span></div>
+<div class="resort-stat"><span class="stat-label" data-en="6-day pass" data-zh="6日票">6日票</span><span class="stat-value">€360-480</span></div>
+<div class="resort-stat"><span class="stat-label" data-en="Nearest airport" data-zh="最近機場">最近機場</span><span class="stat-value">GVA 1hr</span></div>
+<div class="resort-tags">
+<span class="tag tag-expert" data-en="Expert Paradise" data-zh="高手天堂">高手天堂</span>
+<span class="tag tag-culture" data-en="French Cuisine" data-zh="法國美食">法國美食</span>
+<span class="tag tag-access" data-en="Best Access" data-zh="交通最便利">交通最便利</span>
+</div>
+</div>
+</div>
+<div class="resort-card dolomiti-card">
+<div class="resort-card-header" style="background: linear-gradient(135deg, #e65100, #ff8f00);">
+<h3>🇮🇹 Dolomiti Superski</h3>
+<span class="resort-subtitle" data-en="Italy・World's Largest Ski Area" data-zh="義大利・世界最大聯合雪場">義大利・世界最大聯合雪場</span>
+</div>
+<div class="resort-card-body">
+<div class="resort-stat"><span class="stat-label" data-en="Altitude" data-zh="海拔">海拔</span><span class="stat-value">1,200 - 3,342m</span></div>
+<div class="resort-stat"><span class="stat-label" data-en="Pistes" data-zh="雪道">雪道</span><span class="stat-value">1,246km</span></div>
+<div class="resort-stat"><span class="stat-label" data-en="6-day pass" data-zh="6日票">6日票</span><span class="stat-value">€436</span></div>
+<div class="resort-stat"><span class="stat-label" data-en="Nearest airport" data-zh="最近機場">最近機場</span><span class="stat-value">VCE 2.5hr</span></div>
+<div class="resort-tags">
+<span class="tag tag-best" data-en="Best Value" data-zh="CP值最高">CP值最高</span>
+<span class="tag tag-culture" data-en="UNESCO Heritage" data-zh="UNESCO遺產">UNESCO遺產</span>
+<span class="tag tag-beginner" data-en="All Levels" data-zh="全程度友善">全程度友善</span>
+</div>
+</div>
+</div>
+<div class="resort-card solden-card">
+<div class="resort-card-header" style="background: linear-gradient(135deg, #b71c1c, #e53935);">
+<h3>🇦🇹 Sölden</h3>
+<span class="resort-subtitle" data-en="Austria・Glacier + James Bond" data-zh="奧地利・冰川雪場+007">奧地利・冰川雪場+007</span>
+</div>
+<div class="resort-card-body">
+<div class="resort-stat"><span class="stat-label" data-en="Altitude" data-zh="海拔">海拔</span><span class="stat-value">1,350 - 3,340m</span></div>
+<div class="resort-stat"><span class="stat-label" data-en="Pistes" data-zh="雪道">雪道</span><span class="stat-value">146km</span></div>
+<div class="resort-stat"><span class="stat-label" data-en="6-day pass" data-zh="6日票">6日票</span><span class="stat-value">€450-478</span></div>
+<div class="resort-stat"><span class="stat-label" data-en="Nearest airport" data-zh="最近機場">最近機場</span><span class="stat-value">INN 1hr / MUC 3hr</span></div>
+<div class="resort-tags">
+<span class="tag tag-snow" data-en="Most Reliable Snow" data-zh="雪況最穩">雪況最穩</span>
+<span class="tag tag-party" data-en="Party Vibe" data-zh="派對氛圍">派對氛圍</span>
+<span class="tag tag-special" data-en="007 Location" data-zh="007聖地">007聖地</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Radar Chart -->
+<div class="comparison-chart-container">
+<h3 data-en="📊 Seven-Dimension Radar Comparison" data-zh="📊 七維度雷達圖比較">📊 七維度雷達圖比較</h3>
+<canvas height="400" id="threeResortRadar" width="500"></canvas>
+</div>
+<!-- Detailed Comparison Tables -->
+<div class="comparison-tables">
+<h3 data-en="❄️ Late December Snow Conditions" data-zh="❄️ 十二月底雪況">❄️ 十二月底雪況</h3>
+<div class="table-responsive">
+<table class="compare-table">
+<thead>
+<tr>
+<th data-en="Item" data-zh="項目">項目</th>
+<th>Chamonix 🇫🇷</th>
+<th>Dolomiti 🇮🇹</th>
+<th>Sölden 🇦🇹</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-en="Glacier skiing" data-zh="冰川滑雪">冰川滑雪</td>
+<td data-en="No (high altitude instead)" data-zh="無（高海拔替代）">無（高海拔替代）</td>
+<td data-en="Marmolada glacier" data-zh="Marmolada 冰川">Marmolada 冰川</td>
+<td class="highlight-best" data-en="Dual glaciers ✓✓" data-zh="雙冰川 ✓✓">雙冰川 ✓✓</td>
+</tr>
+<tr>
+<td data-en="Summit snow depth" data-zh="山頂積雪深度">山頂積雪深度</td>
+<td>~123cm</td>
+<td>60-100cm</td>
+<td class="highlight-best">100-150cm</td>
+</tr>
+<tr>
+<td data-en="Snowmaking coverage" data-zh="人造雪覆蓋">人造雪覆蓋</td>
+<td>~50%</td>
+<td class="highlight-best">95%+</td>
+<td>~70%</td>
+</tr>
+<tr>
+<td data-en="Dec. open ratio" data-zh="12月開放比例">12月開放比例</td>
+<td>~80%</td>
+<td>~90%</td>
+<td class="highlight-best">~95%</td>
+</tr>
+<tr>
+<td data-en="Snow reliability" data-zh="雪況可靠度">雪況可靠度</td>
+<td>★★★★☆</td>
+<td>★★★★☆</td>
+<td class="highlight-best">★★★★★</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 data-en="💰 Cost Comparison (Christmas Peak)" data-zh="💰 費用比較（聖誕旺季）">💰 費用比較（聖誕旺季）</h3>
+<div class="table-responsive">
+<table class="compare-table">
+<thead>
+<tr>
+<th data-en="Item" data-zh="項目">項目</th>
+<th>Chamonix 🇫🇷</th>
+<th>Dolomiti 🇮🇹</th>
+<th>Sölden 🇦🇹</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-en="6-day lift pass" data-zh="6日雪票">6日雪票</td>
+<td>€360 (Le Pass)</td>
+<td class="highlight-best">€436 (1246km!)</td>
+<td>€478 (146km)</td>
+</tr>
+<tr>
+<td data-en="Cost per km piste" data-zh="每km雪道成本">每km雪道成本</td>
+<td>€2.37/km</td>
+<td class="highlight-best">€0.35/km</td>
+<td>€3.28/km</td>
+</tr>
+<tr>
+<td data-en="3-star hotel/night" data-zh="3星住宿/晚">3星住宿/晚</td>
+<td>€150-250</td>
+<td class="highlight-best">€100-180</td>
+<td>€150-250</td>
+</tr>
+<tr>
+<td data-en="Half-board option" data-zh="含半膳選項">含半膳選項</td>
+<td data-en="Rare" data-zh="少見">少見</td>
+<td class="highlight-best" data-en="Common (breakfast+dinner)" data-zh="普遍（含早晚餐）">普遍（含早晚餐）</td>
+<td data-en="Some available" data-zh="部分提供">部分提供</td>
+</tr>
+<tr>
+<td data-en="Dining costs" data-zh="餐飲消費">餐飲消費</td>
+<td data-en="€15-30/meal" data-zh="€15-30/餐">€15-30/餐</td>
+<td class="highlight-best" data-en="€10-20/meal" data-zh="€10-20/餐">€10-20/餐</td>
+<td data-en="€12-25/meal" data-zh="€12-25/餐">€12-25/餐</td>
+</tr>
+<tr>
+<td data-en="6-day total estimate" data-zh="6天總預估費用">6天總預估費用</td>
+<td>~€1,800-2,500</td>
+<td class="highlight-best">~€1,400-2,000</td>
+<td>~€1,800-2,600</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 data-en="🎿 Playability Comparison" data-zh="🎿 可玩性比較">🎿 可玩性比較</h3>
+<div class="table-responsive">
+<table class="compare-table">
+<thead>
+<tr>
+<th data-en="Item" data-zh="項目">項目</th>
+<th>Chamonix 🇫🇷</th>
+<th>Dolomiti 🇮🇹</th>
+<th>Sölden 🇦🇹</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-en="Total piste length" data-zh="雪道總長">雪道總長</td>
+<td>152km</td>
+<td class="highlight-best">1,246km</td>
+<td>146km</td>
+</tr>
+<tr>
+<td data-en="Number of lifts" data-zh="纜車數量">纜車數量</td>
+<td>~50</td>
+<td class="highlight-best">460</td>
+<td>31</td>
+</tr>
+<tr>
+<td data-en="Beginners" data-zh="初學者">初學者</td>
+<td>★★☆☆☆</td>
+<td class="highlight-best">★★★★★</td>
+<td>★★★☆☆</td>
+</tr>
+<tr>
+<td data-en="Intermediate" data-zh="中級者">中級者</td>
+<td>★★★☆☆</td>
+<td class="highlight-best">★★★★★</td>
+<td>★★★★☆</td>
+</tr>
+<tr>
+<td data-en="Expert" data-zh="高手">高手</td>
+<td class="highlight-best">★★★★★</td>
+<td>★★★☆☆</td>
+<td>★★★★☆</td>
+</tr>
+<tr>
+<td data-en="Signature experience" data-zh="特色體驗">特色體驗</td>
+<td data-en="Vallée Blanche legend" data-zh="Vallée Blanche 傳奇">Vallée Blanche 傳奇</td>
+<td data-en="Sella Ronda circuit" data-zh="Sella Ronda 環線">Sella Ronda 環線</td>
+<td data-en="007 ELEMENTS" data-zh="007 ELEMENTS">007 ELEMENTS</td>
+</tr>
+<tr>
+<td data-en="Recommended days" data-zh="建議天數">建議天數</td>
+<td>5-7天</td>
+<td class="highlight-best">7-14天</td>
+<td>4-6天</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 data-en="🌍 Tourism Potential" data-zh="🌍 觀光旅遊性">🌍 觀光旅遊性</h3>
+<div class="table-responsive">
+<table class="compare-table">
+<thead>
+<tr>
+<th data-en="Item" data-zh="項目">項目</th>
+<th>Chamonix 🇫🇷</th>
+<th>Dolomiti 🇮🇹</th>
+<th>Sölden 🇦🇹</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-en="Nearby cities" data-zh="附近大城市">附近大城市</td>
+<td data-en="Geneva(1hr), Annecy(1.5hr)" data-zh="日內瓦(1hr)、安錫(1.5hr)">日內瓦(1hr)、安錫(1.5hr)</td>
+<td data-en="Venice(2.5hr), Bolzano(1hr)" data-zh="威尼斯(2.5hr)、波札諾(1hr)">威尼斯(2.5hr)、波札諾(1hr)</td>
+<td data-en="Innsbruck(1hr)" data-zh="因斯布魯克(1hr)">因斯布魯克(1hr)</td>
+</tr>
+<tr>
+<td data-en="Christmas markets" data-zh="聖誕市集">聖誕市集</td>
+<td data-en="Annecy" data-zh="安錫">安錫</td>
+<td class="highlight-best" data-en="Bolzano (Italy's largest)" data-zh="波札諾（義大利最大）">波札諾（義大利最大）</td>
+<td data-en="Innsbruck (classic)" data-zh="因斯布魯克（經典）">因斯布魯克（經典）</td>
+</tr>
+<tr>
+<td data-en="Cross-border" data-zh="跨國可能">跨國可能</td>
+<td data-en="Italy+Switzerland" data-zh="義大利+瑞士">義大利+瑞士</td>
+<td data-en="Austria" data-zh="奧地利">奧地利</td>
+<td data-en="Italy (South Tyrol)" data-zh="義大利(南蒂羅爾)">義大利(南蒂羅爾)</td>
+</tr>
+<tr>
+<td data-en="Food rating" data-zh="美食評級">美食評級</td>
+<td>★★★★★</td>
+<td class="highlight-best">★★★★★+</td>
+<td>★★★★☆</td>
+</tr>
+<tr>
+<td data-en="Non-ski activities" data-zh="非滑雪活動">非滑雪活動</td>
+<td data-en="Aiguille du Midi view, glacier hike" data-zh="Aiguille du Midi觀景、冰川健行">Aiguille du Midi觀景、冰川健行</td>
+<td data-en="Snowshoe, Alpe di Siusi, spa" data-zh="雪鞋、Alpe di Siusi、溫泉">雪鞋、Alpe di Siusi、溫泉</td>
+<td data-en="007 museum, Aqua Dome spa" data-zh="007博物館、Aqua Dome溫泉">007博物館、Aqua Dome溫泉</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 data-en="✈️ Getting There from Taiwan" data-zh="✈️ 台灣出發交通">✈️ 台灣出發交通</h3>
+<div class="table-responsive">
+<table class="compare-table">
+<thead>
+<tr>
+<th data-en="Item" data-zh="項目">項目</th>
+<th>Chamonix 🇫🇷</th>
+<th>Dolomiti 🇮🇹</th>
+<th>Sölden 🇦🇹</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-en="Target airport" data-zh="目標機場">目標機場</td>
+<td>GVA (日內瓦)</td>
+<td>VCE (威尼斯) / VRN (維洛納)</td>
+<td>MUC (慕尼黑) / INN (因斯布魯克)</td>
+</tr>
+<tr>
+<td data-en="Flight time" data-zh="飛行時間">飛行時間</td>
+<td>14-16hr (1轉)</td>
+<td>14-16hr (1轉)</td>
+<td>14-16hr (1轉)</td>
+</tr>
+<tr>
+<td data-en="Airport→Resort" data-zh="機場→雪場">機場→雪場</td>
+<td class="highlight-best" data-en="1-1.5hr direct bus" data-zh="1-1.5hr 巴士直達">1-1.5hr 巴士直達</td>
+<td data-en="2-2.5hr car/transfer needed" data-zh="2-2.5hr 需租車/轉乘">2-2.5hr 需租車/轉乘</td>
+<td data-en="1hr(INN) / 3hr(MUC)" data-zh="1hr(INN) / 3hr(MUC)">1hr(INN) / 3hr(MUC)</td>
+</tr>
+<tr>
+<td data-en="Round-trip estimate" data-zh="來回票價估計">來回票價估計</td>
+<td>NT$25,000-40,000</td>
+<td>NT$25,000-38,000</td>
+<td>NT$25,000-40,000</td>
+</tr>
+<tr>
+<td data-en="Public transport" data-zh="公共交通">公共交通</td>
+<td class="highlight-best">★★★★★</td>
+<td>★★★☆☆</td>
+<td>★★★★☆</td>
+</tr>
+<tr>
+<td data-en="Total door-to-door" data-zh="總門到門時間">總門到門時間</td>
+<td class="highlight-best">17-20hr</td>
+<td>18-22hr</td>
+<td>18-22hr</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Final Score -->
+<h3 data-en="🏆 Overall Score" data-zh="🏆 綜合評分">🏆 綜合評分</h3>
+<div class="score-bars">
+<div class="score-row">
+<span class="score-label">🇫🇷 Chamonix</span>
+<div class="score-bar-bg">
+<div class="score-bar chamonix-bar" style="width: 76%;">
+<span class="score-number">61/80</span>
+</div>
+</div>
+</div>
+<div class="score-row">
+<span class="score-label">🇮🇹 Dolomiti</span>
+<div class="score-bar-bg">
+<div class="score-bar dolomiti-bar" style="width: 87.5%;">
+<span class="score-number">70/80</span>
+</div>
+</div>
+</div>
+<div class="score-row">
+<span class="score-label">🇦🇹 Sölden</span>
+<div class="score-bar-bg">
+<div class="score-bar solden-bar" style="width: 70%;">
+<span class="score-number">56/80</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Who Should Go Where -->
+<div class="who-goes-where">
+<h3 data-en="👤 Who Should Go Where?" data-zh="👤 誰適合去哪？">👤 誰適合去哪？</h3>
+<div class="persona-cards">
+<div class="persona-card" style="border-left: 4px solid #3949ab;">
+<h4 data-en="Choose Chamonix if you..." data-zh="選 Chamonix 如果你...">選 Chamonix 如果你...</h4>
+<ul>
+<li data-en="Seek extreme skiing (Vallée Blanche)" data-zh="追求極限滑雪（Vallée Blanche）">追求極限滑雪（Vallée Blanche）</li>
+<li data-en="Want French food &amp; culture" data-zh="想結合法國美食文化">想結合法國美食文化</li>
+<li data-en="Value easy access (Geneva 1hr)" data-zh="重視交通便利（日內瓦1小時）">重視交通便利（日內瓦1小時）</li>
+<li data-en="Intermediate-advanced skier" data-zh="中高級以上滑雪程度">中高級以上滑雪程度</li>
+<li data-en="Want to visit Geneva/Annecy/Switzerland" data-zh="想順遊日內瓦/安錫/瑞士">想順遊日內瓦/安錫/瑞士</li>
+</ul>
+</div>
+<div class="persona-card" style="border-left: 4px solid #ff8f00;">
+<h4 data-en="Choose Dolomiti if you..." data-zh="選 Dolomiti 如果你...">選 Dolomiti 如果你...</h4>
+<ul>
+<li data-en="Want the largest ski area, most options" data-zh="想要最大雪場、最多選擇">想要最大雪場、最多選擇</li>
+<li data-en="Mixed group levels (beginner to expert)" data-zh="團體程度混合（初學到高手）">團體程度混合（初學到高手）</li>
+<li data-en="Food lover (Italian cuisine)" data-zh="美食愛好者（義大利料理）">美食愛好者（義大利料理）</li>
+<li data-en="Want to see UNESCO World Heritage scenery" data-zh="想看 UNESCO 世界遺產景觀">想看 UNESCO 世界遺產景觀</li>
+<li data-en="Seek best value for money" data-zh="追求最高CP值">追求最高CP值</li>
+</ul>
+</div>
+<div class="persona-card" style="border-left: 4px solid #e53935;">
+<h4 data-en="Choose Sölden if you..." data-zh="選 Sölden 如果你...">選 Sölden 如果你...</h4>
+<ul>
+<li data-en="Snow reliability is top priority" data-zh="最在意雪況穩定度">最在意雪況穩定度</li>
+<li data-en="007 James Bond fan" data-zh="007 James Bond 粉絲">007 James Bond 粉絲</li>
+<li data-en="Love party vibe (Après-ski)" data-zh="喜歡派對氛圍(Après-ski)">喜歡派對氛圍(Après-ski)</li>
+<li data-en="Want to visit Innsbruck Christmas market" data-zh="想順遊因斯布魯克聖誕市集">想順遊因斯布魯克聖誕市集</li>
+<li data-en="Prefer compact resort" data-zh="偏好緊湊型雪場">偏好緊湊型雪場</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div></div></section><section class="section collapsible-section collapsed" id="ski">
 <div class="container"><div class="section-toggle-bar" data-target="ski"><span class="toggle-chevron">▸</span><span class="toggle-title" data-en="Ski Resort Comparison: Austria's Four Top Recommendations" data-zh="雪場比較：奧地利四大推薦">雪場比較：奧地利四大推薦</span></div><div class="section-collapsible-content">
-
 <p class="section-intro" data-en="From the best value family-friendly resorts to legendary professional ski destinations, the following four resorts each have unique features. Prices are for 2025/2026 peak season adult 6-day lift passes." data-zh="從CP值最高的家庭友善雪場到傳奇級專業滑雪勝地，以下四個雪場各有特色。價格為2025/2026旺季成人6日纜車票。">從CP值最高的家庭友善雪場到傳奇級專業滑雪勝地，以下四個雪場各有特色。價格為2025/2026旺季成人6日纜車票。</p>
 <div class="ski-comparison-table">
 <table>
@@ -453,7 +810,6 @@
 </div></div>
 </section><section class="section section-alt collapsible-section collapsed" id="ski-school">
 <div class="container"><div class="section-toggle-bar" data-target="ski-school"><span class="toggle-chevron">▸</span><span class="toggle-title" data-en="Ski school: courses and fees" data-zh="滑雪學校：課程與費用">滑雪學校：課程與費用</span></div><div class="section-collapsible-content">
-
 <p class="section-intro" data-en="Austria has a world-class ski instruction system. Whether you are a first-time beginner or an advanced skier looking to improve, you can find suitable courses." data-zh="奧地利擁有世界頂級的滑雪教學體系。無論是第一次踏上雪板的初學者，還是想精進技術的進階滑雪者，都能找到合適的課程。">奧地利擁有世界頂級的滑雪教學體系。無論是第一次踏上雪板的初學者，還是想精進技術的進階滑雪者，都能找到合適的課程。</p>
 <!-- Skill Level Definitions -->
 <div class="level-definitions">
@@ -563,7 +919,6 @@
 </div></div>
 </section><section class="section collapsible-section collapsed" id="budget-ski">
 <div class="container"><div class="section-toggle-bar" data-target="budget-ski"><span class="toggle-chevron">▸</span><span class="toggle-title" data-en="Budget European Ski Resorts: Beyond Austria" data-zh="歐洲平價雪場：跳脫奧地利的選擇">歐洲平價雪場：跳脫奧地利的選擇</span></div><div class="section-collapsible-content">
-
 <p class="section-intro" data-en="Austrian resorts are world-class but pricey. On a budget? Europe has many high-value alternatives. Comparing daily costs (lift + stay + food), the cheapest options are half the price of Austria!" data-zh="奧地利雪場設施一流但價格較高。如果預算有限，歐洲還有許多CP值極高的滑雪勝地。以下比較涵蓋東歐、安道爾、斯洛維尼亞等地，從每日總花費（纜車＋住宿＋餐飲）來看，最便宜的選項只要奧地利的一半！">奧地利雪場設施一流但價格較高。如果預算有限，歐洲還有許多CP值極高的滑雪勝地。以下比較涵蓋東歐、安道爾、斯洛維尼亞等地，從每日總花費（纜車＋住宿＋餐飲）來看，最便宜的選項只要奧地利的一半！</p>
 <!-- Total Daily Cost Comparison Chart -->
 <div class="budget-chart-container">
@@ -883,7 +1238,6 @@
 </div></div>
 </section><section class="section section-alt collapsible-section collapsed" id="na-ski">
 <div class="container"><div class="section-toggle-bar" data-target="na-ski"><span class="toggle-chevron">▸</span><span class="toggle-title" data-en="Budget North American Resorts: US &amp; Canada" data-zh="北美平價雪場：美國＆加拿大的選擇">北美平價雪場：美國＆加拿大的選擇</span></div><div class="section-collapsible-content">
-
 <p class="section-intro" data-en="North American large ski resorts (Vail, Whistler) day passes often cost US$200-300, but there are still many high value-for-money options. Below compares affordable resorts in the US and Canada, with a cross-continental comparison to Europe." data-zh="北美大型雪場（Vail、Whistler）日票動輒 US$200-300，但仍有許多高CP值的選擇。以下比較美國與加拿大的平價雪場，並與歐洲做跨洲對比。">北美大型雪場（Vail、Whistler）日票動輒 US$200-300，但仍有許多高CP值的選擇。以下比較美國與加拿大的平價雪場，並與歐洲做跨洲對比。</p>
 <!-- Key Insight Box -->
 <div class="insight-box">
@@ -1203,7 +1557,6 @@
 </div></div>
 </section><section class="section collapsible-section collapsed" id="asia-ski">
 <div class="container"><div class="section-toggle-bar" data-target="asia-ski"><span class="toggle-chevron">▸</span><span class="toggle-title" data-en="Asian ski resorts: choices in Japan &amp; Korea" data-zh="亞洲雪場：日本＆韓國的選擇">亞洲雪場：日本＆韓國的選擇</span></div><div class="section-collapsible-content">
-
 <p class="section-subtitle" data-en="Closest powder snow paradise to Taiwan, flight time only 2.5~4 hours" data-zh="離台灣最近的粉雪天堂，飛行時間僅 2.5~4 小時">離台灣最近的粉雪天堂，飛行時間僅 2.5~4 小時</p>
 <!-- Group Level Banner -->
 <div class="group-level-banner">
@@ -1788,7 +2141,6 @@
 </div></div>
 </section><section class="section section-alt collapsible-section collapsed" id="ski-tips">
 <div class="container"><div class="section-toggle-bar" data-target="ski-tips"><span class="toggle-chevron">▸</span><span class="toggle-title" data-en="Ski Progression Guide" data-zh="滑雪進階攻略">滑雪進階攻略</span></div><div class="section-collapsible-content">
-
 <p class="section-desc" data-en="Skill improvement from Blue run to Red run, Ski vs Snowboard comparison, altitude sickness prevention" data-zh="從藍道到紅道的技術提升、Ski vs Snowboard 比較、高山症預防">從藍道到紅道的技術提升、Ski vs Snowboard 比較、高山症預防</p>
 <h3 class="sub-section-h3" data-en="📊 Your level: Blue run to Red run" data-zh="📊 你們的程度：藍道～紅道">📊 你們的程度：藍道～紅道</h3>
 <div class="level-banner">
@@ -1979,7 +2331,6 @@
 </div></div>
 </section><section class="section section-alt collapsible-section collapsed" id="snow-conditions">
 <div class="container"><div class="section-toggle-bar" data-target="snow-conditions"><span class="toggle-chevron">▸</span><span class="toggle-title" data-en="Christmas &amp; New Year Snow Conditions" data-zh="聖誕跨年雪況分析">聖誕跨年雪況分析</span></div><div class="section-collapsible-content">
-
 <p class="section-intro" data-en="Historical snow conditions, snow depth, and reliability comparisons for late December to early January across regions, helping you choose the least risky ski resorts." data-zh="12月下旬～1月初各地區的歷史雪況、積雪深度與可靠度比較，幫助你選擇最不會「踩雷」的雪場。">12月下旬～1月初各地區的歷史雪況、積雪深度與可靠度比較，幫助你選擇最不會「踩雷」的雪場。</p>
 <!-- Snow Reliability Ranking -->
 <div class="snow-ranking">
@@ -2214,7 +2565,6 @@
 </div></div>
 </section></div><div class="category-group" data-category="travel" id="cat-travel"><div class="category-header"><h2 class="category-title" data-en="🏙️ City &amp; Travel" data-zh="🏙️ 城市旅遊">🏙️ 城市旅遊</h2></div><section class="section section-alt collapsible-section collapsed" id="cities">
 <div class="container"><div class="section-toggle-bar" data-target="cities"><span class="toggle-chevron">▸</span><span class="toggle-title" data-en="City attractions: must-visit cities in Central Europe" data-zh="城市景點：中歐必訪城市">城市景點：中歐必訪城市</span></div><div class="section-collapsible-content">
-
 <p class="section-intro" data-en="Each city has a unique Christmas atmosphere and cultural experience. Below includes local names, must-visit spots, and Christmas market info." data-zh="每座城市都有獨特的聖誕氛圍與文化體驗。以下包含各城市的當地名稱（鄉土名情）、必訪景點與聖誕市集資訊。">每座城市都有獨特的聖誕氛圍與文化體驗。以下包含各城市的當地名稱（鄉土名情）、必訪景點與聖誕市集資訊。</p>
 <div class="city-cards">
 <div class="city-card"><div class="city-header vienna"><h3 data-en="Vienna" data-zh="維也納">維也納</h3><span class="city-local-name">Wien</span><span class="city-country" data-en="Austria Österreich" data-zh="奧地利 Österreich">奧地利 Österreich</span></div>
@@ -2286,7 +2636,6 @@
 </div></div>
 </section><section class="section section-alt collapsible-section collapsed" id="christmas-markets">
 <div class="container"><div class="section-toggle-bar" data-target="christmas-markets"><span class="toggle-chevron">▸</span><span class="toggle-title" data-en="Christmas Market Special Zone" data-zh="聖誕市集專區">聖誕市集專區</span></div><div class="section-collapsible-content">
-
 <p class="section-desc" data-en="European Christmas markets are one of the biggest highlights of winter travel, with aromas of mulled wine, grilled sausages, and gingerbread filling medieval squares" data-zh="歐洲聖誕市集是冬季旅行的最大亮點之一，熱紅酒、烤香腸、薑餅的香氣瀰漫在中世紀廣場上">歐洲聖誕市集是冬季旅行的最大亮點之一，熱紅酒、烤香腸、薑餅的香氣瀰漫在中世紀廣場上</p>
 <div class="xmas-city-grid">
 <div class="xmas-city-card">
@@ -2478,7 +2827,6 @@
 </div></div>
 </section><section class="section collapsible-section collapsed" id="food-guide">
 <div class="container"><div class="section-toggle-bar" data-target="food-guide"><span class="toggle-chevron">▸</span><span class="toggle-title" data-en="Food guide" data-zh="美食指南">美食指南</span></div><div class="section-collapsible-content">
-
 <p class="section-desc" data-en="Complete guide from ski resort mountain huts to city restaurants for Central European winter cuisine" data-zh="從雪場山頂小屋到城市餐廳，中歐冬季美食完全攻略">從雪場山頂小屋到城市餐廳，中歐冬季美食完全攻略</p>
 <h3 class="sub-section-h3" data-en="🏔️ Austrian mountain hut (Hütte) culture" data-zh="🏔️ 奧地利山頂小屋 Hütte 文化">🏔️ 奧地利山頂小屋 Hütte 文化</h3>
 <div class="hutte-intro">
@@ -2623,7 +2971,6 @@
 </div></div>
 </section></div><div class="category-group" data-category="logistics" id="cat-logistics"><div class="category-header"><h2 class="category-title" data-en="💰 Budget &amp; Itinerary" data-zh="💰 預算行程">💰 預算行程</h2></div><section class="section collapsible-section collapsed" id="accommodation">
 <div class="container"><div class="section-toggle-bar" data-target="accommodation"><span class="toggle-chevron">▸</span><span class="toggle-title" data-en="Accommodation In-Depth Comparison" data-zh="住宿深度比較">住宿深度比較</span></div><div class="section-collapsible-content">
-
 <p class="section-desc" data-en="Ski resort accommodation analysis + best city stay areas recommended, Christmas peak season price reference" data-zh="雪場住宿類型解析＋城市最佳住宿區域推薦，聖誕旺季價格參考">雪場住宿類型解析＋城市最佳住宿區域推薦，聖誕旺季價格參考</p>
 <h3 class="sub-section-h3" data-en="🏔️ Ski resort accommodation comparison" data-zh="🏔️ 雪場住宿類型比較">🏔️ 雪場住宿類型比較</h3>
 <div class="accom-type-grid">
@@ -2827,7 +3174,6 @@
 </div></div>
 </section><section class="section collapsible-section collapsed" id="itinerary">
 <div class="container"><div class="section-toggle-bar" data-target="itinerary"><span class="toggle-chevron">▸</span><span class="toggle-title" data-en="Itinerary Options" data-zh="行程方案">行程方案</span></div><div class="section-collapsible-content">
-
 <p class="section-intro" data-en="Based on different holiday lengths and budgets, three itinerary options are provided. All plans follow the principle of 'no backtracking' and are most cost-effective with open-jaw tickets." data-zh="根據不同假期長度與預算，提供三種行程方案。所有方案以「不走回頭路」為原則，搭配 Open-jaw 機票最划算。">根據不同假期長度與預算，提供三種行程方案。所有方案以「不走回頭路」為原則，搭配 Open-jaw 機票最划算。</p>
 <div class="itinerary-tabs">
 <button class="tab-btn active" data-en="Plan A: Classic 3 Countries (10 days)" data-tab="route1" data-zh="方案A：經典三國 (10天)">方案A：經典三國 (10天)</button>
@@ -2887,7 +3233,6 @@
 </div></div>
 </section><section class="section section-alt collapsible-section collapsed" id="map">
 <div class="container"><div class="section-toggle-bar" data-target="map"><span class="toggle-chevron">▸</span><span class="toggle-title" data-en="Interactive Map" data-zh="互動地圖">互動地圖</span></div><div class="section-collapsible-content">
-
 <p class="section-intro" data-en="Blue marks cities, white marks ski resorts. Click for details." data-zh="藍色標記為城市，白色標記為雪場。點擊查看詳細資訊。">藍色標記為城市，白色標記為雪場。點擊查看詳細資訊。</p>
 <div id="mainMap" style="height:550px;border-radius:12px;margin-bottom:2rem;"></div>
 <div class="transport-table">
@@ -2909,7 +3254,6 @@
 </div></div>
 </section><section class="section collapsible-section collapsed" id="budget">
 <div class="container"><div class="section-toggle-bar" data-target="budget"><span class="toggle-chevron">▸</span><span class="toggle-title" data-en="Budget Estimate" data-zh="預算估算">預算估算</span></div><div class="section-collapsible-content">
-
 <p class="section-intro" data-en="Estimated cost per person (in euros, currency can be switched using the button above)." data-zh="一人預估費用（以歐元為基準，可用上方貨幣切換鈕轉換）。">一人預估費用（以歐元為基準，可用上方貨幣切換鈕轉換）。</p>
 <div class="budget-cards">
 <div class="budget-card">
@@ -2966,49 +3310,48 @@
 </section></div></main>
 <!-- Trip Series Navigation -->
 <section class="ts-section">
-  <div class="container">
-    <h3 class="ts-title" data-zh="滑雪旅行系列" data-en="Ski Trip Series">滑雪旅行系列</h3>
-    <div class="ts-grid">
-      <a href="/trip/2024/2324-jp-ski/" class="ts-card">
-        <div class="ts-year">2024</div>
-        <div class="ts-info">
-          <h4 data-zh="福島滑雪之旅" data-en="Fukushima Ski Trip">福島滑雪之旅</h4>
-          <p>Listel Ski Fantasia &middot; Inawashiro &middot; Aizu &middot; Nikko &middot; Tokyo</p>
-          <span class="ts-meta" data-zh="9 天 &middot; 8 人 &middot; Listel Ski Fantasia" data-en="9 Days &middot; 8 People &middot; Listel Ski Fantasia">9 天 &middot; 8 人 &middot; Listel Ski Fantasia</span>
-        </div>
-        <span class="ts-arrow">&rarr;</span>
-      </a>
-      <a href="/trip/2025/2425-jp-ski/" class="ts-card">
-        <div class="ts-year">2025 (I)</div>
-        <div class="ts-info">
-          <h4 data-zh="北海道 Kiroro 滑雪之旅" data-en="Hokkaido Kiroro Ski Trip">北海道 Kiroro 滑雪之旅</h4>
-          <p>Kiroro Snow World &middot; Otaru &middot; Sapporo &middot; Teine</p>
-          <span class="ts-meta" data-zh="11 天 &middot; 8 人 &middot; Kiroro Snow World" data-en="11 Days &middot; 8 People &middot; Kiroro Snow World">11 天 &middot; 8 人 &middot; Kiroro Snow World</span>
-        </div>
-        <span class="ts-arrow">&rarr;</span>
-      </a>
-      <a href="/trip/2025/2526-jp-ski/" class="ts-card">
-        <div class="ts-year">2025 (II)</div>
-        <div class="ts-info">
-          <h4 data-zh="新潟滑雪團" data-en="Niigata Ski Trip">新潟滑雪團</h4>
-          <p>Naeba &middot; Joetsu Kokusai &middot; Echigo-Yuzawa &middot; Tokyo</p>
-          <span class="ts-meta" data-zh="11 天 &middot; 9 人 &middot; 苗場 + 上越國際" data-en="11 Days &middot; 9 People &middot; Naeba + Joetsu Kokusai">11 天 &middot; 9 人 &middot; 苗場 + 上越國際</span>
-        </div>
-        <span class="ts-arrow">&rarr;</span>
-      </a>
-      <div class="ts-card ts-card--active">
-        <div class="ts-year">2026</div>
-        <div class="ts-info">
-          <h4 data-zh="歐洲滑雪＋城市旅遊" data-en="EU Ski + City Travel">歐洲滑雪＋城市旅遊</h4>
-          <p>Austria &middot; Christmas Markets &middot; Central Europe</p>
-          <span class="ts-meta" data-zh="規劃中 &middot; 奧地利四大雪場" data-en="Planning &middot; Austria Top 4 Resorts">規劃中 &middot; 奧地利四大雪場</span>
-        </div>
-        <span class="ts-badge" data-zh="目前" data-en="Current">目前</span>
-      </div>
-    </div>
-  </div>
+<div class="container">
+<h3 class="ts-title" data-en="Ski Trip Series" data-zh="滑雪旅行系列">滑雪旅行系列</h3>
+<div class="ts-grid">
+<a class="ts-card" href="/trip/2024/2324-jp-ski/">
+<div class="ts-year">2024</div>
+<div class="ts-info">
+<h4 data-en="Fukushima Ski Trip" data-zh="福島滑雪之旅">福島滑雪之旅</h4>
+<p>Listel Ski Fantasia · Inawashiro · Aizu · Nikko · Tokyo</p>
+<span class="ts-meta" data-en="9 Days · 8 People · Listel Ski Fantasia" data-zh="9 天 · 8 人 · Listel Ski Fantasia">9 天 · 8 人 · Listel Ski Fantasia</span>
+</div>
+<span class="ts-arrow">→</span>
+</a>
+<a class="ts-card" href="/trip/2025/2425-jp-ski/">
+<div class="ts-year">2025 (I)</div>
+<div class="ts-info">
+<h4 data-en="Hokkaido Kiroro Ski Trip" data-zh="北海道 Kiroro 滑雪之旅">北海道 Kiroro 滑雪之旅</h4>
+<p>Kiroro Snow World · Otaru · Sapporo · Teine</p>
+<span class="ts-meta" data-en="11 Days · 8 People · Kiroro Snow World" data-zh="11 天 · 8 人 · Kiroro Snow World">11 天 · 8 人 · Kiroro Snow World</span>
+</div>
+<span class="ts-arrow">→</span>
+</a>
+<a class="ts-card" href="/trip/2025/2526-jp-ski/">
+<div class="ts-year">2025 (II)</div>
+<div class="ts-info">
+<h4 data-en="Niigata Ski Trip" data-zh="新潟滑雪團">新潟滑雪團</h4>
+<p>Naeba · Joetsu Kokusai · Echigo-Yuzawa · Tokyo</p>
+<span class="ts-meta" data-en="11 Days · 9 People · Naeba + Joetsu Kokusai" data-zh="11 天 · 9 人 · 苗場 + 上越國際">11 天 · 9 人 · 苗場 + 上越國際</span>
+</div>
+<span class="ts-arrow">→</span>
+</a>
+<div class="ts-card ts-card--active">
+<div class="ts-year">2026</div>
+<div class="ts-info">
+<h4 data-en="EU Ski + City Travel" data-zh="歐洲滑雪＋城市旅遊">歐洲滑雪＋城市旅遊</h4>
+<p>Austria · Christmas Markets · Central Europe</p>
+<span class="ts-meta" data-en="Planning · Austria Top 4 Resorts" data-zh="規劃中 · 奧地利四大雪場">規劃中 · 奧地利四大雪場</span>
+</div>
+<span class="ts-badge" data-en="Current" data-zh="目前">目前</span>
+</div>
+</div>
+</div>
 </section>
-
 <footer>
 <div class="container">
 <p data-en="2026 Europe Ski + City Tour Planning | Data updated: April 2026" data-zh="2026 歐洲滑雪＋城市旅遊規劃 | 資料更新：2026年4月">2026 歐洲滑雪＋城市旅遊規劃 | 資料更新：2026年4月</p>
@@ -3019,5 +3362,5 @@
 <script src="app.js"></script>
 <script src="comparison.js"></script>
 <script src="redesign.js"></script>
-</body>
+<script src="three_resort.js"></script></body>
 </html>
