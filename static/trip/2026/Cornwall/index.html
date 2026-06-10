@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cornwall 自駕行程 | Eden Project · St Michael's Mount · Sea Sparkle</title>
+  <meta name="description" content="Cornwall 兩天或三天自駕行程規劃：Eden Project、St Michael's Mount、Minack Theatre、St Ives、Kynance Cove、藍眼淚 Sea Sparkle，含 Glastonbury 選擇性行程" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏖️</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Serif+Display&family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Language Toggle -->
+  <div class="lang-toggle">
+    <button class="lang-btn active" data-lang="zh">中文</button>
+    <button class="lang-btn" data-lang="en">EN</button>
+  </div>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>
+        <span data-zh="Cornwall 自駕之旅" data-en="Cornwall Road Trip">Cornwall 自駕之旅</span>
+      </h1>
+      <p class="hero-subtitle">
+        <span data-zh="Eden Project · St Michael's Mount · 藍眼淚 · Minack Theatre · St Ives" data-en="Eden Project · St Michael's Mount · Sea Sparkle · Minack Theatre · St Ives">Eden Project · St Michael's Mount · 藍眼淚 · Minack Theatre · St Ives</span>
+      </p>
+      <p class="hero-date">
+        <span data-zh="2026年8月 · 2天或3天行程方案" data-en="August 2026 · 2-Day or 3-Day Itinerary Options">2026年8月 · 2天或3天行程方案</span>
+      </p>
+    </div>
+  </header>
+
+  <!-- Trip Overview -->
+  <section class="section overview">
+    <div class="container">
+      <h2><span data-zh="行程總覽" data-en="Trip Overview">行程總覽</span></h2>
+      <div class="overview-grid">
+        <div class="overview-card">
+          <div class="overview-icon">🚗</div>
+          <div class="overview-label"><span data-zh="交通方式" data-en="Transport">交通方式</span></div>
+          <div class="overview-value"><span data-zh="自駕" data-en="Self-Drive">自駕</span></div>
+          <div class="overview-detail"><span data-zh="London 出發" data-en="From London">London 出發</span></div>
+        </div>
+        <div class="overview-card">
+          <div class="overview-icon">📏</div>
+          <div class="overview-label"><span data-zh="總里程" data-en="Total Distance">總里程</span></div>
+          <div class="overview-value">~600 miles</div>
+          <div class="overview-detail"><span data-zh="約 960 公里（含 Glastonbury）" data-en="Approx. 960 km (incl. Glastonbury)">約 960 公里（含 Glastonbury）</span></div>
+        </div>
+        <div class="overview-card">
+          <div class="overview-icon">📅</div>
+          <div class="overview-label"><span data-zh="天數" data-en="Duration">天數</span></div>
+          <div class="overview-value"><span data-zh="2天 或 3天" data-en="2 or 3 Days">2天 或 3天</span></div>
+          <div class="overview-detail"><span data-zh="Bank Holiday 方案分析" data-en="Bank Holiday Analysis">Bank Holiday 方案分析</span></div>
+        </div>
+        <div class="overview-card">
+          <div class="overview-icon">🌊</div>
+          <div class="overview-label"><span data-zh="特殊體驗" data-en="Special Experience">特殊體驗</span></div>
+          <div class="overview-value"><span data-zh="藍眼淚 Sea Sparkle" data-en="Sea Sparkle (Bioluminescence)">藍眼淚 Sea Sparkle</span></div>
+          <div class="overview-detail"><span data-zh="深夜觀賞生物螢光" data-en="Late-night bioluminescence viewing">深夜觀賞生物螢光</span></div>
+        </div>
+        <div class="overview-card">
+          <div class="overview-icon">🏰</div>
+          <div class="overview-label"><span data-zh="必訪景點" data-en="Must-Visit">必訪景點</span></div>
+          <div class="overview-value"><span data-zh="6+ 景點" data-en="6+ Attractions">6+ 景點</span></div>
+          <div class="overview-detail">Eden · St Michael's · Minack · St Ives</div>
+        </div>
+        <div class="overview-card">
+          <div class="overview-icon">🔮</div>
+          <div class="overview-label"><span data-zh="選擇性" data-en="Optional">選擇性</span></div>
+          <div class="overview-value">Glastonbury</div>
+          <div class="overview-detail"><span data-zh="回程順路・Tor + Abbey" data-en="On the way back · Tor + Abbey">回程順路・Tor + Abbey</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bank Holiday Analysis -->
+  <section class="section analysis-section">
+    <div class="container">
+      <h2><span data-zh="Bank Holiday 分析：值不值得用？" data-en="Bank Holiday Analysis: Worth Using?">Bank Holiday 分析：值不值得用？</span></h2>
+      <div class="analysis-grid">
+        <div class="analysis-card suggestion">
+          <h3><span data-zh="📅 2026 八月 Bank Holiday" data-en="📅 2026 August Bank Holiday">📅 2026 八月 Bank Holiday</span></h3>
+          <ul>
+            <li><span data-zh="日期：8月31日（週一）" data-en="Date: 31 August (Monday)">日期：8月31日（週一）</span></li>
+            <li><span data-zh="可組成 Sat–Mon 三天連假" data-en="Can form Sat–Mon 3-day weekend">可組成 Sat–Mon 三天連假</span></li>
+            <li><span data-zh="不需額外請假" data-en="No extra leave needed">不需額外請假</span></li>
+          </ul>
+        </div>
+        <div class="analysis-card warning">
+          <h3><span data-zh="⚠️ Bank Holiday 的缺點" data-en="⚠️ Bank Holiday Downsides">⚠️ Bank Holiday 的缺點</span></h3>
+          <ul>
+            <li><span data-zh="Cornwall 八月底是全年最擁擠時段" data-en="Cornwall late August is peak crowding season">Cornwall 八月底是全年最擁擠時段</span></li>
+            <li><span data-zh="M5/A30 可能嚴重塞車（+1-2h）" data-en="M5/A30 may have severe traffic (+1-2h)">M5/A30 可能嚴重塞車（+1-2h）</span></li>
+            <li><span data-zh="住宿價格可能翻倍" data-en="Accommodation prices may double">住宿價格可能翻倍</span></li>
+            <li><span data-zh="熱門景點需排隊" data-en="Popular attractions will have queues">熱門景點需排隊</span></li>
+          </ul>
+        </div>
+        <div class="analysis-card good">
+          <h3><span data-zh="✅ 建議方案" data-en="✅ Recommended Plan">✅ 建議方案</span></h3>
+          <ul>
+            <li><span data-zh="方案 A：用一般週末（Sat-Sun）跑 2 天精華行程" data-en="Plan A: Use a regular weekend (Sat-Sun) for 2-day highlights">方案 A：用一般週末（Sat-Sun）跑 2 天精華行程</span></li>
+            <li><span data-zh="方案 B：Bank Holiday 三天（Sat-Mon），多去 Glastonbury + 更悠閒" data-en="Plan B: Bank Holiday 3 days (Sat-Mon), add Glastonbury + more relaxed">方案 B：Bank Holiday 三天（Sat-Mon），多去 Glastonbury + 更悠閒</span></li>
+            <li><span data-zh="建議：如果八月初有空的週末，避開 Bank Holiday 人潮更佳" data-en="Tip: If you have a free weekend in early August, avoiding Bank Holiday crowds is better">建議：如果八月初有空的週末，避開 Bank Holiday 人潮更佳</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Itinerary Toggle -->
+  <section class="section itinerary-toggle-section">
+    <div class="container">
+      <h2><span data-zh="選擇行程方案" data-en="Choose Itinerary">選擇行程方案</span></h2>
+      <div class="itinerary-tabs">
+        <button class="itinerary-tab active" data-plan="2day">
+          <span data-zh="⚡ 2天精華版" data-en="⚡ 2-Day Express">⚡ 2天精華版</span>
+          <small><span data-zh="一般週末 Sat-Sun" data-en="Regular Weekend Sat-Sun">一般週末 Sat-Sun</span></small>
+        </button>
+        <button class="itinerary-tab" data-plan="3day">
+          <span data-zh="🌿 3天悠閒版" data-en="🌿 3-Day Relaxed">🌿 3天悠閒版</span>
+          <small><span data-zh="Bank Holiday Sat-Mon" data-en="Bank Holiday Sat-Mon">Bank Holiday Sat-Mon</span></small>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Route Map Section -->
+  <section class="section route-section">
+    <div class="container">
+      <h2><span data-zh="路線圖" data-en="Route Map">路線圖</span></h2>
+      <div class="route-map-wrapper">
+        <div id="leafletMap" style="width:100%; height:520px; border-radius:12px; z-index:1;"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 2-DAY ITINERARY ============ -->
+  <div id="plan-2day" class="plan-content active">
+
+    <!-- Day 1: London → Eden Project → St Austell area -->
+    <section class="section day-section" id="day1-2d">
+      <div class="container">
+        <div class="day-header">
+          <h2><span data-zh="Day 1 — 東 Cornwall + Eden Project" data-en="Day 1 — East Cornwall + Eden Project">Day 1 — 東 Cornwall + Eden Project</span></h2>
+          <p class="day-theme"><span data-zh="London → Eden Project → Lost Gardens of Heligan → St Austell 住宿" data-en="London → Eden Project → Lost Gardens of Heligan → Stay St Austell">London → Eden Project → Lost Gardens of Heligan → St Austell 住宿</span></p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-time">06:00</div>
+            <div class="timeline-content">
+              <h3><span data-zh="🚗 London 出發" data-en="🚗 Depart London">🚗 London 出發</span></h3>
+              <p><span data-zh="建議清晨出發避開車潮。路線：M4 → M5 → A30，全程約 4.5-5 小時（270 英里）。八月週末建議 6 點前上路。" data-en="Depart early to avoid traffic. Route: M4 → M5 → A30, approx. 4.5-5 hours (270 miles). On August weekends, aim to leave before 6am.">建議清晨出發避開車潮。路線：M4 → M5 → A30，全程約 4.5-5 小時（270 英里）。八月週末建議 6 點前上路。</span></p>
+              <div class="drive-info">
+                <span class="drive-badge">🚗 270 mi / 4.5-5h</span>
+              </div>
+              <div class="rest-stop">
+                <div class="rest-stop-title"><span data-zh="☕ 建議休息站：Exeter Services (M5)" data-en="☕ Suggested Rest Stop: Exeter Services (M5)">☕ 建議休息站：Exeter Services (M5)</span></div>
+                <div class="rest-stop-info"><span data-zh="約 3 小時車程處 · Costa · M&S · 廁所" data-en="About 3h into the drive · Costa · M&S · Toilets">約 3 小時車程處 · Costa · M&S · 廁所</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item highlight">
+            <div class="timeline-time">10:30–13:30</div>
+            <div class="timeline-content">
+              <h3><span data-zh="🌿 Eden Project" data-en="🌿 Eden Project">🌿 Eden Project</span></h3>
+              <p><span data-zh="世界最大的室內雨林！兩個巨型生物群落圓頂（Biomes）：熱帶雨林 Biome（溫暖潮濕，有瀑布和熱帶植物）和地中海 Biome（橄欖樹、薰衣草、葡萄園）。戶外花園也很值得逛。2026 夏季特別展覽「Enchanted Earth」結合生物螢光主題。" data-en="World's largest indoor rainforest! Two giant Biomes: Rainforest Biome (warm, humid, waterfalls & tropical plants) and Mediterranean Biome (olive trees, lavender, vineyards). Outdoor gardens also worth exploring. Summer 2026 special exhibition 'Enchanted Earth' features bioluminescence themes.">世界最大的室內雨林！兩個巨型生物群落圓頂（Biomes）：熱帶雨林 Biome（溫暖潮濕，有瀑布和熱帶植物）和地中海 Biome（橄欖樹、薰衣草、葡萄園）。戶外花園也很值得逛。2026 夏季特別展覽「Enchanted Earth」結合生物螢光主題。</span></p>
+              <div class="info-box">
+                <div class="info-item"><strong><span data-zh="門票" data-en="Tickets">門票</span>：</strong><span data-zh="成人 £35.50（線上預購）/ £39.50（現場）" data-en="Adult £35.50 (online) / £39.50 (on the door)">成人 £35.50（線上預購）/ £39.50（現場）</span></div>
+                <div class="info-item"><strong><span data-zh="開放時間" data-en="Opening">開放時間</span>：</strong><span data-zh="9:30–18:00（夏季）" data-en="9:30–18:00 (summer)">9:30–18:00（夏季）</span></div>
+                <div class="info-item"><strong><span data-zh="建議停留" data-en="Suggested Duration">建議停留</span>：</strong><span data-zh="3 小時" data-en="3 hours">3 小時</span></div>
+                <div class="info-item"><strong><span data-zh="停車" data-en="Parking">停車</span>：</strong><span data-zh="免費" data-en="Free">免費</span></div>
+              </div>
+              <div class="nav-links">
+                <a href="https://www.google.com/maps/dir/?api=1&destination=50.3601,-4.7447&travelmode=driving" target="_blank" class="nav-link">📍 Google Maps</a>
+                <a href="https://maps.apple.com/?daddr=50.3601,-4.7447&dirflg=d" target="_blank" class="nav-link apple">🍎 Apple Maps</a>
+                <a href="https://www.edenproject.com" target="_blank" class="nav-link website">🌐 Official Site</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item optional-item">
+            <div class="timeline-time">14:00–16:00</div>
+            <div class="timeline-content">
+              <div class="optional-badge"><span data-zh="⚡ 選擇性行程" data-en="⚡ Optional">⚡ 選擇性行程</span></div>
+              <h3><span data-zh="🌳 Lost Gardens of Heligan" data-en="🌳 Lost Gardens of Heligan">🌳 Lost Gardens of Heligan</span></h3>
+              <p><span data-zh="距離 Eden Project 僅 20 分鐘車程。這座「失落的花園」在一戰後被遺忘了 75 年，1990 年代才被重新發現修復。亮點包括：亞熱帶叢林步道、著名的泥人雕塑（Mud Maid）、巨人頭（Giant's Head）、緬甸吊橋。比 Eden 更自然野性。" data-en="Only 20 min from Eden Project. These 'Lost Gardens' were forgotten for 75 years after WWI, rediscovered and restored in the 1990s. Highlights: subtropical jungle walk, famous Mud Maid sculpture, Giant's Head, Burmese rope bridge. More wild and natural than Eden.">距離 Eden Project 僅 20 分鐘車程。這座「失落的花園」在一戰後被遺忘了 75 年，1990 年代才被重新發現修復。亮點包括：亞熱帶叢林步道、著名的泥人雕塑（Mud Maid）、巨人頭（Giant's Head）、緬甸吊橋。比 Eden 更自然野性。</span></p>
+              <div class="info-box">
+                <div class="info-item"><strong><span data-zh="門票" data-en="Tickets">門票</span>：</strong><span data-zh="成人 ~£20" data-en="Adult ~£20">成人 ~£20</span></div>
+                <div class="info-item"><strong><span data-zh="建議停留" data-en="Suggested Duration">建議停留</span>：</strong><span data-zh="2 小時" data-en="2 hours">2 小時</span></div>
+              </div>
+              <div class="drive-info">
+                <span class="drive-badge"><span data-zh="🚗 從 Eden 20 min" data-en="🚗 20 min from Eden">🚗 從 Eden 20 min</span></span>
+              </div>
+              <div class="nav-links">
+                <a href="https://www.google.com/maps/dir/?api=1&destination=50.2892,-4.7969&travelmode=driving" target="_blank" class="nav-link">📍 Google Maps</a>
+                <a href="https://heligan.com" target="_blank" class="nav-link website">🌐 Official Site</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-time">16:30–17:30</div>
+            <div class="timeline-content">
+              <h3><span data-zh="⚓ Charlestown 漁港散步" data-en="⚓ Charlestown Harbour Walk">⚓ Charlestown 漁港散步</span></h3>
+              <p><span data-zh="BBC 影集 Poldark 的拍攝地！保存完好的喬治亞時期港口，有帆船停泊。適合傍晚散步、拍照、吃 Fish & Chips。距離住宿地 St Austell 僅 5 分鐘。" data-en="Filming location for BBC's Poldark! A well-preserved Georgian harbour with tall ships. Perfect for an evening stroll, photos, and Fish & Chips. Just 5 min from St Austell accommodation.">BBC 影集 Poldark 的拍攝地！保存完好的喬治亞時期港口，有帆船停泊。適合傍晚散步、拍照、吃 Fish & Chips。距離住宿地 St Austell 僅 5 分鐘。</span></p>
+              <div class="drive-info">
+                <span class="drive-badge"><span data-zh="🚗 從 Heligan 15 min" data-en="🚗 15 min from Heligan">🚗 從 Heligan 15 min</span></span>
+              </div>
+              <div class="nav-links">
+                <a href="https://www.google.com/maps/dir/?api=1&destination=50.3295,-4.7570&travelmode=driving" target="_blank" class="nav-link">📍 Google Maps</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-time">18:00</div>
+            <div class="timeline-content">
+              <h3><span data-zh="🏨 St Austell 地區住宿" data-en="🏨 Accommodation near St Austell">🏨 St Austell 地區住宿</span></h3>
+              <p><span data-zh="建議住在 St Austell 或 Mevagissey 附近，方便隔天前往西 Cornwall。" data-en="Suggest staying near St Austell or Mevagissey, convenient for heading to West Cornwall the next day.">建議住在 St Austell 或 Mevagissey 附近，方便隔天前往西 Cornwall。</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Day 2: West Cornwall + Return -->
+    <section class="section day-section" id="day2-2d">
+      <div class="container">
+        <div class="day-header">
+          <h2><span data-zh="Day 2 — 西 Cornwall 精華 + 回程" data-en="Day 2 — West Cornwall Highlights + Return">Day 2 — 西 Cornwall 精華 + 回程</span></h2>
+          <p class="day-theme"><span data-zh="St Michael's Mount → Minack Theatre → St Ives → 回 London" data-en="St Michael's Mount → Minack Theatre → St Ives → Return to London">St Michael's Mount → Minack Theatre → St Ives → 回 London</span></p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-time">08:00–08:50</div>
+            <div class="timeline-content">
+              <h3><span data-zh="🚗 開往 Marazion" data-en="🚗 Drive to Marazion">🚗 開往 Marazion</span></h3>
+              <p><span data-zh="從 St Austell 往西開約 50 分鐘到 Marazion，St Michael's Mount 的所在地。" data-en="Drive west from St Austell, about 50 min to Marazion, home of St Michael's Mount.">從 St Austell 往西開約 50 分鐘到 Marazion，St Michael's Mount 的所在地。</span></p>
+              <div class="drive-info">
+                <span class="drive-badge">🚗 35 mi / 50 min</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item highlight">
+            <div class="timeline-time">09:00–11:00</div>
+            <div class="timeline-content">
+              <h3><span data-zh="🏰 St Michael's Mount" data-en="🏰 St Michael's Mount">🏰 St Michael's Mount</span></h3>
+              <p><span data-zh="Cornwall 最具代表性的地標！一座矗立在海中的中世紀城堡與修道院。退潮時可以走石板路（causeway）步行到島上（約 15-20 分鐘），漲潮時有船接駁。城堡內有中世紀房間、教堂、亞熱帶花園。建議提早到，避免排隊。" data-en="Cornwall's most iconic landmark! A medieval castle and monastery rising from the sea. At low tide, walk across the cobbled causeway (15-20 min); at high tide, take a boat. Inside: medieval rooms, chapel, subtropical gardens. Arrive early to avoid queues.">Cornwall 最具代表性的地標！一座矗立在海中的中世紀城堡與修道院。退潮時可以走石板路（causeway）步行到島上（約 15-20 分鐘），漲潮時有船接駁。城堡內有中世紀房間、教堂、亞熱帶花園。建議提早到，避免排隊。</span></p>
+              <div class="info-box">
+                <div class="info-item"><strong><span data-zh="重要" data-en="Important">重要</span>：</strong><span data-zh="務必查看潮汐時間！Causeway 退潮時才能步行" data-en="Check tide times! Causeway only walkable at low tide">務必查看潮汐時間！Causeway 退潮時才能步行</span></div>
+                <div class="info-item"><strong><span data-zh="門票" data-en="Tickets">門票</span>：</strong><span data-zh="城堡 + 花園 ~£25" data-en="Castle + Gardens ~£25">城堡 + 花園 ~£25</span></div>
+                <div class="info-item"><strong><span data-zh="建議停留" data-en="Suggested Duration">建議停留</span>：</strong><span data-zh="2 小時" data-en="2 hours">2 小時</span></div>
+              </div>
+              <div class="nav-links">
+                <a href="https://www.google.com/maps/dir/?api=1&destination=50.1172,-5.4776&travelmode=driving" target="_blank" class="nav-link">📍 Google Maps</a>
+                <a href="https://maps.apple.com/?daddr=50.1172,-5.4776&dirflg=d" target="_blank" class="nav-link apple">🍎 Apple Maps</a>
+                <a href="https://stmichaelsmount.co.uk" target="_blank" class="nav-link website">🌐 Official Site</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item highlight">
+            <div class="timeline-time">11:30–12:30</div>
+            <div class="timeline-content">
+              <h3><span data-zh="🎭 Minack Theatre" data-en="🎭 Minack Theatre">🎭 Minack Theatre</span></h3>
+              <p><span data-zh="全世界最壯觀的露天劇場之一！建在懸崖邊，面向大西洋，由一位女士在 1930 年代獨力打造。即使不看表演，光是參觀劇場本身和亞熱帶花園就值得。俯瞰 Porthcurno 海灘的景色令人屏息。" data-en="One of the world's most spectacular open-air theatres! Built into the cliffs overlooking the Atlantic, created by one woman in the 1930s. Even without a show, the theatre itself and subtropical gardens are worth visiting. The view overlooking Porthcurno Beach is breathtaking.">全世界最壯觀的露天劇場之一！建在懸崖邊，面向大西洋，由一位女士在 1930 年代獨力打造。即使不看表演，光是參觀劇場本身和亞熱帶花園就值得。俯瞰 Porthcurno 海灘的景色令人屏息。</span></p>
+              <div class="info-box">
+                <div class="info-item"><strong><span data-zh="門票" data-en="Tickets">門票</span>：</strong><span data-zh="參觀 £10（線上）/ £12（現場）" data-en="Visit £10 (online) / £12 (on door)">參觀 £10（線上）/ £12（現場）</span></div>
+                <div class="info-item"><strong><span data-zh="建議停留" data-en="Suggested Duration">建議停留</span>：</strong><span data-zh="1 小時" data-en="1 hour">1 小時</span></div>
+                <div class="info-item"><strong><span data-zh="停車" data-en="Parking">停車</span>：</strong><span data-zh="免費" data-en="Free">免費</span></div>
+              </div>
+              <div class="drive-info">
+                <span class="drive-badge"><span data-zh="🚗 從 Marazion 25 min" data-en="🚗 25 min from Marazion">🚗 從 Marazion 25 min</span></span>
+              </div>
+              <div class="nav-links">
+                <a href="https://www.google.com/maps/dir/?api=1&destination=50.0420,-5.6530&travelmode=driving" target="_blank" class="nav-link">📍 Google Maps</a>
+                <a href="https://minack.com" target="_blank" class="nav-link website">🌐 Official Site</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item optional-item">
+            <div class="timeline-time">12:45–13:15</div>
+            <div class="timeline-content">
+              <div class="optional-badge"><span data-zh="⚡ 選擇性行程" data-en="⚡ Optional">⚡ 選擇性行程</span></div>
+              <h3><span data-zh="🌊 Land's End" data-en="🌊 Land's End">🌊 Land's End</span></h3>
+              <p><span data-zh="英格蘭最西端！著名的地標標誌牌（可付費拍照）。懸崖步道景色壯麗，但商業化程度較高。如果時間緊迫可以跳過，把時間留給 St Ives。" data-en="England's most westerly point! Famous landmark signpost (paid photo). Cliff walks are stunning but the area is quite commercialised. Skip if short on time and save it for St Ives.">英格蘭最西端！著名的地標標誌牌（可付費拍照）。懸崖步道景色壯麗，但商業化程度較高。如果時間緊迫可以跳過，把時間留給 St Ives。</span></p>
+              <div class="drive-info">
+                <span class="drive-badge"><span data-zh="🚗 從 Minack 15 min" data-en="🚗 15 min from Minack">🚗 從 Minack 15 min</span></span>
+              </div>
+              <div class="nav-links">
+                <a href="https://www.google.com/maps/dir/?api=1&destination=50.0659,-5.7128&travelmode=driving" target="_blank" class="nav-link">📍 Google Maps</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item highlight">
+            <div class="timeline-time">13:30–15:30</div>
+            <div class="timeline-content">
+              <h3><span data-zh="🎨 St Ives" data-en="🎨 St Ives">🎨 St Ives</span></h3>
+              <p><span data-zh="Cornwall 最美的海濱小鎮！以藝術聞名，有 Tate St Ives 現代美術館、Barbara Hepworth 雕塑花園。鎮上有五個沙灘，Porthminster Beach 和 Porthmeor Beach 最受歡迎。狹窄的巷弄裡滿是獨立藝廊、手工藝品店和咖啡館。午餐推薦海鮮。" data-en="Cornwall's most beautiful seaside town! Famous for art, with Tate St Ives gallery and Barbara Hepworth Sculpture Garden. Five beaches in town — Porthminster and Porthmeor are most popular. Narrow lanes filled with independent galleries, craft shops and cafés. Seafood lunch recommended.">Cornwall 最美的海濱小鎮！以藝術聞名，有 Tate St Ives 現代美術館、Barbara Hepworth 雕塑花園。鎮上有五個沙灘，Porthminster Beach 和 Porthmeor Beach 最受歡迎。狹窄的巷弄裡滿是獨立藝廊、手工藝品店和咖啡館。午餐推薦海鮮。</span></p>
+              <div class="info-box">
+                <div class="info-item"><strong><span data-zh="建議停留" data-en="Suggested Duration">建議停留</span>：</strong><span data-zh="2 小時（午餐 + 散步 + 海灘）" data-en="2 hours (lunch + walk + beach)">2 小時（午餐 + 散步 + 海灘）</span></div>
+                <div class="info-item"><strong><span data-zh="停車提示" data-en="Parking Tip">停車提示</span>：</strong><span data-zh="夏季停車位非常緊張，建議停 Trenwith Car Park" data-en="Parking is very tight in summer, try Trenwith Car Park">夏季停車位非常緊張，建議停 Trenwith Car Park</span></div>
+              </div>
+              <div class="drive-info">
+                <span class="drive-badge"><span data-zh="🚗 從 Land's End 30 min / 從 Minack 40 min" data-en="🚗 30 min from Land's End / 40 min from Minack">🚗 從 Land's End 30 min / 從 Minack 40 min</span></span>
+              </div>
+              <div class="nav-links">
+                <a href="https://www.google.com/maps/dir/?api=1&destination=50.2112,-5.4810&travelmode=driving" target="_blank" class="nav-link">📍 Google Maps</a>
+                <a href="https://maps.apple.com/?daddr=50.2112,-5.4810&dirflg=d" target="_blank" class="nav-link apple">🍎 Apple Maps</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-time">16:00–21:00</div>
+            <div class="timeline-content">
+              <h3><span data-zh="🚗 回程 London" data-en="🚗 Return to London">🚗 回程 London</span></h3>
+              <p><span data-zh="從 St Ives 回 London 約 5-5.5 小時（300 英里）。建議 16:00 出發，避開最晚的車潮。路線：A30 → M5 → M4。" data-en="From St Ives back to London, approx. 5-5.5 hours (300 miles). Suggest departing at 16:00 to avoid late traffic. Route: A30 → M5 → M4.">從 St Ives 回 London 約 5-5.5 小時（300 英里）。建議 16:00 出發，避開最晚的車潮。路線：A30 → M5 → M4。</span></p>
+              <div class="drive-info">
+                <span class="drive-badge">🚗 300 mi / 5-5.5h</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ============ 3-DAY ITINERARY ============ -->
+  <div id="plan-3day" class="plan-content">
+
+    <!-- Day 1: London → Eden Project → South Coast -->
+    <section class="section day-section" id="day1-3d">
+      <div class="container">
+        <div class="day-header">
+          <h2><span data-zh="Day 1 — 東 Cornwall（週六）" data-en="Day 1 — East Cornwall (Saturday)">Day 1 — 東 Cornwall（週六）</span></h2>
+          <p class="day-theme"><span data-zh="London → Eden Project → Charlestown → 住宿" data-en="London → Eden Project → Charlestown → Accommodation">London → Eden Project → Charlestown → 住宿</span></p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-time">06:00</div>
+            <div class="timeline-content">
+              <h3><span data-zh="🚗 London 出發" data-en="🚗 Depart London">🚗 London 出發</span></h3>
+              <p><span data-zh="路線：M4 → M5 → A30。全程約 4.5-5 小時（270 英里）。Bank Holiday 週末車流量大，務必早出發。" data-en="Route: M4 → M5 → A30. Approx. 4.5-5 hours (270 miles). Bank Holiday weekend traffic is heavy, leave early.">路線：M4 → M5 → A30。全程約 4.5-5 小時（270 英里）。Bank Holiday 週末車流量大，務必早出發。</span></p>
+              <div class="drive-info">
+                <span class="drive-badge">🚗 270 mi / 4.5-5h</span>
+              </div>
+              <div class="rest-stop">
+                <div class="rest-stop-title"><span data-zh="☕ 建議休息站：Exeter Services (M5)" data-en="☕ Suggested Rest Stop: Exeter Services (M5)">☕ 建議休息站：Exeter Services (M5)</span></div>
+                <div class="rest-stop-info"><span data-zh="約 3 小時車程處" data-en="About 3h into the drive">約 3 小時車程處</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item highlight">
+            <div class="timeline-time">10:30–14:00</div>
+            <div class="timeline-content">
+              <h3><span data-zh="🌿 Eden Project（悠閒版）" data-en="🌿 Eden Project (Relaxed)">🌿 Eden Project（悠閒版）</span></h3>
+              <p><span data-zh="三天版可以花更多時間在 Eden Project！除了兩個 Biomes，還可以體驗戶外花園、空中步道（Canopy Walkway）、夏季特展「Enchanted Earth」。園內有多間餐廳可以午餐。" data-en="With 3 days, spend more time at Eden Project! Beyond the two Biomes, try the outdoor gardens, Canopy Walkway, and summer exhibition 'Enchanted Earth'. Multiple restaurants on-site for lunch.">三天版可以花更多時間在 Eden Project！除了兩個 Biomes，還可以體驗戶外花園、空中步道（Canopy Walkway）、夏季特展「Enchanted Earth」。園內有多間餐廳可以午餐。</span></p>
+              <div class="info-box">
+                <div class="info-item"><strong><span data-zh="門票" data-en="Tickets">門票</span>：</strong><span data-zh="成人 £35.50（線上預購）" data-en="Adult £35.50 (online advance)">成人 £35.50（線上預購）</span></div>
+                <div class="info-item"><strong><span data-zh="建議停留" data-en="Suggested Duration">建議停留</span>：</strong><span data-zh="3.5 小時" data-en="3.5 hours">3.5 小時</span></div>
+              </div>
+              <div class="nav-links">
+                <a href="https://www.google.com/maps/dir/?api=1&destination=50.3601,-4.7447&travelmode=driving" target="_blank" class="nav-link">📍 Google Maps</a>
+                <a href="https://www.edenproject.com" target="_blank" class="nav-link website">🌐 Official Site</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-time">14:30–16:00</div>
+            <div class="timeline-content">
+              <h3><span data-zh="🌳 Lost Gardens of Heligan" data-en="🌳 Lost Gardens of Heligan">🌳 Lost Gardens of Heligan</span></h3>
+              <p><span data-zh="一戰後被遺忘 75 年的神秘花園。亞熱帶叢林、泥人雕塑（Mud Maid）、巨人頭（Giant's Head）、緬甸吊橋。與 Eden Project 風格完全不同，更加自然野性。" data-en="Mysterious gardens forgotten for 75 years after WWI. Subtropical jungle, Mud Maid sculpture, Giant's Head, Burmese rope bridge. Completely different style from Eden — more wild and natural.">一戰後被遺忘 75 年的神秘花園。亞熱帶叢林、泥人雕塑（Mud Maid）、巨人頭（Giant's Head）、緬甸吊橋。與 Eden Project 風格完全不同，更加自然野性。</span></p>
+              <div class="drive-info">
+                <span class="drive-badge"><span data-zh="🚗 從 Eden 20 min" data-en="🚗 20 min from Eden">🚗 從 Eden 20 min</span></span>
+              </div>
+              <div class="nav-links">
+                <a href="https://www.google.com/maps/dir/?api=1&destination=50.2892,-4.7969&travelmode=driving" target="_blank" class="nav-link">📍 Google Maps</a>
+                <a href="https://heligan.com" target="_blank" class="nav-link website">🌐 Official Site</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-time">16:30–18:00</div>
+            <div class="timeline-content">
+              <h3><span data-zh="⚓ Charlestown 漁港" data-en="⚓ Charlestown Harbour">⚓ Charlestown 漁港</span></h3>
+              <p><span data-zh="Poldark 拍攝地。喬治亞時期港口，帆船停泊，傍晚氣氛極佳。吃 Fish & Chips 配夕陽。" data-en="Poldark filming location. Georgian harbour with tall ships. Wonderful evening atmosphere. Fish & Chips with sunset.">Poldark 拍攝地。喬治亞時期港口，帆船停泊，傍晚氣氛極佳。吃 Fish & Chips 配夕陽。</span></p>
+              <div class="drive-info">
+                <span class="drive-badge"><span data-zh="🚗 從 Heligan 15 min" data-en="🚗 15 min from Heligan">🚗 從 Heligan 15 min</span></span>
+              </div>
+              <div class="nav-links">
+                <a href="https://www.google.com/maps/dir/?api=1&destination=50.3295,-4.7570&travelmode=driving" target="_blank" class="nav-link">📍 Google Maps</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-time">18:30</div>
+            <div class="timeline-content">
+              <h3><span data-zh="🏨 住宿 St Austell / Mevagissey 地區" data-en="🏨 Stay near St Austell / Mevagissey">🏨 住宿 St Austell / Mevagissey 地區</span></h3>
+              <p><span data-zh="早點休息，為明天的西 Cornwall 精華行程養精蓄銳。" data-en="Rest early, recharge for tomorrow's West Cornwall highlights.">早點休息，為明天的西 Cornwall 精華行程養精蓄銳。</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Day 2: West Cornwall -->
+    <section class="section day-section" id="day2-3d">
+      <div class="container">
+        <div class="day-header">
+          <h2><span data-zh="Day 2 — 西 Cornwall 全日（週日）" data-en="Day 2 — Full Day West Cornwall (Sunday)">Day 2 — 西 Cornwall 全日（週日）</span></h2>
+          <p class="day-theme"><span data-zh="St Michael's Mount → Minack Theatre → Land's End → St Ives → 藍眼淚" data-en="St Michael's Mount → Minack Theatre → Land's End → St Ives → Sea Sparkle">St Michael's Mount → Minack Theatre → Land's End → St Ives → 藍眼淚</span></p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-time">08:00–08:50</div>
+            <div class="timeline-content">
+              <h3><span data-zh="🚗 開往 Marazion" data-en="🚗 Drive to Marazion">🚗 開往 Marazion</span></h3>
+              <p><span data-zh="從 St Austell 往西，約 50 分鐘車程。" data-en="Head west from St Austell, about 50 min drive.">從 St Austell 往西，約 50 分鐘車程。</span></p>
+              <div class="drive-info">
+                <span class="drive-badge">🚗 35 mi / 50 min</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item highlight">
+            <div class="timeline-time">09:00–11:30</div>
+            <div class="timeline-content">
+              <h3><span data-zh="🏰 St Michael's Mount" data-en="🏰 St Michael's Mount">🏰 St Michael's Mount</span></h3>
+              <p><span data-zh="Cornwall 最具代表性的地標！海中城堡，退潮走 causeway、漲潮搭船。城堡、花園、教堂都值得看。三天版可以多花時間逛花園。" data-en="Cornwall's most iconic landmark! Castle in the sea — walk the causeway at low tide, take a boat at high tide. Castle, gardens, and chapel all worth seeing. With 3 days, spend more time in the gardens.">Cornwall 最具代表性的地標！海中城堡，退潮走 causeway、漲潮搭船。城堡、花園、教堂都值得看。三天版可以多花時間逛花園。</span></p>
+              <div class="info-box">
+                <div class="info-item"><strong><span data-zh="重要" data-en="Important">重要</span>：</strong><span data-zh="查看潮汐時間！建議退潮時段前往" data-en="Check tide times! Best to visit during low tide">查看潮汐時間！建議退潮時段前往</span></div>
+                <div class="info-item"><strong><span data-zh="建議停留" data-en="Suggested Duration">建議停留</span>：</strong><span data-zh="2.5 小時" data-en="2.5 hours">2.5 小時</span></div>
+              </div>
+              <div class="nav-links">
+                <a href="https://www.google.com/maps/dir/?api=1&destination=50.1172,-5.4776&travelmode=driving" target="_blank" class="nav-link">📍 Google Maps</a>
+                <a href="https://stmichaelsmount.co.uk" target="_blank" class="nav-link website">🌐 Official Site</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item highlight">
+            <div class="timeline-time">12:00–13:00</div>
+            <div class="timeline-content">
+              <h3><span data-zh="🎭 Minack Theatre" data-en="🎭 Minack Theatre">🎭 Minack Theatre</span></h3>
+              <p><span data-zh="懸崖邊的露天劇場，俯瞰大西洋。即使不看表演也值得參觀。Porthcurno 海灘就在下方，碧綠海水美不勝收。" data-en="Open-air theatre on the cliffs overlooking the Atlantic. Worth visiting even without a show. Porthcurno Beach below with stunning turquoise waters.">懸崖邊的露天劇場，俯瞰大西洋。即使不看表演也值得參觀。Porthcurno 海灘就在下方，碧綠海水美不勝收。</span></p>
+              <div class="drive-info">
+                <span class="drive-badge"><span data-zh="🚗 從 Marazion 25 min" data-en="🚗 25 min from Marazion">🚗 從 Marazion 25 min</span></span>
+              </div>
+              <div class="nav-links">
+                <a href="https://www.google.com/maps/dir/?api=1&destination=50.0420,-5.6530&travelmode=driving" target="_blank" class="nav-link">📍 Google Maps</a>
+                <a href="https://minack.com" target="_blank" class="nav-link website">🌐 Official Site</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item optional-item">
+            <div class="timeline-time">13:15–13:45</div>
+            <div class="timeline-content">
+              <div class="optional-badge"><span data-zh="⚡ 選擇性行程" data-en="⚡ Optional">⚡ 選擇性行程</span></div>
+              <h3><span data-zh="🌊 Land's End" data-en="🌊 Land's End">🌊 Land's End</span></h3>
+              <p><span data-zh="英格蘭最西端。拍照打卡、懸崖步道。商業化但地理意義特殊。30 分鐘足夠。" data-en="England's westernmost point. Photo op, cliff walks. Commercialised but geographically significant. 30 min is enough.">英格蘭最西端。拍照打卡、懸崖步道。商業化但地理意義特殊。30 分鐘足夠。</span></p>
+              <div class="drive-info">
+                <span class="drive-badge"><span data-zh="🚗 從 Minack 15 min" data-en="🚗 15 min from Minack">🚗 從 Minack 15 min</span></span>
+              </div>
+              <div class="nav-links">
+                <a href="https://www.google.com/maps/dir/?api=1&destination=50.0659,-5.7128&travelmode=driving" target="_blank" class="nav-link">📍 Google Maps</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item highlight">
+            <div class="timeline-time">14:15–16:30</div>
+            <div class="timeline-content">
+              <h3><span data-zh="🎨 St Ives" data-en="🎨 St Ives">🎨 St Ives</span></h3>
+              <p><span data-zh="Cornwall 最美海濱小鎮。Tate St Ives、Barbara Hepworth 雕塑花園、五個沙灘、獨立藝廊和咖啡館。三天版有更多時間享受午餐和海灘。" data-en="Cornwall's most beautiful seaside town. Tate St Ives, Barbara Hepworth Sculpture Garden, five beaches, independent galleries and cafés. With 3 days, more time for lunch and beach.">Cornwall 最美海濱小鎮。Tate St Ives、Barbara Hepworth 雕塑花園、五個沙灘、獨立藝廊和咖啡館。三天版有更多時間享受午餐和海灘。</span></p>
+              <div class="drive-info">
+                <span class="drive-badge"><span data-zh="🚗 從 Land's End 30 min" data-en="🚗 30 min from Land's End">🚗 從 Land's End 30 min</span></span>
+              </div>
+              <div class="nav-links">
+                <a href="https://www.google.com/maps/dir/?api=1&destination=50.2112,-5.4810&travelmode=driving" target="_blank" class="nav-link">📍 Google Maps</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item optional-item">
+            <div class="timeline-time">17:00–18:30</div>
+            <div class="timeline-content">
+              <div class="optional-badge"><span data-zh="⚡ 選擇性行程" data-en="⚡ Optional">⚡ 選擇性行程</span></div>
+              <h3><span data-zh="🦎 Kynance Cove / Lizard Point" data-en="🦎 Kynance Cove / Lizard Point">🦎 Kynance Cove / Lizard Point</span></h3>
+              <p><span data-zh="英國最南端！Kynance Cove 有綠松石色海水和戲劇性的岩石。從 St Ives 開車約 50 分鐘。如果時間允許且想看藍眼淚，這裡也是近年觀測到生物螢光的地點之一。" data-en="Britain's most southerly point! Kynance Cove has turquoise waters and dramatic rock formations. About 50 min from St Ives. If time allows and you want to see Sea Sparkle, this is one of the recent bioluminescence sighting locations.">英國最南端！Kynance Cove 有綠松石色海水和戲劇性的岩石。從 St Ives 開車約 50 分鐘。如果時間允許且想看藍眼淚，這裡也是近年觀測到生物螢光的地點之一。</span></p>
+              <div class="drive-info">
+                <span class="drive-badge"><span data-zh="🚗 從 St Ives 50 min" data-en="🚗 50 min from St Ives">🚗 從 St Ives 50 min</span></span>
+              </div>
+              <div class="nav-links">
+                <a href="https://www.google.com/maps/dir/?api=1&destination=49.9743,-5.2315&travelmode=driving" target="_blank" class="nav-link">📍 Google Maps</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-time">19:00</div>
+            <div class="timeline-content">
+              <h3><span data-zh="🏨 住宿 Penzance / Marazion 地區" data-en="🏨 Stay near Penzance / Marazion">🏨 住宿 Penzance / Marazion 地區</span></h3>
+              <p><span data-zh="住在西 Cornwall，方便晚上嘗試觀賞藍眼淚。" data-en="Stay in West Cornwall, convenient for attempting Sea Sparkle viewing at night.">住在西 Cornwall，方便晚上嘗試觀賞藍眼淚。</span></p>
+            </div>
+          </div>
+
+          <div class="timeline-item sea-sparkle-item">
+            <div class="timeline-time">23:00–01:00</div>
+            <div class="timeline-content">
+              <h3><span data-zh="✨ 藍眼淚 Sea Sparkle 觀賞" data-en="✨ Sea Sparkle (Bioluminescence) Viewing">✨ 藍眼淚 Sea Sparkle 觀賞</span></h3>
+              <p><span data-zh="深夜前往觀賞生物螢光！Cornwall 的藍眼淚由浮游生物（Noctiluca scintillans）受到擾動時發出藍綠色螢光。八月是最佳觀賞季節之一。注意：這是自然現象，無法保證一定看得到。" data-en="Late night bioluminescence viewing! Cornwall's Sea Sparkle is caused by plankton (Noctiluca scintillans) emitting blue-green light when disturbed. August is one of the best viewing months. Note: This is a natural phenomenon — sightings cannot be guaranteed.">深夜前往觀賞生物螢光！Cornwall 的藍眼淚由浮游生物（Noctiluca scintillans）受到擾動時發出藍綠色螢光。八月是最佳觀賞季節之一。注意：這是自然現象，無法保證一定看得到。</span></p>
+              <div class="info-box sea-sparkle-info">
+                <div class="info-item"><strong><span data-zh="最佳地點" data-en="Best Locations">最佳地點</span>：</strong></div>
+                <div class="info-item">1. Grebe Beach, Helford River — <span data-zh="最推薦，遮蔽水域，可下水" data-en="Most recommended, sheltered waters, can swim">最推薦，遮蔽水域，可下水</span></div>
+                <div class="info-item">2. Gannel Estuary, Newquay — <span data-zh="漲潮時河口發光" data-en="Estuary glows at incoming tide">漲潮時河口發光</span></div>
+                <div class="info-item">3. Kynance Cove — <span data-zh="從崖上觀賞（不建議夜泳）" data-en="View from cliffs (night swimming not advised)">從崖上觀賞（不建議夜泳）</span></div>
+                <div class="info-item"><strong><span data-zh="觀賞條件" data-en="Viewing Conditions">觀賞條件</span>：</strong></div>
+                <div class="info-item">• <span data-zh="選擇無月光的夜晚（23:00-03:00）" data-en="Choose a moonless night (23:00-03:00)">選擇無月光的夜晚（23:00-03:00）</span></div>
+                <div class="info-item">• <span data-zh="中潮或高潮時，遮蔽海灣最佳" data-en="Mid or high tide, sheltered coves best">中潮或高潮時，遮蔽海灣最佳</span></div>
+                <div class="info-item">• <span data-zh="輕輕攪動水面觸發螢光" data-en="Gently disturb water to trigger glow">輕輕攪動水面觸發螢光</span></div>
+                <div class="info-item">• <span data-zh="使用紅光手電筒，讓眼睛適應黑暗" data-en="Use red-light torch, let eyes adjust to darkness">使用紅光手電筒，讓眼睛適應黑暗</span></div>
+                <div class="info-item">• <span data-zh="前幾天天氣平靜、溫暖時機率較高" data-en="Higher chance after calm, warm days">前幾天天氣平靜、溫暖時機率較高</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Day 3: Glastonbury + Return -->
+    <section class="section day-section" id="day3-3d">
+      <div class="container">
+        <div class="day-header">
+          <h2><span data-zh="Day 3 — Glastonbury + 回程（週一 Bank Holiday）" data-en="Day 3 — Glastonbury + Return (Monday Bank Holiday)">Day 3 — Glastonbury + 回程（週一 Bank Holiday）</span></h2>
+          <p class="day-theme"><span data-zh="Cornwall → Glastonbury Tor → Glastonbury Abbey → London" data-en="Cornwall → Glastonbury Tor → Glastonbury Abbey → London">Cornwall → Glastonbury Tor → Glastonbury Abbey → London</span></p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-time">08:00–10:30</div>
+            <div class="timeline-content">
+              <h3><span data-zh="🚗 開往 Glastonbury" data-en="🚗 Drive to Glastonbury">🚗 開往 Glastonbury</span></h3>
+              <p><span data-zh="從 Penzance/Marazion 地區出發，沿 A30 → M5 → A39 前往 Glastonbury，約 2.5 小時（120 英里）。Glastonbury 位於 Somerset，正好在回 London 的路上。" data-en="Depart from Penzance/Marazion area, via A30 → M5 → A39 to Glastonbury, about 2.5 hours (120 miles). Glastonbury is in Somerset, conveniently on the way back to London.">從 Penzance/Marazion 地區出發，沿 A30 → M5 → A39 前往 Glastonbury，約 2.5 小時（120 英里）。Glastonbury 位於 Somerset，正好在回 London 的路上。</span></p>
+              <div class="drive-info">
+                <span class="drive-badge">🚗 120 mi / 2.5h</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item highlight">
+            <div class="timeline-time">10:30–12:00</div>
+            <div class="timeline-content">
+              <h3><span data-zh="⛰️ Glastonbury Tor" data-en="⛰️ Glastonbury Tor">⛰️ Glastonbury Tor</span></h3>
+              <p><span data-zh="Somerset 平原上突起的神秘小山丘，頂端有 St Michael's Tower 遺跡。與亞瑟王傳說和凱爾特神話有深厚連結。爬上去約 20-30 分鐘，山頂 360 度全景非常壯觀。傳說這裡是 Avalon（阿瓦隆）的入口。" data-en="A mysterious hill rising from the Somerset plains, topped with St Michael's Tower ruins. Deep connections to King Arthur legends and Celtic mythology. About 20-30 min climb to the top, with stunning 360° panoramic views. Legend says this is the entrance to Avalon.">Somerset 平原上突起的神秘小山丘，頂端有 St Michael's Tower 遺跡。與亞瑟王傳說和凱爾特神話有深厚連結。爬上去約 20-30 分鐘，山頂 360 度全景非常壯觀。傳說這裡是 Avalon（阿瓦隆）的入口。</span></p>
+              <div class="info-box">
+                <div class="info-item"><strong><span data-zh="門票" data-en="Tickets">門票</span>：</strong><span data-zh="免費" data-en="Free">免費</span></div>
+                <div class="info-item"><strong><span data-zh="建議停留" data-en="Suggested Duration">建議停留</span>：</strong><span data-zh="1-1.5 小時（含爬山）" data-en="1-1.5 hours (incl. climb)">1-1.5 小時（含爬山）</span></div>
+                <div class="info-item"><strong><span data-zh="停車" data-en="Parking">停車</span>：</strong><span data-zh="Glastonbury Tor Car Park（步行 15 分鐘到山腳）" data-en="Glastonbury Tor Car Park (15 min walk to base)">Glastonbury Tor Car Park（步行 15 分鐘到山腳）</span></div>
+              </div>
+              <div class="nav-links">
+                <a href="https://www.google.com/maps/dir/?api=1&destination=51.1442,-2.6987&travelmode=driving" target="_blank" class="nav-link">📍 Google Maps</a>
+                <a href="https://maps.apple.com/?daddr=51.1442,-2.6987&dirflg=d" target="_blank" class="nav-link apple">🍎 Apple Maps</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-time">12:15–13:30</div>
+            <div class="timeline-content">
+              <h3><span data-zh="🏛️ Glastonbury Abbey + 小鎮午餐" data-en="🏛️ Glastonbury Abbey + Town Lunch">🏛️ Glastonbury Abbey + 小鎮午餐</span></h3>
+              <p><span data-zh="英國最古老的基督教建築遺址之一，傳說是亞瑟王和 Guinevere 的埋葬地。36 英畝的寧靜園區。小鎮本身充滿 New Age 氛圍，有水晶店、靈性書店、素食餐廳。Chalice Well（聖杯井）也值得一看。" data-en="One of Britain's oldest Christian sites, legendarily the burial place of King Arthur and Guinevere. 36 acres of peaceful grounds. The town itself has a strong New Age vibe with crystal shops, spiritual bookstores, and vegetarian restaurants. Chalice Well is also worth visiting.">英國最古老的基督教建築遺址之一，傳說是亞瑟王和 Guinevere 的埋葬地。36 英畝的寧靜園區。小鎮本身充滿 New Age 氛圍，有水晶店、靈性書店、素食餐廳。Chalice Well（聖杯井）也值得一看。</span></p>
+              <div class="info-box">
+                <div class="info-item"><strong><span data-zh="Abbey 門票" data-en="Abbey Tickets">Abbey 門票</span>：</strong><span data-zh="成人 ~£10" data-en="Adult ~£10">成人 ~£10</span></div>
+                <div class="info-item"><strong><span data-zh="建議停留" data-en="Suggested Duration">建議停留</span>：</strong><span data-zh="1-1.5 小時（含午餐）" data-en="1-1.5 hours (incl. lunch)">1-1.5 小時（含午餐）</span></div>
+              </div>
+              <div class="nav-links">
+                <a href="https://www.google.com/maps/dir/?api=1&destination=51.1475,-2.7139&travelmode=driving" target="_blank" class="nav-link">📍 Google Maps</a>
+                <a href="https://www.glastonburyabbey.com" target="_blank" class="nav-link website">🌐 Official Site</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-time">14:00–16:30</div>
+            <div class="timeline-content">
+              <h3><span data-zh="🚗 回程 London" data-en="🚗 Return to London">🚗 回程 London</span></h3>
+              <p><span data-zh="從 Glastonbury 回 London 約 2.5 小時（130 英里）。路線：A39 → M5 → M4。Bank Holiday 週一下午車流量大，建議不要太晚出發。" data-en="From Glastonbury to London, approx. 2.5 hours (130 miles). Route: A39 → M5 → M4. Bank Holiday Monday afternoon traffic is heavy, don't leave too late.">從 Glastonbury 回 London 約 2.5 小時（130 英里）。路線：A39 → M5 → M4。Bank Holiday 週一下午車流量大，建議不要太晚出發。</span></p>
+              <div class="drive-info">
+                <span class="drive-badge">🚗 130 mi / 2.5h</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Sea Sparkle Section (shown in both plans) -->
+  <section class="section sea-sparkle-section">
+    <div class="container">
+      <h2><span data-zh="🌊 藍眼淚 Sea Sparkle 完整攻略" data-en="🌊 Sea Sparkle Complete Guide">🌊 藍眼淚 Sea Sparkle 完整攻略</span></h2>
+      <div class="analysis-grid">
+        <div class="analysis-card good">
+          <h3><span data-zh="最佳觀賞地點" data-en="Best Viewing Locations">最佳觀賞地點</span></h3>
+          <ul>
+            <li><strong>Grebe Beach, Helford River</strong> — <span data-zh="最推薦！遮蔽水域，淡水與海水交匯處，可安全下水體驗" data-en="Most recommended! Sheltered waters, freshwater meets sea, safe to swim">最推薦！遮蔽水域，淡水與海水交匯處，可安全下水體驗</span></li>
+            <li><strong>Gannel Estuary, Newquay</strong> — <span data-zh="漲潮時河口發光，是 Cornwall 最穩定的觀測點之一" data-en="Estuary glows at incoming tide, one of Cornwall's most consistent spots">漲潮時河口發光，是 Cornwall 最穩定的觀測點之一</span></li>
+            <li><strong>Kynance Cove, Lizard</strong> — <span data-zh="2025年8月有觀測紀錄，從崖上觀賞（夜泳危險）" data-en="Sighted August 2025, view from cliffs (night swimming dangerous)">2025年8月有觀測紀錄，從崖上觀賞（夜泳危險）</span></li>
+            <li><strong>Pedn Vounder, Penzance</strong> — <span data-zh="壯觀但有強烈離岸流，僅從崖上觀賞" data-en="Spectacular but strong rip currents, view from cliffs only">壯觀但有強烈離岸流，僅從崖上觀賞</span></li>
+          </ul>
+        </div>
+        <div class="analysis-card suggestion">
+          <h3><span data-zh="觀賞條件與技巧" data-en="Viewing Conditions & Tips">觀賞條件與技巧</span></h3>
+          <ul>
+            <li><span data-zh="時間：23:00–03:00（越暗越好）" data-en="Time: 23:00–03:00 (darker is better)">時間：23:00–03:00（越暗越好）</span></li>
+            <li><span data-zh="月相：選擇新月或無月光的夜晚" data-en="Moon: Choose new moon or moonless nights">月相：選擇新月或無月光的夜晚</span></li>
+            <li><span data-zh="潮汐：中潮或高潮時最佳" data-en="Tide: Mid or high tide is best">潮汐：中潮或高潮時最佳</span></li>
+            <li><span data-zh="天氣：前幾天平靜溫暖後機率較高" data-en="Weather: Higher chance after calm, warm days">天氣：前幾天平靜溫暖後機率較高</span></li>
+            <li><span data-zh="裝備：紅光手電筒、保暖衣物、防滑鞋" data-en="Gear: Red-light torch, warm clothes, non-slip shoes">裝備：紅光手電筒、保暖衣物、防滑鞋</span></li>
+            <li><span data-zh="技巧：到達後靜待 5-10 分鐘讓眼睛適應，再輕輕攪動水面" data-en="Technique: Wait 5-10 min for eyes to adjust, then gently stir water">技巧：到達後靜待 5-10 分鐘讓眼睛適應，再輕輕攪動水面</span></li>
+          </ul>
+        </div>
+        <div class="analysis-card warning">
+          <h3><span data-zh="安全注意事項" data-en="Safety Notes">安全注意事項</span></h3>
+          <ul>
+            <li><span data-zh="務必結伴同行，告知他人行蹤" data-en="Always go with others, tell someone your plans">務必結伴同行，告知他人行蹤</span></li>
+            <li><span data-zh="查看潮汐時間，注意離岸流" data-en="Check tide times, beware of rip currents">查看潮汐時間，注意離岸流</span></li>
+            <li><span data-zh="只在淺水區活動" data-en="Stay in shallow waters only">只在淺水區活動</span></li>
+            <li><span data-zh="帶保暖衣物替換" data-en="Bring warm clothes to change into">帶保暖衣物替換</span></li>
+            <li><span data-zh="尊重環境和海洋生物" data-en="Respect the environment and marine life">尊重環境和海洋生物</span></li>
+            <li><span data-zh="這是自然現象，不保證看得到，保持平常心" data-en="Natural phenomenon, not guaranteed — manage expectations">這是自然現象，不保證看得到，保持平常心</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p><span data-zh="Cornwall 自駕行程 · 2026年8月" data-en="Cornwall Road Trip · August 2026">Cornwall 自駕行程 · 2026年8月</span></p>
+  </footer>
+
+  <script src="map.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
