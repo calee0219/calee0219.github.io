@@ -27,11 +27,10 @@
       { id: 'C', name: 'Lost Gardens of Heligan', desc: '14:00-16:00 · 選擇性', lat: 50.2892, lng: -4.7969, day: 1, time: '14:00-16:00', optional: true },
       { id: 'D', name: 'Charlestown', desc: '16:30-17:30 · 漁港散步', lat: 50.3295, lng: -4.7570, day: 1, time: '16:30-17:30' },
       { id: 'E', name: 'St Austell (住宿)', desc: '18:00 Check-in', lat: 50.3440, lng: -4.7900, day: 1, time: '18:00' },
-      { id: 'F', name: "St Michael's Mount", desc: '09:00-11:00 · 2h', lat: 50.1172, lng: -5.4776, day: 2, time: '09:00-11:00', highlight: true },
-      { id: 'G', name: 'Minack Theatre', desc: '11:30-12:30 · 1h', lat: 50.0420, lng: -5.6530, day: 2, time: '11:30-12:30', highlight: true },
-      { id: 'H', name: "Land's End", desc: '12:45-13:15 · 選擇性', lat: 50.0659, lng: -5.7128, day: 2, time: '12:45-13:15', optional: true },
-      { id: 'I', name: 'St Ives', desc: '13:30-15:30 · 2h', lat: 50.2112, lng: -5.4810, day: 2, time: '13:30-15:30', highlight: true },
-      { id: 'J', name: 'London (回程)', desc: '~21:00 抵達', lat: 51.5074, lng: -0.1278, day: 2, time: '16:00-21:00' }
+      { id: 'F', name: 'Minack Theatre', desc: '08:45-09:45 · 1h', lat: 50.0420, lng: -5.6530, day: 2, time: '08:45-09:45', highlight: true },
+      { id: 'G', name: 'St Ives', desc: '10:15-12:15 · 2h', lat: 50.2112, lng: -5.4810, day: 2, time: '10:15-12:15', highlight: true },
+      { id: 'H', name: "St Michael's Mount", desc: '13:00-15:00 · 配合低潮', lat: 50.1172, lng: -5.4776, day: 2, time: '13:00-15:00', highlight: true },
+      { id: 'I', name: 'London (回程)', desc: '~21:00 抵達', lat: 51.5074, lng: -0.1278, day: 2, time: '15:30-21:00' }
     ],
     '3day': [
       { id: 'A', name: 'London', desc: '06:00 出發', lat: 51.5074, lng: -0.1278, day: 1, time: '06:00' },
@@ -39,15 +38,15 @@
       { id: 'C', name: 'Lost Gardens of Heligan', desc: '14:30-16:00 · 1.5h', lat: 50.2892, lng: -4.7969, day: 1, time: '14:30-16:00' },
       { id: 'D', name: 'Charlestown', desc: '16:30-18:00 · 漁港晚餐', lat: 50.3295, lng: -4.7570, day: 1, time: '16:30-18:00' },
       { id: 'E', name: 'St Austell (住宿)', desc: 'Day 1 住宿', lat: 50.3440, lng: -4.7900, day: 1, time: '18:30' },
-      { id: 'F', name: "St Michael's Mount", desc: '09:00-11:30 · 2.5h', lat: 50.1172, lng: -5.4776, day: 2, time: '09:00-11:30', highlight: true },
-      { id: 'G', name: 'Minack Theatre', desc: '12:00-13:00 · 1h', lat: 50.0420, lng: -5.6530, day: 2, time: '12:00-13:00', highlight: true },
-      { id: 'H', name: "Land's End", desc: '13:15-13:45 · 選擇性', lat: 50.0659, lng: -5.7128, day: 2, time: '13:15-13:45', optional: true },
-      { id: 'I', name: 'St Ives', desc: '14:15-16:30 · 2h+', lat: 50.2112, lng: -5.4810, day: 2, time: '14:15-16:30', highlight: true },
-      { id: 'J', name: 'Kynance Cove / Lizard', desc: '17:00-18:30 · 選擇性', lat: 49.9743, lng: -5.2315, day: 2, time: '17:00-18:30', optional: true },
-      { id: 'K', name: 'Penzance (住宿)', desc: 'Day 2 住宿 + 藍眼淚', lat: 50.1185, lng: -5.5371, day: 2, time: '19:00' },
-      { id: 'L', name: 'Glastonbury Tor', desc: '10:30-12:00 · 1.5h', lat: 51.1442, lng: -2.6987, day: 3, time: '10:30-12:00', highlight: true },
-      { id: 'M', name: 'Glastonbury Abbey', desc: '12:15-13:30 · 午餐', lat: 51.1475, lng: -2.7139, day: 3, time: '12:15-13:30' },
-      { id: 'N', name: 'London (回程)', desc: '~16:30 抵達', lat: 51.5074, lng: -0.1278, day: 3, time: '14:00-16:30' }
+      { id: 'F', name: 'Minack Theatre', desc: '09:00-10:00 · 1h', lat: 50.0420, lng: -5.6530, day: 2, time: '09:00-10:00', highlight: true },
+      { id: 'G', name: "Land's End", desc: '10:15-10:45 · 選擇性', lat: 50.0659, lng: -5.7128, day: 2, time: '10:15-10:45', optional: true },
+      { id: 'H', name: 'St Ives', desc: '11:15-13:30 · 2h+', lat: 50.2112, lng: -5.4810, day: 2, time: '11:15-13:30', highlight: true },
+      { id: 'I', name: 'Kynance Cove / Lizard', desc: '14:30-16:00 · 選擇性', lat: 49.9743, lng: -5.2315, day: 2, time: '14:30-16:00', optional: true },
+      { id: 'J', name: 'Penzance (住宿)', desc: 'Day 2 住宿 + 藍眼淚', lat: 50.1185, lng: -5.5371, day: 2, time: '19:00' },
+      { id: 'K', name: "St Michael's Mount", desc: '08:30-11:00 · 2.5h 城堡開放', lat: 50.1172, lng: -5.4776, day: 3, time: '08:30-11:00', highlight: true },
+      { id: 'L', name: 'Glastonbury Tor', desc: '13:30-15:00 · 1.5h', lat: 51.1442, lng: -2.6987, day: 3, time: '13:30-15:00', highlight: true },
+      { id: 'M', name: 'Glastonbury Abbey', desc: '15:15-16:30 · 午餐', lat: 51.1475, lng: -2.7139, day: 3, time: '15:15-16:30' },
+      { id: 'N', name: 'London (回程)', desc: '~19:00 抵達', lat: 51.5074, lng: -0.1278, day: 3, time: '16:30-19:00' }
     ]
   };
 
@@ -68,17 +67,17 @@
     '2day': {
       day1: [
         [51.5074, -0.1278], // London
-        [51.40, -0.30],     // M4
-        [51.45, -0.80],     // M4
-        [51.50, -1.50],     // M4
-        [51.55, -2.20],     // M4
-        [51.45, -2.60],     // M5 junction
-        [51.20, -2.80],     // M5
-        [50.95, -3.10],     // M5
+        [51.40, -0.30],
+        [51.45, -0.80],
+        [51.50, -1.50],
+        [51.55, -2.20],
+        [51.45, -2.60],
+        [51.20, -2.80],
+        [50.95, -3.10],
         [50.7260, -3.4700], // Exeter Services
-        [50.65, -3.70],     // A30
-        [50.50, -4.20],     // A30
-        [50.40, -4.60],     // A30
+        [50.65, -3.70],
+        [50.50, -4.20],
+        [50.40, -4.60],
         [50.3601, -4.7447], // Eden Project
         [50.2892, -4.7969], // Heligan
         [50.3295, -4.7570], // Charlestown
@@ -86,27 +85,28 @@
       ],
       day2: [
         [50.3440, -4.7900], // St Austell
-        [50.25, -5.00],     // A390
-        [50.18, -5.20],     // A394
-        [50.1172, -5.4776], // St Michael's Mount
-        [50.08, -5.55],     // B3315
+        [50.25, -5.00],
+        [50.15, -5.30],
+        [50.08, -5.55],
         [50.0420, -5.6530], // Minack Theatre
-        [50.0659, -5.7128], // Land's End
-        [50.10, -5.65],     // A30
-        [50.15, -5.55],     // A3074
+        [50.10, -5.65],
+        [50.15, -5.55],
         [50.2112, -5.4810], // St Ives
+        [50.18, -5.45],
+        [50.1172, -5.4776], // St Michael's Mount
       ],
       day2Return: [
-        [50.2112, -5.4810], // St Ives
-        [50.25, -5.30],     // A30
-        [50.40, -4.80],     // A30
-        [50.50, -4.20],     // A30
-        [50.65, -3.70],     // A30
+        [50.1172, -5.4776], // St Michael's Mount
+        [50.18, -5.20],
+        [50.25, -5.00],
+        [50.40, -4.60],
+        [50.50, -4.20],
+        [50.65, -3.70],
         [50.7260, -3.4700], // Exeter
-        [50.95, -3.10],     // M5
-        [51.20, -2.80],     // M5
-        [51.45, -2.60],     // M4
-        [51.50, -1.50],     // M4
+        [50.95, -3.10],
+        [51.20, -2.80],
+        [51.45, -2.60],
+        [51.50, -1.50],
         [51.5074, -0.1278], // London
       ]
     },
@@ -132,8 +132,7 @@
       day2: [
         [50.3440, -4.7900], // St Austell
         [50.25, -5.00],
-        [50.18, -5.20],
-        [50.1172, -5.4776], // St Michael's Mount
+        [50.15, -5.30],
         [50.08, -5.55],
         [50.0420, -5.6530], // Minack Theatre
         [50.0659, -5.7128], // Land's End
@@ -154,6 +153,8 @@
       ],
       day3: [
         [50.1185, -5.5371], // Penzance
+        [50.1172, -5.4776], // St Michael's Mount
+        [50.18, -5.20],
         [50.25, -5.00],
         [50.40, -4.60],
         [50.50, -4.20],
@@ -357,16 +358,17 @@
 
     // Fit bounds
     const allCoords = stops.map(s => [s.lat, s.lng]);
-    seaSparkleSpots.forEach(s => allCoords.push([s.lat, s.lng]));
-    map.fitBounds(allCoords, { padding: [40, 40] });
+    map.fitBounds(allCoords, { padding: [30, 30] });
   }
+
+  // ===== EXPOSE TO GLOBAL =====
+  window.drawMapPlan = drawPlan;
 
   // Initial draw
   drawPlan('2day');
 
-  // Listen for plan changes
-  window.addEventListener('planChanged', function(e) {
+  // Listen for plan switch events
+  document.addEventListener('planSwitch', function(e) {
     drawPlan(e.detail.plan);
   });
-
 })();
