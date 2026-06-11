@@ -367,8 +367,8 @@
   // Initial draw
   drawPlan('2day');
 
-  // Listen for plan switch events
-  document.addEventListener('planSwitch', function(e) {
+  // Listen for plan switch events from app.js
+  window.addEventListener('planChanged', function(e) {
     drawPlan(e.detail.plan);
   });
 })();
