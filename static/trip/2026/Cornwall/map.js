@@ -364,11 +364,22 @@
   // ===== EXPOSE TO GLOBAL =====
   window.drawMapPlan = drawPlan;
 
-  // Initial draw
+  // Initial draw - check if app.js has already set a plan preference
+  // (app.js loads after map.js, so this runs first with default)
   drawPlan('2day');
+
+  // Also listen for DOMContentLoaded in case app.js fires planChanged on load
+  // This ensures the map syncs with the saved plan preference
+  window.addEventListener('DOMContentLoaded', function() {
+    map.invalidateSize();
+  });
 
   // Listen for plan switch events from app.js
   window.addEventListener('planChanged', function(e) {
-    drawPlan(e.detail.plan);
+    // Invalidate map size in case container was resized
+    setTimeout(function() {
+      map.invalidateSize();
+      drawPlan(e.detail.plan);
+    }, 100);
   });
 })();
