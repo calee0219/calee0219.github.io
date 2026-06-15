@@ -722,3 +722,12 @@ img {
     font-size: 0.85rem;
   }
 }
+
+
+.subsection-title {
+  text-align: center;
+  font-size: 1.4rem;
+  color: var(--color-primary);
+  margin: 40px 0 20px;
+  font-weight: 700;
+}
