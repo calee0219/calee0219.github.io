@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>法羅群島行程 | Faroe Islands · August Bank Holiday 2026</title>
+  <meta name="description" content="法羅群島七天行程規劃：Múlafossur Waterfall、Mykines 看 Puffin、Kalsoy 燈塔健行、Saksun、Gjógv，從倫敦出發的完整攻略" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏝️</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Serif+Display&family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Language Toggle -->
+  <div class="lang-toggle">
+    <button class="lang-btn active" data-lang="zh">中文</button>
+    <button class="lang-btn" data-lang="en">EN</button>
+  </div>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>
+        <span data-zh="法羅群島探險之旅" data-en="Faroe Islands Adventure">法羅群島探險之旅</span>
+      </h1>
+      <p class="hero-subtitle">
+        <span data-zh="Múlafossur · Mykines Puffins · Kalsoy · Saksun · Gjógv" data-en="Múlafossur · Mykines Puffins · Kalsoy · Saksun · Gjógv">Múlafossur · Mykines Puffins · Kalsoy · Saksun · Gjógv</span>
+      </p>
+      <p class="hero-date">
+        <span data-zh="2026年8月22日–29日 · 7天6夜 · 從倫敦出發" data-en="Aug 22–29, 2026 · 7 Days 6 Nights · From London">2026年8月22日–29日 · 7天6夜 · 從倫敦出發</span>
+      </p>
+    </div>
+  </header>
+
+  <!-- Trip Overview -->
+  <section class="section overview">
+    <div class="container">
+      <h2><span data-zh="行程總覽" data-en="Trip Overview">行程總覽</span></h2>
+      <div class="overview-grid">
+        <div class="overview-card">
+          <div class="overview-icon">✈️</div>
+          <div class="overview-label"><span data-zh="交通方式" data-en="Transport">交通方式</span></div>
+          <div class="overview-value"><span data-zh="直飛 + 租車" data-en="Direct Flight + Car Rental">直飛 + 租車</span></div>
+          <div class="overview-detail">Atlantic Airways · LGW→FAE 2h15m</div>
+        </div>
+        <div class="overview-card">
+          <div class="overview-icon">📅</div>
+          <div class="overview-label"><span data-zh="天數" data-en="Duration">天數</span></div>
+          <div class="overview-value"><span data-zh="7天6夜" data-en="7 Days 6 Nights">7天6夜</span></div>
+          <div class="overview-detail"><span data-zh="Sat 22 → Sat 29 Aug" data-en="Sat 22 → Sat 29 Aug">Sat 22 → Sat 29 Aug</span></div>
+        </div>
+        <div class="overview-card">
+          <div class="overview-icon">🏖️</div>
+          <div class="overview-label"><span data-zh="請假天數" data-en="Leave Days">請假天數</span></div>
+          <div class="overview-value"><span data-zh="5天" data-en="5 Days">5天</span></div>
+          <div class="overview-detail"><span data-zh="Mon–Fri · Bank Holiday 恢復" data-en="Mon–Fri · Bank Holiday to recover">Mon–Fri · Bank Holiday 恢復</span></div>
+        </div>
+        <div class="overview-card">
+          <div class="overview-icon">🌡️</div>
+          <div class="overview-label"><span data-zh="八月氣候" data-en="August Weather">八月氣候</span></div>
+          <div class="overview-value">10–15°C</div>
+          <div class="overview-detail"><span data-zh="16hr 日照 · 偶陣雨" data-en="16hr daylight · occasional showers">16hr 日照 · 偶陣雨</span></div>
+        </div>
+        <div class="overview-card">
+          <div class="overview-icon">🐧</div>
+          <div class="overview-label"><span data-zh="特殊體驗" data-en="Special Experience">特殊體驗</span></div>
+          <div class="overview-value">Puffins</div>
+          <div class="overview-detail"><span data-zh="八月是最後觀賞月份" data-en="August is last month to see them">八月是最後觀賞月份</span></div>
+        </div>
+        <div class="overview-card">
+          <div class="overview-icon">💰</div>
+          <div class="overview-label"><span data-zh="預估預算" data-en="Est. Budget">預估預算</span></div>
+          <div class="overview-value">~£3,500</div>
+          <div class="overview-detail"><span data-zh="兩人總計（含機票）" data-en="Total for 2 (incl. flights)">兩人總計（含機票）</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Leave Analysis Section -->
+  <section class="section analysis-section">
+    <div class="container">
+      <h2><span data-zh="📊 請假分析：為什麼值得請 5 天假？" data-en="📊 Leave Analysis: Why 5 Days Off is Worth It">📊 請假分析：為什麼值得請 5 天假？</span></h2>
+      <div class="analysis-grid">
+        <div class="analysis-card good">
+          <h3><span data-zh="✅ 推薦方案：7天（請5天假）" data-en="✅ Recommended: 7 Days (5 Days Leave)">✅ 推薦方案：7天（請5天假）</span></h3>
+          <ul>
+            <li><span data-zh="出發：週六 8/22（不佔假）" data-en="Depart: Sat 8/22 (no leave needed)">出發：週六 8/22（不佔假）</span></li>
+            <li><span data-zh="請假：Mon 25 – Fri 29（5天）" data-en="Leave: Mon 25 – Fri 29 (5 days)">請假：Mon 25 – Fri 29（5天）</span></li>
+            <li><span data-zh="回程：週六 8/29（不佔假）" data-en="Return: Sat 8/29 (no leave needed)">回程：週六 8/29（不佔假）</span></li>
+            <li><span data-zh="恢復：Sun 30 + Bank Holiday Mon 31" data-en="Recovery: Sun 30 + Bank Holiday Mon 31">恢復：Sun 30 + Bank Holiday Mon 31</span></li>
+            <li><strong><span data-zh="⭐ 5天假換9天連假（含恢復日）！" data-en="⭐ 5 days leave = 9 consecutive days off!">⭐ 5天假換9天連假（含恢復日）！</span></strong></li>
+          </ul>
+        </div>
+        <div class="analysis-card warning">
+          <h3><span data-zh="⚠️ 替代方案：4天（請4天假）" data-en="⚠️ Alternative: 4 Days (4 Days Leave)">⚠️ 替代方案：4天（請4天假）</span></h3>
+          <ul>
+            <li><span data-zh="出發：週二 8/26" data-en="Depart: Tue 8/26">出發：週二 8/26</span></li>
+            <li><span data-zh="回程：週六 8/29" data-en="Return: Sat 8/29">回程：週六 8/29</span></li>
+            <li><span data-zh="實際遊覽僅 3 天，太趕" data-en="Only 3 full days exploring — too rushed">實際遊覽僅 3 天，太趕</span></li>
+            <li><span data-zh="無法拜訪 Mykines + 北島" data-en="Cannot visit both Mykines + Northern Isles">無法拜訪 Mykines + 北島</span></li>
+            <li><span data-zh="❌ 不推薦：景點太分散" data-en="❌ Not recommended: attractions too spread out">❌ 不推薦：景點太分散</span></li>
+          </ul>
+        </div>
+        <div class="analysis-card suggestion">
+          <h3><span data-zh="💡 為什麼 7 天是最佳天數？" data-en="💡 Why 7 Days is Optimal?">💡 為什麼 7 天是最佳天數？</span></h3>
+          <ul>
+            <li><span data-zh="法羅群島有 18 座島嶼，景點分散" data-en="18 islands with scattered attractions">法羅群島有 18 座島嶼，景點分散</span></li>
+            <li><span data-zh="天氣多變，需彈性日備案" data-en="Changeable weather needs flexible backup days">天氣多變，需彈性日備案</span></li>
+            <li><span data-zh="Mykines 船班需提前預訂且可能取消" data-en="Mykines ferry must be pre-booked, may cancel">Mykines 船班需提前預訂且可能取消</span></li>
+            <li><span data-zh="直飛僅週二/六，無法中途加減天" data-en="Direct flights only Tue/Sat, can't adjust mid-trip">直飛僅週二/六，無法中途加減天</span></li>
+            <li><span data-zh="健行需要體力分配，不宜每天高強度" data-en="Hiking needs energy management, avoid daily intensity">健行需要體力分配，不宜每天高強度</span></li>
+            <li><strong><span data-zh="⭐ 7天 = 完整體驗 + 天氣緩衝" data-en="⭐ 7 days = complete experience + weather buffer">⭐ 7天 = 完整體驗 + 天氣緩衝</span></strong></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Calendar visualization -->
+      <div class="calendar-viz">
+        <h3><span data-zh="📅 八月日曆視覺化" data-en="📅 August Calendar View">📅 八月日曆視覺化</span></h3>
+        <div class="calendar-grid">
+          <div class="cal-header">Mon</div>
+          <div class="cal-header">Tue</div>
+          <div class="cal-header">Wed</div>
+          <div class="cal-header">Thu</div>
+          <div class="cal-header">Fri</div>
+          <div class="cal-header">Sat</div>
+          <div class="cal-header">Sun</div>
+          <!-- Week 4: Aug 17-23 -->
+          <div class="cal-day">17</div>
+          <div class="cal-day">18</div>
+          <div class="cal-day">19</div>
+          <div class="cal-day">20</div>
+          <div class="cal-day">21</div>
+          <div class="cal-day travel">22 ✈️</div>
+          <div class="cal-day faroe">23</div>
+          <!-- Week 5: Aug 24-30 -->
+          <div class="cal-day faroe leave">24</div>
+          <div class="cal-day faroe leave">25</div>
+          <div class="cal-day faroe leave">26</div>
+          <div class="cal-day faroe leave">27</div>
+          <div class="cal-day faroe leave">28</div>
+          <div class="cal-day travel">29 ✈️</div>
+          <div class="cal-day rest">30</div>
+          <!-- Week 6: Aug 31 -->
+          <div class="cal-day bank-holiday">31 🎉</div>
+        </div>
+        <div class="calendar-legend">
+          <span class="legend-item"><span class="legend-dot travel-dot"></span><span data-zh="出發/回程" data-en="Travel Day">出發/回程</span></span>
+          <span class="legend-item"><span class="legend-dot faroe-dot"></span><span data-zh="法羅群島" data-en="In Faroe Islands">法羅群島</span></span>
+          <span class="legend-item"><span class="legend-dot leave-dot"></span><span data-zh="需請假" data-en="Leave Required">需請假</span></span>
+          <span class="legend-item"><span class="legend-dot rest-dot"></span><span data-zh="休息日" data-en="Rest Day">休息日</span></span>
+          <span class="legend-item"><span class="legend-dot bh-dot"></span><span data-zh="Bank Holiday" data-en="Bank Holiday">Bank Holiday</span></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+  <section class="section map-section">
+    <div class="container">
+      <h2><span data-zh="🗺️ 行程路線圖" data-en="🗺️ Route Map">🗺️ 行程路線圖</span></h2>
+      <p class="map-intro"><span data-zh="點擊標記查看景點詳情與導航連結。橘色為 Day 1-3（Vágar + Streymoy），藍色為 Day 4-5（Eysturoy + 北島），綠色為 Day 6-7（南部 + Tórshavn）。" data-en="Click markers for details and navigation links. Orange = Day 1-3 (Vágar + Streymoy), Blue = Day 4-5 (Eysturoy + Northern Isles), Green = Day 6-7 (South + Tórshavn).">點擊標記查看景點詳情與導航連結。橘色為 Day 1-3（Vágar + Streymoy），藍色為 Day 4-5（Eysturoy + 北島），綠色為 Day 6-7（南部 + Tórshavn）。</span></p>
+      <div id="leafletMap" class="leaflet-map"></div>
+    </div>
+  </section>
+
+  <!-- Itinerary Section -->
+  <section class="section itinerary-section">
+    <div class="container">
+      <h2><span data-zh="📋 每日行程" data-en="📋 Daily Itinerary">📋 每日行程</span></h2>
+
+      <!-- Day 1 -->
+      <div class="day-block">
+        <div class="day-header">
+          <span class="day-badge">Day 1</span>
+          <span class="day-title" data-zh="週六 8/22 — 抵達 + Vágar 島西部" data-en="Sat 8/22 — Arrival + West Vágar">週六 8/22 — 抵達 + Vágar 島西部</span>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="time-badge">09:00</div>
+            <div class="timeline-content">
+              <h4>London Gatwick → Vágar Airport</h4>
+              <p><span data-zh="Atlantic Airways 直飛，飛行時間 2 小時 15 分。抵達後於機場取租車。" data-en="Atlantic Airways direct flight, 2h15m. Pick up rental car at airport.">Atlantic Airways 直飛，飛行時間 2 小時 15 分。抵達後於機場取租車。</span></p>
+              <div class="detail-tag">✈️ 2h 15min</div>
+            </div>
+          </div>
+          <div class="timeline-item highlight-item">
+            <div class="time-badge">12:00</div>
+            <div class="timeline-content">
+              <h4>Gásadalur & Múlafossur Waterfall</h4>
+              <p><span data-zh="法羅群島最具代表性的景點！壯觀的瀑布直瀉入大西洋。從停車場步行 5 分鐘即達觀景台。" data-en="The most iconic Faroe Islands sight! Spectacular waterfall plunging into the Atlantic. 5-min walk from parking to viewpoint.">法羅群島最具代表性的景點！壯觀的瀑布直瀉入大西洋。從停車場步行 5 分鐘即達觀景台。</span></p>
+              <div class="detail-tag">⏱️ 1.5h</div>
+              <div class="detail-tag">📍 <span data-zh="機場開車 25 分鐘" data-en="25 min from airport">機場開車 25 分鐘</span></div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="time-badge">14:00</div>
+            <div class="timeline-content">
+              <h4>Bøsdalafossur & Bøur Village</h4>
+              <p><span data-zh="Bøur 是擁有草皮屋頂房屋的迷人小村莊，可遠眺 Drangarnir 海蝕柱和 Tindhólmur 島。" data-en="Bøur is a charming village with turf-roofed houses, views of Drangarnir sea stacks and Tindhólmur island.">Bøur 是擁有草皮屋頂房屋的迷人小村莊，可遠眺 Drangarnir 海蝕柱和 Tindhólmur 島。</span></p>
+              <div class="detail-tag">⏱️ 1h</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="time-badge">16:00</div>
+            <div class="timeline-content">
+              <h4><span data-zh="前往 Tórshavn · Check-in" data-en="Drive to Tórshavn · Check-in">前往 Tórshavn · Check-in</span></h4>
+              <p><span data-zh="從 Vágar 經海底隧道前往首都 Tórshavn，車程約 45 分鐘。入住住宿，傍晚探索首都。" data-en="Drive from Vágar through subsea tunnel to Tórshavn, ~45 min. Check in, explore capital in evening.">從 Vágar 經海底隧道前往首都 Tórshavn，車程約 45 分鐘。入住住宿，傍晚探索首都。</span></p>
+              <div class="detail-tag">🚗 45 min</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="time-badge">18:00</div>
+            <div class="timeline-content">
+              <h4><span data-zh="Tórshavn 晚餐散步" data-en="Tórshavn Evening Walk & Dinner">Tórshavn 晚餐散步</span></h4>
+              <p><span data-zh="推薦 Suppugarðurin 拉麵或 Barbara Fish House。散步 Tinganes 半島（世界最古老議會之一）。" data-en="Recommended: Suppugarðurin ramen or Barbara Fish House. Walk Tinganes peninsula (one of world's oldest parliaments).">推薦 Suppugarðurin 拉麵或 Barbara Fish House。散步 Tinganes 半島（世界最古老議會之一）。</span></p>
+              <div class="detail-tag">🍜 <span data-zh="晚餐" data-en="Dinner">晚餐</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 2 -->
+      <div class="day-block">
+        <div class="day-header">
+          <span class="day-badge day2">Day 2</span>
+          <span class="day-title" data-zh="週日 8/23 — Vágar 島健行（Sørvágsvatn）" data-en="Sun 8/23 — Vágar Island Hike (Sørvágsvatn)">週日 8/23 — Vágar 島健行（Sørvágsvatn）</span>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item highlight-item">
+            <div class="time-badge">08:30</div>
+            <div class="timeline-content">
+              <h4>Sørvágsvatn / Trælanípa <span data-zh="「懸崖上的湖」健行" data-en="'Hanging Lake' Hike">「懸崖上的湖」健行</span></h4>
+              <p><span data-zh="法羅群島最著名的健行路線！湖面看似懸浮在海洋上方的視覺奇觀。步道中等難度，來回約 3 小時。需支付健行費 200 DKK/人。" data-en="The most famous Faroe Islands hike! The lake appears to float above the ocean. Moderate trail, ~3 hours round trip. Hiking fee 200 DKK/person required.">法羅群島最著名的健行路線！湖面看似懸浮在海洋上方的視覺奇觀。步道中等難度，來回約 3 小時。需支付健行費 200 DKK/人。</span></p>
+              <div class="detail-tag">🥾 3h · 7km</div>
+              <div class="detail-tag">📈 <span data-zh="爬升 320m" data-en="320m elevation">爬升 320m</span></div>
+              <div class="detail-tag">💰 200 DKK/person</div>
+            </div>
+          </div>
+          <div class="timeline-item optional-item">
+            <div class="time-badge">12:30</div>
+            <div class="timeline-content">
+              <h4>Trøllkonufingur Viewpoint <span class="optional-tag" data-zh="選擇性" data-en="Optional">選擇性</span></h4>
+              <p><span data-zh="「巨魔女人的手指」——巨大的海蝕柱。從 Sandavágur 村外的觀景台可以看到。" data-en="'Troll Woman's Finger' — a massive sea stack. Viewable from a viewpoint outside Sandavágur village.">「巨魔女人的手指」——巨大的海蝕柱。從 Sandavágur 村外的觀景台可以看到。</span></p>
+              <div class="detail-tag">⏱️ 30 min</div>
+            </div>
+          </div>
+          <div class="timeline-item highlight-item">
+            <div class="time-badge">14:00</div>
+            <div class="timeline-content">
+              <h4>Vestmanna Bird Cliffs <span data-zh="海崖遊船" data-en="Boat Tour">海崖遊船</span></h4>
+              <p><span data-zh="搭船穿越壯觀的海崖、洞穴和峽灣。可看到海鸚、海鷗等海鳥。行程約 1.5 小時。建議提前預訂。" data-en="Boat tour through spectacular sea cliffs, caves and fjords. See puffins, guillemots and other seabirds. ~1.5 hours. Book in advance.">搭船穿越壯觀的海崖、洞穴和峽灣。可看到海鸚、海鷗等海鳥。行程約 1.5 小時。建議提前預訂。</span></p>
+              <div class="detail-tag">🚤 1.5h</div>
+              <div class="detail-tag">💰 ~£55/person</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="time-badge">17:00</div>
+            <div class="timeline-content">
+              <h4><span data-zh="回 Tórshavn 休息" data-en="Return to Tórshavn">回 Tórshavn 休息</span></h4>
+              <p><span data-zh="超市採購晚餐食材（推薦 FK 或 Bonus），在住宿自煮節省開支。" data-en="Grocery shopping for dinner (FK or Bonus recommended), cook at accommodation to save money.">超市採購晚餐食材（推薦 FK 或 Bonus），在住宿自煮節省開支。</span></p>
+              <div class="detail-tag">🛒 <span data-zh="自煮晚餐" data-en="Self-catering">自煮晚餐</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 3 -->
+      <div class="day-block">
+        <div class="day-header">
+          <span class="day-badge day3">Day 3</span>
+          <span class="day-title" data-zh="週一 8/24 — Mykines 海鸚島" data-en="Mon 8/24 — Mykines Puffin Island">週一 8/24 — Mykines 海鸚島</span>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item highlight-item">
+            <div class="time-badge">08:00</div>
+            <div class="timeline-content">
+              <h4>Mykines <span data-zh="海鸚天堂" data-en="Puffin Paradise">海鸚天堂</span> 🐧</h4>
+              <p><span data-zh="搭渡輪前往法羅群島最西端的島嶼！步行至 Mykineshólmur 燈塔，沿途可近距離觀賞數千隻海鸚（Puffins）。八月是觀賞最後機會！渡輪需提前在 mykines.fo 預訂。" data-en="Take the ferry to the westernmost island! Walk to Mykineshólmur lighthouse, seeing thousands of puffins up close. August is the last chance! Ferry must be pre-booked at mykines.fo.">搭渡輪前往法羅群島最西端的島嶼！步行至 Mykineshólmur 燈塔，沿途可近距離觀賞數千隻海鸚（Puffins）。八月是觀賞最後機會！渡輪需提前在 mykines.fo 預訂。</span></p>
+              <div class="detail-tag">⛴️ 45 min <span data-zh="渡輪" data-en="ferry">渡輪</span></div>
+              <div class="detail-tag">🥾 4-5h <span data-zh="島上健行" data-en="island hike">島上健行</span></div>
+              <div class="detail-tag">💰 200 DKK <span data-zh="登島費" data-en="landing fee">登島費</span></div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="time-badge">16:00</div>
+            <div class="timeline-content">
+              <h4><span data-zh="返回 Sørvágur → Tórshavn" data-en="Return to Sørvágur → Tórshavn">返回 Sørvágur → Tórshavn</span></h4>
+              <p><span data-zh="搭最後一班渡輪回到 Sørvágur，開車回 Tórshavn。今天體力消耗大，早點休息。" data-en="Take last ferry back to Sørvágur, drive to Tórshavn. Physically demanding day, rest early.">搭最後一班渡輪回到 Sørvágur，開車回 Tórshavn。今天體力消耗大，早點休息。</span></p>
+              <div class="detail-tag">🚗 45 min</div>
+            </div>
+          </div>
+        </div>
+        <div class="info-box warning-box">
+          <strong>⚠️ <span data-zh="重要提醒" data-en="Important">重要提醒</span></strong>
+          <p><span data-zh="Mykines 渡輪極易客滿，務必提前 2-4 週在 mykines.fo 或 ssl.fo 預訂！天氣不佳時船班可能取消，建議多預留一天作為備案日。" data-en="Mykines ferry sells out fast — book 2-4 weeks ahead at mykines.fo or ssl.fo! Sailings may cancel in bad weather, keep a backup day.">Mykines 渡輪極易客滿，務必提前 2-4 週在 mykines.fo 或 ssl.fo 預訂！天氣不佳時船班可能取消，建議多預留一天作為備案日。</span></p>
+        </div>
+      </div>
+
+      <!-- Day 4 -->
+      <div class="day-block">
+        <div class="day-header">
+          <span class="day-badge day4">Day 4</span>
+          <span class="day-title" data-zh="週二 8/25 — Streymoy 北部（Saksun + Tjørnuvík）" data-en="Tue 8/25 — North Streymoy (Saksun + Tjørnuvík)">週二 8/25 — Streymoy 北部（Saksun + Tjørnuvík）</span>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item highlight-item">
+            <div class="time-badge">09:00</div>
+            <div class="timeline-content">
+              <h4>Saksun</h4>
+              <p><span data-zh="隱藏在群山環繞的峽谷中的夢幻村莊。草皮屋頂教堂、瀑布和潮汐瀉湖構成絕美畫面。可參觀 Dúvugarðar 歷史農場（門票 ~150 DKK）。" data-en="A dreamlike village hidden in a mountain-surrounded valley. Turf-roofed church, waterfall and tidal lagoon create stunning scenery. Visit Dúvugarðar heritage farm (~150 DKK).">隱藏在群山環繞的峽谷中的夢幻村莊。草皮屋頂教堂、瀑布和潮汐瀉湖構成絕美畫面。可參觀 Dúvugarðar 歷史農場（門票 ~150 DKK）。</span></p>
+              <div class="detail-tag">⏱️ 2h</div>
+              <div class="detail-tag">📍 <span data-zh="Tórshavn 開車 40 分鐘" data-en="40 min from Tórshavn">Tórshavn 開車 40 分鐘</span></div>
+            </div>
+          </div>
+          <div class="timeline-item highlight-item">
+            <div class="time-badge">12:00</div>
+            <div class="timeline-content">
+              <h4>Tjørnuvík</h4>
+              <p><span data-zh="Streymoy 最北端的村莊，擁有美麗的黑沙灘。可遠眺 Risin og Kellingin（巨人與女巫）海蝕柱。適合衝浪！" data-en="Northernmost village on Streymoy with a beautiful black sand beach. Views of Risin og Kellingin (Giant and Witch) sea stacks. Surfing possible!">Streymoy 最北端的村莊，擁有美麗的黑沙灘。可遠眺 Risin og Kellingin（巨人與女巫）海蝕柱。適合衝浪！</span></p>
+              <div class="detail-tag">⏱️ 1.5h</div>
+              <div class="detail-tag">🏖️ <span data-zh="黑沙灘" data-en="Black Sand Beach">黑沙灘</span></div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="time-badge">14:30</div>
+            <div class="timeline-content">
+              <h4><span data-zh="Tórshavn 市區深度探索" data-en="Tórshavn City Exploration">Tórshavn 市區深度探索</span></h4>
+              <p><span data-zh="下午回到首都，深入探索：Skansin 堡壘、Á Reyni 彩色木屋區、Kongaminnið 紀念碑觀景台、國家博物館。" data-en="Return to capital for deeper exploration: Skansin fortress, Á Reyni colorful wooden houses, Kongaminnið monument viewpoint, National Museum.">下午回到首都，深入探索：Skansin 堡壘、Á Reyni 彩色木屋區、Kongaminnið 紀念碑觀景台、國家博物館。</span></p>
+              <div class="detail-tag">⏱️ 3h</div>
+            </div>
+          </div>
+          <div class="timeline-item optional-item">
+            <div class="time-badge">18:00</div>
+            <div class="timeline-content">
+              <h4>Kirkjubøur <span class="optional-tag" data-zh="選擇性" data-en="Optional">選擇性</span></h4>
+              <p><span data-zh="法羅群島最重要的歷史遺址。13 世紀大教堂遺跡和 Roykstovan（可能是歐洲最古老的木造住宅）。距 Tórshavn 僅 15 分鐘車程。" data-en="Most important historical site in Faroes. 13th-century cathedral ruins and Roykstovan (possibly Europe's oldest inhabited wooden house). Only 15 min from Tórshavn.">法羅群島最重要的歷史遺址。13 世紀大教堂遺跡和 Roykstovan（可能是歐洲最古老的木造住宅）。距 Tórshavn 僅 15 分鐘車程。</span></p>
+              <div class="detail-tag">⏱️ 1h</div>
+              <div class="detail-tag">🚗 15 min</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 5 -->
+      <div class="day-block">
+        <div class="day-header">
+          <span class="day-badge day5">Day 5</span>
+          <span class="day-title" data-zh="週三 8/26 — Eysturoy 島（Gjógv + Slættaratindur）" data-en="Wed 8/26 — Eysturoy Island (Gjógv + Slættaratindur)">週三 8/26 — Eysturoy 島（Gjógv + Slættaratindur）</span>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item highlight-item">
+            <div class="time-badge">09:00</div>
+            <div class="timeline-content">
+              <h4>Gjógv</h4>
+              <p><span data-zh="Eysturoy 島最北端的迷人村莊，以天然岩石峽灣港口聞名。村莊寧靜美麗，周圍被壯觀的山脈環繞。" data-en="Charming northernmost village on Eysturoy, famous for its natural gorge harbour. Peaceful and beautiful, surrounded by dramatic mountains.">Eysturoy 島最北端的迷人村莊，以天然岩石峽灣港口聞名。村莊寧靜美麗，周圍被壯觀的山脈環繞。</span></p>
+              <div class="detail-tag">⏱️ 2h</div>
+              <div class="detail-tag">📍 <span data-zh="Tórshavn 開車 50 分鐘" data-en="50 min from Tórshavn">Tórshavn 開車 50 分鐘</span></div>
+            </div>
+          </div>
+          <div class="timeline-item optional-item">
+            <div class="time-badge">11:30</div>
+            <div class="timeline-content">
+              <h4>Slættaratindur <span class="optional-tag" data-zh="選擇性" data-en="Optional">選擇性</span></h4>
+              <p><span data-zh="法羅群島最高峰（880m）！天氣好時可登頂，來回約 2 小時。山頂可 360° 俯瞰多座島嶼。" data-en="Highest peak in Faroe Islands (880m)! Summit in good weather, ~2 hours round trip. 360° views of multiple islands from top.">法羅群島最高峰（880m）！天氣好時可登頂，來回約 2 小時。山頂可 360° 俯瞰多座島嶼。</span></p>
+              <div class="detail-tag">🥾 2h · 880m</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="time-badge">14:00</div>
+            <div class="timeline-content">
+              <h4>Eiði & <span data-zh="海蝕柱觀景" data-en="Sea Stack Views">海蝕柱觀景</span></h4>
+              <p><span data-zh="Eiði 村莊附近可看到 Risin og Kellingin 海蝕柱的另一個角度。村莊有不錯的咖啡廳可以休息。" data-en="Near Eiði village, see Risin og Kellingin sea stacks from another angle. Nice café in village for a break.">Eiði 村莊附近可看到 Risin og Kellingin 海蝕柱的另一個角度。村莊有不錯的咖啡廳可以休息。</span></p>
+              <div class="detail-tag">⏱️ 1h</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="time-badge">16:00</div>
+            <div class="timeline-content">
+              <h4><span data-zh="前往 Klaksvík 住宿" data-en="Drive to Klaksvík for overnight">前往 Klaksvík 住宿</span></h4>
+              <p><span data-zh="法羅群島第二大城鎮，明天探索北島的最佳基地。經海底隧道前往。" data-en="Second largest town in Faroes, best base for exploring Northern Isles tomorrow. Via subsea tunnel.">法羅群島第二大城鎮，明天探索北島的最佳基地。經海底隧道前往。</span></p>
+              <div class="detail-tag">🚗 35 min</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 6 -->
+      <div class="day-block">
+        <div class="day-header">
+          <span class="day-badge day6">Day 6</span>
+          <span class="day-title" data-zh="週四 8/27 — Kalsoy 島（Kallur 燈塔健行）" data-en="Thu 8/27 — Kalsoy Island (Kallur Lighthouse Hike)">週四 8/27 — Kalsoy 島（Kallur 燈塔健行）</span>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item highlight-item">
+            <div class="time-badge">08:00</div>
+            <div class="timeline-content">
+              <h4>Kalsoy Island & Kallur Lighthouse 🏔️</h4>
+              <p><span data-zh="搭渡輪從 Klaksvík 前往 Kalsoy 島（20 分鐘），開車穿越單線隧道到 Trøllanes 村，再健行至 Kallur 燈塔。這是法羅群島最壯觀的健行之一！懸崖邊的燈塔配上無敵海景。" data-en="Ferry from Klaksvík to Kalsoy (20 min), drive through single-lane tunnels to Trøllanes village, then hike to Kallur Lighthouse. One of the most spectacular hikes in the Faroes! Clifftop lighthouse with incredible ocean views.">搭渡輪從 Klaksvík 前往 Kalsoy 島（20 分鐘），開車穿越單線隧道到 Trøllanes 村，再健行至 Kallur 燈塔。這是法羅群島最壯觀的健行之一！懸崖邊的燈塔配上無敵海景。</span></p>
+              <div class="detail-tag">⛴️ 20 min</div>
+              <div class="detail-tag">🥾 2.5h · 5km</div>
+              <div class="detail-tag">📈 <span data-zh="爬升 400m" data-en="400m elevation">爬升 400m</span></div>
+              <div class="detail-tag">💰 200 DKK/person</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="time-badge">13:00</div>
+            <div class="timeline-content">
+              <h4><span data-zh="回 Klaksvík 午餐" data-en="Return to Klaksvík for lunch">回 Klaksvík 午餐</span></h4>
+              <p><span data-zh="在 Klaksvík 享用午餐，探索這座漁港小鎮。推薦 Roykstovan 餐廳。" data-en="Lunch in Klaksvík, explore this fishing town. Roykstovan restaurant recommended.">在 Klaksvík 享用午餐，探索這座漁港小鎮。推薦 Roykstovan 餐廳。</span></p>
+              <div class="detail-tag">🍽️ 1.5h</div>
+            </div>
+          </div>
+          <div class="timeline-item optional-item">
+            <div class="time-badge">15:00</div>
+            <div class="timeline-content">
+              <h4>Viðareiði <span class="optional-tag" data-zh="選擇性" data-en="Optional">選擇性</span></h4>
+              <p><span data-zh="法羅群島最北端的村莊，擁有壯觀的 Cape Enniberg 懸崖（世界最高海角之一，754m）。天氣好時景色絕倫。" data-en="Northernmost village in Faroes with spectacular Cape Enniberg cliff (one of world's highest sea capes, 754m). Stunning in good weather.">法羅群島最北端的村莊，擁有壯觀的 Cape Enniberg 懸崖（世界最高海角之一，754m）。天氣好時景色絕倫。</span></p>
+              <div class="detail-tag">⏱️ 1.5h</div>
+              <div class="detail-tag">🚗 20 min <span data-zh="from Klaksvík" data-en="from Klaksvík">from Klaksvík</span></div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="time-badge">17:30</div>
+            <div class="timeline-content">
+              <h4><span data-zh="回 Tórshavn" data-en="Return to Tórshavn">回 Tórshavn</span></h4>
+              <p><span data-zh="開車回首都，沿途欣賞峽灣風光。車程約 1 小時。" data-en="Drive back to capital, enjoying fjord scenery along the way. ~1 hour drive.">開車回首都，沿途欣賞峽灣風光。車程約 1 小時。</span></p>
+              <div class="detail-tag">🚗 1h</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 7 -->
+      <div class="day-block">
+        <div class="day-header">
+          <span class="day-badge day7">Day 7</span>
+          <span class="day-title" data-zh="週五 8/28 — 彈性日 / 備案行程" data-en="Fri 8/28 — Flexible Day / Backup Plans">週五 8/28 — 彈性日 / 備案行程</span>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="time-badge">09:00</div>
+            <div class="timeline-content">
+              <h4><span data-zh="彈性安排（依天氣/體力）" data-en="Flexible Plans (weather/energy dependent)">彈性安排（依天氣/體力）</span></h4>
+              <p><span data-zh="這天作為天氣備案或補充行程：" data-en="Use this day as weather backup or additional activities:">這天作為天氣備案或補充行程：</span></p>
+              <ul class="options-list">
+                <li><span data-zh="🅰️ 若 Mykines 之前取消 → 今天重新預訂" data-en="🅰️ If Mykines was cancelled → rebook today">🅰️ 若 Mykines 之前取消 → 今天重新預訂</span></li>
+                <li><span data-zh="🅱️ Nólsoy 島半日遊（從 Tórshavn 搭渡輪 20 分鐘）" data-en="🅱️ Nólsoy island half-day trip (20 min ferry from Tórshavn)">🅱️ Nólsoy 島半日遊（從 Tórshavn 搭渡輪 20 分鐘）</span></li>
+                <li><span data-zh="🅲️ Sandoy 島探索（黑沙灘 + 寧靜村莊）" data-en="🅲️ Sandoy island exploration (black sand beaches + quiet villages)">🅲️ Sandoy 島探索（黑沙灘 + 寧靜村莊）</span></li>
+                <li><span data-zh="🅳️ RIB 快艇遊（Drangarnir 海蝕柱 + 海上看 Gásadalur）" data-en="🅳️ RIB boat tour (Drangarnir sea stacks + Gásadalur from sea)">🅳️ RIB 快艇遊（Drangarnir 海蝕柱 + 海上看 Gásadalur）</span></li>
+                <li><span data-zh="🅴️ 悠閒日：Tórshavn 咖啡廳 + 紀念品購物 + 打包" data-en="🅴️ Relaxed day: Tórshavn cafés + souvenir shopping + packing">🅴️ 悠閒日：Tórshavn 咖啡廳 + 紀念品購物 + 打包</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="time-badge">19:00</div>
+            <div class="timeline-content">
+              <h4><span data-zh="告別晚餐" data-en="Farewell Dinner">告別晚餐</span></h4>
+              <p><span data-zh="推薦 KOKS（米其林星級，需提前預訂）或 Ræst（發酵料理體驗）。享受最後一晚的法羅群島美食。" data-en="Recommended: KOKS (Michelin-starred, book ahead) or Ræst (fermented food experience). Enjoy your last Faroese evening.">推薦 KOKS（米其林星級，需提前預訂）或 Ræst（發酵料理體驗）。享受最後一晚的法羅群島美食。</span></p>
+              <div class="detail-tag">🍽️ <span data-zh="告別晚餐" data-en="Farewell Dinner">告別晚餐</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 8 (Departure) -->
+      <div class="day-block">
+        <div class="day-header">
+          <span class="day-badge day8">Day 8</span>
+          <span class="day-title" data-zh="週六 8/29 — 回程" data-en="Sat 8/29 — Return to London">週六 8/29 — 回程</span>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="time-badge">08:00</div>
+            <div class="timeline-content">
+              <h4><span data-zh="退房 → Vágar 機場" data-en="Check-out → Vágar Airport">退房 → Vágar 機場</span></h4>
+              <p><span data-zh="還車、辦理登機。Atlantic Airways 回倫敦 Gatwick，飛行 2 小時 15 分。抵達後享受 Sun 30 + Bank Holiday Mon 31 恢復！" data-en="Return car, check in. Atlantic Airways back to London Gatwick, 2h15m flight. Enjoy Sun 30 + Bank Holiday Mon 31 to recover!">還車、辦理登機。Atlantic Airways 回倫敦 Gatwick，飛行 2 小時 15 分。抵達後享受 Sun 30 + Bank Holiday Mon 31 恢復！</span></p>
+              <div class="detail-tag">✈️ 2h 15min</div>
+              <div class="detail-tag">🎉 <span data-zh="Bank Holiday 恢復" data-en="Bank Holiday recovery">Bank Holiday 恢復</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Budget Section -->
+  <section class="section budget-section">
+    <div class="container">
+      <h2><span data-zh="💰 預算分析（兩人）" data-en="💰 Budget Analysis (2 People)">💰 預算分析（兩人）</span></h2>
+      <div class="budget-table-wrapper">
+        <table class="budget-table">
+          <thead>
+            <tr>
+              <th><span data-zh="項目" data-en="Item">項目</span></th>
+              <th><span data-zh="預估費用" data-en="Est. Cost">預估費用</span></th>
+              <th><span data-zh="備註" data-en="Notes">備註</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>✈️ <span data-zh="機票（來回×2人）" data-en="Flights (return × 2)">機票（來回×2人）</span></td>
+              <td>£700–940</td>
+              <td><span data-zh="Atlantic Airways 直飛 LGW↔FAE" data-en="Atlantic Airways direct LGW↔FAE">Atlantic Airways 直飛 LGW↔FAE</span></td>
+            </tr>
+            <tr>
+              <td>🚗 <span data-zh="租車（7天）" data-en="Car Rental (7 days)">租車（7天）</span></td>
+              <td>£600–800</td>
+              <td><span data-zh="含基本保險，Vágar 機場取還" data-en="Incl. basic insurance, Vágar airport pickup/return">含基本保險，Vágar 機場取還</span></td>
+            </tr>
+            <tr>
+              <td>⛽ <span data-zh="油費" data-en="Fuel">油費</span></td>
+              <td>£80–120</td>
+              <td><span data-zh="島嶼小，每日約 50-80km" data-en="Islands are small, ~50-80km daily">島嶼小，每日約 50-80km</span></td>
+            </tr>
+            <tr>
+              <td>🚇 <span data-zh="海底隧道通行費" data-en="Subsea Tunnel Tolls">海底隧道通行費</span></td>
+              <td>£70–95</td>
+              <td><span data-zh="Tunnel Pass: DKK 500 (3天) + DKK 100/天" data-en="Tunnel Pass: DKK 500 (3 days) + DKK 100/day">Tunnel Pass: DKK 500 (3天) + DKK 100/天</span></td>
+            </tr>
+            <tr>
+              <td>🏨 <span data-zh="住宿（6晚）" data-en="Accommodation (6 nights)">住宿（6晚）</span></td>
+              <td>£900–1,500</td>
+              <td><span data-zh="Airbnb/Guesthouse £150-250/晚" data-en="Airbnb/Guesthouse £150-250/night">Airbnb/Guesthouse £150-250/晚</span></td>
+            </tr>
+            <tr>
+              <td>🍽️ <span data-zh="餐飲（7天）" data-en="Food (7 days)">餐飲（7天）</span></td>
+              <td>£350–500</td>
+              <td><span data-zh="混合自煮+外食，£50-70/天" data-en="Mix self-catering + eating out, £50-70/day">混合自煮+外食，£50-70/天</span></td>
+            </tr>
+            <tr>
+              <td>🎫 <span data-zh="活動/門票" data-en="Activities/Tickets">活動/門票</span></td>
+              <td>£200–300</td>
+              <td><span data-zh="Vestmanna 遊船、健行費、Mykines 渡輪" data-en="Vestmanna boat, hiking fees, Mykines ferry">Vestmanna 遊船、健行費、Mykines 渡輪</span></td>
+            </tr>
+            <tr>
+              <td>🛍️ <span data-zh="雜費（紀念品等）" data-en="Misc (souvenirs etc.)">雜費（紀念品等）</span></td>
+              <td>£100–150</td>
+              <td><span data-zh="法羅毛衣、明信片、咖啡" data-en="Faroese sweater, postcards, coffee">法羅毛衣、明信片、咖啡</span></td>
+            </tr>
+            <tr class="budget-total">
+              <td><strong><span data-zh="總計" data-en="TOTAL">總計</span></strong></td>
+              <td><strong>£3,000–4,405</strong></td>
+              <td><span data-zh="每人約 £1,500–2,200" data-en="~£1,500–2,200 per person">每人約 £1,500–2,200</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="budget-tips">
+        <h3><span data-zh="💡 省錢技巧" data-en="💡 Money-Saving Tips">💡 省錢技巧</span></h3>
+        <ul>
+          <li><span data-zh="自煮為主：超市（FK、Bonus）食材比餐廳便宜 60-70%" data-en="Self-cater mostly: supermarket (FK, Bonus) food is 60-70% cheaper than restaurants">自煮為主：超市（FK、Bonus）食材比餐廳便宜 60-70%</span></li>
+          <li><span data-zh="提早訂機票：提前 3 個月以上通常最便宜" data-en="Book flights early: 3+ months ahead is usually cheapest">提早訂機票：提前 3 個月以上通常最便宜</span></li>
+          <li><span data-zh="免費自來水：法羅群島自來水極純淨，無需買瓶裝水" data-en="Free tap water: Faroese tap water is extremely pure, no need for bottled water">免費自來水：法羅群島自來水極純淨，無需買瓶裝水</span></li>
+          <li><span data-zh="免稅購物：法羅群島不屬於 EU，可享免稅" data-en="Tax-free shopping: Faroe Islands are not in the EU, enjoy tax-free shopping">免稅購物：法羅群島不屬於 EU，可享免稅</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Transport Section -->
+  <section class="section transport-section">
+    <div class="container">
+      <h2><span data-zh="🚗 交通方式詳解" data-en="🚗 Transportation Details">🚗 交通方式詳解</span></h2>
+      <div class="transport-table-wrapper">
+        <table class="transport-table">
+          <thead>
+            <tr>
+              <th><span data-zh="項目" data-en="Item">項目</span></th>
+              <th><span data-zh="詳情" data-en="Details">詳情</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong><span data-zh="航班" data-en="Flight">航班</span></strong></td>
+              <td><span data-zh="Atlantic Airways · LGW↔FAE · 每週二/六 · 2h15m · 5月底-8月底" data-en="Atlantic Airways · LGW↔FAE · Tue/Sat · 2h15m · Late May-Late Aug">Atlantic Airways · LGW↔FAE · 每週二/六 · 2h15m · 5月底-8月底</span></td>
+            </tr>
+            <tr>
+              <td><strong><span data-zh="租車" data-en="Car Rental">租車</span></strong></td>
+              <td><span data-zh="強烈建議！島上公共交通有限。Vágar 機場有 Europcar、62°N 等。右駕（與英國相同方向）。" data-en="Highly recommended! Limited public transport. Europcar, 62°N at Vágar airport. Right-hand drive (same as UK).">強烈建議！島上公共交通有限。Vágar 機場有 Europcar、62°N 等。右駕（與英國相同方向）。</span></td>
+            </tr>
+            <tr>
+              <td><strong><span data-zh="海底隧道" data-en="Subsea Tunnels">海底隧道</span></strong></td>
+              <td><span data-zh="連接主要島嶼的收費隧道。Tunnel Pass (DKK 500/3天) 最划算。可在 tunnil.fo 線上購買。" data-en="Toll tunnels connecting main islands. Tunnel Pass (DKK 500/3 days) best value. Buy online at tunnil.fo.">連接主要島嶼的收費隧道。Tunnel Pass (DKK 500/3天) 最划算。可在 tunnil.fo 線上購買。</span></td>
+            </tr>
+            <tr>
+              <td><strong><span data-zh="渡輪" data-en="Ferries">渡輪</span></strong></td>
+              <td><span data-zh="前往 Mykines、Kalsoy 等離島必須搭渡輪。Mykines 需提前預訂（mykines.fo）。Kalsoy 渡輪免費但需排隊。" data-en="Required for Mykines, Kalsoy etc. Mykines must be pre-booked (mykines.fo). Kalsoy ferry is free but queue early.">前往 Mykines、Kalsoy 等離島必須搭渡輪。Mykines 需提前預訂（mykines.fo）。Kalsoy 渡輪免費但需排隊。</span></td>
+            </tr>
+            <tr>
+              <td><strong><span data-zh="公共巴士" data-en="Public Bus">公共巴士</span></strong></td>
+              <td><span data-zh="Strandfaraskip Landsins 營運。Tourist Travel Card: DKK 500 (4天) / DKK 700 (7天)。班次有限，不建議作為主要交通。" data-en="Operated by Strandfaraskip Landsins. Tourist Travel Card: DKK 500 (4 days) / DKK 700 (7 days). Limited frequency, not recommended as main transport.">Strandfaraskip Landsins 營運。Tourist Travel Card: DKK 500 (4天) / DKK 700 (7天)。班次有限，不建議作為主要交通。</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Practical Tips Section -->
+  <section class="section tips-section">
+    <div class="container">
+      <h2><span data-zh="📝 注意事項與準備" data-en="📝 Practical Tips & Preparation">📝 注意事項與準備</span></h2>
+      <div class="tips-grid">
+        <div class="tip-card">
+          <h3><span data-zh="🧥 穿著建議" data-en="🧥 What to Wear">🧥 穿著建議</span></h3>
+          <ul>
+            <li><span data-zh="防水外套（必備！）" data-en="Waterproof jacket (essential!)">防水外套（必備！）</span></li>
+            <li><span data-zh="多層穿搭（溫差大）" data-en="Layered clothing (temperature varies)">多層穿搭（溫差大）</span></li>
+            <li><span data-zh="防水登山鞋" data-en="Waterproof hiking boots">防水登山鞋</span></li>
+            <li><span data-zh="防風帽/毛帽" data-en="Windproof hat/beanie">防風帽/毛帽</span></li>
+            <li><span data-zh="手套（山頂風大）" data-en="Gloves (windy on summits)">手套（山頂風大）</span></li>
+          </ul>
+        </div>
+        <div class="tip-card">
+          <h3><span data-zh="⚠️ 安全須知" data-en="⚠️ Safety Notes">⚠️ 安全須知</span></h3>
+          <ul>
+            <li><span data-zh="懸崖邊無護欄，保持安全距離" data-en="No fences at cliff edges, keep safe distance">懸崖邊無護欄，保持安全距離</span></li>
+            <li><span data-zh="天氣瞬變，隨時準備撤退" data-en="Weather changes fast, be ready to turn back">天氣瞬變，隨時準備撤退</span></li>
+            <li><span data-zh="單線隧道注意會車燈號" data-en="Single-lane tunnels: watch for passing lights">單線隧道注意會車燈號</span></li>
+            <li><span data-zh="羊群常在路上，減速慢行" data-en="Sheep on roads, drive slowly">羊群常在路上，減速慢行</span></li>
+            <li><span data-zh="手機訊號偏遠地區可能無" data-en="No phone signal in remote areas">手機訊號偏遠地區可能無</span></li>
+          </ul>
+        </div>
+        <div class="tip-card">
+          <h3><span data-zh="📱 實用資訊" data-en="📱 Useful Info">📱 實用資訊</span></h3>
+          <ul>
+            <li><span data-zh="貨幣：DKK（丹麥克朗），到處可刷卡" data-en="Currency: DKK (Danish Krone), cards accepted everywhere">貨幣：DKK（丹麥克朗），到處可刷卡</span></li>
+            <li><span data-zh="語言：法羅語/丹麥語，英語通用" data-en="Language: Faroese/Danish, English widely spoken">語言：法羅語/丹麥語，英語通用</span></li>
+            <li><span data-zh="時區：UTC+0（夏令 UTC+1，與英國相同）" data-en="Timezone: UTC+0 (summer UTC+1, same as UK)">時區：UTC+0（夏令 UTC+1，與英國相同）</span></li>
+            <li><span data-zh="電壓：230V，歐規插頭（需轉接器）" data-en="Voltage: 230V, EU plug (adapter needed)">電壓：230V，歐規插頭（需轉接器）</span></li>
+            <li><span data-zh="eSIM：推薦 Airalo 歐洲方案" data-en="eSIM: Airalo Europe plan recommended">eSIM：推薦 Airalo 歐洲方案</span></li>
+          </ul>
+        </div>
+        <div class="tip-card">
+          <h3><span data-zh="📋 出發前 Checklist" data-en="📋 Pre-Trip Checklist">📋 出發前 Checklist</span></h3>
+          <ul>
+            <li><span data-zh="☐ 預訂 Mykines 渡輪（提前 2-4 週）" data-en="☐ Book Mykines ferry (2-4 weeks ahead)">☐ 預訂 Mykines 渡輪（提前 2-4 週）</span></li>
+            <li><span data-zh="☐ 預訂 Vestmanna 遊船" data-en="☐ Book Vestmanna boat tour">☐ 預訂 Vestmanna 遊船</span></li>
+            <li><span data-zh="☐ 預訂租車（越早越便宜）" data-en="☐ Book rental car (earlier = cheaper)">☐ 預訂租車（越早越便宜）</span></li>
+            <li><span data-zh="☐ 購買 Tunnel Pass（tunnil.fo）" data-en="☐ Buy Tunnel Pass (tunnil.fo)">☐ 購買 Tunnel Pass（tunnil.fo）</span></li>
+            <li><span data-zh="☐ 下載離線地圖（Maps.me 或 Google Maps）" data-en="☐ Download offline maps (Maps.me or Google Maps)">☐ 下載離線地圖（Maps.me 或 Google Maps）</span></li>
+            <li><span data-zh="☐ 帶歐規轉接插頭" data-en="☐ Bring EU plug adapter">☐ 帶歐規轉接插頭</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Worth It Section -->
+  <section class="section worth-section">
+    <div class="container">
+      <h2><span data-zh="🌟 為什麼值得去法羅群島？" data-en="🌟 Why the Faroe Islands Are Worth It">🌟 為什麼值得去法羅群島？</span></h2>
+      <div class="worth-grid">
+        <div class="worth-card">
+          <div class="worth-icon">🏔️</div>
+          <h4><span data-zh="獨一無二的地貌" data-en="Unique Landscapes">獨一無二的地貌</span></h4>
+          <p><span data-zh="18 座火山島嶼，壯觀的海崖、瀑布和峽灣。比冰島更小眾，同樣震撼。" data-en="18 volcanic islands with dramatic sea cliffs, waterfalls and fjords. Less touristy than Iceland, equally stunning.">18 座火山島嶼，壯觀的海崖、瀑布和峽灣。比冰島更小眾，同樣震撼。</span></p>
+        </div>
+        <div class="worth-card">
+          <div class="worth-icon">🐧</div>
+          <h4><span data-zh="八月限定：海鸚" data-en="August Only: Puffins">八月限定：海鸚</span></h4>
+          <p><span data-zh="海鸚（Puffins）5-8 月棲息於法羅群島。八月是最後觀賞機會，錯過等明年！" data-en="Puffins nest in Faroes May-August. August is the last chance to see them — miss it and wait a year!">海鸚（Puffins）5-8 月棲息於法羅群島。八月是最後觀賞機會，錯過等明年！</span></p>
+        </div>
+        <div class="worth-card">
+          <div class="worth-icon">✈️</div>
+          <h4><span data-zh="直飛限時" data-en="Seasonal Direct Flight">直飛限時</span></h4>
+          <p><span data-zh="倫敦直飛僅 5-8 月營運！其他時間需經哥本哈根轉機，多花 5+ 小時。" data-en="London direct flights only operate May-Aug! Other times require Copenhagen connection, adding 5+ hours.">倫敦直飛僅 5-8 月營運！其他時間需經哥本哈根轉機，多花 5+ 小時。</span></p>
+        </div>
+        <div class="worth-card">
+          <div class="worth-icon">🧘</div>
+          <h4><span data-zh="真正的遠離塵囂" data-en="True Escape from Crowds">真正的遠離塵囂</span></h4>
+          <p><span data-zh="全島僅 5 萬人口，比倫敦一個地鐵站的日流量還少。真正的寧靜與自然。" data-en="Only 50,000 total population — less than daily traffic at one London tube station. True peace and nature.">全島僅 5 萬人口，比倫敦一個地鐵站的日流量還少。真正的寧靜與自然。</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p><span data-zh="法羅群島行程規劃 · 2026 年 8 月 Bank Holiday" data-en="Faroe Islands Trip Plan · August Bank Holiday 2026">法羅群島行程規劃 · 2026 年 8 月 Bank Holiday</span></p>
+      <p class="footer-sub"><span data-zh="兩人旅行 · 從倫敦出發" data-en="Trip for Two · From London">兩人旅行 · 從倫敦出發</span></p>
+    </div>
+  </footer>
+
+  <script src="map.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
