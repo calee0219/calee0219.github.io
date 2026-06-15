@@ -98,7 +98,8 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #1a3a4a 0%, #2d7d9a 50%, #4a9e6f 100%);
+  background: url('hero-bg.jpg') center/cover no-repeat;
+  background-color: #1a3a4a;
   overflow: hidden;
 }
 
@@ -112,7 +113,7 @@ img {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.15);
+  background: rgba(0,0,0,0.35);
 }
 
 .hero-content {
@@ -804,4 +805,232 @@ img {
 
 .timeline-item.optional-item.fade-in.visible {
   opacity: 0.85;
+}
+
+/* ===== PLAN SELECTOR TABS ===== */
+.plan-selector {
+  margin-top: 32px;
+}
+
+.plan-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.plan-tab {
+  padding: 12px 20px;
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  color: var(--color-text);
+}
+
+.plan-tab:hover {
+  border-color: var(--color-accent);
+  background: var(--color-accent-light);
+}
+
+.plan-tab.active {
+  border-color: var(--color-accent);
+  background: var(--color-accent);
+  color: white;
+}
+
+.plan-tab .tab-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-left: 6px;
+  font-weight: 600;
+}
+
+.plan-tab .tab-badge.recommended {
+  background: var(--color-success);
+  color: white;
+}
+
+.plan-tab .tab-badge.balanced {
+  background: var(--color-warning);
+  color: white;
+}
+
+.plan-tab .tab-badge.minimal {
+  background: var(--color-info);
+  color: white;
+}
+
+.plan-content {
+  display: none;
+}
+
+.plan-content.active {
+  display: block;
+}
+
+/* ===== COMPARISON TABLE ===== */
+.comparison-table-wrapper {
+  overflow-x: auto;
+  margin: 24px 0;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+  background: var(--color-surface);
+}
+
+.comparison-table th {
+  background: var(--color-primary);
+  color: white;
+  padding: 12px 16px;
+  text-align: left;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.comparison-table td {
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--color-border);
+  vertical-align: top;
+}
+
+.comparison-table tr:last-child td {
+  border-bottom: none;
+}
+
+.comparison-table tr:nth-child(even) {
+  background: var(--color-accent-light);
+}
+
+.comparison-table .check {
+  color: var(--color-success);
+  font-weight: 700;
+}
+
+.comparison-table .cross {
+  color: #e74c3c;
+  font-weight: 700;
+}
+
+.comparison-table .partial {
+  color: var(--color-warning);
+  font-weight: 600;
+}
+
+/* ===== TRADE-OFF TABLE ===== */
+.tradeoff-section {
+  margin-top: 32px;
+}
+
+.tradeoff-table-wrapper {
+  overflow-x: auto;
+  margin: 16px 0;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+
+.tradeoff-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+  background: var(--color-surface);
+}
+
+.tradeoff-table th {
+  background: var(--color-faroe-dark);
+  color: white;
+  padding: 10px 14px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.tradeoff-table td {
+  padding: 8px 14px;
+  border-bottom: 1px solid var(--color-border);
+  text-align: center;
+}
+
+.tradeoff-table tr:nth-child(even) {
+  background: #f0f8f4;
+}
+
+.tradeoff-table td:first-child {
+  text-align: left;
+  font-weight: 500;
+}
+
+/* ===== PLAN ITINERARY COMPACT ===== */
+.compact-itinerary {
+  margin-top: 20px;
+}
+
+.compact-day {
+  margin-bottom: 16px;
+  padding: 16px;
+  background: var(--color-surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  border-left: 4px solid var(--color-accent);
+}
+
+.compact-day h4 {
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+  color: var(--color-primary);
+}
+
+.compact-day ul {
+  list-style: none;
+  padding: 0;
+}
+
+.compact-day ul li {
+  padding: 4px 0;
+  font-size: 0.88rem;
+  color: var(--color-text);
+}
+
+.compact-day ul li::before {
+  content: '→ ';
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+/* ===== FLIGHT INFO BOX ===== */
+.flight-info-box {
+  background: linear-gradient(135deg, #f0f8ff 0%, #e8f4f8 100%);
+  border: 1px solid var(--color-accent);
+  border-radius: var(--radius);
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.flight-info-box h4 {
+  color: var(--color-accent);
+  margin-bottom: 10px;
+}
+
+.flight-info-box p {
+  font-size: 0.88rem;
+  margin-bottom: 6px;
+}
+
+@media (max-width: 640px) {
+  .plan-tabs {
+    flex-direction: column;
+  }
+  .plan-tab {
+    text-align: center;
+  }
 }

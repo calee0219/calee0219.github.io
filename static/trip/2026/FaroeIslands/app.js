@@ -46,6 +46,25 @@
     }
   } catch(e) {}
 
+  // ===== Plan Tab Switching =====
+  const planTabs = document.querySelectorAll('.plan-tab');
+  const planContents = document.querySelectorAll('.plan-content');
+
+  planTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const plan = tab.dataset.plan;
+      
+      // Update tab states
+      planTabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      
+      // Update content visibility
+      planContents.forEach(content => {
+        content.classList.toggle('active', content.id === `plan-${plan}`);
+      });
+    });
+  });
+
   // ===== Smooth scroll for anchor links =====
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
@@ -73,7 +92,7 @@
   }, observerOptions);
 
   // Observe elements for animation
-  document.querySelectorAll('.timeline-item, .overview-card, .analysis-card, .tip-card, .worth-card, .day-block').forEach(el => {
+  document.querySelectorAll('.timeline-item, .overview-card, .analysis-card, .tip-card, .worth-card, .day-block, .compact-day').forEach(el => {
     el.classList.add('fade-in');
     observer.observe(el);
   });
