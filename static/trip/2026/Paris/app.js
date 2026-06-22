@@ -68,3 +68,36 @@
     faders.forEach(reveal);
   }
 })();
+
+/* ===== TODO checklist (persisted in localStorage) ===== */
+(function () {
+  const STORAGE_KEY = 'paris2026_todo';
+  const items = Array.from(document.querySelectorAll('.todo-item'));
+  if (!items.length) return;
+
+  let state = {};
+  try { state = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}'); } catch (e) { state = {}; }
+
+  const save = () => {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch (e) {}
+  };
+
+  items.forEach(item => {
+    const key = item.getAttribute('data-key');
+    if (state[key]) item.classList.add('done');
+    item.addEventListener('click', () => {
+      const done = item.classList.toggle('done');
+      state[key] = done;
+      save();
+    });
+  });
+
+  const resetBtn = document.getElementById('todoReset');
+  if (resetBtn) {
+    resetBtn.addEventListener('click', () => {
+      items.forEach(item => item.classList.remove('done'));
+      state = {};
+      save();
+    });
+  }
+})();
