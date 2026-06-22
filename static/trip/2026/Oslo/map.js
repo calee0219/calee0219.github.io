@@ -4,94 +4,91 @@
   const mapContainer = document.getElementById('leafletMap');
   if (!mapContainer) return;
 
-  const map = L.map('leafletMap', { scrollWheelZoom: false }).setView([59.911, 10.738], 13);
+  const map = L.map('leafletMap', { scrollWheelZoom: false }).setView([59.905, 10.730], 12);
 
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
     maxZoom: 19
   }).addTo(map);
 
-  const dayColors = { 1: '#c0392b', 2: '#2c5d8f', 3: '#1f8a70' };
+  // Day 1 = soft slate blue (city-calm), Day 2 = teal/green (islands), Day 3 = deep green (forest)
+  const dayColors = { 1: '#2c5d8f', 2: '#1f8a70', 3: '#3a6b35' };
 
   // ===== Stops =====
   const stops = [
-    // Day 1 — Central landmarks loop
+    // Day 1 — The quiet side of the city: water, fortress, opera roof
     { id: '1', day: 1, lat: 59.9106, lng: 10.7525, highlight: false,
       zh: 'Oslo S 中央車站（起點）', en: 'Oslo Central Station (Start)', dzh: '機場快線 Flytoget 抵達點', den: 'Arrival by Flytoget airport express' },
-    { id: '2', day: 1, lat: 59.9127, lng: 10.7461, highlight: false,
-      zh: 'Oslo 大教堂', en: 'Oslo Cathedral', dzh: '1697 年巴洛克主教座堂', den: '1697 baroque cathedral' },
-    { id: '3', day: 1, lat: 59.9139, lng: 10.7374, highlight: true,
-      zh: 'Karl Johans gate 大街', en: 'Karl Johans gate', dzh: '奧斯陸最熱鬧的步行大街', den: "Oslo's main pedestrian boulevard" },
-    { id: '4', day: 1, lat: 59.9170, lng: 10.7277, highlight: true,
-      zh: '皇宮 & 皇宮公園', en: 'Royal Palace & Park', dzh: '挪威王室官邸，13:30 衛兵交接', den: 'Royal residence, 13:30 guard change' },
-    { id: '5', day: 1, lat: 59.9145, lng: 10.7331, highlight: false,
-      zh: '國家劇院', en: 'National Theatre', dzh: '1899 年新巴洛克劇院', den: '1899 neo-baroque theatre' },
-    { id: '6', day: 1, lat: 59.9120, lng: 10.7335, highlight: true,
-      zh: '市政廳 Rådhuset', en: 'City Hall (Rådhuset)', dzh: '諾貝爾和平獎頒獎地', den: 'Nobel Peace Prize venue' },
-    { id: '7', day: 1, lat: 59.9114, lng: 10.7290, highlight: false,
-      zh: 'Aker Brygge 碼頭', en: 'Aker Brygge', dzh: '濱海餐廳與散步道', den: 'Waterfront promenade & dining' },
-    { id: '8', day: 1, lat: 59.9066, lng: 10.7220, highlight: true,
-      zh: 'Tjuvholmen & Astrup Fearnley', en: 'Tjuvholmen & Astrup Fearnley', dzh: '現代美術館與雕塑公園、海濱浴場', den: 'Modern art museum, sculpture park & beach' },
-    { id: '9', day: 1, lat: 59.9075, lng: 10.7363, highlight: true,
-      zh: 'Akershus 要塞', en: 'Akershus Fortress', dzh: '13 世紀中世紀城堡，免費入園', den: '13th-century medieval castle, free grounds' },
-    { id: '10', day: 1, lat: 59.9075, lng: 10.7533, highlight: true,
-      zh: '奧斯陸歌劇院（屋頂）', en: 'Oslo Opera House (roof)', dzh: '可步行登上斜面屋頂，峽灣全景', den: 'Walk up the sloping marble roof' },
-    { id: '11', day: 1, lat: 59.9063, lng: 10.7556, highlight: false,
-      zh: 'Munch 孟克美術館', en: 'MUNCH Museum', dzh: '《吶喊》原作收藏', den: "Home of Munch's 'The Scream'" },
+    { id: '2', day: 1, lat: 59.9127, lng: 10.7461, highlight: true,
+      zh: '奧斯陸大教堂 & 三一教堂', en: 'Oslo Cathedral & Trinity Church', dzh: '1697 主教座堂 + 磚造三一教堂，舊城起點', den: '1697 cathedral + brick Trinity Church' },
+    { id: '3', day: 1, lat: 59.9120, lng: 10.7335, highlight: true,
+      zh: '市政廳 Rådhuset & 海濱', en: 'City Hall & waterfront', dzh: '諾貝爾和平獎頒獎地，走向峽灣', den: 'Nobel Peace Prize hall, toward the fjord' },
+    { id: '4', day: 1, lat: 59.9075, lng: 10.7363, highlight: true,
+      zh: 'Akershus 要塞草坡', en: 'Akershus Fortress lawns', dzh: '中世紀城堡草坡，峽灣靜望', den: 'Medieval ramparts, quiet fjord views' },
+    { id: '5', day: 1, lat: 59.9075, lng: 10.7533, highlight: true,
+      zh: '奧斯陸歌劇院（屋頂）', en: 'Oslo Opera House (roof)', dzh: '大理石斜面屋頂，留白與光線', den: 'Sloping marble roof, light & space' },
+    { id: '6', day: 1, lat: 59.9018, lng: 10.7560, highlight: false,
+      zh: 'Sørenga 海水泳池', en: 'Sørenga seawater pool', dzh: '峽灣海水泳池，傍晚靜水', den: 'Fjord seawater pool, calm evening' },
+    { id: '7', day: 1, lat: 59.9063, lng: 10.7556, highlight: false,
+      zh: 'Munch 孟克美術館（選擇性）', en: 'MUNCH Museum (optional)', dzh: '《吶喊》原作，時間夠再加', den: "Munch's 'Scream', only if time allows" },
 
-    // Day 2 — Frogner / Vigeland + Grünerløkka
-    { id: '12', day: 2, lat: 59.9270, lng: 10.7000, highlight: true,
-      zh: 'Vigeland 雕塑公園', en: 'Vigeland Sculpture Park', dzh: '212 座銅鐵花崗岩雕塑、Monolith', den: '212 sculptures incl. the Monolith' },
-    { id: '13', day: 2, lat: 59.9268, lng: 10.7045, highlight: false,
-      zh: 'Frogner 公園 & 城市博物館', en: 'Frogner Park & City Museum', dzh: '公園綠地與奧斯陸城市博物館', den: 'Park greens & Oslo City Museum' },
-    { id: '14', day: 2, lat: 59.9197, lng: 10.7186, highlight: false,
-      zh: 'Bygdøy allé / Frogner 街區', en: 'Frogner District walk', dzh: '優雅街區與咖啡館', den: 'Elegant streets & cafés' },
-    { id: '15', day: 2, lat: 59.9162, lng: 10.7333, highlight: true,
-      zh: '國家博物館 Nasjonalmuseet', en: 'National Museum', dzh: '北歐最大藝術館，另一版《吶喊》', den: "Nordic's largest art museum" },
-    { id: '16', day: 2, lat: 59.9233, lng: 10.7596, highlight: true,
-      zh: 'Grünerløkka 文青街區', en: 'Grünerløkka', dzh: '時髦咖啡、二手店、街頭藝術', den: 'Hip cafés, vintage & street art' },
-    { id: '17', day: 2, lat: 59.9265, lng: 10.7515, highlight: false,
-      zh: 'Mathallen 美食廳 & Akerselva', en: 'Mathallen & Akerselva river', dzh: '室內美食市集、河岸步道', den: 'Indoor food hall & riverside walk' },
+    // Day 2 — Fjord island hopping (the archipelago day)
+    { id: '8', day: 2, lat: 59.9090, lng: 10.7335, highlight: false,
+      zh: '市政廳碼頭 Rådhusbrygge', en: 'City Hall Pier (Rådhusbrygge)', dzh: '島嶼渡輪起點，Ruter B1', den: 'Island ferry hub, Ruter line B1' },
+    { id: '9', day: 2, lat: 59.8957, lng: 10.7245, highlight: true,
+      zh: 'Hovedøya 島', en: 'Hovedøya island', dzh: '12 世紀修道院遺跡、林間步道、礁石游泳', den: '12th-c monastery ruins, trails & swimming' },
+    { id: '10', day: 2, lat: 59.8836, lng: 10.7320, highlight: true,
+      zh: 'Gressholmen / Rambergøya', en: 'Gressholmen / Rambergøya', dzh: '連島步道、1930 小酒館、自然保護區', den: 'Linked-island trails, 1930 tavern, reserve' },
+    { id: '11', day: 2, lat: 59.8862, lng: 10.7360, highlight: false,
+      zh: 'Heggholmen 燈塔', en: 'Heggholmen lighthouse', dzh: '內峽灣最古老燈塔之一', den: 'One of the oldest inner-fjord lighthouses' },
+    { id: '12', day: 2, lat: 59.8920, lng: 10.7150, highlight: true,
+      zh: 'Lindøya 彩色木屋島', en: 'Lindøya cabin island', dzh: '上百棟紅黃彩色夏季木屋', den: 'Hundreds of colourful summer cabins' },
+    { id: '13', day: 2, lat: 59.8870, lng: 10.7060, highlight: false,
+      zh: 'Nakholmen（選擇性）', en: 'Nakholmen (optional)', dzh: '跳水台、最佳天際線視角', den: 'Diving jetty, best skyline view' },
 
-    // Day 3 — Fjord & Bygdøy
-    { id: '18', day: 3, lat: 59.9018, lng: 10.7560, highlight: true,
-      zh: 'Sørenga 海水泳池', en: 'Sørenga Seawater Pool', dzh: '峽灣海水泳池，晨間散步', den: 'Fjord seawater pool, morning stroll' },
-    { id: '19', day: 3, lat: 59.9035, lng: 10.7480, highlight: false,
-      zh: 'Vippa 美食市集', en: 'Vippa Food Hall', dzh: '濱海街頭美食市集', den: 'Waterfront street-food market' },
-    { id: '20', day: 3, lat: 59.9090, lng: 10.7335, highlight: false,
-      zh: 'City Hall Pier 3（渡輪碼頭）', en: 'City Hall Pier 3 (ferry)', dzh: '搭 #B10/B9 渡輪往 Bygdøy', den: 'Take ferry B10/B9 to Bygdøy' },
-    { id: '21', day: 3, lat: 59.9056, lng: 10.6847, highlight: true,
-      zh: 'Bygdøy 半島博物館群', en: 'Bygdøy Museums', dzh: 'Fram 極地船 / Kon-Tiki / 民俗博物館', den: 'Fram, Kon-Tiki & Folk Museum' },
-    { id: '22', day: 3, lat: 59.9011, lng: 10.6840, highlight: false,
-      zh: 'Huk 海灘', en: 'Huk Beach', dzh: '半島南端海灘，夏日戲水', den: 'Peninsula beach for summer swims' }
+    // Day 3 — Forest & sculpture calm, then home
+    { id: '14', day: 3, lat: 59.9270, lng: 10.7000, highlight: true,
+      zh: 'Vigeland 雕塑公園', en: 'Vigeland Sculpture Park', dzh: '212 座雕塑，清晨人少最靜', den: '212 sculptures, quietest early morning' },
+    { id: '15', day: 3, lat: 59.9268, lng: 10.7045, highlight: false,
+      zh: 'Majorstuen（轉地鐵 1 號線）', en: 'Majorstuen (Metro line 1)', dzh: '搭 Holmenkollbanen 上山', den: 'Board the Holmenkollen metro line' },
+    { id: '16', day: 3, lat: 59.9836, lng: 10.6790, highlight: true,
+      zh: 'Frognerseteren 森林觀景', en: 'Frognerseteren forest view', dzh: '森林、湖泊與峽灣全景，城市即森林', den: 'Forest, lake & fjord panorama above Oslo' },
+    { id: '17', day: 3, lat: 59.9639, lng: 10.6675, highlight: false,
+      zh: 'Holmenkollen 跳台（選擇性）', en: 'Holmenkollen ski jump (optional)', dzh: '下山途中可停，眺望全城', den: 'Optional stop on the way down' },
+    { id: '18', day: 3, lat: 59.9106, lng: 10.7525, highlight: false,
+      zh: '返回 Oslo S · 機場快線', en: 'Back to Oslo S · airport express', dzh: '取行李，Flytoget 19 分鐘往機場', den: 'Collect bags, Flytoget 19 min to OSL' }
   ];
 
   // ===== Routes =====
   const routes = {
     1: [
-      [59.9106,10.7525],[59.9127,10.7461],[59.9139,10.7374],[59.9170,10.7277],
-      [59.9145,10.7331],[59.9120,10.7335],[59.9114,10.7290],[59.9066,10.7220],
-      [59.9075,10.7363],[59.9075,10.7533],[59.9063,10.7556]
+      [59.9106,10.7525],[59.9127,10.7461],[59.9120,10.7335],[59.9075,10.7363],
+      [59.9075,10.7533],[59.9018,10.7560],[59.9063,10.7556]
     ],
-    2: [
-      [59.9270,10.7000],[59.9268,10.7045],[59.9197,10.7186],[59.9162,10.7333],
-      [59.9233,10.7596],[59.9265,10.7515]
-    ],
+    // Day 2 walking-on-island segments are tiny; the day is mostly ferry (drawn separately)
+    2: [],
     3: [
-      [59.9018,10.7560],[59.9035,10.7480],[59.9090,10.7335]
+      [59.9270,10.7000],[59.9268,10.7045]
     ]
   };
-  const ferryDay3 = [[59.9090,10.7335],[59.9056,10.6847]];
-  const bygdoyWalk = [[59.9056,10.6847],[59.9011,10.6840]];
+
+  // Ferry legs for Day 2 (dashed) — the heart of the island-hopping day
+  const ferryDay2 = [
+    [59.9090,10.7335],[59.8957,10.7245],[59.8836,10.7320],
+    [59.8862,10.7360],[59.8920,10.7150],[59.8870,10.7060],[59.9090,10.7335]
+  ];
+  // Metro leg for Day 3 (dashed) up to the forest
+  const metroDay3 = [[59.9268,10.7045],[59.9639,10.6675],[59.9836,10.6790]];
+  const returnDay3 = [[59.9836,10.6790],[59.9106,10.7525]];
 
   const layers = { 1: L.layerGroup(), 2: L.layerGroup(), 3: L.layerGroup() };
 
   // polylines
   L.polyline(routes[1], { color: dayColors[1], weight: 4, opacity: 0.85 }).addTo(layers[1]);
-  L.polyline(routes[2], { color: dayColors[2], weight: 4, opacity: 0.85 }).addTo(layers[2]);
+  L.polyline(ferryDay2, { color: dayColors[2], weight: 3, opacity: 0.8, dashArray: '8, 8' }).addTo(layers[2]);
   L.polyline(routes[3], { color: dayColors[3], weight: 4, opacity: 0.85 }).addTo(layers[3]);
-  L.polyline(ferryDay3, { color: dayColors[3], weight: 3, opacity: 0.7, dashArray: '8, 8' }).addTo(layers[3]);
-  L.polyline(bygdoyWalk, { color: dayColors[3], weight: 4, opacity: 0.85 }).addTo(layers[3]);
+  L.polyline(metroDay3, { color: dayColors[3], weight: 3, opacity: 0.7, dashArray: '4, 8' }).addTo(layers[3]);
+  L.polyline(returnDay3, { color: dayColors[3], weight: 2, opacity: 0.5, dashArray: '2, 10' }).addTo(layers[3]);
 
   function createMarkerIcon(label, day, isHighlight) {
     const color = dayColors[day] || '#15263b';
@@ -106,7 +103,7 @@
   stops.forEach(stop => {
     const marker = L.marker([stop.lat, stop.lng], { icon: createMarkerIcon(stop.id, stop.day, stop.highlight) });
     const hl = stop.highlight ? ' ⭐' : '';
-    const nav = `<br/><a href="https://www.google.com/maps/dir/?api=1&destination=${stop.lat},${stop.lng}&travelmode=walking" target="_blank" style="font-size:11px;color:#2c5d8f;">📍 導航 / Directions</a>`;
+    const nav = `<br/><a href="https://www.google.com/maps/dir/?api=1&destination=${stop.lat},${stop.lng}" target="_blank" style="font-size:11px;color:#2c5d8f;">📍 導航 / Directions</a>`;
     marker.bindPopup(`
       <div style="font-family:'DM Sans','Noto Sans TC',sans-serif;min-width:170px;">
         <strong style="font-size:14px;">${stop.id}. <span data-zh="${stop.zh}" data-en="${stop.en}">${stop.zh}</span></strong>${hl}<br/>
@@ -126,10 +123,9 @@
     div.style.cssText = 'background:white;padding:10px 14px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.15);font-family:"DM Sans","Noto Sans TC",sans-serif;font-size:11px;line-height:2;';
     div.innerHTML = `
       <div style="font-weight:600;margin-bottom:4px;">Route Legend</div>
-      <div><span style="display:inline-block;width:18px;height:3px;background:${dayColors[1]};margin-right:6px;vertical-align:middle;"></span><span data-zh="Day 1 中心地標環線" data-en="Day 1 Central landmarks">Day 1 中心地標環線</span></div>
-      <div><span style="display:inline-block;width:18px;height:3px;background:${dayColors[2]};margin-right:6px;vertical-align:middle;"></span><span data-zh="Day 2 Vigeland & Grünerløkka" data-en="Day 2 Vigeland & Grünerløkka">Day 2 Vigeland & Grünerløkka</span></div>
-      <div><span style="display:inline-block;width:18px;height:3px;background:${dayColors[3]};margin-right:6px;vertical-align:middle;"></span><span data-zh="Day 3 峽灣 & Bygdøy" data-en="Day 3 Fjord & Bygdøy">Day 3 峽灣 & Bygdøy</span></div>
-      <div><span style="display:inline-block;width:18px;height:0;border-top:3px dashed #666;margin-right:6px;vertical-align:middle;"></span><span data-zh="渡輪" data-en="Ferry">渡輪</span></div>
+      <div><span style="display:inline-block;width:18px;height:3px;background:${dayColors[1]};margin-right:6px;vertical-align:middle;"></span><span data-zh="Day 1 城市的安靜面" data-en="Day 1 The quiet city">Day 1 城市的安靜面</span></div>
+      <div><span style="display:inline-block;width:18px;height:0;border-top:3px dashed ${dayColors[2]};margin-right:6px;vertical-align:middle;"></span><span data-zh="Day 2 峽灣跳島（渡輪）" data-en="Day 2 Island hopping (ferry)">Day 2 峽灣跳島（渡輪）</span></div>
+      <div><span style="display:inline-block;width:18px;height:3px;background:${dayColors[3]};margin-right:6px;vertical-align:middle;"></span><span data-zh="Day 3 森林與雕塑" data-en="Day 3 Forest & sculpture">Day 3 森林與雕塑</span></div>
     `;
     return div;
   };

@@ -6,8 +6,8 @@
 }
 
 :root {
-  --color-primary: #15263b;
-  --color-accent: #c0392b;       /* Norwegian flag red */
+  --color-primary: #1f3a4d;      /* Deep fjord slate */
+  --color-accent: #4a7c8c;       /* Muted teal */
   --color-accent-2: #2c5d8f;     /* Fjord blue */
   --color-accent-light: #eef4fa;
   --color-bg: #f7f9fb;
@@ -262,9 +262,9 @@ img { max-width: 100%; height: auto; }
 .day-filter-btn:hover { border-color: var(--color-accent-2); }
 .day-filter-btn.active { color: white; border-color: transparent; }
 .day-filter-btn.all.active { background: var(--color-primary); }
-.day-filter-btn.d1.active { background: #c0392b; }
-.day-filter-btn.d2.active { background: #2c5d8f; }
-.day-filter-btn.d3.active { background: #1f8a70; }
+.day-filter-btn.d1.active { background: #2c5d8f; }
+.day-filter-btn.d2.active { background: #1f8a70; }
+.day-filter-btn.d3.active { background: #3a6b35; }
 
 /* ===== ITINERARY ===== */
 .day-block { margin-bottom: 48px; }
@@ -310,8 +310,9 @@ img { max-width: 100%; height: auto; }
   border-radius: 20px;
   white-space: nowrap;
 }
-.day-badge.day2 { background: var(--color-accent-2); }
-.day-badge.day3 { background: #1f8a70; }
+.day-badge { background: #2c5d8f; }
+.day-badge.day2 { background: #1f8a70; }
+.day-badge.day3 { background: #3a6b35; }
 
 .day-title { font-size: 1.08rem; font-weight: 600; color: var(--color-primary); }
 
@@ -351,7 +352,10 @@ img { max-width: 100%; height: auto; }
   border: 3px solid var(--color-bg);
 }
 
-.timeline-item.highlight-item::before { background: var(--color-success); width: 14px; height: 14px; left: -31px; }
+.timeline-item.highlight-item::before { background: #1f8a70; width: 14px; height: 14px; left: -31px; }
+.timeline-item.island-item::before { background: #1f8a70; }
+.detail-tag.hours { background: #fdf3e3; color: #b9770e; }
+.detail-tag.ferry { background: #e7f3f1; color: #15806a; }
 .timeline-item.optional-item::before { background: #95a5a6; }
 .timeline-item.optional-item { opacity: 0.9; }
 .timeline-item.transit-item::before { background: var(--color-warning); }
