@@ -50,4 +50,29 @@
     el.classList.add('fade-in');
     observer.observe(el);
   });
+
+  // ===== Pre-trip TODO checklist =====
+  const todoItems = document.querySelectorAll('.todo-item');
+  if (todoItems.length) {
+    let saved = {};
+    try { saved = JSON.parse(localStorage.getItem('oslo-trip-todo') || '{}'); } catch(e) { saved = {}; }
+    todoItems.forEach((item, i) => {
+      const key = 'todo-' + i;
+      if (saved[key]) item.classList.add('done');
+      item.setAttribute('role', 'checkbox');
+      item.setAttribute('aria-checked', item.classList.contains('done') ? 'true' : 'false');
+      const toggle = () => {
+        item.classList.toggle('done');
+        const done = item.classList.contains('done');
+        item.setAttribute('aria-checked', done ? 'true' : 'false');
+        saved[key] = done;
+        try { localStorage.setItem('oslo-trip-todo', JSON.stringify(saved)); } catch(e) {}
+      };
+      item.addEventListener('click', toggle);
+      item.addEventListener('keydown', (e) => {
+        if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); toggle(); }
+      });
+      item.tabIndex = 0;
+    });
+  }
 })();

@@ -545,3 +545,66 @@ img { max-width: 100%; height: auto; }
   color: #8a5a2b;
   font-weight: 600;
 }
+
+
+/* ===== PRE-TRIP TODO CHECKLIST ===== */
+.todo-group { margin-bottom: 1.6rem; }
+.todo-group h3 {
+  font-size: 1.02rem;
+  color: var(--color-primary);
+  margin-bottom: 0.6rem;
+}
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.todo-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 0.7rem 0.9rem;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+.todo-item:hover { border-color: var(--color-accent-2); }
+.todo-check {
+  flex: 0 0 auto;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--color-accent);
+  border-radius: 5px;
+  margin-top: 0.15rem;
+  position: relative;
+  transition: background 0.15s, border-color 0.15s;
+}
+.todo-item.done .todo-check {
+  background: var(--color-accent-2);
+  border-color: var(--color-accent-2);
+}
+.todo-item.done .todo-check::after {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.todo-text {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--color-text);
+}
+.todo-item.done .todo-text {
+  text-decoration: line-through;
+  color: var(--color-text-light);
+}
