@@ -1,0 +1,628 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🗼 2026 巴黎藝術與音樂之旅 · Paris Art & Music</title>
+  <meta name="description" content="2026年9月18-20日，三天兩夜巴黎藝術與古典音樂之旅：橘園、奧賽、米其林三星午餐、聖禮拜堂燭光音樂會。" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22><text y=%2248%22 font-size=%2248%22>🗼</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=Caveat:wght@400;500;600;700&family=Noto+Serif+TC:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== TOP BAR ===== -->
+  <div class="topbar">
+    <div class="topbar-inner">
+      <span class="topbar-brand">🗼 Paris 2026</span>
+      <nav class="topbar-nav">
+        <a href="#overview" data-zh="總覽" data-en="Overview">總覽</a>
+        <a href="#tickets" data-zh="車票" data-en="Tickets">車票</a>
+        <a href="#itinerary" data-zh="行程" data-en="Itinerary">行程</a>
+        <a href="#map" data-zh="地圖" data-en="Map">地圖</a>
+        <a href="#dining" data-zh="美食" data-en="Dining">美食</a>
+        <a href="#music" data-zh="音樂" data-en="Music">音樂</a>
+        <a href="#surprise" data-zh="驚喜" data-en="Surprises">驚喜</a>
+        <a href="#more" data-zh="遺珠之憾" data-en="More">遺珠之憾</a>
+      </nav>
+      <div class="lang-toggle">
+        <button class="lang-btn active" data-lang="zh">中</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <header class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <div class="hero-eyebrow" data-zh="藝術 · 音樂 · 美食" data-en="Art · Music · Gastronomy">藝術 · 音樂 · 美食</div>
+      <h1 data-zh="巴黎三日" data-en="Three Days in Paris">巴黎三日</h1>
+      <p class="hero-sub" data-zh="2026年9月18–20日 · 為初訪者打造，給老朋友驚喜" data-en="18–20 September 2026 · Designed for a first-timer, with surprises for a returning friend">2026年9月18–20日 · 為初訪者打造，給老朋友驚喜</p>
+      <div class="hero-meta">
+        <span class="hero-chip" data-zh="🎨 橘園 + 奧賽" data-en="🎨 Orangerie + Orsay">🎨 橘園 + 奧賽</span>
+        <span class="hero-chip" data-zh="⭐ 米其林三星午餐" data-en="⭐ 3-Star Lunch">⭐ 米其林三星午餐</span>
+        <span class="hero-chip" data-zh="🎻 燭光古典音樂會" data-en="🎻 Candlelit Classical Concert">🎻 燭光古典音樂會</span>
+      </div>
+    </div>
+    <div class="scroll-cue">⌄</div>
+  </header>
+
+  <!-- ===== OVERVIEW ===== -->
+  <section id="overview">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-eyebrow" data-zh="行程總覽" data-en="At a Glance">行程總覽</div>
+        <h2 data-zh="一趟以藝術與音樂為主軸的小旅行" data-en="A Short Escape Built Around Art & Music">一趟以藝術與音樂為主軸的小旅行</h2>
+        <p data-zh="從倫敦搭歐洲之星週五晚抵達，週日晚返回。兩天半的時間，以橘園與奧賽兩座印象派殿堂為核心，穿插一頓米其林三星午餐與一場聖禮拜堂的燭光古典音樂會。" data-en="Arrive Friday evening by Eurostar, depart Sunday night. Two and a half days centred on the Orangerie and Orsay, woven together with a three-star Michelin lunch and a candlelit classical concert at Sainte-Chapelle.">從倫敦搭歐洲之星週五晚抵達，週日晚返回。兩天半的時間，以橘園與奧賽兩座印象派殿堂為核心，穿插一頓米其林三星午餐與一場聖禮拜堂的燭光古典音樂會。</p>
+      </div>
+      <div class="overview-grid">
+        <div class="overview-card">
+          <div class="overview-icon">📅</div>
+          <div class="overview-label" data-zh="日期" data-en="Dates">日期</div>
+          <div class="overview-value">Sep 18–20</div>
+          <div class="overview-detail" data-zh="週五晚抵 · 週日晚離" data-en="Fri eve in · Sun eve out">週五晚抵 · 週日晚離</div>
+        </div>
+        <div class="overview-card">
+          <div class="overview-icon">👥</div>
+          <div class="overview-label" data-zh="旅人" data-en="Travellers">旅人</div>
+          <div class="overview-value" data-zh="兩位" data-en="Two">兩位</div>
+          <div class="overview-detail" data-zh="一位初訪 · 一位老手" data-en="One first-timer · one veteran">一位初訪 · 一位老手</div>
+        </div>
+        <div class="overview-card">
+          <div class="overview-icon">🚄</div>
+          <div class="overview-label" data-zh="交通" data-en="Transport">交通</div>
+          <div class="overview-value">Eurostar</div>
+          <div class="overview-detail" data-zh="倫敦 ⇄ 巴黎北站" data-en="London ⇄ Gare du Nord">倫敦 ⇄ 巴黎北站</div>
+        </div>
+        <div class="overview-card">
+          <div class="overview-icon">🎨</div>
+          <div class="overview-label" data-zh="核心主題" data-en="Theme">核心主題</div>
+          <div class="overview-value" data-zh="藝術 + 音樂" data-en="Art + Music">藝術 + 音樂</div>
+          <div class="overview-detail" data-zh="印象派 · 古典樂" data-en="Impressionism · Classical">印象派 · 古典樂</div>
+        </div>
+        <div class="overview-card">
+          <div class="overview-icon">⭐</div>
+          <div class="overview-label" data-zh="美食亮點" data-en="Dining Highlight">美食亮點</div>
+          <div class="overview-value">Kei</div>
+          <div class="overview-detail" data-zh="米其林三星午餐" data-en="3-star Michelin lunch">米其林三星午餐</div>
+        </div>
+        <div class="overview-card">
+          <div class="overview-icon">🚶</div>
+          <div class="overview-label" data-zh="市內移動" data-en="Getting Around">市內移動</div>
+          <div class="overview-value" data-zh="步行 + 地鐵" data-en="Walk + Métro">步行 + 地鐵</div>
+          <div class="overview-detail" data-zh="景點高度集中" data-en="Compact city centre">景點高度集中</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TICKETS ===== -->
+  <section id="tickets" class="alt-bg">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-eyebrow" data-zh="歐洲之星車票" data-en="Eurostar Tickets">歐洲之星車票</div>
+        <h2 data-zh="倫敦 ⇄ 巴黎" data-en="London ⇄ Paris">倫敦 ⇄ 巴黎</h2>
+      </div>
+      <div class="ticket-wrap">
+        <div class="ticket">
+          <div class="ticket-top">
+            <span class="dir" data-zh="去程 · 倫敦 → 巴黎" data-en="Outbound · London → Paris">去程 · 倫敦 → 巴黎</span>
+            <span class="date" data-zh="9月18日 週五" data-en="Fri 18 Sep">9月18日 週五</span>
+          </div>
+          <div class="ticket-body">
+            <div class="ticket-pt">
+              <div class="time">19:01</div>
+              <div class="place">London St Pancras Int'l</div>
+            </div>
+            <div class="ticket-mid">
+              <div class="line">🚄 →</div>
+              <div class="dur" data-zh="約 2h28m" data-en="~2h28m">約 2h28m</div>
+            </div>
+            <div class="ticket-pt">
+              <div class="time">22:29</div>
+              <div class="place">Paris Gare du Nord</div>
+            </div>
+          </div>
+          <div class="ticket-note" data-zh="抵達已晚，當晚僅安排車站旁宵夜與入住，輕鬆為主。" data-en="Late arrival — only a station-side supper and check-in are planned for the evening.">抵達已晚，當晚僅安排車站旁宵夜與入住，輕鬆為主。</div>
+        </div>
+        <div class="ticket">
+          <div class="ticket-top">
+            <span class="dir" data-zh="回程 · 巴黎 → 倫敦" data-en="Return · Paris → London">回程 · 巴黎 → 倫敦</span>
+            <span class="date" data-zh="9月20日 週日" data-en="Sun 20 Sep">9月20日 週日</span>
+          </div>
+          <div class="ticket-body">
+            <div class="ticket-pt">
+              <div class="time">21:02</div>
+              <div class="place">Paris Gare du Nord</div>
+            </div>
+            <div class="ticket-mid">
+              <div class="line">🚄 →</div>
+              <div class="dur" data-zh="約 2h28m" data-en="~2h28m">約 2h28m</div>
+            </div>
+            <div class="ticket-pt">
+              <div class="time">22:30</div>
+              <div class="place">London St Pancras Int'l</div>
+            </div>
+          </div>
+          <div class="ticket-note" data-zh="歐洲之星建議從巴黎出發前 60–75 分鐘抵站（票閘於發車前 30 分鐘關閉），請於 19:45–20:00 前回到北站。" data-en="Eurostar advises arriving 60–75 min before departure (gates close 30 min prior); be back at Gare du Nord by ~19:45–20:00.">歐洲之星建議從巴黎出發前 60–75 分鐘抵站（票閘於發車前 30 分鐘關閉），請於 19:45–20:00 前回到北站。</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ITINERARY ===== -->
+  <section id="itinerary">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-eyebrow" data-zh="逐日行程" data-en="Day by Day">逐日行程</div>
+        <h2 data-zh="三天的節奏" data-en="The Rhythm of Three Days">三天的節奏</h2>
+        <p data-zh="每個地點都標註停留時間、移動方式與建議出發時間。標示「選擇性」的活動可依當天體力自由取捨。" data-en="Each stop lists time spent, how to get there, and a suggested departure time. Items marked “optional” can be skipped based on your energy.">每個地點都標註停留時間、移動方式與建議出發時間。標示「選擇性」的活動可依當天體力自由取捨。</p>
+      </div>
+
+      <div class="day-tabs">
+        <button class="day-tab active" data-day="1">
+          <span class="d-day" data-zh="9/18 週五" data-en="Fri 9/18">9/18 週五</span>
+          <span class="d-title" data-zh="抵達之夜" data-en="Arrival Night">抵達之夜</span>
+        </button>
+        <button class="day-tab" data-day="2">
+          <span class="d-day" data-zh="9/19 週六" data-en="Sat 9/19">9/19 週六</span>
+          <span class="d-title" data-zh="藝術與音樂" data-en="Art & Music">藝術與音樂</span>
+        </button>
+        <button class="day-tab" data-day="3">
+          <span class="d-day" data-zh="9/20 週日" data-en="Sun 9/20">9/20 週日</span>
+          <span class="d-title" data-zh="驚喜與返程" data-en="Surprises & Departure">驚喜與返程</span>
+        </button>
+      </div>
+
+      <!-- DAY 1 -->
+      <div class="day-content active" id="day-1">
+        <div class="timeline">
+          <div class="tl-item is-transit" data-id="🚄">
+            <div class="tl-card">
+              <div class="tl-time">22:29</div>
+              <div class="tl-title" data-zh="抵達巴黎北站" data-en="Arrive at Gare du Nord">抵達巴黎北站</div>
+              <div class="tl-desc" data-zh="歐洲之星準時抵達北站。先別急著趕行程——今晚以休息與補充體力為主。" data-en="The Eurostar pulls in on time. No rushing tonight — the evening is about rest and a warm meal.">歐洲之星準時抵達北站。先別急著趕行程——今晚以休息與補充體力為主。</div>
+              <div class="tl-meta"><span class="tl-tag addr"><a href="https://www.google.com/maps/search/?api=1&query=Gare+du+Nord+Paris" target="_blank">📍 Gare du Nord</a></span></div>
+            </div>
+          </div>
+          <div class="transit-line"><span class="ic">🚶</span><span data-zh="步行 2 分鐘穿過馬路即達" data-en="2-min walk across the street">步行 2 分鐘穿過馬路即達</span></div>
+          <div class="tl-item is-meal" data-id="🍽">
+            <div class="tl-card has-img">
+              <div>
+                <div class="tl-time" data-zh="22:45 · 約 1 小時" data-en="22:45 · ~1 hr">22:45 · 約 1 小時</div>
+                <div class="tl-title"><a href="https://www.terminusnord.com/" target="_blank">Terminus Nord</a></div>
+                <div class="tl-desc" data-zh="北站正對面的經典 Belle Époque 大型 brasserie，營業至深夜。點一份烤雞、香煎魚或熱湯暖胃，避開生蠔與生食即可。" data-en="A classic Belle Époque brasserie right opposite the station, open late. Go for roast chicken, pan-seared fish or a warm soup — easy to avoid oysters and raw dishes.">北站正對面的經典 Belle Époque 大型 brasserie，營業至深夜。點一份烤雞、香煎魚或熱湯暖胃，避開生蠔與生食即可。</div>
+                <div class="tl-meta">
+                  <span class="tl-tag" data-zh="🍗 全熟料理友善" data-en="🍗 Cooked dishes">🍗 全熟料理友善</span>
+                  <span class="tl-tag addr"><a href="https://www.google.com/maps/search/?api=1&query=Terminus+Nord+Paris" target="_blank">📍 23 Rue de Dunkerque</a></span>
+                </div>
+              </div>
+              <div class="tl-img"><img src="assets/eurostar.jpg" alt="Eurostar / Gare du Nord" /></div>
+            </div>
+          </div>
+          <div class="transit-line"><span class="ic">🚕</span><span data-zh="搭計程車或地鐵前往住宿" data-en="Taxi or Métro to your accommodation">搭計程車或地鐵前往住宿</span></div>
+          <div class="tl-item" data-id="🛏">
+            <div class="tl-card">
+              <div class="tl-time" data-zh="約 23:45" data-en="~23:45">約 23:45</div>
+              <div class="tl-title" data-zh="入住與休息" data-en="Check in & Rest">入住與休息</div>
+              <div class="tl-desc" data-zh="建議住在右岸 1–2 區或左岸 5–6 區，方便明早步行前往橘園。早點休息，迎接精彩的週六。" data-en="Stay in the 1st–2nd (Right Bank) or 5th–6th (Left Bank) for an easy walk to the Orangerie tomorrow. Rest well for a big Saturday.">建議住在右岸 1–2 區或左岸 5–6 區，方便明早步行前往橘園。早點休息，迎接精彩的週六。</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DAY 2 -->
+      <div class="day-content" id="day-2">
+        <div class="timeline">
+          <div class="tl-item is-meal" data-id="A">
+            <div class="tl-card has-img">
+              <div>
+                <div class="tl-time" data-zh="09:00 · 1–1.5 小時 · 建議 08:30 出門" data-en="09:00 · 1–1.5 hr · leave by 08:30">09:00 · 1–1.5 小時 · 建議 08:30 出門</div>
+                <div class="tl-title"><a href="https://www.musee-orangerie.fr/en" target="_blank">橘園美術館 Musée de l'Orangerie</a></div>
+                <div class="tl-desc" data-zh="開門即進，趁人潮湧入前獨享莫內《睡蓮》的兩間橢圓形展廳。柔和天光灑落，是一天最寧靜的開場。" data-en="Arrive at opening to have Monet's two oval Water Lilies rooms almost to yourselves before the crowds. The soft skylight makes for the calmest possible start to the day.">開門即進，趁人潮湧入前獨享莫內《睡蓮》的兩間橢圓形展廳。柔和天光灑落，是一天最寧靜的開場。</div>
+                <div class="tl-meta">
+                  <span class="tl-tag depart" data-zh="🕗 建議 08:30 出發" data-en="🕗 Leave 08:30">🕗 建議 08:30 出發</span>
+                  <span class="tl-tag" data-zh="🎟 線上 €12.50（可買橘園+奧賽聯票 €20）" data-en="🎟 €12.50 online (combo with Orsay €20)">🎟 線上 €12.50（橘園+奧賽聯票 €20）</span>
+                  <span class="tl-tag hours" data-zh="🕘 週三–週一 9:00–18:00（週二休館）· 9/19 週六開放 ✔" data-en="🕘 Wed–Mon 9:00–18:00 (closed Tue) · open Sat 19 Sep ✔">🕘 週三–週一 9:00–18:00（週二休）· 9/19開放 ✔</span>
+                  <span class="tl-tag look" data-zh="✨ 必看：莫內《睡蓮》八連作·下層雷諾瓦、塞尚、馬諦斯收藏" data-en="✨ Don't miss: Monet's eight Water Lilies panels · downstairs Renoir, Cézanne, Matisse">✨ 必看：莫內《睡蓮》八連作·雷諾瓦、塞尚</span>
+                  <span class="tl-tag addr"><a href="https://www.google.com/maps/search/?api=1&query=Musee+de+l'Orangerie" target="_blank">📍 Jardin des Tuileries</a></span>
+                </div>
+              </div>
+              <div class="tl-img"><img src="assets/orangerie.jpg" alt="Musée de l'Orangerie" /></div>
+            </div>
+          </div>
+          <div class="transit-line"><span class="ic">🚶</span><span data-zh="穿過杜樂麗花園散步 約 10 分鐘" data-en="~10-min stroll through the Tuileries">穿過杜樂麗花園散步 約 10 分鐘</span></div>
+          <div class="tl-item" data-id="B">
+            <div class="tl-card has-img">
+              <div>
+                <div class="tl-time" data-zh="10:30 · 約 30–40 分鐘" data-en="10:30 · ~30–40 min">10:30 · 約 30–40 分鐘</div>
+                <div class="tl-title"><a href="https://www.google.com/maps/search/?api=1&query=Jardin+des+Tuileries" target="_blank">杜樂麗花園 Jardin des Tuileries</a></div>
+                <div class="tl-desc" data-zh="巴黎最古老的法式花園，由勒諾特爾設計。九月初秋的林蔭大道正轉金黃，散步至協和廣場方向，再轉往午餐地點。" data-en="Paris's oldest formal garden, laid out by Le Nôtre. The tree-lined allées are just turning golden in early autumn — wander towards Concorde, then on to lunch.">巴黎最古老的法式花園，由勒諾特爾設計。九月初秋的林蔭大道正轉金黃，散步至協和廣場方向，再轉往午餐地點。</div>
+                <div class="tl-meta"><span class="tl-tag" data-zh="🍂 初秋金黃林蔭" data-en="🍂 Early-autumn colour">🍂 初秋金黃林蔭</span></div>
+              </div>
+              <div class="tl-img"><img src="assets/tuileries.jpg" alt="Tuileries" /></div>
+            </div>
+          </div>
+          <div class="transit-line"><span class="ic">🚶</span><span data-zh="沿 Rue de Rivoli 步行 約 15 分鐘" data-en="~15-min walk along Rue de Rivoli">沿 Rue de Rivoli 步行 約 15 分鐘</span></div>
+          <div class="tl-item is-meal" data-id="C">
+            <div class="tl-card has-img">
+              <div>
+                <div class="tl-time" data-zh="12:30 · 約 2–2.5 小時 · 建議 12:15 到場" data-en="12:30 · ~2–2.5 hr · arrive 12:15">12:30 · 約 2–2.5 小時 · 建議 12:15 到場</div>
+                <div class="tl-title"><a href="https://restaurant-kei.fr/en" target="_blank">Restaurant Kei ⭐⭐⭐</a></div>
+                <div class="tl-desc" data-zh="本趟的重頭戲：日裔主廚小林圭的米其林三星。週六供應 Discovery 午間套餐，料理以精緻海鮮、家禽與蔬菜為主（招牌「蔬菜花園」沙拉），非生食路線。訂位時請先告知不吃牛排、偏生與過肥的肉類、生魚片，廚房可細緻調整。" data-en="The centrepiece: chef Kei Kobayashi's three Michelin stars. The Saturday Discovery lunch leans on refined seafood, poultry and vegetables (the signature “garden” salad) rather than raw dishes. When booking, flag the no-steak / no-rare-meat / no-fatty-meat / no-sashimi preferences — the kitchen adapts gracefully.">本趟的重頭戲：日裔主廚小林圭的米其林三星。週六供應 Discovery 午間套餐，料理以精緻海鮮、家禽與蔬菜為主（招牌「蔬菜花園」沙拉），非生食路線。訂位時請先告知不吃牛排、偏生與過肥的肉類、生魚片，廚房可細緻調整。</div>
+                <div class="tl-meta">
+                  <span class="tl-tag depart" data-zh="🕗 建議 12:15 到場" data-en="🕗 Arrive 12:15">🕗 建議 12:15 到場</span>
+                  <span class="tl-tag" data-zh="💶 週六午間 Discovery 約 €195" data-en="💶 Sat Discovery lunch ~€195">💶 週六 Discovery 約 €195</span>
+                  <span class="tl-tag" data-zh="📞 提前兩個月訂位（每月首個週二 09:30 開放）" data-en="📞 Book 2 months ahead (1st Tue of month, 09:30)">📞 提前兩個月訂位</span>
+                  <span class="tl-tag hours" data-zh="🕘 Discovery 套餐僅週五、六午餐供應 · 9/19 週六命中 ✔" data-en="🕘 Discovery menu only Fri & Sat lunch · Sat 19 Sep fits ✔">🕘 Discovery 僅週五、六午餐 · 9/19命中 ✔</span>
+                  <span class="tl-tag addr"><a href="https://www.google.com/maps/search/?api=1&query=Restaurant+Kei+Paris" target="_blank">📍 5 Rue Coq Héron</a></span>
+                </div>
+              </div>
+              <div class="tl-img"><img src="assets/kei.jpg" alt="Restaurant Kei" /></div>
+            </div>
+          </div>
+          <div class="transit-line"><span class="ic">🚶</span><span data-zh="步行過塞納河 約 15 分鐘（或地鐵 1 站）" data-en="~15-min walk across the Seine (or 1 Métro stop)">步行過塞納河 約 15 分鐘（或地鐵 1 站）</span></div>
+          <div class="tl-item" data-id="D">
+            <div class="tl-card has-img">
+              <div>
+                <div class="tl-time" data-zh="15:30 · 約 2 小時 · 最後入場 17:00" data-en="15:30 · ~2 hr · last entry 17:00">15:30 · 約 2 小時 · 最後入場 17:00</div>
+                <div class="tl-title"><a href="https://www.musee-orsay.fr/en" target="_blank">奧賽美術館 Musée d'Orsay</a></div>
+                <div class="tl-desc" data-zh="由舊火車站改建，是全球印象派與後印象派收藏的聖殿——梵谷、莫內、雷諾瓦、竇加、塞尚齊聚。別錯過五樓那座著名的大鐘與屋頂視野。（2026年起接待區整修中，入場前請確認動線。）" data-en="Housed in a former railway station, this is the temple of Impressionism and Post-Impressionism — Van Gogh, Monet, Renoir, Degas, Cézanne together. Don't miss the famous fifth-floor clock and rooftop view. (Reception areas under renovation from 2026 — check access before you go.)">由舊火車站改建，是全球印象派與後印象派收藏的聖殿——梵谷、莫內、雷諾瓦、竇加、塞尚齊聚。別錯過五樓那座著名的大鐘與屋頂視野。（2026年起接待區整修中，入場前請確認動線。）</div>
+                <div class="tl-meta">
+                  <span class="tl-tag" data-zh="🎟 線上全票 €16" data-en="🎟 €16 online">🎟 線上全票 €16</span>
+                  <span class="tl-tag hours" data-zh="🕘 週二–週日 9:30–18:00（週一休館）· 9/19 週六開放 ✔" data-en="🕘 Tue–Sun 9:30–18:00 (closed Mon) · open Sat 19 Sep ✔">🕘 週二–週日 9:30–18:00（週一休）· 9/19開放 ✔</span>
+                  <span class="tl-tag look" data-zh="✨ 必看：梵谷自畫像、雷諾瓦《煎餅磨坊》、竇加芭蕾舞、五樓大鐘觀景" data-en="✨ Don't miss: Van Gogh self-portrait, Renoir's Bal du moulin, Degas, the 5th-floor clock">✨ 必看：梵谷自畫像·雷諾瓦·竇加·五樓大鐘</span>
+                  <span class="tl-tag addr"><a href="https://www.google.com/maps/search/?api=1&query=Musee+d'Orsay" target="_blank">📍 Esplanade Valéry Giscard d'Estaing</a></span>
+                </div>
+              </div>
+              <div class="tl-img"><img src="assets/orsay.jpg" alt="Musée d'Orsay" /></div>
+            </div>
+          </div>
+          <div class="transit-line"><span class="ic">🚇</span><span data-zh="地鐵或散步前往西堤島 約 20 分鐘" data-en="Métro or walk to Île de la Cité ~20 min">地鐵或散步前往西堤島 約 20 分鐘</span></div>
+          <div class="tl-item" data-id="E">
+            <div class="tl-card has-img">
+              <div>
+                <div class="tl-time" data-zh="18:00 · 約 45 分鐘 · 建議線上預約時段" data-en="18:00 · ~45 min · reserve a time slot online">18:00 · 約 45 分鐘 · 建議線上預約</div>
+                <div class="tl-title"><a href="https://www.notredamedeparis.fr/en/" target="_blank">巴黎聖母院 Notre-Dame de Paris</a></div>
+                <div class="tl-desc" data-zh="經歷 2019 大火與五年修復，2024 年底重新開放的哥德式石造教堂代表。清洗後的米色石牌、重生的彩繪玻璃玫瑰窗與宏偉中殿，明亮如新。免費入場，但週末人潮多，建議事先在官網預約時段免排隊。" data-en="Reopened in December 2024 after the 2019 fire and a five-year restoration, this is the definitive Gothic cathedral. The cleaned cream stonework, reborn rose windows and soaring nave are dazzlingly bright. Free entry, but weekends are busy — reserve a time slot online to skip the queue.">經歷 2019 大火與五年修復，2024 年底重新開放的哥德式石造教堂代表。清洗後的石牌、重生的玻璃玫瑰窗與宏偉中殿明亮如新。免費入場，週末人潮多，建議官網預約時段免排隊。</div>
+                <div class="tl-meta">
+                  <span class="tl-tag" data-zh="🎟 免費入場（可選免費預約）" data-en="🎟 Free entry (optional free reservation)">🎟 免費入場（可選預約）</span>
+                  <span class="tl-tag hours" data-zh="🕘 週六約 8:15–19:00（週四至 22:00）· 9/19開放 ✔" data-en="🕘 Sat ~8:15–19:00 (Thu to 22:00) · open Sat 19 Sep ✔">🕘 週六約 8:15–19:00· 9/19開放 ✔</span>
+                  <span class="tl-tag look" data-zh="✨ 必看：南北玫瑰窗、重建中殿、新設計祭壇家具與大管風琴" data-en="✨ Don't miss: rose windows, restored nave, new liturgical furnishings and great organ">✨ 必看：玫瑰窗·重建中殿·大管風琴</span>
+                  <span class="tl-tag addr"><a href="https://www.google.com/maps/search/?api=1&query=Notre-Dame+de+Paris" target="_blank">📍 6 Parvis Notre-Dame</a></span>
+                </div>
+              </div>
+              <div class="tl-img"><img src="assets/notre-dame.jpg" alt="Notre-Dame de Paris" /></div>
+            </div>
+          </div>
+          <div class="transit-line"><span class="ic">🚶</span><span data-zh="步行 5 分鐘至聖禮拜堂（同在西堤島）" data-en="5-min walk to Sainte-Chapelle (same island)">步行 5 分鐘至聖禮拜堂（同在西堤島）</span></div>
+          <div class="tl-item optional" data-id="F0">
+            <div class="tl-card">
+              <div class="tl-time" data-zh="18:50 · 音樂會前輕食" data-en="18:50 · pre-concert bite">18:50 · 音樂會前輕食<span class="optional-badge" data-zh="選擇性" data-en="Optional">選擇性</span></div>
+              <div class="tl-title"><a href="https://www.google.com/maps/search/?api=1&query=Les+Deux+Palais+Paris" target="_blank">Les Deux Palais</a></div>
+              <div class="tl-desc" data-zh="聖禮拜堂正對面的 Belle Époque 小酒館，適合音樂會前喝杯香檳、吃點熱食墊胃。記得預留 45 分鐘安檢時間。" data-en="A Belle Époque café directly opposite Sainte-Chapelle — perfect for a glass of champagne and a light warm dish before the concert. Leave 45 min for security.">聖禮拜堂正對面的 Belle Époque 小酒館，適合音樂會前喝杯香檳、吃點熱食墊胃。記得預留 45 分鐘安檢時間。</div>
+            </div>
+          </div>
+          <div class="transit-line"><span class="ic">🚶</span><span data-zh="步行 2 分鐘至聖禮拜堂" data-en="2-min walk to Sainte-Chapelle">步行 2 分鐘至聖禮拜堂</span></div>
+          <div class="tl-item is-music" data-id="F">
+            <div class="tl-card has-img">
+              <div>
+                <div class="tl-time" data-zh="約 19:00 或 20:30 · 約 1 小時" data-en="~19:00 or 20:30 · ~1 hr">約 19:00 或 20:30 · 約 1 小時</div>
+                <div class="tl-title"><a href="https://www.sainte-chapelle.fr/en" target="_blank">聖禮拜堂燭光古典音樂會</a></div>
+                <div class="tl-desc" data-zh="13 世紀哥德傑作，15 面巨型彩繪玻璃環繞。在這裡聆聽韋瓦第《四季》、巴哈與帕海貝爾《卡農》，是藝術、建築與音樂的三重盛宴——對初訪者震撼、對老手依然難忘。請提前 45 分鐘到場安檢。" data-en="A 13th-century Gothic masterpiece ringed by fifteen towering stained-glass windows. Hearing Vivaldi's Four Seasons, Bach and Pachelbel's Canon here is a triple feast of art, architecture and music — overwhelming for a first-timer, unforgettable even for a veteran. Arrive 45 min early for security.">13 世紀哥德傑作，15 面巨型彩繪玻璃環繞。在這裡聆聽韋瓦第《四季》、巴哈與帕海貝爾《卡農》，是藝術、建築與音樂的三重盛宴——對初訪者震撼、對老手依然難忘。請提前 45 分鐘到場安檢。</div>
+                <div class="tl-meta">
+                  <span class="tl-tag stay" data-zh="🎻 古典樂之夜" data-en="🎻 Classical night">🎻 古典樂之夜</span>
+                  <span class="tl-tag" data-zh="🎟 約 €29–52 · 建議提前線上訂" data-en="🎟 ~€29–52 · book online ahead">🎟 約 €29–52</span>
+                  <span class="tl-tag addr"><a href="https://www.google.com/maps/search/?api=1&query=Sainte-Chapelle+Paris" target="_blank">📍 10 Boulevard du Palais</a></span>
+                </div>
+              </div>
+              <div class="tl-img"><img src="assets/sainte-chapelle.jpg" alt="Sainte-Chapelle" /></div>
+            </div>
+          </div>
+          <div class="tl-item optional" data-id="G">
+            <div class="tl-card">
+              <div class="tl-time" data-zh="22:00 · 夜遊" data-en="22:00 · evening stroll">22:00 · 夜遊<span class="optional-badge" data-zh="選擇性" data-en="Optional">選擇性</span></div>
+              <div class="tl-title" data-zh="塞納河畔 & 拉丁區" data-en="Seine & Latin Quarter">塞納河畔 & 拉丁區</div>
+              <div class="tl-desc" data-zh="音樂會後沿塞納河散步，遠眺點燈的聖母院，或在拉丁區找間咖啡館收尾，為完美的一天畫下句點。" data-en="After the concert, stroll along the Seine for a glimpse of the floodlit Notre-Dame, or end the perfect day at a Latin Quarter café.">音樂會後沿塞納河散步，遠眺點燈的聖母院，或在拉丁區找間咖啡館收尾，為完美的一天畫下句點。</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DAY 3 -->
+      <div class="day-content" id="day-3">
+        <div class="timeline">
+          <div class="tl-item" data-id="A">
+            <div class="tl-card has-img">
+              <div>
+                <div class="tl-time" data-zh="09:30 · 約 1.5 小時 · 建議 09:10 出門" data-en="09:30 · ~1.5 hr · leave by 09:10">09:30 · 約 1.5 小時 · 建議 09:10 出門</div>
+                <div class="tl-title"><a href="https://www.musee-rodin.fr/en" target="_blank">羅丹美術館 Musée Rodin</a></div>
+                <div class="tl-desc" data-zh="給老手的第一份驚喜：相較人潮洶湧的大館，這裡是一座優雅寧靜的宅邸與玫瑰花園。《沉思者》《地獄之門》就在綠意中，週日早晨格外靜謐。" data-en="The first surprise for the veteran: a serene mansion and rose garden rather than a crowded blockbuster museum. The Thinker and Gates of Hell sit among the greenery — especially peaceful on a Sunday morning.">給老手的第一份驚喜：相較人潮洶湧的大館，這裡是一座優雅寧靜的宅邸與玫瑰花園。《沉思者》《地獄之門》就在綠意中，週日早晨格外靜謐。</div>
+                <div class="tl-meta">
+                  <span class="tl-tag depart" data-zh="🕗 建議 09:10 出發" data-en="🕗 Leave 09:10">🕗 建議 09:10 出發</span>
+                  <span class="tl-tag" data-zh="🎟 €14 · 僅花園 €5" data-en="🎟 €14 · garden only €5">🎟 €14 · 僅花園 €5</span>
+                  <span class="tl-tag hours" data-zh="🕘 週二–週日 10:00–18:30（週一休）· 9/20開放 ✔" data-en="🕘 Tue–Sun 10:00–18:30 (closed Mon) · open Sun 20 Sep ✔">🕘 週二–週日 10:00–18:30（週一休）· 9/20開放 ✔</span>
+                  <span class="tl-tag look" data-zh="✨ 必看：《沉思者》《地獄之門》《加萊市民》· 卡蜜兒·克勞達作品" data-en="✨ Don't miss: The Thinker, Gates of Hell, Burghers of Calais · also Camille Claudel">✨ 必看：《沉思者》《地獄之門》· 卡蜜兒作品</span>
+                  <span class="tl-tag addr"><a href="https://www.google.com/maps/search/?api=1&query=Musee+Rodin+Paris" target="_blank">📍 77 Rue de Varenne</a></span>
+                </div>
+              </div>
+              <div class="tl-img"><img src="assets/rodin.jpg" alt="Musée Rodin" /></div>
+            </div>
+          </div>
+          <div class="transit-line"><span class="ic">🚇</span><span data-zh="地鐵約 15 分鐘前往左岸聖日耳曼" data-en="~15-min Métro to Saint-Germain">地鐵約 15 分鐘前往左岸聖日耳曼</span></div>
+          <div class="tl-item is-meal" data-id="B">
+            <div class="tl-card has-img">
+              <div>
+                <div class="tl-time" data-zh="12:30 · 約 1.5 小時" data-en="12:30 · ~1.5 hr">12:30 · 約 1.5 小時</div>
+                <div class="tl-title"><a href="https://www.restaurantchezfernand.fr/en/" target="_blank">Chez Fernand</a></div>
+                <div class="tl-desc" data-zh="左岸經典小酒館，週日照常營業。點一份紅酒燉雞（coq au vin）或烤雞，全熟燉煮、香濃下飯，完全避開生肉與牛排，是返程前溫暖飽足的一餐。" data-en="A classic Left-Bank bistro open on Sundays. Order coq au vin or roast chicken — slow-cooked and fully done, with no raw meat or steak in sight. A warm, satisfying meal before heading home.">左岸經典小酒館，週日照常營業。點一份紅酒燉雞（coq au vin）或烤雞，全熟燉煮、香濃下飯，完全避開生肉與牛排，是返程前溫暖飽足的一餐。</div>
+                <div class="tl-meta">
+                  <span class="tl-tag" data-zh="🍗 紅酒燉雞 / 烤雞" data-en="🍗 Coq au vin / roast chicken">🍗 紅酒燉雞 / 烤雞</span>
+                  <span class="tl-tag" data-zh="💶 約 €30–50" data-en="💶 ~€30–50">💶 約 €30–50</span>
+                  <span class="tl-tag hours" data-zh="🕘 每日 12:00–14:30 / 19:00–23:00 · 9/20 週日照常 ✔" data-en="🕘 Daily 12:00–14:30 / 19:00–23:00 · open Sun 20 Sep ✔">🕘 每日 12:00–14:30 / 19:00–23:00 · 9/20開 ✔</span>
+                  <span class="tl-tag addr"><a href="https://www.google.com/maps/search/?api=1&query=Chez+Fernand+9+rue+Christine+Paris" target="_blank">📍 9 Rue Christine</a></span>
+                </div>
+              </div>
+              <div class="tl-img"><img src="assets/coq-au-vin.jpg" alt="Coq au vin" /></div>
+            </div>
+          </div>
+          <div class="transit-line"><span class="ic">🚶</span><span data-zh="下午行程三選一（依體力選擇）" data-en="Pick one for the afternoon (by energy level)">下午行程三選一（依體力選擇）</span></div>
+
+          <div class="tl-item optional" data-id="C1">
+            <div class="tl-card has-img">
+              <div>
+                <div class="tl-time" data-zh="14:15 · 下午選項 A" data-en="14:15 · Afternoon Option A">14:15 · 下午選項 A<span class="optional-badge" data-zh="選擇性" data-en="Optional">選擇性</span></div>
+                <div class="tl-title"><a href="https://www.google.com/maps/search/?api=1&query=Place+des+Vosges+Paris" target="_blank">瑪黑區 Le Marais</a></div>
+                <div class="tl-desc" data-zh="最有巴黎味的舊城區：孚日廣場、畢卡索美術館、雨果故居與滿街設計小店。適合初訪者悠閒漫遊、購物與咖啡。" data-en="The most quintessentially Parisian old quarter: Place des Vosges, the Picasso Museum, Victor Hugo's house and streets full of boutiques. Ideal for a relaxed first-timer wander, shopping and coffee.">最有巴黎味的舊城區：孚日廣場、畢卡索美術館、雨果故居與滿街設計小店。適合初訪者悠閒漫遊、購物與咖啡。</div>
+                <div class="tl-meta"><span class="tl-tag" data-zh="🛍 初訪者友善" data-en="🛍 First-timer friendly">🛍 初訪者友善</span></div>
+              </div>
+              <div class="tl-img"><img src="assets/marais.jpg" alt="Le Marais" /></div>
+            </div>
+          </div>
+          <div class="tl-item optional" data-id="C2">
+            <div class="tl-card has-img">
+              <div>
+                <div class="tl-time" data-zh="14:15 · 下午選項 B" data-en="14:15 · Afternoon Option B">14:15 · 下午選項 B<span class="optional-badge" data-zh="選擇性" data-en="Optional">選擇性</span></div>
+                <div class="tl-title"><a href="https://www.marmottan.fr/en/" target="_blank">瑪摩丹莫內美術館 Marmottan Monet</a></div>
+                <div class="tl-desc" data-zh="給老手的莫內驚喜：全球最大莫內收藏，鎮館之寶正是定義「印象派」一詞的《印象·日出》。觀光客稀少，是莫內迷的私房聖地。" data-en="A Monet surprise for the veteran: the world's largest Monet collection, crowned by Impression, Sunrise — the very painting that named Impressionism. Few tourists, a true insider's pilgrimage.">給老手的莫內驚喜：全球最大莫內收藏，鎮館之寶正是定義「印象派」一詞的《印象·日出》。觀光客稀少，是莫內迷的私房聖地。</div>
+                <div class="tl-meta"><span class="tl-tag stay" data-zh="🎁 老手驚喜" data-en="🎁 Surprise pick">🎁 老手驚喜</span><span class="tl-tag hours" data-zh="🕘 週二–週日 10:00–18:00（週一休）· 9/20開放 ✔" data-en="🕘 Tue–Sun 10:00–18:00 (closed Mon) · open Sun 20 Sep ✔">🕘 週二–週日 10:00–18:00（週一休）· 9/20開放 ✔</span><span class="tl-tag look" data-zh="✨ 必看：《印象·日出》原作· 晚期睡蓮· 貝羅·莫里索收藏" data-en="✨ Don't miss: original Impression Sunrise · late Water Lilies · Berthe Morisot">✨ 必看：《印象·日出》原作·晚期睡蓮</span><span class="tl-tag addr"><a href="https://www.google.com/maps/search/?api=1&query=Musee+Marmottan+Monet+Paris" target="_blank">📍 2 Rue Louis-Boilly</a></span></div>
+              </div>
+              <div class="tl-img"><img src="assets/marmottan.jpg" alt="Marmottan Monet" /></div>
+            </div>
+          </div>
+          <div class="tl-item optional" data-id="C3">
+            <div class="tl-card has-img">
+              <div>
+                <div class="tl-time" data-zh="14:15 · 下午選項 C（音樂主題）" data-en="14:15 · Afternoon Option C (music)">14:15 · 下午選項 C（音樂主題）<span class="optional-badge" data-zh="選擇性" data-en="Optional">選擇性</span></div>
+                <div class="tl-title"><a href="https://www.operadeparis.fr/en/visits/palais-garnier" target="_blank">加尼葉歌劇院 Palais Garnier</a></div>
+                <div class="tl-desc" data-zh="延續音樂主題：登上華麗大階梯，仰望夏卡爾繪製的天頂壁畫。歌劇院本身就是一件藝術品，日間可自由參觀。" data-en="Continuing the music theme: climb the grand staircase and look up at Chagall's painted ceiling. The opera house itself is a work of art, open for daytime self-guided visits.">延續音樂主題：登上華麗大階梯，仰望夏卡爾繪製的天頂壁畫。歌劇院本身就是一件藝術品，日間可自由參觀。</div>
+                <div class="tl-meta"><span class="tl-tag stay" data-zh="🎭 音樂主題" data-en="🎭 Music theme">🎭 音樂主題</span><span class="tl-tag hours" data-zh="🕘 參觀每日 10:00–17:00（若有日場演出則關閉）· 出發前請查官網 ⚠" data-en="🕘 Visits daily 10:00–17:00 (closed on matinee days) · check site before going ⚠">🕘 每日 10:00–17:00（日場演出日關閉）· 出發前查官網 ⚠</span><span class="tl-tag look" data-zh="✨ 必看：夏卡爾天頂壁畫· 大階梯· 《歌劇魅影》第五號包廂" data-en="✨ Don't miss: Chagall ceiling · grand staircase · Phantom box no.5">✨ 必看：夏卡爾天頂壁畫·大階梯</span><span class="tl-tag addr"><a href="https://www.google.com/maps/search/?api=1&query=Palais+Garnier+Paris" target="_blank">📍 Place de l'Opéra</a></span></div>
+              </div>
+              <div class="tl-img"><img src="assets/garnier.jpg" alt="Palais Garnier" /></div>
+            </div>
+          </div>
+
+          <div class="transit-line"><span class="ic">🚕</span><span data-zh="取行李後前往北站（建議發車前 60–75 分鐘抵達）" data-en="Collect luggage, head to Gare du Nord (60–75 min before departure)">取行李後前往北站（建議發車前 60–75 分鐘抵達）</span></div>
+          <div class="tl-item is-transit" data-id="🚄">
+            <div class="tl-card">
+              <div class="tl-time" data-zh="約 19:45–20:00 抵站 · 21:02 發車" data-en="~19:45–20:00 at station · 21:02 departure">約 19:45–20:00 抵站 · 21:02 發車</div>
+              <div class="tl-title" data-zh="返回倫敦" data-en="Return to London">返回倫敦</div>
+              <div class="tl-desc" data-zh="搭乘 21:02 歐洲之星返回倫敦，22:30 抵達 St Pancras。帶著滿滿的藝術與音樂回憶結束旅程。" data-en="Board the 21:02 Eurostar back to London, arriving St Pancras at 22:30. End the trip with memories full of art and music.">搭乘 21:02 歐洲之星返回倫敦，22:30 抵達 St Pancras。帶著滿滿的藝術與音樂回憶結束旅程。</div>
+              <div class="tl-meta"><span class="tl-tag addr"><a href="https://www.google.com/maps/search/?api=1&query=Gare+du+Nord+Paris" target="_blank">📍 Gare du Nord</a></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MAP ===== -->
+  <section id="map" class="alt-bg">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-eyebrow" data-zh="路線地圖" data-en="Route Map">路線地圖</div>
+        <h2 data-zh="三天的足跡" data-en="Three Days on the Map">三天的足跡</h2>
+        <p data-zh="切換上方分頁可看到每一天的路線與停留點。點擊地圖標記可查看時間與導航連結。" data-en="Switch the day tabs above to see each day's route and stops. Click any marker for timing and a navigation link.">切換上方分頁可看到每一天的路線與停留點。點擊地圖標記可查看時間與導航連結。</p>
+      </div>
+      <div id="leafletMap"></div>
+      <p class="map-note" data-zh="地圖資料 © OpenStreetMap 貢獻者 · 標記顏色對應行程日" data-en="Map data © OpenStreetMap contributors · marker colours match each day">地圖資料 © OpenStreetMap 貢獻者 · 標記顏色對應行程日</p>
+    </div>
+  </section>
+
+  <!-- ===== DINING ===== -->
+  <section id="dining">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-eyebrow" data-zh="美食推薦" data-en="Where to Eat">美食推薦</div>
+        <h2 data-zh="一頓三星，幾頓暖心" data-en="One Star-Studded Lunch, Several Cosy Meals">一頓三星，幾頓暖心</h2>
+      </div>
+      <div class="diet-note">
+        <strong data-zh="飲食考量：" data-en="Dietary note: ">飲食考量：</strong>
+        <span data-zh="其中一位旅客不吃牛排、偏生的肉類、過肥的肉類，也不吃生魚片。以下推薦皆以全熟家禽、熟製海鮮、燉煮料理與蔬食為主；訂位時主動告知，巴黎的餐廳普遍樂意客製。" data-en="One traveller avoids steak, rare meat, overly fatty meat and sashimi. Every recommendation below centres on fully-cooked poultry, cooked seafood, braised dishes and vegetables; flag it when booking — Paris restaurants are generally happy to adapt.">其中一位旅客不吃牛排、偏生的肉類、過肥的肉類，也不吃生魚片。以下推薦皆以全熟家禽、熟製海鮮、燉煮料理與蔬食為主；訂位時主動告知，巴黎的餐廳普遍樂意客製。</span>
+      </div>
+      <div class="rec-grid">
+        <div class="rec-card featured">
+          <div class="rec-img"><img src="assets/kei.jpg" alt="Restaurant Kei" /></div>
+          <div class="rec-body">
+            <div class="rec-ribbon" data-zh="主推 · 米其林三星午餐" data-en="Top pick · 3-star Michelin lunch">主推 · 米其林三星午餐</div>
+            <div class="rec-name"><a href="https://restaurant-kei.fr/en" target="_blank">Restaurant Kei ⭐⭐⭐</a></div>
+            <div class="rec-meta" data-zh="9/19 週六午餐 · Discovery 套餐約 €195 · 第一區" data-en="Sat 9/19 lunch · Discovery menu ~€195 · 1st arr.">9/19 週六午餐 · Discovery 套餐約 €195 · 第一區</div>
+            <div class="rec-desc" data-zh="全巴黎週六最值得鎖定的三星午餐，料理精緻而非生食，可完美配合飲食限制，且地點與藝術行程動線相連。" data-en="The Saturday three-star lunch worth locking in: refined, not raw, easily tailored to the dietary needs, and perfectly on the art-route line.">全巴黎週六最值得鎖定的三星午餐，料理精緻而非生食，可完美配合飲食限制，且地點與藝術行程動線相連。</div>
+            <div class="rec-pick" data-zh="✓ 已排入 9/19 行程" data-en="✓ Built into the 9/19 plan">✓ 已排入 9/19 行程</div>
+          </div>
+        </div>
+        <div class="rec-card">
+          <div class="rec-img"><img src="assets/coq-au-vin.jpg" alt="Chez Fernand" /></div>
+          <div class="rec-body">
+            <div class="rec-ribbon" data-zh="週日午餐" data-en="Sunday lunch">週日午餐</div>
+            <div class="rec-name"><a href="https://www.restaurantchezfernand.fr/en/" target="_blank">Chez Fernand</a></div>
+            <div class="rec-meta" data-zh="左岸經典 bistro · 約 €30–50 · 每日營業" data-en="Classic Left-Bank bistro · ~€30–50 · open daily">左岸經典 bistro · 約 €30–50 · 每日營業</div>
+            <div class="rec-desc" data-zh="紅酒燉雞與烤雞做得地道，全熟燉煮、毫無生食疑慮，是返程前的完美一餐。" data-en="Excellent coq au vin and roast chicken — slow-cooked, fully done, no raw-food worries. A perfect meal before the train home.">紅酒燉雞與烤雞做得地道，全熟燉煮、毫無生食疑慮，是返程前的完美一餐。</div>
+            <div class="rec-pick" data-zh="✓ 已排入 9/20 行程" data-en="✓ Built into the 9/20 plan">✓ 已排入 9/20 行程</div>
+          </div>
+        </div>
+        <div class="rec-card">
+          <div class="rec-img"><img src="assets/eurostar.jpg" alt="Terminus Nord" /></div>
+          <div class="rec-body">
+            <div class="rec-ribbon" data-zh="抵達當晚宵夜" data-en="Arrival-night supper">抵達當晚宵夜</div>
+            <div class="rec-name"><a href="https://www.terminusnord.com/" target="_blank">Terminus Nord</a></div>
+            <div class="rec-meta" data-zh="北站正對面 · Belle Époque brasserie · 營業至深夜" data-en="Opposite the station · Belle Époque brasserie · open late">北站正對面 · Belle Époque brasserie · 營業至深夜</div>
+            <div class="rec-desc" data-zh="深夜抵達也吃得到熱食：烤雞、香煎魚、法式洋蔥湯，避開生蠔即可。" data-en="Hot food even on a late arrival: roast chicken, pan-seared fish, French onion soup — just skip the oysters.">深夜抵達也吃得到熱食：烤雞、香煎魚、法式洋蔥湯，避開生蠔即可。</div>
+            <div class="rec-pick" data-zh="✓ 已排入 9/18 行程" data-en="✓ Built into the 9/18 plan">✓ 已排入 9/18 行程</div>
+          </div>
+        </div>
+        <div class="rec-card">
+          <div class="rec-body" style="padding-top:22px;">
+            <div class="rec-ribbon" data-zh="平價備案 · 想省一點時" data-en="Value alternative">平價備案 · 想省一點時</div>
+            <div class="rec-name"><a href="https://www.fredericsimonin.com/en/" target="_blank">Frédéric Simonin</a></div>
+            <div class="rec-meta" data-zh="現代法式 · 午間三道約 €85（週一至週五）· 第十七區" data-en="Modern French · 3-course lunch ~€85 (Mon–Fri) · 17th arr.">現代法式 · 午間三道約 €85（週一至週五）· 第十七區</div>
+            <div class="rec-desc" data-zh="若覺得三星午餐預算偏高，這家以精緻醬汁聞名的現代法式是高 CP 替代——海鮮與家禽料理皆細膩。注意僅平日供應午間套餐，本趟若想嘗試需調整為週五當天（但抵達較晚），故列為備案參考。" data-en="If the three-star budget feels steep, this modern-French address known for its sauces is a high-value alternative — refined seafood and poultry. Note the value lunch is weekday-only, so it's listed here as a reference option.">若覺得三星午餐預算偏高，這家以精緻醬汁聞名的現代法式是高 CP 替代——海鮮與家禽料理皆細膩。注意僅平日供應午間套餐，故列為備案參考。</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MUSIC ===== -->
+  <section id="music" class="alt-bg">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-eyebrow" data-zh="古典樂之夜" data-en="A Night of Classical Music">古典樂之夜</div>
+        <h2 data-zh="在彩繪玻璃下聽四季" data-en="The Four Seasons Beneath Stained Glass">在彩繪玻璃下聽四季</h2>
+      </div>
+      <div class="callout" style="margin-bottom:24px;">
+        <h3 data-zh="🎻 主選：聖禮拜堂燭光音樂會（9/19 週六晚）" data-en="🎻 Main pick: Sainte-Chapelle candlelit concert (Sat 9/19)">🎻 主選：聖禮拜堂燭光音樂會（9/19 週六晚）</h3>
+        <p data-zh="在 13 世紀哥德教堂的彩繪玻璃環抱下，由巴黎室內樂團演奏韋瓦第《四季》與巴洛克經典，約一小時。建築、藝術與音樂在此交織，是整趟旅程的情感高潮。門票約 €29–52，務必提前線上訂位（夏秋兩季常售罄）。" data-en="Ringed by the stained glass of a 13th-century Gothic chapel, a Paris chamber ensemble performs Vivaldi's Four Seasons and Baroque favourites for about an hour. Architecture, art and music intertwine — the emotional peak of the whole trip. Tickets ~€29–52; book online well ahead (often sold out in summer/autumn)." >在 13 世紀哥德教堂的彩繪玻璃環抱下，由巴黎室內樂團演奏韋瓦第《四季》與巴洛克經典，約一小時。建築、藝術與音樂在此交織，是整趟旅程的情感高潮。門票約 €29–52，務必提前線上訂位（夏秋兩季常售罄）。</p>
+        <p style="margin-top:10px;"><a href="https://www.classictic.com/en/city/paris-t7/paris-events-ec1/concerts-in-la-sainte-chapelle-el216/" target="_blank" data-zh="→ 查看場次與訂票（Classictic）" data-en="→ Check dates & tickets (Classictic)">→ 查看場次與訂票（Classictic）</a></p>
+      </div>
+      <div class="surprise-grid">
+        <div class="surprise-card">
+          <div class="s-ic">🎼</div>
+          <h4 data-zh="替代方案：巴黎愛樂廳" data-en="Alternative: Philharmonie de Paris">替代方案：巴黎愛樂廳</h4>
+          <p data-zh="若偏好正規交響樂團，九月新樂季開鑼，可查當週節目。地點在 19 區，需搭地鐵前往。" data-en="For a full symphony orchestra, the new season opens in September — check that week's programme. Located in the 19th, reachable by Métro.">若偏好正規交響樂團，九月新樂季開鑼，可查當週節目。地點在 19 區，需搭地鐵前往。</p>
+          <p style="margin-top:8px;"><a href="https://philharmoniedeparis.fr/en" target="_blank">→ philharmoniedeparis.fr</a></p>
+        </div>
+        <div class="surprise-card">
+          <div class="s-ic">🎭</div>
+          <h4 data-zh="替代方案：加尼葉歌劇院" data-en="Alternative: Palais Garnier">替代方案：加尼葉歌劇院</h4>
+          <p data-zh="若當週有芭蕾或歌劇演出，在夏卡爾天頂下觀賞別具意義；無演出時也可日間參觀建築。" data-en="If a ballet or opera is on that week, watching beneath Chagall's ceiling is special; otherwise visit the building by day.">若當週有芭蕾或歌劇演出，在夏卡爾天頂下觀賞別具意義；無演出時也可日間參觀建築。</p>
+          <p style="margin-top:8px;"><a href="https://www.operadeparis.fr/en" target="_blank">→ operadeparis.fr</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SURPRISES ===== -->
+  <section id="surprise">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-eyebrow" data-zh="給老朋友的驚喜" data-en="Surprises for the Veteran">給老朋友的驚喜</div>
+        <h2 data-zh="去過兩次，也還沒看夠" data-en="Twice Before, Still More to See">去過兩次，也還沒看夠</h2>
+        <p data-zh="主行程以初訪者為核心，這些散落在旅程中的彩蛋則是留給已經去過兩次的旅伴——冷門卻深刻的藝術與音樂體驗。" data-en="The main plan is built for the first-timer; these scattered easter eggs are for the companion who's been twice — quieter but deeper art-and-music moments.">主行程以初訪者為核心，這些散落在旅程中的彩蛋則是留給已經去過兩次的旅伴——冷門卻深刻的藝術與音樂體驗。</p>
+      </div>
+      <div class="surprise-grid">
+        <div class="surprise-card">
+          <div class="s-ic">🌅</div>
+          <h4 data-zh="《印象·日出》本尊" data-en="The original Impression, Sunrise">《印象·日出》本尊</h4>
+          <p data-zh="在瑪摩丹莫內美術館親見定義整個畫派名稱的那幅畫，連去過兩次的人多半也錯過。" data-en="See the very painting that named the movement at the Marmottan Monet — even twice-over visitors often miss it.">在瑪摩丹莫內美術館親見定義整個畫派名稱的那幅畫，連去過兩次的人多半也錯過。</p>
+        </div>
+        <div class="surprise-card">
+          <div class="s-ic">🌹</div>
+          <h4 data-zh="羅丹的玫瑰花園" data-en="Rodin's rose garden">羅丹的玫瑰花園</h4>
+          <p data-zh="在雕塑與玫瑰之間散步，《沉思者》就在戶外，是巴黎最優雅的喘息片刻。" data-en="Wander among sculptures and roses with The Thinker outdoors — Paris's most elegant breather.">在雕塑與玫瑰之間散步，《沉思者》就在戶外，是巴黎最優雅的喘息片刻。</p>
+        </div>
+        <div class="surprise-card">
+          <div class="s-ic">🎻</div>
+          <h4 data-zh="教堂裡的四季" data-en="Vivaldi inside the chapel">教堂裡的四季</h4>
+          <p data-zh="不只是參觀聖禮拜堂，而是在彩繪玻璃下聽一場現場古典樂——體驗層次完全不同。" data-en="Not just visiting Sainte-Chapelle, but hearing live classical music beneath its glass — a wholly different experience.">不只是參觀聖禮拜堂，而是在彩繪玻璃下聽一場現場古典樂——體驗層次完全不同。</p>
+        </div>
+        <div class="surprise-card">
+          <div class="s-ic">🖼️</div>
+          <h4 data-zh="夏卡爾的天頂" data-en="Chagall's ceiling">夏卡爾的天頂</h4>
+          <p data-zh="加尼葉歌劇院的天頂壁畫由夏卡爾繪製，色彩斑斕，藝術迷不該錯過。" data-en="The Palais Garnier ceiling, painted by Chagall in vivid colour — a must for art lovers.">加尼葉歌劇院的天頂壁畫由夏卡爾繪製，色彩斑斕，藝術迷不該錯過。</p>
+        </div>
+      </div>
+
+      <div class="callout" style="margin-top:32px;">
+        <h3 data-zh="🏛️ 關於羅浮宮" data-en="🏛️ About the Louvre">🏛️ 關於羅浮宮</h3>
+        <p data-zh="羅浮宮經典但耗時、人潮龐大。本行程以橘園與奧賽兩座印象派殿堂為核心，因此將羅浮宮列為「選擇性」——若 9/19 上午精力充沛，可在午餐前快速造訪幾件鎮館之寶（蒙娜麗莎、勝利女神、米羅的維納斯），但會壓縮時間。建議優先確保橘園、奧賽與音樂會的從容節奏。" data-en="The Louvre is iconic but time-consuming and crowded. This plan centres on the Orangerie and Orsay, so the Louvre is kept “optional” — if you're energetic on Saturday morning you could dash in for a few highlights (Mona Lisa, Winged Victory, Venus de Milo) before lunch, but it tightens the schedule. We'd prioritise an unhurried pace at the Orangerie, Orsay and the concert.">羅浮宮經典但耗時、人潮龐大。本行程以橘園與奧賽兩座印象派殿堂為核心，因此將羅浮宮列為「選擇性」——若 9/19 上午精力充沛，可在午餐前快速造訪幾件鎮館之寶（蒙娜麗莎、勝利女神、米羅的維納斯），但會壓縮時間。建議優先確保橘園、奧賽與音樂會的從容節奏。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MORE SPOTS / 遺珠之憾 ===== -->
+  <section id="more" class="alt-bg">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-eyebrow" data-zh="遺珠之憾" data-en="More to Explore">遺珠之憾</div>
+        <h2 data-zh="時間不夠，但值得一看" data-en="Didn't Quite Fit — but Worth It">時間不夠，但值得一看</h2>
+        <p data-zh="以下是研究過、但因三天時間有限而未排入主行程的景點。如果想調整行程，可以拿這些替換上面的選擇性項目。所有開放時間均已查證（以官網為準）。" data-en="Spots we researched but couldn't squeeze into three days. Swap any of them in for the optional items above if you'd like to adjust. Opening hours verified (check official sites to confirm).">以下是研究過、但因三天時間有限而未排入主行程的景點。如果想調整行程，可以拿這些替換上面的選擇性項目。所有開放時間均已查證（以官網為準）。</p>
+      </div>
+      <div class="more-grid">
+
+        <div class="more-card">
+          <div class="more-head"><span class="more-ic">🏛️</span><span class="more-cat" data-zh="藝術·免費" data-en="Art · Free">藝術·免費</span></div>
+          <h4><a href="https://www.petitpalais.paris.fr/en" target="_blank">小皇宮 Petit Palais</a></h4>
+          <p data-zh="1900 世博為巴黎市立美術館，內部裝飾華麗，收藏從古典到印象派。免費入場，人潮較少，是藝術迷的私房點。" data-en="The City of Paris's fine-arts museum, built for the 1900 World's Fair. Sumptuous interiors and a free collection from antiquity to Impressionism — a quiet favourite for art lovers.">1900 世博為巴黎市立美術館，內部裝飾華麗，收藏從古典到印象派。免費入場，人潮較少，是藝術迷的私房點。</p>
+          <div class="more-meta"><span data-zh="🕘 週二–日 10:00–18:00（週一休）" data-en="🕘 Tue–Sun 10:00–18:00 (closed Mon)">🕘 週二–日 10:00–18:00（週一休）</span></div>
+        </div>
+
+        <div class="more-card">
+          <div class="more-head"><span class="more-ic">🖼️</span><span class="more-cat" data-zh="藝術·經典" data-en="Art · Icon">藝術·經典</span></div>
+          <h4><a href="https://www.louvre.fr/en" target="_blank">羅浮宮 Musée du Louvre</a></h4>
+          <p data-zh="世界最大藝術博物館。由於耗時、人潮龐大，本行程未列為必訪；若想一認蒙娜麗莎與勝利女神，可預約週六上午開門時段快速進出。" data-en="The world's largest art museum. Time-consuming and crowded, so not a must here — but if you want the Mona Lisa and Winged Victory, book an opening-time Saturday slot for a quick visit.">世界最大藝術博物館。由於耗時、人潮龐大，本行程未列為必訪；若想一認蒙娜麗莎，可預約週六開門時段快速進出。</p>
+          <div class="more-meta"><span data-zh="🕘 週三–一 9:00–18:00（週二休）· 9/19 開放" data-en="🕘 Wed–Mon 9:00–18:00 (closed Tue) · open Sat 19">🕘 週三–一 9:00–18:00（週二休）· 9/19開</span></div>
+        </div>
+
+        <div class="more-card">
+          <div class="more-head"><span class="more-ic">🎼</span><span class="more-cat" data-zh="音樂·古典樂" data-en="Music · Classical">音樂·古典樂</span></div>
+          <h4><a href="https://philharmoniedeparis.fr/en" target="_blank">巴黎愛樂廳 Philharmonie de Paris</a></h4>
+          <p data-zh="尚·努維爾設計的現代音樂廳，是巴黎管弦樂團主場。若週六晚有演出，是古典樂迷的首選替代方案（可取代聖禮拜堂音樂會）。附設音樂博物館。" data-en="Jean Nouvel's modern concert hall, home of the Orchestre de Paris. If there's a Saturday-night programme, it's the top alternative for classical fans (in place of the Sainte-Chapelle concert). Music museum on site.">尚·努維爾設計的現代音樂廳，是巴黎管弦樂團主場。若週六晚有演出，是古典樂迷的首選替代方案。附設音樂博物館。</p>
+          <div class="more-meta"><span data-zh="🎵 視當晚節目而定 · 建議提前訂票" data-en="🎵 Depends on the night's programme · book ahead">🎵 視當晚節目而定 · 提前訂票</span></div>
+        </div>
+
+        <div class="more-card">
+          <div class="more-head"><span class="more-ic">⛪</span><span class="more-cat" data-zh="地標·視野" data-en="Landmark · View">地標·視野</span></div>
+          <h4><a href="https://www.sacre-coeur-montmartre.com/english/" target="_blank">蒙馬特聖心堂 Sacré-Cœur</a></h4>
+          <p data-zh="白色穹頂高踞巴黎最高點，俯瞰全城。周圍蒙馬特區是畫家與酒館雲集的藝術老區，適合黃昏散步。靠近北站，抵達當晚可順道一遊。" data-en="The white-domed basilica crowns Paris's highest point with a sweeping city view. The Montmartre quarter around it is the old artists' district — lovely at dusk and close to Gare du Nord.">白色穹頂高踞巴黎最高點，俯瞰全城。周圍蒙馬特區是畫家與酒館雲集的藝術老區，靠近北站。</p>
+          <div class="more-meta"><span data-zh="🕘 每日 6:30–22:30 · 免費" data-en="🕘 Daily 6:30–22:30 · free">🕘 每日 6:30–22:30 · 免費</span></div>
+        </div>
+
+        <div class="more-card">
+          <div class="more-head"><span class="more-ic">📖</span><span class="more-cat" data-zh="文化·散步" data-en="Culture · Stroll">文化·散步</span></div>
+          <h4><a href="https://shakespeareandcompany.com/" target="_blank">莎士比亞書店 Shakespeare and Company</a></h4>
+          <p data-zh="塞納河左岸、聖母院對岸的傳奇英文書店，海明威與費茲傑羅曾是常客。適合聖母院參觀後順路進去逛逛。" data-en="The legendary English-language bookshop on the Left Bank facing Notre-Dame; once frequented by Hemingway and Beckett. A perfect detour after visiting the cathedral.">塞納河左岸、聖母院對岸的傳奇英文書店，海明威與費茲傑羅曾是常客。適合聖母院參觀後順路進去逛逛。</p>
+          <div class="more-meta"><span data-zh="🕘 每日約 10:00–20:00" data-en="🕘 Daily ~10:00–20:00">🕘 每日約 10:00–20:00</span></div>
+        </div>
+
+        <div class="more-card">
+          <div class="more-head"><span class="more-ic">🌳</span><span class="more-cat" data-zh="公園·休憩" data-en="Park · Relax">公園·休憩</span></div>
+          <h4><a href="https://www.google.com/maps/search/?api=1&query=Jardin+du+Luxembourg" target="_blank">盧森堡公園 Jardin du Luxembourg</a></h4>
+          <p data-zh="左岸最受喜愛的公園，參議院前的法式幾何花園、單車座椅與噴水池。適合週日午餐後散步、與巴黎人一起曬太陽。" data-en="The Left Bank's best-loved park, with formal gardens before the Senate, single chairs by the fountain and chestnut alleys. Ideal for a Sunday post-lunch stroll among Parisians.">左岸最受喜愛的公園，參議院前的法式花園、單車座椅與噴水池。適合週日午餐後散步。</p>
+          <div class="more-meta"><span data-zh="🕘 每日約 7:30–日落 · 免費" data-en="🕘 Daily ~7:30–dusk · free">🕘 每日約 7:30–日落 · 免費</span></div>
+        </div>
+
+      </div>
+      <div class="callout" style="margin-top:28px;">
+        <h3 data-zh="⚠️ 關於龐畢度中心（Centre Pompidou）" data-en="⚠️ About the Centre Pompidou">⚠️ 關於龐畢度中心（Centre Pompidou）</h3>
+        <p data-zh="這座現代藝術地標已於 2025 年 9 月起閉館進行大規模整修，預計至 2030 年，因此 2026 年 9 月期間無法參觀，特此說明以免撲空。想看現代藝術可改訪東京宮（Palais de Tokyo）。" data-en="This modern-art landmark closed in September 2025 for a major renovation running until around 2030, so it cannot be visited in September 2026. For modern art, consider the Palais de Tokyo instead.">這座現代藝術地標已於 2025 年 9 月起閉館進行大規模整修，預計至 2030 年，因此 2026 年 9 月期間無法參觀。想看現代藝術可改訪東京宮（Palais de Tokyo）。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="foot">
+    <div class="foot-title">🗼 Bon voyage à Paris</div>
+    <p data-zh="2026年9月18–20日 · 藝術、音樂與美食的三日小旅行" data-en="18–20 September 2026 · Three days of art, music and gastronomy">2026年9月18–20日 · 藝術、音樂與美食的三日小旅行</p>
+    <p style="margin-top:10px; font-size:12px; opacity:.7;" data-zh="地圖資料 © OpenStreetMap 貢獻者 · 開放時間與票價以官方網站為準" data-en="Map data © OpenStreetMap contributors · hours and prices subject to official websites">地圖資料 © OpenStreetMap 貢獻者 · 開放時間與票價以官方網站為準</p>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin="anonymous"></script>
+  <script src="map.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
