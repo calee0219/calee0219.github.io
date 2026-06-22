@@ -157,4 +157,39 @@
       applyFilter(btn.dataset.day);
     });
   });
+
+  // ===== Coffee walk map =====
+  const coffeeContainer = document.getElementById('coffeeMap');
+  if (coffeeContainer) {
+    const cafes = [
+      { id: 'M', lat: 59.9233, lng: 10.7506, route: true, zh: 'Mathallen 美食廳（起點）', en: 'Mathallen Food Hall (start)' },
+      { id: '1', lat: 59.9255, lng: 10.7560, route: true, zh: 'Tim Wendelboe', en: 'Tim Wendelboe' },
+      { id: '2', lat: 59.9236, lng: 10.7588, route: true, zh: 'Supreme Roastworks', en: 'Supreme Roastworks' },
+      { id: '3', lat: 59.9268, lng: 10.7575, route: true, zh: 'Kuro Oslo', en: 'Kuro Oslo' },
+      { id: 'F', lat: 59.9183, lng: 10.7376, route: false, zh: 'Fuglen（市中心）', en: 'Fuglen (centre)' },
+      { id: 'J', lat: 59.9281, lng: 10.7370, route: false, zh: 'Java / Mocca（St. Hanshaugen）', en: 'Java / Mocca (St. Hanshaugen)' }
+    ];
+    const cmap = L.map('coffeeMap', { scrollWheelZoom: false }).setView([59.924, 10.752], 14);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+      maxZoom: 19
+    }).addTo(cmap);
+    const brown = '#8a5a2b';
+    const cafeIcon = (label, onRoute) => L.divIcon({
+      className: 'coffee-marker',
+      html: `<div style="background:${onRoute ? brown : '#b9986a'};color:#fff;width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font:600 11px 'DM Sans',sans-serif;border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,0.3);">${label}</div>`,
+      iconSize: [24, 24], iconAnchor: [12, 12]
+    });
+    cafes.forEach(c => {
+      L.marker([c.lat, c.lng], { icon: cafeIcon(c.id, c.route) })
+        .bindPopup(`<div style="font-family:'DM Sans','Noto Sans TC',sans-serif;"><strong data-zh="${c.zh}" data-en="${c.en}">${c.zh}</strong></div>`)
+        .addTo(cmap);
+    });
+    // Walking route: Mathallen -> Tim Wendelboe -> Supreme -> Kuro
+    const walkPath = [
+      [59.9233, 10.7506], [59.9255, 10.7560], [59.9236, 10.7588], [59.9268, 10.7575]
+    ];
+    L.polyline(walkPath, { color: brown, weight: 4, dashArray: '8,8', opacity: 0.85 }).addTo(cmap);
+    cmap.fitBounds(cafes.map(c => [c.lat, c.lng]), { padding: [40, 40] });
+  }
 })();

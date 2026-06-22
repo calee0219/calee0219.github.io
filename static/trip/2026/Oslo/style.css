@@ -499,3 +499,49 @@ img { max-width: 100%; height: auto; }
 .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.5s ease, transform 0.5s ease; }
 .fade-in.visible { opacity: 1; transform: translateY(0); }
 .timeline-item.optional-item.fade-in.visible { opacity: 0.9; }
+
+
+/* ===== COFFEE WALK ROUTE STEPS ===== */
+.route-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+.route-step {
+  display: flex;
+  gap: 0.9rem;
+  align-items: flex-start;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 0.9rem 1.1rem;
+  box-shadow: var(--shadow-sm);
+}
+.route-num {
+  flex: 0 0 auto;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #8a5a2b;
+  color: #fff;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  margin-top: 0.1rem;
+}
+.route-step strong { color: var(--color-primary); }
+.route-step p {
+  margin: 0.3rem 0 0;
+  font-size: 0.88rem;
+  color: var(--color-text);
+  line-height: 1.6;
+}
+.route-walk {
+  display: inline-block;
+  margin-left: 0.5rem;
+  font-size: 0.78rem;
+  color: #8a5a2b;
+  font-weight: 600;
+}
