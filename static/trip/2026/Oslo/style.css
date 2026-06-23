@@ -608,3 +608,16 @@ img { max-width: 100%; height: auto; }
   text-decoration: line-through;
   color: var(--color-text-light);
 }
+
+
+/* Arrival-night note callout */
+.arrival-note {
+  margin-top: 0.7rem;
+  padding: 0.7rem 0.9rem;
+  background: rgba(44, 93, 143, 0.07);
+  border-left: 3px solid #2c5d8f;
+  border-radius: 6px;
+  font-size: 0.86rem;
+  line-height: 1.7;
+  color: #3a4a5a;
+}

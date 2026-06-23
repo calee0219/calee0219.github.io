@@ -28,9 +28,9 @@
     { id: '5', day: 1, lat: 59.9075, lng: 10.7533, highlight: true,
       zh: '奧斯陸歌劇院（屋頂）', en: 'Oslo Opera House (roof)', dzh: '大理石斜面屋頂，留白與光線', den: 'Sloping marble roof, light & space' },
     { id: '6', day: 1, lat: 59.9018, lng: 10.7560, highlight: false,
-      zh: 'Sørenga 海水泳池', en: 'Sørenga seawater pool', dzh: '峽灣海水泳池，傍晚靜水', den: 'Fjord seawater pool, calm evening' },
-    { id: '7', day: 1, lat: 59.9063, lng: 10.7556, highlight: false,
-      zh: 'Munch 孟克美術館（選擇性）', en: 'MUNCH Museum (optional)', dzh: '《吶喊》原作，時間夠再加', den: "Munch's 'Scream', only if time allows" },
+      zh: 'Sørenga 海水泳池（略停）', en: 'Sørenga seawater pool (brief)', dzh: '峽灣海水泳池，上山前小坐', den: 'Fjord seawater pool, a brief pause' },
+    { id: '7', day: 1, lat: 59.9836, lng: 10.6790, highlight: true,
+      zh: 'Frognerseteren 森林觀景（黃昏）', en: 'Frognerseteren forest view (golden hour)', dzh: '搭最美地鐵 1 號線上山，城市即森林、峽灣全景', den: 'Scenic Metro 1 up the hill: forest & fjord panorama' },
 
     // Day 2 — Fjord island hopping (the archipelago day)
     { id: '8', day: 2, lat: 59.9090, lng: 10.7335, highlight: false,
@@ -46,29 +46,28 @@
     { id: '13', day: 2, lat: 59.8870, lng: 10.7060, highlight: false,
       zh: 'Nakholmen（選擇性）', en: 'Nakholmen (optional)', dzh: '跳水台、最佳天際線視角', den: 'Diving jetty, best skyline view' },
 
-    // Day 3 — Forest & sculpture calm, then home
+    // Day 3 — Sculpture & coffee, an easy goodbye
     { id: '14', day: 3, lat: 59.9270, lng: 10.7000, highlight: true,
-      zh: 'Vigeland 雕塑公園', en: 'Vigeland Sculpture Park', dzh: '212 座雕塑，清晨人少最靜', den: '212 sculptures, quietest early morning' },
-    { id: '15', day: 3, lat: 59.9268, lng: 10.7045, highlight: false,
-      zh: 'Majorstuen（轉地鐵 1 號線）', en: 'Majorstuen (Metro line 1)', dzh: '搭 Holmenkollbanen 上山', den: 'Board the Holmenkollen metro line' },
-    { id: '16', day: 3, lat: 59.9836, lng: 10.6790, highlight: true,
-      zh: 'Frognerseteren 森林觀景', en: 'Frognerseteren forest view', dzh: '森林、湖泊與峽灣全景，城市即森林', den: 'Forest, lake & fjord panorama above Oslo' },
-    { id: '17', day: 3, lat: 59.9639, lng: 10.6675, highlight: false,
-      zh: 'Holmenkollen 跳台（選擇性）', en: 'Holmenkollen ski jump (optional)', dzh: '下山途中可停，眺望全城', den: 'Optional stop on the way down' },
-    { id: '18', day: 3, lat: 59.9106, lng: 10.7525, highlight: false,
-      zh: '返回 Oslo S · 機場快線', en: 'Back to Oslo S · airport express', dzh: '取行李，Flytoget 19 分鐘往機場', den: 'Collect bags, Flytoget 19 min to OSL' }
+      zh: 'Vigeland 雕塑公園（清晨）', en: 'Vigeland Sculpture Park (early)', dzh: '212 座雕塑，清晨人少最靜', den: '212 sculptures, quietest early morning' },
+    { id: '15', day: 3, lat: 59.9183, lng: 10.7376, highlight: true,
+      zh: '市區咖啡早午（Fuglen / Java）', en: 'Central café brunch (Fuglen / Java)', dzh: '北歐寧靜的告別：深焙 + 點心', den: 'A calm Nordic goodbye: deep roast + pastry' },
+    { id: '16', day: 3, lat: 59.9133, lng: 10.7390, highlight: false,
+      zh: 'Karl Johans gate 漫步（選擇性）', en: 'Karl Johans gate stroll (optional)', dzh: '最後漫步、買伴手禮', den: 'Last stroll, souvenirs' },
+    { id: '17', day: 3, lat: 59.9106, lng: 10.7525, highlight: false,
+      zh: '取行李 · Oslo S 機場快線', en: 'Collect bags · Oslo S airport express', dzh: 'Flytoget 19 分鐘往機場，18:50 起飛', den: 'Flytoget 19 min to OSL, 18:50 departure' }
   ];
 
   // ===== Routes =====
   const routes = {
     1: [
       [59.9106,10.7525],[59.9127,10.7461],[59.9120,10.7335],[59.9075,10.7363],
-      [59.9075,10.7533],[59.9018,10.7560],[59.9063,10.7556]
+      [59.9075,10.7533],[59.9018,10.7560]
     ],
     // Day 2 walking-on-island segments are tiny; the day is mostly ferry (drawn separately)
     2: [],
+    // Day 3 = short central walk: Vigeland -> café -> Karl Johans -> Oslo S
     3: [
-      [59.9270,10.7000],[59.9268,10.7045]
+      [59.9270,10.7000],[59.9183,10.7376],[59.9133,10.7390],[59.9106,10.7525]
     ]
   };
 
@@ -77,18 +76,16 @@
     [59.9090,10.7335],[59.8957,10.7245],[59.8836,10.7320],
     [59.8862,10.7360],[59.8920,10.7150],[59.8870,10.7060],[59.9090,10.7335]
   ];
-  // Metro leg for Day 3 (dashed) up to the forest
-  const metroDay3 = [[59.9268,10.7045],[59.9639,10.6675],[59.9836,10.6790]];
-  const returnDay3 = [[59.9836,10.6790],[59.9106,10.7525]];
+  // Metro leg for Day 1 evening (dashed) up to the forest
+  const metroDay1 = [[59.9018,10.7560],[59.9268,10.7045],[59.9639,10.6675],[59.9836,10.6790]];
 
   const layers = { 1: L.layerGroup(), 2: L.layerGroup(), 3: L.layerGroup() };
 
   // polylines
   L.polyline(routes[1], { color: dayColors[1], weight: 4, opacity: 0.85 }).addTo(layers[1]);
+  L.polyline(metroDay1, { color: dayColors[1], weight: 3, opacity: 0.7, dashArray: '4, 8' }).addTo(layers[1]);
   L.polyline(ferryDay2, { color: dayColors[2], weight: 3, opacity: 0.8, dashArray: '8, 8' }).addTo(layers[2]);
   L.polyline(routes[3], { color: dayColors[3], weight: 4, opacity: 0.85 }).addTo(layers[3]);
-  L.polyline(metroDay3, { color: dayColors[3], weight: 3, opacity: 0.7, dashArray: '4, 8' }).addTo(layers[3]);
-  L.polyline(returnDay3, { color: dayColors[3], weight: 2, opacity: 0.5, dashArray: '2, 10' }).addTo(layers[3]);
 
   function createMarkerIcon(label, day, isHighlight) {
     const color = dayColors[day] || '#15263b';
@@ -125,7 +122,7 @@
       <div style="font-weight:600;margin-bottom:4px;">Route Legend</div>
       <div><span style="display:inline-block;width:18px;height:3px;background:${dayColors[1]};margin-right:6px;vertical-align:middle;"></span><span data-zh="Day 1 城市的安靜面" data-en="Day 1 The quiet city">Day 1 城市的安靜面</span></div>
       <div><span style="display:inline-block;width:18px;height:0;border-top:3px dashed ${dayColors[2]};margin-right:6px;vertical-align:middle;"></span><span data-zh="Day 2 峽灣跳島（渡輪）" data-en="Day 2 Island hopping (ferry)">Day 2 峽灣跳島（渡輪）</span></div>
-      <div><span style="display:inline-block;width:18px;height:3px;background:${dayColors[3]};margin-right:6px;vertical-align:middle;"></span><span data-zh="Day 3 森林與雕塑" data-en="Day 3 Forest & sculpture">Day 3 森林與雕塑</span></div>
+      <div><span style="display:inline-block;width:18px;height:3px;background:${dayColors[3]};margin-right:6px;vertical-align:middle;"></span><span data-zh="Day 3 雕塑與咖啡" data-en="Day 3 Sculpture & coffee">Day 3 雕塑與咖啡</span></div>
     `;
     return div;
   };
