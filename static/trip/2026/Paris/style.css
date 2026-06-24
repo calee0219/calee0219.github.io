@@ -86,7 +86,8 @@ a:hover { text-decoration: underline; }
 @keyframes bob { 0%,100%{transform:translate(-50%,0);} 50%{transform:translate(-50%,8px);} }
 
 /* ===== SECTION ===== */
-section { padding: 64px 0; }
+section { padding: 64px 0; scroll-margin-top: 72px; }
+header[id], section[id], div[id] { scroll-margin-top: 72px; }
 .section-head { text-align: center; margin-bottom: 40px; }
 .section-eyebrow { font-family: var(--font-hand); font-size: 24px; color: var(--color-accent); }
 .section-head h2 { font-family: var(--font-display); font-weight: 600; font-size: clamp(28px, 5vw, 44px); color: var(--color-primary); line-height: 1.1; }
