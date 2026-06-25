@@ -621,3 +621,46 @@ img { max-width: 100%; height: auto; }
   line-height: 1.7;
   color: #3a4a5a;
 }
+
+/* Highlighted TODO group (reservations) */
+.todo-group-highlight {
+  background: var(--color-accent-light);
+  border: 1px solid var(--color-border);
+  border-left: 4px solid var(--color-accent);
+  border-radius: var(--radius);
+  padding: 1.1rem 1.3rem 0.6rem;
+  margin-bottom: 1.8rem;
+  box-shadow: var(--shadow-sm);
+}
+.todo-group-highlight h3 { color: var(--color-primary); }
+
+/* Oslo Pass comparison */
+.pass-table-wrap { overflow-x: auto; margin: 1.2rem 0; }
+.pass-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  background: var(--color-surface);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+.pass-table th, .pass-table td {
+  padding: 0.7rem 0.9rem;
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+  vertical-align: top;
+}
+.pass-table th { background: var(--color-primary); color: #fff; font-weight: 600; }
+.pass-table tr:last-child td { border-bottom: none; }
+.pass-table .row-best { background: #eef9f1; }
+.pass-table .row-best td:first-child { font-weight: 700; color: var(--color-success); }
+.pass-verdict {
+  background: #eef9f1;
+  border: 1px solid #cde9d6;
+  border-left: 4px solid var(--color-success);
+  border-radius: var(--radius);
+  padding: 1rem 1.2rem;
+  margin-top: 1rem;
+}
+.pass-verdict strong { color: var(--color-success); }

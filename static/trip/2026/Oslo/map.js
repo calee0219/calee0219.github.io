@@ -128,6 +128,25 @@
     </div>
   `).addTo(map);
 
+  // ===== Airport marker + hotel⇄airport Flytoget link (always visible) =====
+  const airport = { lat: 60.1939, lng: 11.1004, zh: '奧斯陸機場 OSL Gardermoen', en: 'Oslo Airport (OSL Gardermoen)', dzh: 'Flytoget 機場快線 19 分鐘直達 Oslo S', den: 'Flytoget airport express, 19 min to Oslo S' };
+  const airportIcon = L.divIcon({
+    className: 'airport-marker',
+    html: `<div style="background:#15263b;color:#fff;width:30px;height:30px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);display:flex;align-items:center;justify-content:center;border:3px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,0.35);"><span style="transform:rotate(45deg);font-size:14px;">✈️</span></div>`,
+    iconSize: [30, 30], iconAnchor: [15, 30], popupAnchor: [0, -28]
+  });
+  const navA = `<br/><a href="https://www.google.com/maps/dir/?api=1&destination=${airport.lat},${airport.lng}" target="_blank" style="font-size:11px;color:#15263b;">📍 導航 / Directions</a>`;
+  L.marker([airport.lat, airport.lng], { icon: airportIcon, zIndexOffset: 1000 }).bindPopup(`
+    <div style="font-family:'DM Sans','Noto Sans TC',sans-serif;min-width:180px;">
+      <strong style="font-size:14px;color:#15263b;">✈️ <span data-zh="${airport.zh}" data-en="${airport.en}">${airport.zh}</span></strong><br/>
+      <span style="color:#666;font-size:12px;" data-zh="去程：週五 22:50 抵達 → Flytoget 進市區；回程：週一 16:50 前抵達 → 18:50 起飛" data-en="Arrive Fri 22:50 → Flytoget into town; return: reach airport by 16:50 Mon → 18:50 departure">去程：週五 22:50 抵達 → Flytoget 進市區；回程：週一 16:50 前抵達 → 18:50 起飛</span>${navA}
+    </div>
+  `).addTo(map);
+  // Flytoget link hotel (Oslo S) ⇄ airport, dashed
+  L.polyline([[hotel.lat, hotel.lng], [airport.lat, airport.lng]], { color: '#15263b', weight: 3, opacity: 0.7, dashArray: '2, 9' })
+    .bindPopup('<div style="font-family:\'DM Sans\',sans-serif;font-size:12px;"><strong>Flytoget</strong> · <span data-zh="旅館 ⇄ 機場 19 分鐘" data-en="Hotel ⇄ Airport, 19 min">旅館 ⇄ 機場 19 分鐘</span></div>')
+    .addTo(map);
+
   // legend
   const legend = L.control({ position: 'bottomleft' });
   legend.onAdd = function() {
@@ -139,13 +158,14 @@
       <div><span style="display:inline-block;width:18px;height:0;border-top:3px dashed ${dayColors[2]};margin-right:6px;vertical-align:middle;"></span><span data-zh="Day 2 峽灣跳島（渡輪）" data-en="Day 2 Island hopping (ferry)">Day 2 峽灣跳島（渡輪）</span></div>
       <div><span style="display:inline-block;width:18px;height:3px;background:${dayColors[3]};margin-right:6px;vertical-align:middle;"></span><span data-zh="Day 3 雕塑與咖啡" data-en="Day 3 Sculpture & coffee">Day 3 雕塑與咖啡</span></div>
       <div><span style="display:inline-block;width:12px;height:12px;background:#6a5acd;border-radius:50%;margin-right:6px;vertical-align:middle;"></span><span data-zh="🏨 住宿 Scandic Byporten" data-en="🏨 Hotel: Scandic Byporten">🏨 住宿 Scandic Byporten</span></div>
+      <div><span style="display:inline-block;width:18px;height:0;border-top:3px dotted #15263b;margin-right:6px;vertical-align:middle;"></span><span data-zh="✈️ 機場 ⇄ 旅館（Flytoget）" data-en="✈️ Airport ⇄ hotel (Flytoget)">✈️ 機場 ⇄ 旅館（Flytoget）</span></div>
     `;
     return div;
   };
   legend.addTo(map);
 
-  // fit
-  const allCoords = stops.map(s => [s.lat, s.lng]);
+  // fit (include hotel + airport so the full arrival/return route is visible)
+  const allCoords = stops.map(s => [s.lat, s.lng]).concat([[hotel.lat, hotel.lng], [airport.lat, airport.lng]]);
   map.fitBounds(allCoords, { padding: [40, 40] });
 
   // ===== Day filter buttons =====
@@ -160,7 +180,7 @@
     });
     let coords;
     if (day === 'all') coords = allCoords;
-    else coords = stops.filter(s => String(s.day) === String(day)).map(s => [s.lat, s.lng]);
+    else coords = stops.filter(s => String(s.day) === String(day)).map(s => [s.lat, s.lng]).concat([[hotel.lat, hotel.lng]]);
     if (coords.length) map.fitBounds(coords, { padding: [40, 40] });
   }
   filterBtns.forEach(btn => {
