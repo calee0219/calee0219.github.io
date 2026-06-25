@@ -139,7 +139,7 @@
   L.marker([airport.lat, airport.lng], { icon: airportIcon, zIndexOffset: 1000 }).bindPopup(`
     <div style="font-family:'DM Sans','Noto Sans TC',sans-serif;min-width:180px;">
       <strong style="font-size:14px;color:#15263b;">✈️ <span data-zh="${airport.zh}" data-en="${airport.en}">${airport.zh}</span></strong><br/>
-      <span style="color:#666;font-size:12px;" data-zh="去程：週五 22:50 抵達 → Flytoget 進市區；回程：週一 16:50 前抵達 → 18:50 起飛" data-en="Arrive Fri 22:50 → Flytoget into town; return: reach airport by 16:50 Mon → 18:50 departure">去程：週五 22:50 抵達 → Flytoget 進市區；回程：週一 16:50 前抵達 → 18:50 起飛</span>${navA}
+      <span style="color:#666;font-size:12px;" data-zh="Norwegian · Terminal S。去程 DY1309 週五 22:50 抵達 → Flytoget 進市區；回程 DY1310 週一 18:50 起飛（建議 16:50 前抵達）" data-en="Norwegian · Terminal S. Out DY1309 arrives Fri 22:50 → Flytoget into town; return DY1310 departs Mon 18:50 (be there by 16:50)">Norwegian · Terminal S。去程 DY1309 週五 22:50 抵達 → Flytoget 進市區；回程 DY1310 週一 18:50 起飛（建議 16:50 前抵達）</span>${navA}
     </div>
   `).addTo(map);
   // Flytoget link hotel (Oslo S) ⇄ airport, dashed
