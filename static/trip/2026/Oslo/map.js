@@ -113,6 +113,21 @@
 
   layers[1].addTo(map); layers[2].addTo(map); layers[3].addTo(map);
 
+  // ===== Hotel marker (always visible) =====
+  const hotel = { lat: 59.9114, lng: 10.7505, zh: 'Scandic Byporten（住宿）', en: 'Scandic Byporten (hotel)', dzh: 'Jernbanetorget 6 · 緊鄰 Oslo S，每天的起點與終點', den: 'Jernbanetorget 6 · next to Oslo S, start & end each day' };
+  const hotelIcon = L.divIcon({
+    className: 'hotel-marker',
+    html: `<div style="background:#6a5acd;color:#fff;width:30px;height:30px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);display:flex;align-items:center;justify-content:center;border:3px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,0.35);"><span style="transform:rotate(45deg);font-size:14px;">🏨</span></div>`,
+    iconSize: [30, 30], iconAnchor: [15, 30], popupAnchor: [0, -28]
+  });
+  const navH = `<br/><a href="https://www.google.com/maps/dir/?api=1&destination=${hotel.lat},${hotel.lng}" target="_blank" style="font-size:11px;color:#5a4cae;">📍 導航 / Directions</a>`;
+  L.marker([hotel.lat, hotel.lng], { icon: hotelIcon, zIndexOffset: 1000 }).bindPopup(`
+    <div style="font-family:'DM Sans','Noto Sans TC',sans-serif;min-width:170px;">
+      <strong style="font-size:14px;color:#5a4cae;">🏨 <span data-zh="${hotel.zh}" data-en="${hotel.en}">${hotel.zh}</span></strong><br/>
+      <span style="color:#666;font-size:12px;" data-zh="${hotel.dzh}" data-en="${hotel.den}">${hotel.dzh}</span>${navH}
+    </div>
+  `).addTo(map);
+
   // legend
   const legend = L.control({ position: 'bottomleft' });
   legend.onAdd = function() {
@@ -123,6 +138,7 @@
       <div><span style="display:inline-block;width:18px;height:3px;background:${dayColors[1]};margin-right:6px;vertical-align:middle;"></span><span data-zh="Day 1 城市的安靜面" data-en="Day 1 The quiet city">Day 1 城市的安靜面</span></div>
       <div><span style="display:inline-block;width:18px;height:0;border-top:3px dashed ${dayColors[2]};margin-right:6px;vertical-align:middle;"></span><span data-zh="Day 2 峽灣跳島（渡輪）" data-en="Day 2 Island hopping (ferry)">Day 2 峽灣跳島（渡輪）</span></div>
       <div><span style="display:inline-block;width:18px;height:3px;background:${dayColors[3]};margin-right:6px;vertical-align:middle;"></span><span data-zh="Day 3 雕塑與咖啡" data-en="Day 3 Sculpture & coffee">Day 3 雕塑與咖啡</span></div>
+      <div><span style="display:inline-block;width:12px;height:12px;background:#6a5acd;border-radius:50%;margin-right:6px;vertical-align:middle;"></span><span data-zh="🏨 住宿 Scandic Byporten" data-en="🏨 Hotel: Scandic Byporten">🏨 住宿 Scandic Byporten</span></div>
     `;
     return div;
   };
