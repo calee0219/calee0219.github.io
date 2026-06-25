@@ -16,7 +16,8 @@
   const stopsByDay = {
     1: [
       { id: '1', name: { zh: '巴黎北站 抵達', en: 'Gare du Nord (Arrival)' }, desc: { zh: '22:29 歐洲之星抵達', en: '22:29 Eurostar arrival' }, lat: 48.8809, lng: 2.3553, time: '22:29' },
-      { id: '2', name: { zh: 'Terminus Nord 宵夜', en: 'Terminus Nord supper' }, desc: { zh: '車站對面 brasserie', en: 'Brasserie opposite station' }, lat: 48.8800, lng: 2.3573, time: '22:45', meal: true }
+      { id: '2', name: { zh: 'Terminus Nord 宵夜', en: 'Terminus Nord supper' }, desc: { zh: '車站對面 brasserie', en: 'Brasserie opposite station' }, lat: 48.8800, lng: 2.3573, time: '22:45', meal: true },
+      { id: '3', name: { zh: 'Hotel Elysa-Luxembourg', en: 'Hotel Elysa-Luxembourg' }, desc: { zh: '入住 · 6 Rue Gay Lussac、5 區', en: 'Check in · 6 Rue Gay Lussac, 5th arr.' }, lat: 48.8462, lng: 2.3422, time: '23:45', stay: true }
     ],
     2: [
       { id: 'A', name: { zh: '橘園美術館', en: "Musée de l'Orangerie" }, desc: { zh: '莫內睡蓮 · 1–1.5h', en: 'Monet Water Lilies · 1–1.5h' }, lat: 48.8638, lng: 2.3226, time: '09:00', highlight: true },
@@ -39,7 +40,7 @@
 
   // ===== ROUTE POLYLINES (ordered walking/metro paths) =====
   const routesByDay = {
-    1: [[48.8809, 2.3553], [48.8800, 2.3573]],
+    1: [[48.8809, 2.3553], [48.8800, 2.3573], [48.8462, 2.3422]],
     2: [
       [48.8638, 2.3226], [48.8634, 2.3275], [48.8639, 2.3417],
       [48.8600, 2.3266], [48.8530, 2.3499], [48.8556, 2.3447], [48.8554, 2.3450]
@@ -75,7 +76,7 @@
     }
 
     stops.forEach(stop => {
-      const mColor = stop.optional ? '#d98a2b' : (stop.music ? '#5b6ee1' : (stop.meal ? '#2f8f5b' : color));
+      const mColor = stop.optional ? '#d98a2b' : (stop.music ? '#5b6ee1' : (stop.meal ? '#2f8f5b' : (stop.stay ? '#8a5a9b' : color)));
       const marker = L.marker([stop.lat, stop.lng], { icon: createMarkerIcon(stop.id, mColor) }).addTo(map);
       drawnLayers.push(marker);
       const optTag = stop.optional ? (lang === 'en' ? ' <em style="color:#d98a2b">(optional)</em>' : ' <em style="color:#d98a2b">（選擇性）</em>') : '';
@@ -115,11 +116,13 @@
     const L2 = lang === 'en' ? 'Meal' : '餐飲';
     const L3 = lang === 'en' ? 'Concert' : '音樂會';
     const L4 = lang === 'en' ? 'Optional' : '選擇性';
+    const L5 = lang === 'en' ? 'Hotel' : '住宿';
     div.innerHTML = `
       <div><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#b8860b;margin-right:6px;vertical-align:middle;"></span>${L1}</div>
       <div><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#2f8f5b;margin-right:6px;vertical-align:middle;"></span>${L2}</div>
       <div><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#5b6ee1;margin-right:6px;vertical-align:middle;"></span>${L3}</div>
-      <div><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#d98a2b;margin-right:6px;vertical-align:middle;"></span>${L4}</div>`;
+      <div><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#d98a2b;margin-right:6px;vertical-align:middle;"></span>${L4}</div>
+      <div><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#8a5a9b;margin-right:6px;vertical-align:middle;"></span>${L5}</div>`;
   }
 
   window.drawMapPlan = drawPlan;

@@ -84,13 +84,19 @@
 
   items.forEach(item => {
     const key = item.getAttribute('data-key');
-    if (state[key]) item.classList.add('done');
+    // Use stored value if present; otherwise fall back to the HTML default (preset done).
+    if (Object.prototype.hasOwnProperty.call(state, key)) {
+      item.classList.toggle('done', !!state[key]);
+    } else if (item.classList.contains('done')) {
+      state[key] = true;
+    }
     item.addEventListener('click', () => {
       const done = item.classList.toggle('done');
       state[key] = done;
       save();
     });
   });
+  save();
 
   const resetBtn = document.getElementById('todoReset');
   if (resetBtn) {
