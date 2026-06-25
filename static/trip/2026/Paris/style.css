@@ -148,6 +148,7 @@ header[id], section[id], div[id] { scroll-margin-top: 72px; }
 .tl-item.is-meal::before { background: var(--color-success); }
 .tl-item.is-music::before { background: var(--color-accent-2); }
 .tl-item.is-transit::before { background: #8a93a6; }
+.tl-item.is-hotel::before { background: var(--color-primary); }
 .tl-item.optional::before { background: var(--color-warning); }
 .tl-card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius); padding: 18px 20px; box-shadow: var(--shadow-sm); }
 .tl-card.has-img { display: grid; grid-template-columns: 1fr 150px; gap: 16px; align-items: stretch; }
@@ -229,7 +230,7 @@ header[id], section[id], div[id] { scroll-margin-top: 72px; }
 .fade-in.visible { opacity: 1; transform: none; }
 
 /* ===== TODO / 行前待辦 ===== */
-#todo .wrap { max-width: 860px; }
+#todo .wrap { max-width: 860px; margin: 0 auto; padding: 0 24px; }
 .todo-group { margin-bottom: 26px; }
 .todo-h { font-family: var(--font-display); font-size: 19px; color: var(--color-primary); margin-bottom: 12px; padding-bottom: 8px; border-bottom: 2px solid var(--color-border); }
 .todo-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
