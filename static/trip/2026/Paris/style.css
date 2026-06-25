@@ -246,3 +246,68 @@ header[id], section[id], div[id] { scroll-margin-top: 72px; }
 .todo-reset { font-size: 13px; color: var(--color-text-light, #888); background: transparent; border: 1px solid var(--color-border); border-radius: 999px; padding: 8px 18px; cursor: pointer; transition: all .2s ease; }
 .todo-reset:hover { color: var(--color-primary); border-color: var(--color-primary); }
 @media (max-width: 560px) { .todo-when { align-self: flex-start; } }
+
+/* ===== Museum Pass analysis ===== */
+#pass .container { max-width: 920px; }
+.pass-verdict {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: 0 auto 32px;
+}
+.pass-card {
+  border-radius: 14px;
+  padding: 24px;
+  background: #fff;
+  border: 1px solid #ece6da;
+  box-shadow: 0 6px 18px rgba(60,50,30,.06);
+}
+.pass-card.pass-win { border-color: #b7d3b0; background: linear-gradient(180deg,#f6fbf4,#fff); }
+.pass-card.pass-lose { border-color: #e6cfcf; background: linear-gradient(180deg,#fdf6f5,#fff); }
+.pass-tag { font-size: 13px; font-weight: 700; margin-bottom: 8px; }
+.pass-card.pass-win .pass-tag { color: #3f8a4e; }
+.pass-card.pass-lose .pass-tag { color: #b15a5a; }
+.pass-card h3 { font-family: var(--font-display); margin: 4px 0 6px; font-size: 21px; color: var(--color-primary); }
+.pass-price { font-size: 26px; font-weight: 800; color: #1f2937; margin-bottom: 10px; }
+.pass-card p { font-size: 14px; line-height: 1.7; opacity: .85; margin: 0; }
+
+.pass-table-wrap { overflow-x: auto; margin: 0 auto 28px; }
+.pass-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(60,50,30,.06);
+  font-size: 14.5px;
+}
+.pass-table th, .pass-table td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #efeae0;
+}
+.pass-table thead th {
+  background: #f3ede1;
+  font-weight: 700;
+  color: #5b4a2e;
+}
+.pass-table th:nth-child(2), .pass-table td:nth-child(2),
+.pass-table th:nth-child(3), .pass-table td:nth-child(3) { text-align: center; white-space: nowrap; }
+.pass-table .pass-row-note td { color: #b15a5a; background: #fdf8f6; }
+.pass-table .pass-row-total td { background: #f6fbf4; font-size: 15.5px; font-weight: 700; }
+.pass-table tr:last-child td { border-bottom: none; }
+
+.pass-notes { max-width: 760px; margin: 0 auto; }
+.pass-notes p {
+  background: #fbf7ee;
+  border-left: 3px solid #c9a24b;
+  border-radius: 8px;
+  padding: 14px 18px;
+  font-size: 14px;
+  line-height: 1.8;
+  margin: 0 0 12px;
+}
+
+@media (max-width: 680px) {
+  .pass-verdict { grid-template-columns: 1fr; }
+}

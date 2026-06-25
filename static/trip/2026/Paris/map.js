@@ -26,7 +26,8 @@
       { id: 'D', name: { zh: '奧賽美術館', en: "Musée d'Orsay" }, desc: { zh: '印象派 · 2h', en: 'Impressionism · 2h' }, lat: 48.8600, lng: 2.3266, time: '15:30', highlight: true },
       { id: 'E', name: { zh: '巴黎聖母院', en: 'Notre-Dame de Paris' }, desc: { zh: '哥德教堂 · 重新開放 · 45min', en: 'Reopened Gothic cathedral · 45min' }, lat: 48.8530, lng: 2.3499, time: '18:00', highlight: true },
       { id: 'F0', name: { zh: 'Les Deux Palais 輕食', en: 'Les Deux Palais bite' }, desc: { zh: '音樂會前 · 選擇性', en: 'Pre-concert · optional' }, lat: 48.8556, lng: 2.3447, time: '18:50', optional: true },
-      { id: 'G', name: { zh: '聖禮拜堂音樂會', en: 'Sainte-Chapelle concert' }, desc: { zh: '燭光古典樂 · 1h', en: 'Candlelit classical · 1h' }, lat: 48.8554, lng: 2.3450, time: '19:00', music: true }
+      { id: 'G', name: { zh: '聖禮拜堂音樂會', en: 'Sainte-Chapelle concert' }, desc: { zh: '燭光古典樂 · 1h', en: 'Candlelit classical · 1h' }, lat: 48.8554, lng: 2.3450, time: '19:00', music: true },
+      { id: 'H', name: { zh: '回旅館', en: 'Back to hotel' }, desc: { zh: 'Hotel Elysa-Luxembourg · M4/RER B 一站', en: 'Hotel Elysa-Luxembourg · M4/RER B one stop' }, lat: 48.8462, lng: 2.3422, time: '22:30', stay: true }
     ],
     3: [
       { id: 'A', name: { zh: '羅丹美術館', en: 'Musée Rodin' }, desc: { zh: '玫瑰花園 · 1.5h', en: 'Rose garden · 1.5h' }, lat: 48.8553, lng: 2.3158, time: '09:30', highlight: true },
@@ -34,7 +35,8 @@
       { id: 'C1', name: { zh: '瑪黑區（選項 A）', en: 'Le Marais (Option A)' }, desc: { zh: '孚日廣場 · 選擇性', en: 'Place des Vosges · optional' }, lat: 48.8554, lng: 2.3655, time: '14:15', optional: true },
       { id: 'C2', name: { zh: '瑪摩丹莫內（選項 B）', en: 'Marmottan Monet (Option B)' }, desc: { zh: '印象·日出 · 選擇性', en: 'Impression, Sunrise · optional' }, lat: 48.8593, lng: 2.2670, time: '14:15', optional: true },
       { id: 'C3', name: { zh: '加尼葉歌劇院（選項 C）', en: 'Palais Garnier (Option C)' }, desc: { zh: '夏卡爾天頂 · 選擇性', en: 'Chagall ceiling · optional' }, lat: 48.8719, lng: 2.3316, time: '14:15', optional: true },
-      { id: 'D', name: { zh: '巴黎北站 返程', en: 'Gare du Nord (Return)' }, desc: { zh: '21:02 歐洲之星發車', en: '21:02 Eurostar departure' }, lat: 48.8809, lng: 2.3553, time: '21:02' }
+      { id: 'D', name: { zh: '回旅館取行李', en: 'Back to hotel for luggage' }, desc: { zh: 'Hotel Elysa-Luxembourg · 取寄放行李', en: 'Hotel Elysa-Luxembourg · collect luggage' }, lat: 48.8462, lng: 2.3422, time: '18:45', stay: true },
+      { id: 'E', name: { zh: '巴黎北站 返程', en: 'Gare du Nord (Return)' }, desc: { zh: '21:02 歐洲之星發車', en: '21:02 Eurostar departure' }, lat: 48.8809, lng: 2.3553, time: '21:02' }
     ]
   };
 
@@ -43,10 +45,10 @@
     1: [[48.8809, 2.3553], [48.8800, 2.3573], [48.8462, 2.3422]],
     2: [
       [48.8638, 2.3226], [48.8634, 2.3275], [48.8639, 2.3417],
-      [48.8600, 2.3266], [48.8530, 2.3499], [48.8556, 2.3447], [48.8554, 2.3450]
+      [48.8600, 2.3266], [48.8530, 2.3499], [48.8556, 2.3447], [48.8554, 2.3450], [48.8462, 2.3422]
     ],
     3: [
-      [48.8553, 2.3158], [48.8551, 2.3390], [48.8554, 2.3655], [48.8809, 2.3553]
+      [48.8553, 2.3158], [48.8551, 2.3390], [48.8554, 2.3655], [48.8462, 2.3422], [48.8809, 2.3553]
     ]
   };
 
