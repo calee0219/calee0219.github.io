@@ -20,23 +20,22 @@
       { id: '3', name: { zh: 'Hotel Elysa-Luxembourg', en: 'Hotel Elysa-Luxembourg' }, desc: { zh: '入住 · 6 Rue Gay Lussac、5 區', en: 'Check in · 6 Rue Gay Lussac, 5th arr.' }, lat: 48.8462, lng: 2.3422, time: '23:45', stay: true }
     ],
     2: [
-      { id: 'A', name: { zh: '橘園美術館', en: "Musée de l'Orangerie" }, desc: { zh: '莫內睡蓮 · 1–1.5h', en: 'Monet Water Lilies · 1–1.5h' }, lat: 48.8638, lng: 2.3226, time: '09:00', highlight: true },
-      { id: 'B', name: { zh: '杜樂麗花園', en: 'Jardin des Tuileries' }, desc: { zh: '散步 · 30–40 min', en: 'Stroll · 30–40 min' }, lat: 48.8634, lng: 2.3275, time: '10:30' },
-      { id: 'C', name: { zh: 'Restaurant Kei ⭐⭐⭐', en: 'Restaurant Kei ⭐⭐⭐' }, desc: { zh: '米其林三星午餐', en: '3-star Michelin lunch' }, lat: 48.8639, lng: 2.3417, time: '12:30', meal: true, highlight: true },
-      { id: 'D', name: { zh: '奧賽美術館', en: "Musée d'Orsay" }, desc: { zh: '印象派 · 2h', en: 'Impressionism · 2h' }, lat: 48.8600, lng: 2.3266, time: '15:30', highlight: true },
-      { id: 'E', name: { zh: '巴黎聖母院', en: 'Notre-Dame de Paris' }, desc: { zh: '哥德教堂 · 重新開放 · 45min', en: 'Reopened Gothic cathedral · 45min' }, lat: 48.8530, lng: 2.3499, time: '18:00', highlight: true },
-      { id: 'F0', name: { zh: 'Les Deux Palais 輕食', en: 'Les Deux Palais bite' }, desc: { zh: '音樂會前 · 選擇性', en: 'Pre-concert · optional' }, lat: 48.8556, lng: 2.3447, time: '18:50', optional: true },
-      { id: 'G', name: { zh: '聖禮拜堂音樂會', en: 'Sainte-Chapelle concert' }, desc: { zh: '燭光古典樂 · 1h', en: 'Candlelit classical · 1h' }, lat: 48.8554, lng: 2.3450, time: '19:00', music: true },
-      { id: 'H', name: { zh: '回旅館', en: 'Back to hotel' }, desc: { zh: 'Hotel Elysa-Luxembourg · M4/RER B 一站', en: 'Hotel Elysa-Luxembourg · M4/RER B one stop' }, lat: 48.8462, lng: 2.3422, time: '22:30', stay: true }
+      { id: 'A', name: { zh: 'BnF 黎塞留館', en: 'BnF Richelieu' }, desc: { zh: '研究員閱覽室 · 免費 · 10:00', en: 'Researchers-only reading rooms · free · 10:00' }, lat: 48.86702, lng: 2.33892, time: '10:00', highlight: true },
+      { id: 'B', name: { zh: 'Restaurant Kei ⭐⭐⭐', en: 'Restaurant Kei ⭐⭐⭐' }, desc: { zh: '米其林三星午餐 · 待確認', en: '3-star Michelin lunch · pending' }, lat: 48.8639, lng: 2.3417, time: '12:30', meal: true, highlight: true },
+      { id: 'C', name: { zh: '古監獄 Conciergerie', en: 'Conciergerie' }, desc: { zh: '中世紀王宮監獄 · 免費 · 15:00', en: 'Medieval palace-prison · free · 15:00' }, lat: 48.85608, lng: 2.34615, time: '15:00', highlight: true },
+      { id: 'D', name: { zh: '巴黎聖母院', en: 'Notre-Dame de Paris' }, desc: { zh: '免費 · 18:00 預約時段', en: 'Free · 18:00 reserved slot' }, lat: 48.8530, lng: 2.3499, time: '18:00', highlight: true },
+      { id: 'E0', name: { zh: 'Les Deux Palais 輕食', en: 'Les Deux Palais bite' }, desc: { zh: '音樂會前 · 選擇性', en: 'Pre-concert · optional' }, lat: 48.8556, lng: 2.3447, time: '18:50', optional: true },
+      { id: 'E', name: { zh: '燭光音樂會（待選）', en: 'Candlelit concert (TBD)' }, desc: { zh: 'Sainte-Chapelle / St-Germain · 晚間', en: 'Sainte-Chapelle / St-Germain · evening' }, lat: 48.8554, lng: 2.3450, time: '20:00', music: true },
+      { id: 'F', name: { zh: '回旅館', en: 'Back to hotel' }, desc: { zh: 'Hotel Elysa-Luxembourg', en: 'Hotel Elysa-Luxembourg' }, lat: 48.8462, lng: 2.3422, time: '22:30', stay: true }
     ],
     3: [
-      { id: 'A', name: { zh: '羅丹美術館', en: 'Musée Rodin' }, desc: { zh: '玫瑰花園 · 1.5h', en: 'Rose garden · 1.5h' }, lat: 48.8553, lng: 2.3158, time: '09:30', highlight: true },
-      { id: 'B', name: { zh: 'Chez Fernand 午餐', en: 'Chez Fernand lunch' }, desc: { zh: '紅酒燉雞 · 1.5h', en: 'Coq au vin · 1.5h' }, lat: 48.8551, lng: 2.3390, time: '12:30', meal: true },
-      { id: 'C1', name: { zh: '瑪黑區（選項 A）', en: 'Le Marais (Option A)' }, desc: { zh: '孚日廣場 · 選擇性', en: 'Place des Vosges · optional' }, lat: 48.8554, lng: 2.3655, time: '14:15', optional: true },
-      { id: 'C2', name: { zh: '瑪摩丹莫內（選項 B）', en: 'Marmottan Monet (Option B)' }, desc: { zh: '印象·日出 · 選擇性', en: 'Impression, Sunrise · optional' }, lat: 48.8593, lng: 2.2670, time: '14:15', optional: true },
-      { id: 'C3', name: { zh: '加尼葉歌劇院（選項 C）', en: 'Palais Garnier (Option C)' }, desc: { zh: '夏卡爾天頂 · 選擇性', en: 'Chagall ceiling · optional' }, lat: 48.8719, lng: 2.3316, time: '14:15', optional: true },
-      { id: 'D', name: { zh: '回旅館取行李', en: 'Back to hotel for luggage' }, desc: { zh: 'Hotel Elysa-Luxembourg · 取寄放行李', en: 'Hotel Elysa-Luxembourg · collect luggage' }, lat: 48.8462, lng: 2.3422, time: '18:45', stay: true },
-      { id: 'E', name: { zh: '巴黎北站 返程', en: 'Gare du Nord (Return)' }, desc: { zh: '21:02 歐洲之星發車', en: '21:02 Eurostar departure' }, lat: 48.8809, lng: 2.3553, time: '21:02' }
+      { id: 'A', name: { zh: '榮軍院 Invalides', en: 'Invalides' }, desc: { zh: 'Grand Salon · 免費 · 10:00', en: 'Grand Salon · free · 10:00' }, lat: 48.85707, lng: 2.31276, time: '10:00', highlight: true },
+      { id: 'B', name: { zh: '榮譽軍團宮', en: 'Hôtel de Salm' }, desc: { zh: '大法官官邸 · 免費 · 11:30', en: "Grand Chancellor's residence · free · 11:30" }, lat: 48.85999, lng: 2.32444, time: '11:30', highlight: true },
+      { id: 'C', name: { zh: 'Chez Fernand Christine', en: 'Chez Fernand Christine' }, desc: { zh: '紅酒燉雞 · 12:30', en: 'Coq au vin · 12:30' }, lat: 48.8551, lng: 2.3390, time: '12:30', meal: true },
+      { id: 'D', name: { zh: '巴黎美術學院', en: 'Beaux-Arts de Paris' }, desc: { zh: '免費 · 導覽 14:30', en: 'Free · tour 14:30' }, lat: 48.85408, lng: 2.33313, time: '14:20', highlight: true },
+      { id: 'E', name: { zh: '參議院（選擇性）', en: 'Sénat (optional)' }, desc: { zh: '盧森堡宮 · 免費 · 視排隊', en: 'Palais du Luxembourg · free · if queue allows' }, lat: 48.84915, lng: 2.33865, time: '16:15', optional: true },
+      { id: 'F', name: { zh: '回旅館取行李', en: 'Back to hotel for luggage' }, desc: { zh: 'Hotel Elysa-Luxembourg · 18:45', en: 'Hotel Elysa-Luxembourg · 18:45' }, lat: 48.8462, lng: 2.3422, time: '18:45', stay: true },
+      { id: 'G', name: { zh: '巴黎北站 返程', en: 'Gare du Nord (Return)' }, desc: { zh: '21:02 歐洲之星發車', en: '21:02 Eurostar departure' }, lat: 48.8809, lng: 2.3553, time: '21:02' }
     ]
   };
 
@@ -44,11 +43,12 @@
   const routesByDay = {
     1: [[48.8809, 2.3553], [48.8800, 2.3573], [48.8462, 2.3422]],
     2: [
-      [48.8638, 2.3226], [48.8634, 2.3275], [48.8639, 2.3417],
-      [48.8600, 2.3266], [48.8530, 2.3499], [48.8556, 2.3447], [48.8554, 2.3450], [48.8462, 2.3422]
+      [48.8462, 2.3422], [48.86702, 2.33892], [48.8639, 2.3417],
+      [48.85608, 2.34615], [48.8530, 2.3499], [48.8556, 2.3447], [48.8554, 2.3450], [48.8462, 2.3422]
     ],
     3: [
-      [48.8553, 2.3158], [48.8551, 2.3390], [48.8554, 2.3655], [48.8462, 2.3422], [48.8809, 2.3553]
+      [48.8462, 2.3422], [48.85707, 2.31276], [48.85999, 2.32444], [48.8551, 2.3390],
+      [48.85408, 2.33313], [48.84915, 2.33865], [48.8462, 2.3422], [48.8809, 2.3553]
     ]
   };
 

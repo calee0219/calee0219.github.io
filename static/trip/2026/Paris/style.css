@@ -163,6 +163,8 @@ header[id], section[id], div[id] { scroll-margin-top: 72px; }
 .tl-tag.stay { background: #e9eefc; color: var(--color-accent-2); }
 .tl-tag.hours { background: #eaf6ee; color: #2f7d4f; }
 .tl-tag.look { background: #fbeef6; color: #9c2d6e; }
+.tl-tag.bail { background: #fdecec; color: #b3372f; }
+.tl-tag.planb { background: #eef4fd; color: #2b5cb8; }
 .tl-tag.addr a { color: var(--color-text-light); }
 .tl-img { border-radius: 10px; overflow: hidden; }
 .tl-img img { width: 100%; height: 100%; object-fit: cover; min-height: 120px; }
