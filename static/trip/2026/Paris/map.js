@@ -22,7 +22,6 @@
     2: [
       { id: 'A0', name: { zh: "La Maison d'Isabelle 早餐", en: "La Maison d'Isabelle breakfast" }, desc: { zh: '2018 巴黎最佳可頌 · 06:00 開', en: 'Best croissant Paris 2018 · open 06:00' }, lat: 48.8523, lng: 2.3455, time: '08:00', meal: true },
       { id: 'A', name: { zh: 'BnF 黎塞留館', en: 'BnF Richelieu' }, desc: { zh: '研究員閱覽室 · 免費 · 10:00', en: 'Researchers-only reading rooms · free · 10:00' }, lat: 48.86702, lng: 2.33892, time: '10:00', highlight: true },
-      { id: 'B', name: { zh: 'Restaurant Kei ⭐⭐⭐', en: 'Restaurant Kei ⭐⭐⭐' }, desc: { zh: '米其林三星午餐 · 待確認', en: '3-star Michelin lunch · pending' }, lat: 48.8639, lng: 2.3417, time: '12:30', meal: true, highlight: true },
       { id: 'C', name: { zh: '古監獄 Conciergerie', en: 'Conciergerie' }, desc: { zh: '中世紀王宮監獄 · 免費 · 15:00', en: 'Medieval palace-prison · free · 15:00' }, lat: 48.85608, lng: 2.34615, time: '15:00', highlight: true },
       { id: 'D', name: { zh: '巴黎聖母院', en: 'Notre-Dame de Paris' }, desc: { zh: '免費 · 18:00 預約時段', en: 'Free · 18:00 reserved slot' }, lat: 48.8530, lng: 2.3499, time: '18:00', highlight: true },
       { id: 'E0', name: { zh: '塞納河日落散步', en: 'Seine sunset stroll' }, desc: { zh: 'Square du Vert-Galant · 18:45–20:00', en: 'Square du Vert-Galant · 18:45–20:00' }, lat: 48.8574, lng: 2.3424, time: '18:45' },
