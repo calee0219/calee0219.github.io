@@ -22,7 +22,10 @@
     2: [
       { id: 'A0', name: { zh: "La Maison d'Isabelle 早餐", en: "La Maison d'Isabelle breakfast" }, desc: { zh: '2018 巴黎最佳可頌 · 06:00 開', en: 'Best croissant Paris 2018 · open 06:00' }, lat: 48.8523, lng: 2.3455, time: '08:00', meal: true },
       { id: 'A', name: { zh: 'BnF 黎塞留館', en: 'BnF Richelieu' }, desc: { zh: '研究員閱覽室 · 免費 · 10:00', en: 'Researchers-only reading rooms · free · 10:00' }, lat: 48.86702, lng: 2.33892, time: '10:00', highlight: true },
+      { id: 'B0', name: { zh: 'Stohrer 最老甜點店', en: 'Stohrer (oldest pâtisserie)' }, desc: { zh: 'baba au rhum · 外帶 · ~11:35', en: 'baba au rhum · takeaway · ~11:35' }, lat: 48.8639, lng: 2.3417, time: '~11:35', meal: true },
+      { id: 'B2', name: { zh: 'Taozi Pâtisserie（選擇性）', en: 'Taozi Pâtisserie (optional)' }, desc: { zh: '創意麻糬 · 若午餐選 Le Clarence', en: 'Creative mochi · if lunch is Le Clarence' }, lat: 48.8735, lng: 2.3156, time: '~14:00', meal: true, optional: true },
       { id: 'C', name: { zh: '古監獄 Conciergerie', en: 'Conciergerie' }, desc: { zh: '中世紀王宮監獄 · 免費 · 15:00', en: 'Medieval palace-prison · free · 15:00' }, lat: 48.85608, lng: 2.34615, time: '15:00', highlight: true },
+      { id: 'C2', name: { zh: 'Marais 甜點三選一（選擇性）', en: 'Marais desserts, pick one (optional)' }, desc: { zh: "Brigat'／Christophe Louie／Yann Couvreur · ~16:30", en: "Brigat' / Christophe Louie / Yann Couvreur · ~16:30" }, lat: 48.8590, lng: 2.3620, time: '~16:30', meal: true, optional: true },
       { id: 'D', name: { zh: '巴黎聖母院', en: 'Notre-Dame de Paris' }, desc: { zh: '免費 · 18:00 預約時段', en: 'Free · 18:00 reserved slot' }, lat: 48.8530, lng: 2.3499, time: '18:00', highlight: true },
       { id: 'E0', name: { zh: '塞納河日落散步', en: 'Seine sunset stroll' }, desc: { zh: 'Square du Vert-Galant · 18:45–20:00', en: 'Square du Vert-Galant · 18:45–20:00' }, lat: 48.8574, lng: 2.3424, time: '18:45' },
       { id: 'E', name: { zh: 'Odéon 晚餐', en: 'Odéon dinner' }, desc: { zh: "三選一：Comptoir du Relais／Breizh Café／L'Avant Comptoir", en: "Pick one: Comptoir du Relais / Breizh Café / L'Avant Comptoir" }, lat: 48.8509, lng: 2.3372, time: '20:15', meal: true },
@@ -46,7 +49,7 @@
     1: [[48.8809, 2.3553], [48.8462, 2.3422], [48.8507, 2.3372]],
     2: [
       [48.8462, 2.3422], [48.8523, 2.3455], [48.86702, 2.33892], [48.8639, 2.3417],
-      [48.85608, 2.34615], [48.8530, 2.3499], [48.8574, 2.3424], [48.8509, 2.3372], [48.8462, 2.3422]
+      [48.85608, 2.34615], [48.8590, 2.3620], [48.8530, 2.3499], [48.8574, 2.3424], [48.8509, 2.3372], [48.8462, 2.3422]
     ],
     3: [
       [48.8462, 2.3422], [48.8502, 2.3297], [48.85707, 2.31276], [48.85999, 2.32444], [48.8551, 2.3390],
