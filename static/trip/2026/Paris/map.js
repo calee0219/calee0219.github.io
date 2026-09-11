@@ -25,7 +25,7 @@
       { id: 'B0', name: { zh: 'Stohrer 最老甜點店', en: 'Stohrer (oldest pâtisserie)' }, desc: { zh: 'baba au rhum · 外帶 · ~11:40', en: 'baba au rhum · takeaway · ~11:40' }, lat: 48.8639, lng: 2.3417, time: '~11:40', meal: true },
       { id: 'B', name: { zh: 'Maison Rostang 午餐（已訂位）', en: 'Maison Rostang lunch (booked)' }, desc: { zh: '二星 · 12:15 · 2 位 · €85–105', en: '2 stars · 12:15 · 2 guests · €85–105' }, lat: 48.88143, lng: 2.2985, time: '12:15', meal: true },
       { id: 'C', name: { zh: '古監獄 Conciergerie', en: 'Conciergerie' }, desc: { zh: '中世紀王宮監獄 · 免費 · 15:00', en: 'Medieval palace-prison · free · 15:00' }, lat: 48.85608, lng: 2.34615, time: '15:00', highlight: true },
-      { id: 'C2', name: { zh: 'Marais 甜點三選一（選擇性）', en: 'Marais desserts, pick one (optional)' }, desc: { zh: "Brigat'／Christophe Louie／Yann Couvreur · ~16:30", en: "Brigat' / Christophe Louie / Yann Couvreur · ~16:30" }, lat: 48.8590, lng: 2.3620, time: '~16:30', meal: true, optional: true },
+      { id: 'T', name: { zh: '聖母院登塔（預約中）', en: 'Notre-Dame tower (booking)' }, desc: { zh: '遺產日限定 · 免費 · ~17:00 · 約 50 分', en: 'Heritage-days only · free · ~17:00 · ~50 min' }, lat: 48.8526, lng: 2.3505, time: '~17:00', optional: true },
       { id: 'D', name: { zh: '巴黎聖母院', en: 'Notre-Dame de Paris' }, desc: { zh: '免費 · 18:00 預約時段', en: 'Free · 18:00 reserved slot' }, lat: 48.8530, lng: 2.3499, time: '18:00', highlight: true },
       { id: 'E0', name: { zh: '塞納河日落散步', en: 'Seine sunset stroll' }, desc: { zh: 'Square du Vert-Galant · 18:45–20:00', en: 'Square du Vert-Galant · 18:45–20:00' }, lat: 48.8574, lng: 2.3424, time: '18:45' },
       { id: 'E', name: { zh: 'Semilla 晚餐（已訂位）', en: 'Semilla dinner (booked)' }, desc: { zh: '現代法式 · 20:30 · 2 位 · 已訂位', en: 'Modern French · 20:30 · 2 guests · booked' }, lat: 48.8536, lng: 2.3357, time: '20:30', meal: true },
@@ -34,12 +34,12 @@
     3: [
       { id: 'A0', name: { zh: 'Maison Mulot 早餐', en: 'Maison Mulot breakfast' }, desc: { zh: '週日 07:00 開 · 6 區老字號 · 外帶直奔榮軍院', en: 'Open Sun from 07:00 · 6th-arr. institution · takeaway to the Invalides' }, lat: 48.8532, lng: 2.3368, time: '09:00', meal: true },
       { id: 'A', name: { zh: '榮軍院 Invalides', en: 'Invalides' }, desc: { zh: 'Grand Salon · 免費 · 10:00', en: 'Grand Salon · free · 10:00' }, lat: 48.85707, lng: 2.31276, time: '10:00', highlight: true },
-      { id: 'B', name: { zh: '榮譽軍團宮', en: 'Hôtel de Salm' }, desc: { zh: '大法官官邸 · 免費 · 11:30', en: "Grand Chancellor's residence · free · 11:30" }, lat: 48.85999, lng: 2.32444, time: '11:30', highlight: true },
+      { id: 'B', name: { zh: '榮譽軍團宮', en: 'Hôtel de Salm' }, desc: { zh: '大法官官邸 · 免費 · 11:15', en: "Grand Chancellor's residence · free · 11:15" }, lat: 48.85999, lng: 2.32444, time: '11:15', highlight: true },
       { id: 'C', name: { zh: 'Chez Fernand Christine', en: 'Chez Fernand Christine' }, desc: { zh: '紅酒燉雞 · 12:30', en: 'Coq au vin · 12:30' }, lat: 48.8551, lng: 2.3390, time: '12:30', meal: true },
       { id: 'D', name: { zh: '巴黎美術學院', en: 'Beaux-Arts de Paris' }, desc: { zh: '免費 · 導覽 14:30', en: 'Free · tour 14:30' }, lat: 48.85408, lng: 2.33313, time: '14:20', highlight: true },
-      { id: 'D2', name: { zh: 'Pierre Hermé 馬卡龍', en: 'Pierre Hermé macarons' }, desc: { zh: '72 Rue Bonaparte · 週日 10:00–19:00', en: '72 Rue Bonaparte · Sun 10:00–19:00' }, lat: 48.8520, lng: 2.3325, time: '~15:50', meal: true },
-      { id: 'E', name: { zh: '參議院（選擇性）', en: 'Sénat (optional)' }, desc: { zh: '盧森堡宮 · 免費 · 視排隊', en: 'Palais du Luxembourg · free · if queue allows' }, lat: 48.84915, lng: 2.33865, time: '16:15', optional: true },
-      { id: 'F', name: { zh: '回旅館取行李', en: 'Back to hotel for luggage' }, desc: { zh: 'Hotel Elysa-Luxembourg · 18:45', en: 'Hotel Elysa-Luxembourg · 18:45' }, lat: 48.8462, lng: 2.3422, time: '18:45', stay: true },
+      { id: 'D2', name: { zh: 'Pierre Hermé 馬卡龍', en: 'Pierre Hermé macarons' }, desc: { zh: '72 Rue Bonaparte · 週日 10:00–19:00', en: '72 Rue Bonaparte · Sun 10:00–19:00' }, lat: 48.8520, lng: 2.3325, time: '~15:55', meal: true },
+      { id: 'E', name: { zh: '參議院（選擇性）', en: 'Sénat (optional)' }, desc: { zh: '盧森堡宮 · 免費 · 視排隊', en: 'Palais du Luxembourg · free · if queue allows' }, lat: 48.84915, lng: 2.33865, time: '~16:25', optional: true },
+      { id: 'F', name: { zh: '回旅館取行李', en: 'Back to hotel for luggage' }, desc: { zh: 'Hotel Elysa-Luxembourg · 取行李＋休息', en: 'Hotel Elysa-Luxembourg · luggage + rest' }, lat: 48.8462, lng: 2.3422, time: '~17:45', stay: true },
       { id: 'G', name: { zh: '巴黎北站 返程', en: 'Gare du Nord (Return)' }, desc: { zh: '21:02 歐洲之星發車', en: '21:02 Eurostar departure' }, lat: 48.8809, lng: 2.3553, time: '21:02' }
     ]
   };
@@ -49,7 +49,7 @@
     1: [[48.8809, 2.3553], [48.8462, 2.3422], [48.8507, 2.3372]],
     2: [
       [48.8462, 2.3422], [48.8523, 2.3455], [48.86702, 2.33892], [48.8639, 2.3417],
-      [48.88143, 2.2985], [48.85608, 2.34615], [48.8590, 2.3620], [48.8530, 2.3499], [48.8574, 2.3424], [48.8536, 2.3357], [48.8462, 2.3422]
+      [48.88143, 2.2985], [48.85608, 2.34615], [48.8526, 2.3505], [48.8530, 2.3499], [48.8574, 2.3424], [48.8536, 2.3357], [48.8462, 2.3422]
     ],
     3: [
       [48.8462, 2.3422], [48.8532, 2.3368], [48.85707, 2.31276], [48.85999, 2.32444], [48.8551, 2.3390],
