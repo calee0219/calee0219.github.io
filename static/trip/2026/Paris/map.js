@@ -20,19 +20,19 @@
       { id: '3', name: { zh: 'Les Éditeurs 深夜食堂', en: 'Les Éditeurs late supper' }, desc: { zh: '開到 02:00 · 農家烤雞／紅酒燉牛肉', en: 'Open till 02:00 · roast chicken / beef braised in wine' }, lat: 48.8507, lng: 2.3372, time: '~00:00', meal: true }
     ],
     2: [
-      { id: 'A0', name: { zh: "La Maison d'Isabelle 早餐", en: "La Maison d'Isabelle breakfast" }, desc: { zh: '2018 巴黎最佳可頌 · 06:00 開', en: 'Best croissant Paris 2018 · open 06:00' }, lat: 48.8523, lng: 2.3455, time: '08:00', meal: true },
+      { id: 'A0', name: { zh: "La Maison d'Isabelle 早餐", en: "La Maison d'Isabelle breakfast" }, desc: { zh: '2018 巴黎最佳可頌 · 06:00 開 · 外帶直奔 BnF', en: 'Best croissant Paris 2018 · open 06:00 · takeaway to the BnF' }, lat: 48.8523, lng: 2.3455, time: '09:10', meal: true },
       { id: 'A', name: { zh: 'BnF 黎塞留館', en: 'BnF Richelieu' }, desc: { zh: '研究員閱覽室 · 免費 · 10:00', en: 'Researchers-only reading rooms · free · 10:00' }, lat: 48.86702, lng: 2.33892, time: '10:00', highlight: true },
-      { id: 'B0', name: { zh: 'Stohrer 最老甜點店', en: 'Stohrer (oldest pâtisserie)' }, desc: { zh: 'baba au rhum · 外帶 · ~11:35', en: 'baba au rhum · takeaway · ~11:35' }, lat: 48.8639, lng: 2.3417, time: '~11:35', meal: true },
+      { id: 'B0', name: { zh: 'Stohrer 最老甜點店', en: 'Stohrer (oldest pâtisserie)' }, desc: { zh: 'baba au rhum · 外帶 · ~11:40', en: 'baba au rhum · takeaway · ~11:40' }, lat: 48.8639, lng: 2.3417, time: '~11:40', meal: true },
       { id: 'B', name: { zh: 'Maison Rostang 午餐（已訂位）', en: 'Maison Rostang lunch (booked)' }, desc: { zh: '二星 · 12:15 · 2 位 · €85–105', en: '2 stars · 12:15 · 2 guests · €85–105' }, lat: 48.88143, lng: 2.2985, time: '12:15', meal: true },
       { id: 'C', name: { zh: '古監獄 Conciergerie', en: 'Conciergerie' }, desc: { zh: '中世紀王宮監獄 · 免費 · 15:00', en: 'Medieval palace-prison · free · 15:00' }, lat: 48.85608, lng: 2.34615, time: '15:00', highlight: true },
       { id: 'C2', name: { zh: 'Marais 甜點三選一（選擇性）', en: 'Marais desserts, pick one (optional)' }, desc: { zh: "Brigat'／Christophe Louie／Yann Couvreur · ~16:30", en: "Brigat' / Christophe Louie / Yann Couvreur · ~16:30" }, lat: 48.8590, lng: 2.3620, time: '~16:30', meal: true, optional: true },
       { id: 'D', name: { zh: '巴黎聖母院', en: 'Notre-Dame de Paris' }, desc: { zh: '免費 · 18:00 預約時段', en: 'Free · 18:00 reserved slot' }, lat: 48.8530, lng: 2.3499, time: '18:00', highlight: true },
       { id: 'E0', name: { zh: '塞納河日落散步', en: 'Seine sunset stroll' }, desc: { zh: 'Square du Vert-Galant · 18:45–20:00', en: 'Square du Vert-Galant · 18:45–20:00' }, lat: 48.8574, lng: 2.3424, time: '18:45' },
-      { id: 'E', name: { zh: 'Odéon 晚餐', en: 'Odéon dinner' }, desc: { zh: "三選一：Comptoir du Relais／Breizh Café／L'Avant Comptoir", en: "Pick one: Comptoir du Relais / Breizh Café / L'Avant Comptoir" }, lat: 48.8509, lng: 2.3372, time: '20:15', meal: true },
+      { id: 'E', name: { zh: 'Semilla 晚餐（已訂位）', en: 'Semilla dinner (booked)' }, desc: { zh: '現代法式 · 20:30 · 2 位 · 已訂位', en: 'Modern French · 20:30 · 2 guests · booked' }, lat: 48.8536, lng: 2.3357, time: '20:30', meal: true },
       { id: 'F', name: { zh: '回旅館', en: 'Back to hotel' }, desc: { zh: 'Hotel Elysa-Luxembourg', en: 'Hotel Elysa-Luxembourg' }, lat: 48.8462, lng: 2.3422, time: '22:30', stay: true }
     ],
     3: [
-      { id: 'A0', name: { zh: "La Parisienne Madame 早餐", en: "La Parisienne Madame breakfast" }, desc: { zh: '週日 07:00 開 · 6 區麵包店', en: 'Open Sun from 07:00 · 6th-arr. bakery' }, lat: 48.8502, lng: 2.3297, time: '08:00', meal: true },
+      { id: 'A0', name: { zh: 'Maison Mulot 早餐', en: 'Maison Mulot breakfast' }, desc: { zh: '週日 07:00 開 · 6 區老字號 · 外帶直奔榮軍院', en: 'Open Sun from 07:00 · 6th-arr. institution · takeaway to the Invalides' }, lat: 48.8532, lng: 2.3368, time: '09:00', meal: true },
       { id: 'A', name: { zh: '榮軍院 Invalides', en: 'Invalides' }, desc: { zh: 'Grand Salon · 免費 · 10:00', en: 'Grand Salon · free · 10:00' }, lat: 48.85707, lng: 2.31276, time: '10:00', highlight: true },
       { id: 'B', name: { zh: '榮譽軍團宮', en: 'Hôtel de Salm' }, desc: { zh: '大法官官邸 · 免費 · 11:30', en: "Grand Chancellor's residence · free · 11:30" }, lat: 48.85999, lng: 2.32444, time: '11:30', highlight: true },
       { id: 'C', name: { zh: 'Chez Fernand Christine', en: 'Chez Fernand Christine' }, desc: { zh: '紅酒燉雞 · 12:30', en: 'Coq au vin · 12:30' }, lat: 48.8551, lng: 2.3390, time: '12:30', meal: true },
@@ -49,10 +49,10 @@
     1: [[48.8809, 2.3553], [48.8462, 2.3422], [48.8507, 2.3372]],
     2: [
       [48.8462, 2.3422], [48.8523, 2.3455], [48.86702, 2.33892], [48.8639, 2.3417],
-      [48.88143, 2.2985], [48.85608, 2.34615], [48.8590, 2.3620], [48.8530, 2.3499], [48.8574, 2.3424], [48.8509, 2.3372], [48.8462, 2.3422]
+      [48.88143, 2.2985], [48.85608, 2.34615], [48.8590, 2.3620], [48.8530, 2.3499], [48.8574, 2.3424], [48.8536, 2.3357], [48.8462, 2.3422]
     ],
     3: [
-      [48.8462, 2.3422], [48.8502, 2.3297], [48.85707, 2.31276], [48.85999, 2.32444], [48.8551, 2.3390],
+      [48.8462, 2.3422], [48.8532, 2.3368], [48.85707, 2.31276], [48.85999, 2.32444], [48.8551, 2.3390],
       [48.85408, 2.33313], [48.8520, 2.3325], [48.84915, 2.33865], [48.8462, 2.3422], [48.8809, 2.3553]
     ]
   };
