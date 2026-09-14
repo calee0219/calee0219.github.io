@@ -1,0 +1,1954 @@
+<!DOCTYPE html>
+
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title data-en="2026 Europe Ski + City Travel Planning" data-zh="2026 歐洲滑雪＋城市旅遊規劃 | Europe Ski + City Travel">2026 歐洲滑雪＋城市旅遊規劃 | Europe Ski + City Travel</title>
+<link href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;text y='.9em' font-size='90'&gt;⛷&lt;/text&gt;&lt;/svg&gt;" rel="icon"/>
+<link href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="favicon.ico" rel="icon" type="image/x-icon"/>
+<link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="favicon-192.png" rel="icon" sizes="192x192" type="image/png">
+<link href="favicon-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="style.css" rel="stylesheet"/>
+</link><link href="redesign.css" rel="stylesheet"/>
+<link href="comparison.css" rel="stylesheet"/>
+<link href="three_resort.css" rel="stylesheet"/></head>
+<body>
+<!-- Global Currency Switcher (sticky) -->
+<div class="currency-bar" id="currencyBar">
+<div class="bar-left">
+<span class="currency-label" data-en="Currency" data-zh="貨幣">貨幣</span>
+<div class="currency-btns">
+<button class="cur-btn" data-cur="EUR">EUR €</button>
+<button class="cur-btn active" data-cur="NTD">NTD NT$</button>
+<button class="cur-btn" data-cur="USD">USD $</button>
+<button class="cur-btn" data-cur="GBP">GBP £</button>
+</div>
+</div>
+<div class="lang-toggle">
+<button class="lang-btn active" data-lang="zh">中文</button>
+<button class="lang-btn" data-lang="en">EN</button>
+</div>
+</div><nav class="category-bar" id="categoryBar"><div class="category-bar-inner"><button class="cat-tab active" data-category="all" data-en="All" data-zh="全部">全部</button><button class="cat-tab" data-category="planning" data-en="📋 Planning" data-zh="📋 行前準備">📋 行前準備</button><button class="cat-tab" data-category="skiing" data-en="⛷️ Skiing" data-zh="⛷️ 滑雪攻略">⛷️ 滑雪攻略</button><button class="cat-tab" data-category="travel" data-en="🏙️ City &amp; Travel" data-zh="🏙️ 城市旅遊">🏙️ 城市旅遊</button><button class="cat-tab" data-category="logistics" data-en="💰 Budget &amp; Itinerary" data-zh="💰 預算行程">💰 預算行程</button></div></nav>
+<!-- Hero Section -->
+<header class="hero">
+<div class="hero-overlay"></div>
+<div class="hero-content">
+<h1 data-en="2026 Europe Ski + City Travel" data-zh="2026 歐洲滑雪＋城市旅遊">2026 歐洲滑雪＋城市旅遊</h1>
+<p class="hero-subtitle" data-en="Austria Skiing ✕ Central Europe Cities ✕ Christmas Markets" data-zh="奧地利滑雪 ✕ 中歐城市探索 ✕ 聖誕市集巡禮">奧地利滑雪 ✕ 中歐城市探索 ✕ 聖誕市集巡禮</p>
+<p class="hero-desc" data-en="The ultimate guide for a Christmas &amp; New Year ski holiday in Europe with friends" data-zh="聖誕跨年黃金假期，帶朋友暢遊歐洲的完整攻略">聖誕跨年黃金假期，帶朋友暢遊歐洲的完整攻略</p>
+<nav class="hero-nav hero-nav-categories"><a class="hero-cat-btn" data-en="🗓️ Minute-by-minute itinerary" data-zh="🗓️ 分秒版行程" href="../">🗓️ 分秒版行程</a><a class="hero-cat-btn" data-category="planning" data-en="📋 Planning" data-zh="📋 行前準備" href="#cat-planning">📋 行前準備</a><a class="hero-cat-btn" data-category="skiing" data-en="⛷️ Skiing" data-zh="⛷️ 滑雪攻略" href="#cat-skiing">⛷️ 滑雪攻略</a><a class="hero-cat-btn" data-category="travel" data-en="🏙️ City &amp; Travel" data-zh="🏙️ 城市旅遊" href="#cat-travel">🏙️ 城市旅遊</a><a class="hero-cat-btn" data-category="logistics" data-en="💰 Budget &amp; Itinerary" data-zh="💰 預算行程" href="#cat-logistics">💰 預算行程</a></nav>
+</div>
+</header>
+<main>
+<!-- ==================== LEAVE STRATEGY ==================== -->
+<!-- ==================== FLIGHTS ==================== -->
+<!-- ==================== SKI RESORTS ==================== -->
+<!-- ==================== SKI SCHOOL ==================== -->
+<!-- ==================== BUDGET EUROPEAN SKI RESORTS ==================== -->
+<!-- ==================== NORTH AMERICA BUDGET SKI ==================== -->
+<!-- ==================== CITIES ==================== -->
+<!-- ====== ASIA SKI SECTION ====== -->
+<!-- ====== SKI PROGRESSION TIPS SECTION ====== -->
+<!-- ==================== ITINERARY ==================== -->
+<!-- ====== SNOW CONDITIONS SECTION ====== -->
+<!-- ====== CHRISTMAS MARKETS SECTION ====== -->
+<!-- ====== FOOD GUIDE SECTION ====== -->
+<!-- ====== ACCOMMODATION SECTION ====== -->
+<!-- ==================== MAP ==================== -->
+<!-- ==================== BUDGET ==================== -->
+<div class="category-group" data-category="planning" id="cat-planning"><div class="category-header"><h2 class="category-title" data-en="📋 Planning" data-zh="📋 行前準備">📋 行前準備</h2></div><section class="section collapsible-section collapsed" id="leave">
+<div class="container"><div class="section-toggle-bar" data-target="leave"><span class="toggle-chevron">▸</span><span class="toggle-title" data-en="Leave Strategy: Christmas &amp; New Year Holiday" data-zh="請假攻略：聖誕跨年黃金假期">請假攻略：聖誕跨年黃金假期</span></div><div class="section-collapsible-content">
+<p class="section-intro" data-en="Both Dec 25, 2026 (Fri) and Jan 1, 2027 (Fri) are holidays. Only 4 days of PTO needed for 10 consecutive days off." data-zh="2026年12/25（五）與2027年1/1（五）都是假日，中間只需請4天假即可享受10天連休。">2026年12/25（五）與2027年1/1（五）都是假日，中間只需請4天假即可享受10天連休。</p>
+<div class="region-toggle">
+<button class="region-btn active" data-en="Taiwan" data-region="tw" data-section="leave" data-zh="台灣版">台灣版</button>
+<button class="region-btn" data-en="US" data-region="us" data-section="leave" data-zh="美國版">美國版</button>
+</div>
+<!-- TW Leave -->
+<div class="region-content active" data-region="tw" data-section="leave">
+<div class="calendar-wrapper">
+<div class="calendar-month" id="cal-dec-tw"></div>
+<div class="calendar-month" id="cal-jan-tw"></div>
+</div>
+<div class="leave-options">
+<div class="leave-card best">
+<div class="leave-badge" data-en="Best Pick" data-zh="最推薦">最推薦</div>
+<h3 data-en="Plan A: Best Value" data-zh="方案A：最佳CP值">方案A：最佳CP值</h3>
+<div class="leave-stats">
+<div class="stat"><span class="stat-num">4</span><span class="stat-label" data-en="PTO Days" data-zh="天請假">天請假</span></div>
+<div class="stat"><span class="stat-num">10</span><span class="stat-label" data-en="Days Off" data-zh="天連休">天連休</span></div>
+</div>
+<p data-en="PTO/leave: 12/28 (Mon) ~ 12/31 (Thu)" data-zh="請假：12/28（一）~ 12/31（四）">請假：12/28（一）~ 12/31（四）</p>
+<p data-en="Consecutive days off: 12/25 (Fri) ~ 1/3 (Sun)" data-zh="連休：12/25（五）~ 1/3（日）">連休：12/25（五）~ 1/3（日）</p>
+<p class="leave-note" data-en="12/25 Constitution Day + weekend + PTO/leave 4 days + 1/1 New Year + weekend = perfect 10 days. Actual stay in Europe about 8 days, enough for 5 days skiing + 3 days city touring." data-zh="12/25 行憲紀念日＋週末＋請假4天＋1/1 元旦＋週末＝完美10天。歐洲實際停留約8天，足夠滑雪5天＋城市3天。">12/25 行憲紀念日＋週末＋請假4天＋1/1 元旦＋週末＝完美10天。歐洲實際停留約8天，足夠滑雪5天＋城市3天。</p>
+</div>
+<div class="leave-card">
+<h3 data-en="Plan B: Extended" data-zh="方案B：豪華型">方案B：豪華型</h3>
+<div class="leave-stats">
+<div class="stat"><span class="stat-num">8</span><span class="stat-label" data-en="PTO Days" data-zh="天請假">天請假</span></div>
+<div class="stat"><span class="stat-num">16</span><span class="stat-label" data-en="Days Off" data-zh="天連休">天連休</span></div>
+</div>
+<p data-en="PTO/leave: 12/21 (Mon)~12/24 (Thu) + 12/28 (Mon)~12/31 (Thu)" data-zh="請假：12/21（一）~12/24（四）＋12/28（一）~12/31（四）">請假：12/21（一）~12/24（四）＋12/28（一）~12/31（四）</p>
+<p data-en="Consecutive days off: 12/19 (Sat) ~ 1/3 (Sun)" data-zh="連休：12/19（六）~ 1/3（日）">連休：12/19（六）~ 1/3（日）</p>
+<p class="leave-note" data-en="Departing early avoids Christmas airfare peak; flights on 12/20 are usually 20-30% cheaper than 12/24. Plenty of time for in-depth multi-country exploration." data-zh="提早出發可避開聖誕機票高峰，12/20出發機票通常比12/24便宜20-30%。有充裕時間深度遊覽多國。">提早出發可避開聖誕機票高峰，12/20出發機票通常比12/24便宜20-30%。有充裕時間深度遊覽多國。</p>
+</div>
+<div class="leave-card">
+<h3 data-en="Plan C: Compact" data-zh="方案C：精省型">方案C：精省型</h3>
+<div class="leave-stats">
+<div class="stat"><span class="stat-num">4</span><span class="stat-label" data-en="PTO Days" data-zh="天請假">天請假</span></div>
+<div class="stat"><span class="stat-num">8</span><span class="stat-label" data-en="Days Off" data-zh="天連休">天連休</span></div>
+</div>
+<p data-en="PTO/leave: 12/28 (Mon) ~ 12/31 (Thu)" data-zh="請假：12/28（一）~ 12/31（四）">請假：12/28（一）~ 12/31（四）</p>
+<p data-en="Consecutive days off: 12/26 (Sat) ~ 1/3 (Sun) (depart 12/25 late flight, arrive Europe 12/26)" data-zh="連休：12/26（六）~ 1/3（日）（12/25搭晚班機出發，12/26抵達歐洲）">連休：12/26（六）~ 1/3（日）<br/><small data-en="(Depart on 12/25 night flight, arrive in Europe on 12/26)" data-zh="（12/25搭晚班機出發，12/26抵達歐洲）">（12/25搭晚班機出發，12/26抵達歐洲）</small></p>
+<p class="leave-note" data-en="Took 4 days PTO, but flew on 12/25, stayed about 8 days in Europe. Tighter schedule but feasible." data-zh="同樣請4天假，但12/25當天搭機，歐洲停留約8天。行程較緊湊但可行。">同樣請4天假，但12/25當天搭機，歐洲停留約8天。行程較緊湊但可行。</p>
+</div>
+</div>
+</div>
+<!-- US Leave -->
+<div class="region-content" data-region="us" data-section="leave">
+<div class="calendar-wrapper">
+<div class="calendar-month" id="cal-dec-us"></div>
+<div class="calendar-month" id="cal-jan-us"></div>
+</div>
+<div class="leave-options">
+<div class="leave-card best">
+<div class="leave-badge">Best Value</div>
+<h3>Option A: Best Value</h3>
+<div class="leave-stats">
+<div class="stat"><span class="stat-num">4</span><span class="stat-label">PTO Days</span></div>
+<div class="stat"><span class="stat-num">10</span><span class="stat-label">Days Off</span></div>
+</div>
+<p>PTO: Dec 28 (Mon) ~ Dec 31 (Thu)</p>
+<p>Off: Dec 25 (Fri) ~ Jan 3 (Sun)</p>
+<p class="leave-note">Christmas Day (Fri) + Weekend + 4 PTO + New Year's Day (Fri) + Weekend = 10 consecutive days. Perfect for 5 days skiing + 3 days city touring.</p>
+</div>
+<div class="leave-card">
+<h3>Option B: Extended</h3>
+<div class="leave-stats">
+<div class="stat"><span class="stat-num">8</span><span class="stat-label">PTO Days</span></div>
+<div class="stat"><span class="stat-num">16</span><span class="stat-label">Days Off</span></div>
+</div>
+<p>PTO: Dec 21-24 + Dec 28-31</p>
+<p>Off: Dec 19 (Sat) ~ Jan 3 (Sun)</p>
+<p class="leave-note">Depart earlier to avoid peak Christmas flight prices. Dec 20 departures are typically 20-30% cheaper than Dec 24.</p>
+</div>
+<div class="leave-card">
+<h3>Option C: Compact</h3>
+<div class="leave-stats">
+<div class="stat"><span class="stat-num">4</span><span class="stat-label">PTO Days</span></div>
+<div class="stat"><span class="stat-num">8</span><span class="stat-label">Days Off</span></div>
+</div>
+<p>PTO: Dec 28 (Mon) ~ Dec 31 (Thu)</p>
+<p>Off: Dec 26 (Sat) ~ Jan 3 (Sun)<br/><small>(Fly out Christmas evening, arrive Dec 26)</small></p>
+<p class="leave-note">Same 4 PTO days. Take a Christmas evening flight, arrive in Europe Dec 26. Tight but workable for 5 ski + 3 city days.</p>
+</div>
+</div>
+</div>
+</div></div>
+</section><section class="section section-alt collapsible-section collapsed" id="flights">
+<div class="container"><div class="section-toggle-bar" data-target="flights"><span class="toggle-chevron">▸</span><span class="toggle-title" data-en="Flight Analysis" data-zh="機票分析">機票分析</span></div><div class="section-collapsible-content">
+<p class="section-intro" data-en="Christmas peak season flight comparison. Book 6+ months in advance and consider open-jaw tickets to save transit time." data-zh="聖誕旺季機票比較。建議提早6個月以上預訂，並考慮不同城市進出（Open-jaw）節省交通時間。">聖誕旺季機票比較。建議提早6個月以上預訂，並考慮不同城市進出（Open-jaw）節省交通時間。</p>
+<div class="region-toggle">
+<button class="region-btn active" data-en="From Taiwan" data-region="tw" data-section="flights" data-zh="從台灣出發">從台灣出發</button>
+<button class="region-btn" data-en="From US" data-region="us" data-section="flights" data-zh="從美國出發">從美國出發</button>
+</div>
+<!-- TW Flights -->
+<div class="region-content active" data-region="tw" data-section="flights">
+<div class="flight-cards">
+<div class="flight-card budget">
+<div class="flight-type" data-en="Budget Connection" data-zh="精省轉機">精省轉機</div>
+<div class="flight-price" data-eur="1060" data-label="~">~<span class="price-val">€1,060</span></div>
+<div class="flight-airline" data-en="Scoot" data-zh="酷航 Scoot">酷航 Scoot</div>
+<div class="flight-route" data-en="Taipei TPE → Singapore SIN → Vienna VIE" data-zh="台北 TPE → 新加坡 SIN → 維也納 VIE">台北 TPE → 新加坡 SIN → 維也納 VIE</div>
+<div class="flight-duration" data-en="22-40 hours" data-zh="22-40 小時">22-40 小時</div>
+<ul class="flight-pros"><li data-en="Cheapest option" data-zh="最便宜的選擇">最便宜的選擇</li></ul>
+<ul class="flight-cons"><li data-en="Long layover" data-zh="轉機時間長">轉機時間長</li><li data-en="Budget airlines have no free meals or checked baggage" data-zh="廉航無免費餐飲與托運行李">廉航無免費餐飲與托運行李</li><li data-en="Additional baggage fee required (ski gear is heavy)" data-zh="需另購行李額（滑雪裝備重）">需另購行李額（滑雪裝備重）</li></ul>
+</div>
+<div class="flight-card recommended">
+<div class="flight-badge" data-en="Best Value" data-zh="CP值最高">CP值最高</div>
+<div class="flight-type" data-en="Full-Service Connection" data-zh="傳統航空轉機">傳統航空轉機</div>
+<div class="flight-price" data-eur="1160" data-label="~">~<span class="price-val">€1,160</span></div>
+<div class="flight-airline" data-en="China Airlines + Austrian Airlines" data-zh="中華航空 + 奧地利航空">中華航空 + 奧地利航空</div>
+<div class="flight-route" data-en="Taipei TPE → Bangkok BKK → Vienna VIE" data-zh="台北 TPE → 曼谷 BKK → 維也納 VIE">台北 TPE → 曼谷 BKK → 維也納 VIE</div>
+<div class="flight-duration" data-en="17-28 hours" data-zh="17-28 小時">17-28 小時</div>
+<ul class="flight-pros"><li data-en="Traditional airline service quality" data-zh="傳統航空服務品質">傳統航空服務品質</li><li data-en="Includes free meals and 30kg luggage" data-zh="含免費餐飲與30kg行李">含免費餐飲與30kg行李</li><li data-en="Star Alliance mileage accumulation" data-zh="星空聯盟累積里程">星空聯盟累積里程</li></ul>
+<ul class="flight-cons"><li data-en="Transfer required in Bangkok" data-zh="需在曼谷轉機">需在曼谷轉機</li></ul>
+</div>
+<div class="flight-card premium">
+<div class="flight-type" data-en="Direct Flight" data-zh="直飛省時">直飛省時</div>
+<div class="flight-price" data-eur="1260" data-label="~">~<span class="price-val">€1,260</span></div>
+<div class="flight-airline" data-en="EVA Air" data-zh="長榮航空 EVA Air">長榮航空 EVA Air</div>
+<div class="flight-route" data-en="Taipei TPE → Vienna VIE (direct flight)" data-zh="台北 TPE → 維也納 VIE（直飛）">台北 TPE → 維也納 VIE（直飛）</div>
+<div class="flight-duration" data-en="13-14 hours" data-zh="13-14 小時">13-14 小時</div>
+<ul class="flight-pros"><li data-en="Direct flights save the most time" data-zh="直飛最省時">直飛最省時</li><li data-en="Five-star airline service" data-zh="五星航空服務">五星航空服務</li></ul>
+<ul class="flight-cons"><li data-en="Higher price" data-zh="價格較高">價格較高</li><li data-en="Popular dates sell out easily" data-zh="熱門日期易客滿">熱門日期易客滿</li></ul>
+</div>
+</div>
+<div class="flight-tips">
+<h3 data-en="Money-Saving Tips from Taiwan" data-zh="台灣出發省錢秘訣">台灣出發省錢秘訣</h3>
+<div class="tips-grid">
+<div class="tip" data-en="Open-jaw flights with different arrival and departure points like “Munich in, Prague out” save return transport, ticket price only 5-15% higher." data-zh="Open-jaw 不同點進出例如「慕尼黑進、布拉格出」，省下回程交通，票價僅貴5-15%。"><strong data-en="Open-jaw different arrival and departure points" data-zh="Open-jaw 不同點進出">Open-jaw 不同點進出</strong><br/>例如「慕尼黑進、布拉格出」，省下回程交通，票價僅貴5-15%。</div>
+<div class="tip" data-en="Avoid the most expensive dates: 12/23-24 departures are priciest; recommend 12/20 or 12/25 departures; avoid 12/31-1/1 for return." data-zh="避開最貴日期12/23-24出發最貴，建議12/20或12/25出發；回程避開12/31-1/1。"><strong data-en="Avoid the most expensive dates" data-zh="避開最貴日期">避開最貴日期</strong><br/>12/23-24出發最貴，建議12/20或12/25出發；回程避開12/31-1/1。</div>
+<div class="tip" data-en="Book early for Christmas peak season, recommend 6+ months in advance for 20-30% cheaper prices." data-zh="提早預訂聖誕旺季建議提前6個月以上預訂，價格可便宜20-30%。"><strong data-en="Book early" data-zh="提早預訂">提早預訂</strong><br/>聖誕旺季建議提前6個月以上預訂，價格可便宜20-30%。</div>
+<div class="tip" data-en="Use promotions from Turkish Airlines and Emirates transfers for good deals. EVA/China Airlines also have Europe route promotions." data-zh="善用促銷土航、阿聯酋轉機常有好價。長榮/華航也有歐洲航線促銷。"><strong data-en="Make good use of promotions" data-zh="善用促銷">善用促銷</strong><br/>土航、阿聯酋轉機常有好價。長榮/華航也有歐洲航線促銷。</div>
+</div>
+</div>
+</div>
+<!-- US Flights -->
+<div class="region-content" data-region="us" data-section="flights">
+<div class="flight-cards">
+<div class="flight-card budget">
+<div class="flight-type">East Coast Direct</div>
+<div class="flight-price" data-eur="900" data-label="~">~<span class="price-val">€900</span></div>
+<div class="flight-airline">Austrian Airlines</div>
+<div class="flight-route">New York JFK → Vienna VIE (Nonstop)</div>
+<div class="flight-duration">8h 10min</div>
+<ul class="flight-pros"><li>Only nonstop US-Vienna route</li><li>Short flight time</li></ul>
+<ul class="flight-cons"><li>Only from JFK</li><li>Christmas peak prices surge</li></ul>
+</div>
+<div class="flight-card recommended">
+<div class="flight-badge">Best Value</div>
+<div class="flight-type">East Coast via Hub</div>
+<div class="flight-price" data-eur="1100" data-label="~">~<span class="price-val">€1,100</span></div>
+<div class="flight-airline">Lufthansa / Swiss / United</div>
+<div class="flight-route">JFK/EWR → FRA/ZRH → VIE/MUC</div>
+<div class="flight-duration">10-14 hours</div>
+<ul class="flight-pros"><li>Multiple daily options</li><li>Open-jaw friendly</li></ul>
+<ul class="flight-cons"><li>Requires connection</li></ul>
+</div>
+<div class="flight-card premium">
+<div class="flight-type">West Coast</div>
+<div class="flight-price" data-eur="1500" data-label="~">~<span class="price-val">€1,500</span></div>
+<div class="flight-airline">Lufthansa / United / Condor</div>
+<div class="flight-route">LAX/SFO → FRA/MUC → VIE</div>
+<div class="flight-duration">13-16 hours</div>
+<ul class="flight-pros"><li>Direct to Munich available</li></ul>
+<ul class="flight-cons"><li>Higher prices from West Coast</li></ul>
+</div>
+</div>
+<div class="flight-tips">
+<h3>Tips for US Travelers</h3>
+<div class="tips-grid">
+<div class="tip"><strong>Open-jaw Tickets</strong><br/>Fly into Munich (MUC), out of Prague (PRG) or Budapest (BUD). Saves backtracking.</div>
+<div class="tip"><strong>East Coast Advantage</strong><br/>JFK/EWR have the cheapest and most direct options to Austria.</div>
+<div class="tip"><strong>Book 3-6 Months Ahead</strong><br/>Christmas flights fill up fast. Set price alerts on Google Flights.</div>
+<div class="tip"><strong>Budget Airlines</strong><br/>Icelandair (via Reykjavik) or Aer Lingus (via Dublin) for budget connections.</div>
+</div>
+</div>
+</div>
+</div></div>
+</section></div><div class="category-group" data-category="skiing" id="cat-skiing"><div class="category-header"><h2 class="category-title" data-en="⛷️ Skiing" data-zh="⛷️ 滑雪攻略">⛷️ 滑雪攻略</h2></div><section class="section collapsible-section three-resort-section" data-category="skiing" id="three-resort-compare"><div class="container"><div class="section-toggle-bar" data-target="three-resort-compare"><span class="toggle-chevron">▸</span><span class="toggle-title" data-en="🎿 Three Resort Deep Comparison" data-zh="🎿 三大候選雪場深度比較">🎿 三大候選雪場深度比較</span></div><div class="section-collapsible-content">
+<!-- Resort Cards Side by Side -->
+<div class="resort-cards-row">
+<div class="resort-card chamonix-card">
+<div class="resort-card-header" style="background: linear-gradient(135deg, #1a237e, #3949ab);">
+<h3>🇫🇷 Chamonix Mont-Blanc</h3>
+<span class="resort-subtitle" data-en="France・Extreme Skiing Mecca" data-zh="法國・極限滑雪聖地">法國・極限滑雪聖地</span>
+</div>
+<div class="resort-card-body">
+<div class="resort-stat"><span class="stat-label" data-en="Altitude" data-zh="海拔">海拔</span><span class="stat-value">1,080 - 3,842m</span></div>
+<div class="resort-stat"><span class="stat-label" data-en="Pistes" data-zh="雪道">雪道</span><span class="stat-value">152km</span></div>
+<div class="resort-stat"><span class="stat-label" data-en="6-day pass" data-zh="6日票">6日票</span><span class="stat-value">€360-480</span></div>
+<div class="resort-stat"><span class="stat-label" data-en="Nearest airport" data-zh="最近機場">最近機場</span><span class="stat-value">GVA 1hr</span></div>
+<div class="resort-tags">
+<span class="tag tag-expert" data-en="Expert Paradise" data-zh="高手天堂">高手天堂</span>
+<span class="tag tag-culture" data-en="French Cuisine" data-zh="法國美食">法國美食</span>
+<span class="tag tag-access" data-en="Best Access" data-zh="交通最便利">交通最便利</span>
+</div>
+</div>
+</div>
+<div class="resort-card dolomiti-card">
+<div class="resort-card-header" style="background: linear-gradient(135deg, #e65100, #ff8f00);">
+<h3>🇮🇹 Dolomiti Superski</h3>
+<span class="resort-subtitle" data-en="Italy・World's Largest Ski Area" data-zh="義大利・世界最大聯合雪場">義大利・世界最大聯合雪場</span>
+</div>
+<div class="resort-card-body">
+<div class="resort-stat"><span class="stat-label" data-en="Altitude" data-zh="海拔">海拔</span><span class="stat-value">1,200 - 3,342m</span></div>
+<div class="resort-stat"><span class="stat-label" data-en="Pistes" data-zh="雪道">雪道</span><span class="stat-value">1,246km</span></div>
+<div class="resort-stat"><span class="stat-label" data-en="6-day pass" data-zh="6日票">6日票</span><span class="stat-value">€436</span></div>
+<div class="resort-stat"><span class="stat-label" data-en="Nearest airport" data-zh="最近機場">最近機場</span><span class="stat-value">VCE 2.5hr</span></div>
+<div class="resort-tags">
+<span class="tag tag-best" data-en="Best Value" data-zh="CP值最高">CP值最高</span>
+<span class="tag tag-culture" data-en="UNESCO Heritage" data-zh="UNESCO遺產">UNESCO遺產</span>
+<span class="tag tag-beginner" data-en="All Levels" data-zh="全程度友善">全程度友善</span>
+</div>
+</div>
+</div>
+<div class="resort-card solden-card">
+<div class="resort-card-header" style="background: linear-gradient(135deg, #b71c1c, #e53935);">
+<h3>🇦🇹 Sölden</h3>
+<span class="resort-subtitle" data-en="Austria・Glacier + James Bond" data-zh="奧地利・冰川雪場+007">奧地利・冰川雪場+007</span>
+</div>
+<div class="resort-card-body">
+<div class="resort-stat"><span class="stat-label" data-en="Altitude" data-zh="海拔">海拔</span><span class="stat-value">1,350 - 3,340m</span></div>
+<div class="resort-stat"><span class="stat-label" data-en="Pistes" data-zh="雪道">雪道</span><span class="stat-value">146km</span></div>
+<div class="resort-stat"><span class="stat-label" data-en="6-day pass" data-zh="6日票">6日票</span><span class="stat-value">€450-478</span></div>
+<div class="resort-stat"><span class="stat-label" data-en="Nearest airport" data-zh="最近機場">最近機場</span><span class="stat-value">INN 1hr / MUC 3hr</span></div>
+<div class="resort-tags">
+<span class="tag tag-snow" data-en="Most Reliable Snow" data-zh="雪況最穩">雪況最穩</span>
+<span class="tag tag-party" data-en="Party Vibe" data-zh="派對氛圍">派對氛圍</span>
+<span class="tag tag-special" data-en="007 Location" data-zh="007聖地">007聖地</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Radar Chart -->
+<div class="comparison-chart-container">
+<h3 data-en="📊 Seven-Dimension Radar Comparison" data-zh="📊 七維度雷達圖比較">📊 七維度雷達圖比較</h3>
+<canvas height="400" id="threeResortRadar" width="500"></canvas>
+</div>
+<!-- Detailed Comparison Tables -->
+<div class="comparison-tables">
+<h3 data-en="❄️ Late December Snow Conditions" data-zh="❄️ 十二月底雪況">❄️ 十二月底雪況</h3>
+<div class="table-responsive">
+<table class="compare-table">
+<thead>
+<tr>
+<th data-en="Item" data-zh="項目">項目</th>
+<th>Chamonix 🇫🇷</th>
+<th>Dolomiti 🇮🇹</th>
+<th>Sölden 🇦🇹</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-en="Glacier skiing" data-zh="冰川滑雪">冰川滑雪</td>
+<td data-en="No (high altitude instead)" data-zh="無（高海拔替代）">無（高海拔替代）</td>
+<td data-en="Marmolada glacier" data-zh="Marmolada 冰川">Marmolada 冰川</td>
+<td class="highlight-best" data-en="Dual glaciers ✓✓" data-zh="雙冰川 ✓✓">雙冰川 ✓✓</td>
+</tr>
+<tr>
+<td data-en="Summit snow depth" data-zh="山頂積雪深度">山頂積雪深度</td>
+<td>~123cm</td>
+<td>60-100cm</td>
+<td class="highlight-best">100-150cm</td>
+</tr>
+<tr>
+<td data-en="Snowmaking coverage" data-zh="人造雪覆蓋">人造雪覆蓋</td>
+<td>~50%</td>
+<td class="highlight-best">95%+</td>
+<td>~70%</td>
+</tr>
+<tr>
+<td data-en="Dec. open ratio" data-zh="12月開放比例">12月開放比例</td>
+<td>~80%</td>
+<td>~90%</td>
+<td class="highlight-best">~95%</td>
+</tr>
+<tr>
+<td data-en="Snow reliability" data-zh="雪況可靠度">雪況可靠度</td>
+<td>★★★★☆</td>
+<td>★★★★☆</td>
+<td class="highlight-best">★★★★★</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 data-en="💰 Cost Comparison (Christmas Peak)" data-zh="💰 費用比較（聖誕旺季）">💰 費用比較（聖誕旺季）</h3>
+<div class="table-responsive">
+<table class="compare-table">
+<thead>
+<tr>
+<th data-en="Item" data-zh="項目">項目</th>
+<th>Chamonix 🇫🇷</th>
+<th>Dolomiti 🇮🇹</th>
+<th>Sölden 🇦🇹</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-en="6-day lift pass" data-zh="6日雪票">6日雪票</td>
+<td>€360 (Le Pass)</td>
+<td class="highlight-best">€436 (1246km!)</td>
+<td>€478 (146km)</td>
+</tr>
+<tr>
+<td data-en="Cost per km piste" data-zh="每km雪道成本">每km雪道成本</td>
+<td>€2.37/km</td>
+<td class="highlight-best">€0.35/km</td>
+<td>€3.28/km</td>
+</tr>
+<tr>
+<td data-en="3-star hotel/night" data-zh="3星住宿/晚">3星住宿/晚</td>
+<td>€150-250</td>
+<td class="highlight-best">€100-180</td>
+<td>€150-250</td>
+</tr>
+<tr>
+<td data-en="Half-board option" data-zh="含半膳選項">含半膳選項</td>
+<td data-en="Rare" data-zh="少見">少見</td>
+<td class="highlight-best" data-en="Common (breakfast+dinner)" data-zh="普遍（含早晚餐）">普遍（含早晚餐）</td>
+<td data-en="Some available" data-zh="部分提供">部分提供</td>
+</tr>
+<tr>
+<td data-en="Dining costs" data-zh="餐飲消費">餐飲消費</td>
+<td data-en="€15-30/meal" data-zh="€15-30/餐">€15-30/餐</td>
+<td class="highlight-best" data-en="€10-20/meal" data-zh="€10-20/餐">€10-20/餐</td>
+<td data-en="€12-25/meal" data-zh="€12-25/餐">€12-25/餐</td>
+</tr>
+<tr>
+<td data-en="6-day total estimate" data-zh="6天總預估費用">6天總預估費用</td>
+<td>~€1,800-2,500</td>
+<td class="highlight-best">~€1,400-2,000</td>
+<td>~€1,800-2,600</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 data-en="🎿 Playability Comparison" data-zh="🎿 可玩性比較">🎿 可玩性比較</h3>
+<div class="table-responsive">
+<table class="compare-table">
+<thead>
+<tr>
+<th data-en="Item" data-zh="項目">項目</th>
+<th>Chamonix 🇫🇷</th>
+<th>Dolomiti 🇮🇹</th>
+<th>Sölden 🇦🇹</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-en="Total piste length" data-zh="雪道總長">雪道總長</td>
+<td>152km</td>
+<td class="highlight-best">1,246km</td>
+<td>146km</td>
+</tr>
+<tr>
+<td data-en="Number of lifts" data-zh="纜車數量">纜車數量</td>
+<td>~50</td>
+<td class="highlight-best">460</td>
+<td>31</td>
+</tr>
+<tr>
+<td data-en="Beginners" data-zh="初學者">初學者</td>
+<td>★★☆☆☆</td>
+<td class="highlight-best">★★★★★</td>
+<td>★★★☆☆</td>
+</tr>
+<tr>
+<td data-en="Intermediate" data-zh="中級者">中級者</td>
+<td>★★★☆☆</td>
+<td class="highlight-best">★★★★★</td>
+<td>★★★★☆</td>
+</tr>
+<tr>
+<td data-en="Expert" data-zh="高手">高手</td>
+<td class="highlight-best">★★★★★</td>
+<td>★★★☆☆</td>
+<td>★★★★☆</td>
+</tr>
+<tr>
+<td data-en="Signature experience" data-zh="特色體驗">特色體驗</td>
+<td data-en="Vallée Blanche legend" data-zh="Vallée Blanche 傳奇">Vallée Blanche 傳奇</td>
+<td data-en="Sella Ronda circuit" data-zh="Sella Ronda 環線">Sella Ronda 環線</td>
+<td data-en="007 ELEMENTS" data-zh="007 ELEMENTS">007 ELEMENTS</td>
+</tr>
+<tr>
+<td data-en="Recommended days" data-zh="建議天數">建議天數</td>
+<td>5-7天</td>
+<td class="highlight-best">7-14天</td>
+<td>4-6天</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 data-en="🌍 Tourism Potential" data-zh="🌍 觀光旅遊性">🌍 觀光旅遊性</h3>
+<div class="table-responsive">
+<table class="compare-table">
+<thead>
+<tr>
+<th data-en="Item" data-zh="項目">項目</th>
+<th>Chamonix 🇫🇷</th>
+<th>Dolomiti 🇮🇹</th>
+<th>Sölden 🇦🇹</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-en="Nearby cities" data-zh="附近大城市">附近大城市</td>
+<td data-en="Geneva(1hr), Annecy(1.5hr)" data-zh="日內瓦(1hr)、安錫(1.5hr)">日內瓦(1hr)、安錫(1.5hr)</td>
+<td data-en="Venice(2.5hr), Bolzano(1hr)" data-zh="威尼斯(2.5hr)、波札諾(1hr)">威尼斯(2.5hr)、波札諾(1hr)</td>
+<td data-en="Innsbruck(1hr)" data-zh="因斯布魯克(1hr)">因斯布魯克(1hr)</td>
+</tr>
+<tr>
+<td data-en="Christmas markets" data-zh="聖誕市集">聖誕市集</td>
+<td data-en="Annecy" data-zh="安錫">安錫</td>
+<td class="highlight-best" data-en="Bolzano (Italy's largest)" data-zh="波札諾（義大利最大）">波札諾（義大利最大）</td>
+<td data-en="Innsbruck (classic)" data-zh="因斯布魯克（經典）">因斯布魯克（經典）</td>
+</tr>
+<tr>
+<td data-en="Cross-border" data-zh="跨國可能">跨國可能</td>
+<td data-en="Italy+Switzerland" data-zh="義大利+瑞士">義大利+瑞士</td>
+<td data-en="Austria" data-zh="奧地利">奧地利</td>
+<td data-en="Italy (South Tyrol)" data-zh="義大利(南蒂羅爾)">義大利(南蒂羅爾)</td>
+</tr>
+<tr>
+<td data-en="Food rating" data-zh="美食評級">美食評級</td>
+<td>★★★★★</td>
+<td class="highlight-best">★★★★★+</td>
+<td>★★★★☆</td>
+</tr>
+<tr>
+<td data-en="Non-ski activities" data-zh="非滑雪活動">非滑雪活動</td>
+<td data-en="Aiguille du Midi view, glacier hike" data-zh="Aiguille du Midi觀景、冰川健行">Aiguille du Midi觀景、冰川健行</td>
+<td data-en="Snowshoe, Alpe di Siusi, spa" data-zh="雪鞋、Alpe di Siusi、溫泉">雪鞋、Alpe di Siusi、溫泉</td>
+<td data-en="007 museum, Aqua Dome spa" data-zh="007博物館、Aqua Dome溫泉">007博物館、Aqua Dome溫泉</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 data-en="✈️ Getting There from Taiwan" data-zh="✈️ 台灣出發交通">✈️ 台灣出發交通</h3>
+<div class="table-responsive">
+<table class="compare-table">
+<thead>
+<tr>
+<th data-en="Item" data-zh="項目">項目</th>
+<th>Chamonix 🇫🇷</th>
+<th>Dolomiti 🇮🇹</th>
+<th>Sölden 🇦🇹</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-en="Target airport" data-zh="目標機場">目標機場</td>
+<td>GVA (日內瓦)</td>
+<td>VCE (威尼斯) / VRN (維洛納)</td>
+<td>MUC (慕尼黑) / INN (因斯布魯克)</td>
+</tr>
+<tr>
+<td data-en="Flight time" data-zh="飛行時間">飛行時間</td>
+<td>14-16hr (1轉)</td>
+<td>14-16hr (1轉)</td>
+<td>14-16hr (1轉)</td>
+</tr>
+<tr>
+<td data-en="Airport→Resort" data-zh="機場→雪場">機場→雪場</td>
+<td class="highlight-best" data-en="1-1.5hr direct bus" data-zh="1-1.5hr 巴士直達">1-1.5hr 巴士直達</td>
+<td data-en="2-2.5hr car/transfer needed" data-zh="2-2.5hr 需租車/轉乘">2-2.5hr 需租車/轉乘</td>
+<td data-en="1hr(INN) / 3hr(MUC)" data-zh="1hr(INN) / 3hr(MUC)">1hr(INN) / 3hr(MUC)</td>
+</tr>
+<tr>
+<td data-en="Round-trip estimate" data-zh="來回票價估計">來回票價估計</td>
+<td>NT$25,000-40,000</td>
+<td>NT$25,000-38,000</td>
+<td>NT$25,000-40,000</td>
+</tr>
+<tr>
+<td data-en="Public transport" data-zh="公共交通">公共交通</td>
+<td class="highlight-best">★★★★★</td>
+<td>★★★☆☆</td>
+<td>★★★★☆</td>
+</tr>
+<tr>
+<td data-en="Total door-to-door" data-zh="總門到門時間">總門到門時間</td>
+<td class="highlight-best">17-20hr</td>
+<td>18-22hr</td>
+<td>18-22hr</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Final Score -->
+<h3 data-en="🏆 Overall Score" data-zh="🏆 綜合評分">🏆 綜合評分</h3>
+<div class="score-bars">
+<div class="score-row">
+<span class="score-label">🇫🇷 Chamonix</span>
+<div class="score-bar-bg">
+<div class="score-bar chamonix-bar" style="width: 76%;">
+<span class="score-number">61/80</span>
+</div>
+</div>
+</div>
+<div class="score-row">
+<span class="score-label">🇮🇹 Dolomiti</span>
+<div class="score-bar-bg">
+<div class="score-bar dolomiti-bar" style="width: 87.5%;">
+<span class="score-number">70/80</span>
+</div>
+</div>
+</div>
+<div class="score-row">
+<span class="score-label">🇦🇹 Sölden</span>
+<div class="score-bar-bg">
+<div class="score-bar solden-bar" style="width: 70%;">
+<span class="score-number">56/80</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Who Should Go Where -->
+<div class="who-goes-where">
+<h3 data-en="👤 Who Should Go Where?" data-zh="👤 誰適合去哪？">👤 誰適合去哪？</h3>
+<div class="persona-cards">
+<div class="persona-card" style="border-left: 4px solid #3949ab;">
+<h4 data-en="Choose Chamonix if you..." data-zh="選 Chamonix 如果你...">選 Chamonix 如果你...</h4>
+<ul>
+<li data-en="Seek extreme skiing (Vallée Blanche)" data-zh="追求極限滑雪（Vallée Blanche）">追求極限滑雪（Vallée Blanche）</li>
+<li data-en="Want French food &amp; culture" data-zh="想結合法國美食文化">想結合法國美食文化</li>
+<li data-en="Value easy access (Geneva 1hr)" data-zh="重視交通便利（日內瓦1小時）">重視交通便利（日內瓦1小時）</li>
+<li data-en="Intermediate-advanced skier" data-zh="中高級以上滑雪程度">中高級以上滑雪程度</li>
+<li data-en="Want to visit Geneva/Annecy/Switzerland" data-zh="想順遊日內瓦/安錫/瑞士">想順遊日內瓦/安錫/瑞士</li>
+</ul>
+</div>
+<div class="persona-card" style="border-left: 4px solid #ff8f00;">
+<h4 data-en="Choose Dolomiti if you..." data-zh="選 Dolomiti 如果你...">選 Dolomiti 如果你...</h4>
+<ul>
+<li data-en="Want the largest ski area, most options" data-zh="想要最大雪場、最多選擇">想要最大雪場、最多選擇</li>
+<li data-en="Mixed group levels (beginner to expert)" data-zh="團體程度混合（初學到高手）">團體程度混合（初學到高手）</li>
+<li data-en="Food lover (Italian cuisine)" data-zh="美食愛好者（義大利料理）">美食愛好者（義大利料理）</li>
+<li data-en="Want to see UNESCO World Heritage scenery" data-zh="想看 UNESCO 世界遺產景觀">想看 UNESCO 世界遺產景觀</li>
+<li data-en="Seek best value for money" data-zh="追求最高CP值">追求最高CP值</li>
+</ul>
+</div>
+<div class="persona-card" style="border-left: 4px solid #e53935;">
+<h4 data-en="Choose Sölden if you..." data-zh="選 Sölden 如果你...">選 Sölden 如果你...</h4>
+<ul>
+<li data-en="Snow reliability is top priority" data-zh="最在意雪況穩定度">最在意雪況穩定度</li>
+<li data-en="007 James Bond fan" data-zh="007 James Bond 粉絲">007 James Bond 粉絲</li>
+<li data-en="Love party vibe (Après-ski)" data-zh="喜歡派對氛圍(Après-ski)">喜歡派對氛圍(Après-ski)</li>
+<li data-en="Want to visit Innsbruck Christmas market" data-zh="想順遊因斯布魯克聖誕市集">想順遊因斯布魯克聖誕市集</li>
+<li data-en="Prefer compact resort" data-zh="偏好緊湊型雪場">偏好緊湊型雪場</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div></div></section><section class="section section-alt collapsible-section collapsed" id="ski-school">
+<div class="container"><div class="section-toggle-bar" data-target="ski-school"><span class="toggle-chevron">▸</span><span class="toggle-title" data-en="Ski school: courses and fees" data-zh="滑雪學校：課程與費用">滑雪學校：課程與費用</span></div><div class="section-collapsible-content">
+<p class="section-intro" data-en="Austria has a world-class ski instruction system. Whether you are a first-time beginner or an advanced skier looking to improve, you can find suitable courses." data-zh="奧地利擁有世界頂級的滑雪教學體系。無論是第一次踏上雪板的初學者，還是想精進技術的進階滑雪者，都能找到合適的課程。">奧地利擁有世界頂級的滑雪教學體系。無論是第一次踏上雪板的初學者，還是想精進技術的進階滑雪者，都能找到合適的課程。</p>
+<!-- Skill Level Definitions -->
+<div class="level-definitions">
+<h3 data-en="Skiing skill level definitions" data-zh="滑雪程度定義">滑雪程度定義</h3>
+<div class="level-grid">
+<div class="level-card level-green">
+<div class="level-icon">●</div>
+<h4 data-en="Green run / Anfänger" data-zh="綠道 Green / Anfänger">綠道 Green / Anfänger</h4>
+<p class="level-en">Beginner</p>
+<p data-en="First-time skiers or those with 1-2 experiences. Learning basic stance, braking (snowplow/Pizza), and gentle slope turns. Practice needed on magic carpet or beginner lift areas." data-zh="第一次滑雪或僅有1-2次經驗。正在學習基本站姿、煞車（雪犁/Pizza）和緩坡轉彎。需要在魔毯或初學者纜車區域練習。">第一次滑雪或僅有1-2次經驗。正在學習基本站姿、煞車（雪犁/Pizza）和緩坡轉彎。需要在魔毯或初學者纜車區域練習。</p>
+<p class="level-recommend" data-en="Recommended course: Group beginner lessons 3-5 days" data-zh="建議課程：團體初學者課程 3-5天">建議課程：團體初學者課程 3-5天</p>
+</div>
+<div class="level-card level-blue">
+<div class="level-icon">●</div>
+<h4 data-en="Blue run / Leicht Fortgeschritten" data-zh="藍道 Blue / Leicht Fortgeschritten">藍道 Blue / Leicht Fortgeschritten</h4>
+<p class="level-en">Intermediate</p>
+<p data-en="Can confidently snowplow turn, learning parallel turn. Can ski independently on gentle Blue runs but needs snowplow on steep slopes." data-zh="能自信地以雪犁轉彎，正在學習平行轉彎（Parallel Turn）。可以在緩坡藍道上獨立滑行，但陡坡仍需雪犁輔助。">能自信地以雪犁轉彎，正在學習平行轉彎（Parallel Turn）。可以在緩坡藍道上獨立滑行，但陡坡仍需雪犁輔助。</p>
+<p class="level-recommend" data-en="Recommended lessons: group intermediate course 3 days or private lesson 2-3 hours" data-zh="建議課程：團體中級課程 3天 或 私人課 2-3小時">建議課程：團體中級課程 3天 或 私人課 2-3小時</p>
+</div>
+<div class="level-card level-red">
+<div class="level-icon">●</div>
+<h4 data-en="Red run / Fortgeschritten" data-zh="紅道 Red / Fortgeschritten">紅道 Red / Fortgeschritten</h4>
+<p class="level-en">Advanced</p>
+<p data-en="Able to parallel turn on most pistes. Improving carving skills, speed control, and stability on steeper terrain. Can handle intermediate Red runs." data-zh="能在大多數雪道上平行轉彎。正在精進 Carving（刻滑）技術、速度控制和在較陡地形上的穩定性。可以應對中等難度的紅道。">能在大多數雪道上平行轉彎。正在精進 Carving（刻滑）技術、速度控制和在較陡地形上的穩定性。可以應對中等難度的紅道。</p>
+<p class="level-recommend" data-en="Recommended lessons: private lesson 2-3 hours or advanced group technical course" data-zh="建議課程：私人課 2-3小時 或 進階技術團體課">建議課程：私人課 2-3小時 或 進階技術團體課</p>
+</div>
+<div class="level-card level-black">
+<div class="level-icon">●</div>
+<h4 data-en="Black run / Könner" data-zh="黑道 Black / Könner">黑道 Black / Könner</h4>
+<p class="level-en">Expert</p>
+<p data-en="Confidently ski on all marked pistes. Want to challenge off-piste, moguls, steep slopes, and deep snow. Pursue ultimate speed and style." data-zh="能自信地在所有標記雪道上滑行。想挑戰野雪（Off-piste）、饅頭雪（Moguls）、陡坡和深雪。追求速度與風格的極致。">能自信地在所有標記雪道上滑行。想挑戰野雪（Off-piste）、饅頭雪（Moguls）、陡坡和深雪。追求速度與風格的極致。</p>
+<p class="level-recommend" data-en="Recommended lessons: Freeride private lesson or Off-piste guided tour" data-zh="建議課程：Freeride 私人課 或 Off-piste 導覽">建議課程：Freeride 私人課 或 Off-piste 導覽</p>
+</div>
+</div>
+</div>
+<!-- Ski School Comparison Table -->
+<div class="school-comparison">
+<h3 data-en="Comparison of ski school fees (adults) at various resorts" data-zh="各雪場滑雪學校費用比較（成人）">各雪場滑雪學校費用比較（成人）</h3>
+<div class="ski-comparison-table">
+<table>
+<thead>
+<tr>
+<th data-en="Course types" data-zh="課程類型">課程類型</th>
+<th>SkiWelt</th>
+<th>Saalbach</th>
+<th>Sölden</th>
+<th>St. Anton</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong data-en="Group half-day" data-zh="團體半天">團體半天</strong><br/><small data-en="2.5-3 hours/day" data-zh="2.5-3hr/天">2.5-3hr/天</small></td>
+<td class="price-cell" data-en="~€90/day" data-eur="90" data-zh="~€90/天"><span class="price-val">~€90</span>/天</td>
+<td class="price-cell" data-en="€95/day" data-eur="95" data-zh="€95/天"><span class="price-val">€95</span>/天</td>
+<td class="price-cell" data-en="€90/day" data-eur="90" data-zh="€90/天"><span class="price-val">€90</span>/天</td>
+<td class="price-cell" data-en="~€110/day" data-eur="110" data-zh="~€110/天"><span class="price-val">~€110</span>/天</td>
+</tr>
+<tr>
+<td><strong data-en="Group half-day 5 days" data-zh="團體半天 5日">團體半天 5日</strong><br/><small data-en="Most common plan" data-zh="最常見方案">最常見方案</small></td>
+<td class="price-cell" data-eur="290"><span class="price-val">~€290</span></td>
+<td class="price-cell" data-eur="315"><span class="price-val">€315</span></td>
+<td class="price-cell" data-eur="290"><span class="price-val">€290</span></td>
+<td class="price-cell" data-eur="360"><span class="price-val">~€360</span></td>
+</tr>
+<tr>
+<td><strong data-en="Group full day" data-zh="團體全天">團體全天</strong><br/><small data-en="4-5 hours/day" data-zh="4-5hr/天">4-5hr/天</small></td>
+<td class="price-cell" data-en="~€100/day" data-eur="100" data-zh="~€100/天"><span class="price-val">~€100</span>/天</td>
+<td>-</td>
+<td class="price-cell" data-en="€100/day" data-eur="100" data-zh="€100/天"><span class="price-val">€100</span>/天</td>
+<td class="price-cell" data-en="~€130/day" data-eur="130" data-zh="~€130/天"><span class="price-val">~€130</span>/天</td>
+</tr>
+<tr>
+<td><strong data-en="Private lesson 2hr" data-zh="私人課 2hr">私人課 2hr</strong></td>
+<td class="price-cell" data-eur="190"><span class="price-val">~€190</span></td>
+<td class="price-cell" data-eur="204"><span class="price-val">€204</span></td>
+<td class="price-cell" data-eur="150"><span class="price-val">€150</span></td>
+<td class="price-cell" data-eur="250"><span class="price-val">~€250</span></td>
+</tr>
+<tr>
+<td><strong data-en="Private lesson half day" data-zh="私人課 半天">私人課 半天</strong><br/><small>3-4hr</small></td>
+<td class="price-cell" data-eur="280"><span class="price-val">~€280</span></td>
+<td class="price-cell" data-eur="300"><span class="price-val">~€300</span></td>
+<td class="price-cell" data-eur="240"><span class="price-val">€240</span></td>
+<td class="price-cell" data-eur="380"><span class="price-val">~€380</span></td>
+</tr>
+<tr>
+<td><strong data-en="Beginner package" data-zh="初學者套裝">初學者套裝</strong><br/><small data-en="Includes rental + lessons + beginner lift pass" data-zh="含租借+課程+初學纜車">含租借+課程+初學纜車</small></td>
+<td class="price-cell" data-eur="428"><span class="price-val">~€428</span><br/><small data-en="5 days lessons + 7 days rental" data-zh="5天課+7天租借">5天課+7天租借</small></td>
+<td class="price-cell" data-eur="395"><span class="price-val">€395</span><br/><small data-en="4天課+4天租借+2天初學纜車" data-zh="4天課+4天租借+2天初學纜車">4天課+4天租借+2天初學纜車</small></td>
+<td class="price-cell" data-eur="459"><span class="price-val">€459</span><br/><small data-en="5 days lessons + 6 days rental" data-zh="5天課+6天租借">5天課+6天租借</small></td>
+<td class="price-cell" data-eur="500"><span class="price-val">~€500</span><br/><small data-en="5 days lessons + rental" data-zh="5天課+租借">5天課+租借</small></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Ski School Recommendations -->
+<div class="school-tips">
+<h3 data-en="Course Recommendations" data-zh="選課建議">選課建議</h3>
+<div class="tips-grid">
+<div class="tip" data-en="Top choice for beginners: group lessons 3-5 days. 3 days usually enough to learn basic turns. After 5 days, can ski Blue runs independently. Recommended to combine with beginner package (including rental) for best value." data-zh="初學者首選：團體課 3-5天團體課最划算，3天通常能學會基本轉彎。5天課程結束後可獨立滑藍道。建議搭配初學者套裝（含租借）最省。"><strong data-en="Beginner’s first choice: group lessons 3-5 days" data-zh="初學者首選：團體課 3-5天">初學者首選：團體課 3-5天</strong><br/>團體課最划算，3天通常能學會基本轉彎。5天課程結束後可獨立滑藍道。建議搭配初學者套裝（含租借）最省。</div>
+<div class="tip" data-en="Intermediate-advanced: private lessons 2-3 hours to master basic turns and break through plateaus? 2-3 hours private lessons more efficient than 5-day group. Cost shared by 3-4 people, only €50-80 each." data-zh="中級進階：私人課 2-3小時已會基本轉彎但想突破瓶頸？2-3小時私人課比5天團體課更有效率。3-4人分攤費用，每人僅€50-80。"><strong data-en="Intermediate-advanced: Private lesson 2-3 hours" data-zh="中級進階：私人課 2-3小時">中級進階：私人課 2-3小時</strong><br/>已會基本轉彎但想突破瓶頸？2-3小時私人課比5天團體課更有效率。3-4人分攤費用，每人僅€50-80。</div>
+<div class="tip" data-en="Expert challenge: Freeride guided tours in Sölden and St. Anton offer private Freeride lessons (5hr ~€330), led by professional guides exploring off-piste routes. Requires black run level or above." data-zh="高手挑戰：Freeride 導覽Sölden 和 St. Anton 提供 Freeride 私人課（5hr ~€330），由專業嚮導帶領探索野雪路線。需有黑道以上程度。"><strong data-en="Expert challenge: Freeride guide" data-zh="高手挑戰：Freeride 導覽">高手挑戰：Freeride 導覽</strong><br/>Sölden 和 St. Anton 提供 Freeride 私人課（5hr ~€330），由專業嚮導帶領探索野雪路線。需有黑道以上程度。</div>
+<div class="tip" data-en="Money-saving tip: book online 2-3 months in advance for 10-20% discount. Christmas peak (12/25-1/1) prices rise 10-20%, recommend avoiding lessons 12/25-27. Private lessons are most cost-effective when shared." data-zh="省錢秘訣提前2-3個月線上預訂可享10-20%折扣。聖誕高峰期（12/25-1/1）價格上浮10-20%，建議避開12/25-27開課。私人課多人分攤最划算。"><strong data-en="Money-saving tips" data-zh="省錢秘訣">省錢秘訣</strong><br/>提前2-3個月線上預訂可享10-20%折扣。聖誕高峰期（12/25-1/1）價格上浮10-20%，建議避開12/25-27開課。私人課多人分攤最划算。</div>
+</div>
+</div>
+</div></div>
+</section><section class="section section-alt collapsible-section collapsed" id="ski-tips">
+<div class="container"><div class="section-toggle-bar" data-target="ski-tips"><span class="toggle-chevron">▸</span><span class="toggle-title" data-en="Ski Progression Guide" data-zh="滑雪進階攻略">滑雪進階攻略</span></div><div class="section-collapsible-content">
+<p class="section-desc" data-en="Skill improvement from Blue run to Red run, Ski vs Snowboard comparison, altitude sickness prevention" data-zh="從藍道到紅道的技術提升、Ski vs Snowboard 比較、高山症預防">從藍道到紅道的技術提升、Ski vs Snowboard 比較、高山症預防</p>
+<h3 class="sub-section-h3" data-en="📊 Your level: Blue run to Red run" data-zh="📊 你們的程度：藍道～紅道">📊 你們的程度：藍道～紅道</h3>
+<div class="level-banner">
+<div class="level-indicator">
+<div class="level-bar">
+<div class="level-segment level-green" data-en="Green run" data-zh="綠道" style="width:15%">綠道</div>
+<div class="level-segment level-blue" data-en="Blue run ✅" data-zh="藍道 ✅" style="width:35%">藍道 ✅</div>
+<div class="level-segment level-red" data-en="Red run ✅" data-zh="紅道 ✅" style="width:35%">紅道 ✅</div>
+<div class="level-segment level-black" data-en="Black run" data-zh="黑道" style="width:15%">黑道</div>
+</div>
+<div class="level-arrow" data-en="▲ You are here" data-zh="▲ 你們在這裡">▲ 你們在這裡</div>
+</div>
+<p data-en="Comfortably ski Blue runs, challenging or able to ski Red runs. This level can enjoy most pistes in Europe with many choices!" data-zh="能舒適地滑藍道，正在挑戰或已能滑紅道。這個程度在歐洲可以享受大部分雪道，選擇非常多！">能舒適地滑藍道，正在挑戰或已能滑紅道。這個程度在歐洲可以享受大部分雪道，選擇非常多！</p>
+</div>
+<h3 class="sub-section-h3" data-en="🎿 Key techniques for Blue run → Red run" data-zh="🎿 藍道 → 紅道 關鍵技術">🎿 藍道 → 紅道 關鍵技術</h3>
+<div class="skill-grid">
+<div class="skill-card">
+<div class="skill-num">1</div>
+<h4 data-en="Parallel Turns" data-zh="平行轉彎 Parallel Turns">平行轉彎 Parallel Turns</h4>
+<p data-en="Blue run: May still use V-shape (Snowplough) to slow down. Red run requires: keeping skis parallel and turning with weight shift. This is the key breakthrough from beginner to intermediate." data-zh="藍道：可能還在用 V 字型（Snowplough）減速紅道需要：雙板保持平行，用重心轉移來轉彎。這是從初級到中級最關鍵的突破。"><strong data-en="Blue run:" data-zh="藍道：">藍道：</strong>可能還在用 V 字型（Snowplough）減速<br/>
+<strong data-en="Red run required:" data-zh="紅道需要：">紅道需要：</strong>雙板保持平行，用重心轉移來轉彎。這是從初級到中級最關鍵的突破。</p>
+<div class="skill-tip" data-en="💡 Practice tip: deliberately keep skis parallel on Blue runs, avoid V-shape" data-zh="💡 練習方法：在藍道上刻意保持雙板平行，不用 V 字型">💡 練習方法：在藍道上刻意保持雙板平行，不用 V 字型</div>
+</div>
+<div class="skill-card">
+<div class="skill-num">2</div>
+<h4 data-en="Edge Control" data-zh="邊刃控制 Edge Control">邊刃控制 Edge Control</h4>
+<p data-en="Blue run: mainly rely on flat base of the board; Red run requires using the edge to cut into the snow for speed and direction control. Red runs are steeper; without edge control, you will lose speed." data-zh="藍道：主要靠板底平滑紅道需要：用板邊（edge）切入雪面控制速度和方向。紅道更陡，沒有邊刃控制會失速。"><strong data-en="Blue run:" data-zh="藍道：">藍道：</strong>主要靠板底平滑<br/>
+<strong data-en="Red run required:" data-zh="紅道需要：">紅道需要：</strong>用板邊（edge）切入雪面控制速度和方向。紅道更陡，沒有邊刃控制會失速。</p>
+<div class="skill-tip" data-en="💡 Practice tip: Practice sideslip on Blue runs to feel the edge grip" data-zh="💡 練習方法：在藍道上練習側滑（sideslip），感受邊刃的咬合">💡 練習方法：在藍道上練習側滑（sideslip），感受邊刃的咬合</div>
+</div>
+<div class="skill-card">
+<div class="skill-num">3</div>
+<h4 data-en="Speed Control" data-zh="速度管理 Speed Control">速度管理 Speed Control</h4>
+<p data-en="Blue run: gentle slope, natural speed reduction; Red run requires active turning to control speed. Red run slopes 20-35%, no turning leads to increasing speed." data-zh="藍道：坡度緩，自然減速紅道需要：主動用轉彎來控制速度。紅道坡度 20-35%，不轉彎會越來越快。"><strong data-en="Blue run:" data-zh="藍道：">藍道：</strong>坡度緩，自然減速<br/>
+<strong data-en="Red run required:" data-zh="紅道需要：">紅道需要：</strong>主動用轉彎來控制速度。紅道坡度 20-35%，不轉彎會越來越快。</p>
+<div class="skill-tip" data-en="💡 Practice method: Practice short turns, each turn involves slowing down" data-zh="💡 練習方法：練習短彎（short turns），每次轉彎都是在減速">💡 練習方法：練習短彎（short turns），每次轉彎都是在減速</div>
+</div>
+<div class="skill-card">
+<div class="skill-num">4</div>
+<h4 data-en="Terrain Reading" data-zh="地形判讀 Terrain Reading">地形判讀 Terrain Reading</h4>
+<p data-en="Blue run: terrain is flat and simple. Red run requires: steep slopes, narrow paths, icy surfaces. Learn to observe ahead and choose the best route." data-zh="藍道：地形平坦單純紅道需要：會有陡坡、窄道、結冰面。學會提前觀察，選擇最佳路線。"><strong data-en="Blue run:" data-zh="藍道：">藍道：</strong>地形平坦單純<br/>
+<strong data-en="Red run required:" data-zh="紅道需要：">紅道需要：</strong>會有陡坡、窄道、結冰面。學會提前觀察，選擇最佳路線。</p>
+<div class="skill-tip" data-en="💡 Practice tip: Stop to observe the terrain ahead and plan 2-3 turns" data-zh="💡 練習方法：停下來觀察前方地形，規劃 2-3 個轉彎的路線">💡 練習方法：停下來觀察前方地形，規劃 2-3 個轉彎的路線</div>
+</div>
+</div>
+<div class="progression-timeline">
+<h4 data-en="⏱️ Advanced time reference" data-zh="⏱️ 進階時間參考">⏱️ 進階時間參考</h4>
+<div class="timeline-bar">
+<div class="timeline-stage" style="width:25%">
+<div class="stage-label" data-en="Complete beginner" data-zh="完全初學者">完全初學者</div>
+<div class="stage-days">Day 1-3</div>
+</div>
+<div class="timeline-stage" style="width:25%">
+<div class="stage-label" data-en="Comfortable Blue runs" data-zh="藍道舒適">藍道舒適</div>
+<div class="stage-days">Day 3-5</div>
+</div>
+<div class="timeline-stage" style="width:30%">
+<div class="stage-label" data-en="Try Red runs" data-zh="紅道嘗試">紅道嘗試</div>
+<div class="stage-days">Day 5-10</div>
+</div>
+<div class="timeline-stage" style="width:20%">
+<div class="stage-label" data-en="Comfortable Red runs" data-zh="紅道舒適">紅道舒適</div>
+<div class="stage-days">Day 15-20</div>
+</div>
+</div>
+<p class="timeline-note" data-en="* Accumulated days, not consecutive. Coaching can speed up progress by 30-50%" data-zh="* 累積天數，非連續。有教練指導可加速 30-50%">* 累積天數，非連續。有教練指導可加速 30-50%</p>
+</div>
+<h3 class="sub-section-h3" data-en="🎿 vs 🏂 Ski vs Snowboard complete comparison" data-zh="🎿 vs 🏂 Ski vs Snowboard 完整比較">🎿 vs 🏂 Ski vs Snowboard 完整比較</h3>
+<div class="table-scroll">
+<table class="styled-table">
+<thead>
+<tr>
+<th data-en="Comparison focus" data-zh="比較面向">比較面向</th>
+<th data-en="🎿 Ski alpine" data-zh="🎿 Ski 雙板">🎿 Ski 雙板</th>
+<th data-en="🏂 Snowboard" data-zh="🏂 Snowboard 單板">🏂 Snowboard 單板</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong data-en="Beginner difficulty" data-zh="初學難度">初學難度</strong></td>
+<td data-en="★★☆☆☆ Easy to learn, can ski gentle slopes on first day" data-zh="★★☆☆☆ 較容易上手第一天就能滑緩坡">★★☆☆☆ 較容易上手<br/><small data-en="Can ski gentle slopes on the first day" data-zh="第一天就能滑緩坡">第一天就能滑緩坡</small></td>
+<td data-en="★★★★☆ First 2 days are tough with many falls, which is normal" data-zh="★★★★☆ 前2天較痛苦大量摔倒是正常的">★★★★☆ 前2天較痛苦<br/><small data-en="Frequent falls are normal" data-zh="大量摔倒是正常的">大量摔倒是正常的</small></td>
+</tr>
+<tr>
+<td><strong data-en="Advanced difficulty" data-zh="進階難度">進階難度</strong></td>
+<td data-en="★★★★☆ Mastering harder parallel turns takes time" data-zh="★★★★☆ 精通較難平行轉彎需要時間">★★★★☆ 精通較難<br/><small data-en="Parallel turns take time" data-zh="平行轉彎需要時間">平行轉彎需要時間</small></td>
+<td data-en="★★★☆☆ Fast progress after breakthrough, once you can turn well" data-zh="★★★☆☆ 突破後進步快一旦會轉彎就很快">★★★☆☆ 突破後進步快<br/><small data-en="Once you can turn, you go fast" data-zh="一旦會轉彎就很快">一旦會轉彎就很快</small></td>
+</tr>
+<tr>
+<td><strong data-en="Ways of falling" data-zh="摔倒方式">摔倒方式</strong></td>
+<td data-en="Fewer falls, but higher knee risk when falling" data-zh="較少摔，但摔倒時膝蓋風險較高">較少摔，但摔倒時膝蓋風險較高</td>
+<td data-en="Frequent falls, higher risk of wrist and tailbone injuries ⚠️ Strongly recommend wrist guards and hip protectors" data-zh="頻繁摔，手腕和尾椎風險較高⚠️ 強烈建議戴護腕和護臀">頻繁摔，手腕和尾椎風險較高<br/><small data-en="⚠️ Strongly recommend wrist and hip protectors" data-zh="⚠️ 強烈建議戴護腕和護臀">⚠️ 強烈建議戴護腕和護臀</small></td>
+</tr>
+<tr>
+<td><strong data-en="Take the lift" data-zh="搭纜車">搭纜車</strong></td>
+<td data-en="✅ Easier, just step on directly" data-zh="✅ 較容易，直接站上去">✅ 較容易，直接站上去</td>
+<td data-en="⚠️ Need to unclip one foot, more troublesome getting on and off" data-zh="⚠️ 需解開一腳，上下較麻煩">⚠️ 需解開一腳，上下較麻煩</td>
+</tr>
+<tr>
+<td><strong data-en="Flat ground movement" data-zh="平地移動">平地移動</strong></td>
+<td data-en="✅ Can walk/slide directly" data-zh="✅ 可以直接走/滑">✅ 可以直接走/滑</td>
+<td data-en="❌ Need to walk with skis on, painful on flat ground" data-zh="❌ 需解板步行，平地很痛苦">❌ 需解板步行，平地很痛苦</td>
+</tr>
+<tr>
+<td><strong data-en="Powder snow experience" data-zh="粉雪體驗">粉雪體驗</strong></td>
+<td data-en="Requires skill to enjoy" data-zh="需要技術才能享受">需要技術才能享受</td>
+<td data-en="✅ Naturally perfect for powder snow, super fun" data-zh="✅ 天生適合粉雪，超爽">✅ 天生適合粉雪，超爽</td>
+</tr>
+<tr>
+<td><strong>Terrain Park</strong></td>
+<td data-en="Playable but less crowded" data-zh="可以玩，但較少人">可以玩，但較少人</td>
+<td data-en="✅ Snowboarders' favorite" data-zh="✅ Snowboard 的主場">✅ Snowboard 的主場</td>
+</tr>
+<tr>
+<td><strong data-en="Equipment weight" data-zh="裝備重量">裝備重量</strong></td>
+<td data-en="Heavier (board + boots + poles)" data-zh="較重（板+靴+杖）">較重（板+靴+杖）</td>
+<td data-en="Lighter (board + boots)" data-zh="較輕（板+靴）">較輕（板+靴）</td>
+</tr>
+<tr>
+<td><strong data-en="Rental fee/day" data-zh="租借費/天">租借費/天</strong></td>
+<td data-eur="30" data-eur-max="45">NT$1,050~1,575</td>
+<td data-eur="30" data-eur-max="45">NT$1,050~1,575</td>
+</tr>
+<tr>
+<td><strong data-en="Is it suitable for you?" data-zh="適合你們嗎？">適合你們嗎？</strong></td>
+<td data-en="✅ Blue and Red runs, enjoy all kinds of terrain" data-zh="✅ 藍紅道程度，各種地形都能享受">✅ 藍紅道程度，各種地形都能享受</td>
+<td data-en="✅ Blue and Red runs, especially great powder and park" data-zh="✅ 藍紅道程度，粉雪和Park特別爽">✅ 藍紅道程度，粉雪和Park特別爽</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sb-friendly-box">
+<h4 data-en="🏂 Snowboard friendliness at each ski resort" data-zh="🏂 各雪場 Snowboard 友善度">🏂 各雪場 Snowboard 友善度</h4>
+<div class="sb-grid">
+<div class="sb-item sb-great">
+<strong>SkiWelt</strong>
+<div class="sb-rating">★★★★★</div>
+<small data-en="3 Fun Parks, Boardercross, little flat terrain" data-zh="3個 Fun Park、Boardercross、平地少">3個 Fun Park、Boardercross、平地少</small>
+</div>
+<div class="sb-item sb-great">
+<strong>Saalbach</strong>
+<div class="sb-rating">★★★★★</div>
+<small data-en="Nightpark, multiple Parks, Snowboard mecca" data-zh="Nightpark、多個Park、Snowboard 聖地">Nightpark、多個Park、Snowboard 聖地</small>
+</div>
+<div class="sb-item sb-good">
+<strong>Sölden</strong>
+<div class="sb-rating">★★★★☆</div>
+<small data-en="Area 47 Snowpark, but some flat sections" data-zh="Area 47 Snowpark、但有些平路段">Area 47 Snowpark、但有些平路段</small>
+</div>
+<div class="sb-item sb-good">
+<strong>St. Anton</strong>
+<div class="sb-rating">★★★★☆</div>
+<small data-en="Off-piste paradise, but some connecting trails are flat" data-zh="Off-piste 天堂、但部分連接道平坦">Off-piste 天堂、但部分連接道平坦</small>
+</div>
+</div>
+</div>
+<h3 class="sub-section-h3" data-en="🏔️ Altitude Sickness Prevention" data-zh="🏔️ 高山症預防">🏔️ 高山症預防</h3>
+<div class="altitude-box">
+<div class="altitude-info">
+<h4 data-en="⚠️ Altitude risk level" data-zh="⚠️ 海拔風險等級">⚠️ 海拔風險等級</h4>
+<div class="altitude-levels">
+<div class="alt-level alt-safe" data-en="1,000-2,000m safe base elevation for most ski areas (SkiWelt 620m, Saalbach 1,003m)" data-zh="1,000-2,000m安全大部分雪場基地（SkiWelt 620m、Saalbach 1,003m）">
+<strong>1,000-2,000m</strong> 安全
+            <small data-en="Most ski base areas (SkiWelt 620m, Saalbach 1,003m)" data-zh="大部分雪場基地（SkiWelt 620m、Saalbach 1,003m）">大部分雪場基地（SkiWelt 620m、Saalbach 1,003m）</small>
+</div>
+<div class="alt-level alt-caution" data-en="2,000-2,500m slight caution at most ski area peaks (SkiWelt 1,957m, Saalbach 2,096m)" data-zh="2,000-2,500m輕微注意大部分雪場山頂（SkiWelt 1,957m、Saalbach 2,096m）">
+<strong>2,000-2,500m</strong> 輕微注意
+            <small data-en="Most resort summits (SkiWelt 1,957m, Saalbach 2,096m)" data-zh="大部分雪場山頂（SkiWelt 1,957m、Saalbach 2,096m）">大部分雪場山頂（SkiWelt 1,957m、Saalbach 2,096m）</small>
+</div>
+<div class="alt-level alt-warning" data-en="2,500-3,500m altitude caution: Sölden summit 3,340m, St. Anton summit 2,811m" data-zh="2,500-3,500m需要注意Sölden 山頂 3,340m、St. Anton 山頂 2,811m">
+<strong>2,500-3,500m</strong> 需要注意
+            <small data-en="Sölden summit 3,340m, St. Anton summit 2,811m" data-zh="Sölden 山頂 3,340m、St. Anton 山頂 2,811m">Sölden 山頂 3,340m、St. Anton 山頂 2,811m</small>
+</div>
+</div>
+</div>
+<div class="altitude-tips">
+<h4 data-en="🛡️ Precautions" data-zh="🛡️ 預防措施">🛡️ 預防措施</h4>
+<ul>
+<li data-en="Drink more water: 3-4 liters daily, high altitude air is dry and dehydrates quickly" data-zh="多喝水：每天 3-4 公升，高海拔空氣乾燥脫水快"><strong data-en="Drink more water:" data-zh="多喝水：">多喝水：</strong>每天 3-4 公升，高海拔空氣乾燥脫水快</li>
+<li data-en="Slow down on the first day: don’t rush to the highest point" data-zh="第一天放慢：不要第一天就衝最高點"><strong data-en="Slow down on the first day:" data-zh="第一天放慢：">第一天放慢：</strong>不要第一天就衝最高點</li>
+<li data-en="Avoid alcohol: reduce drinking first 1-2 days (though it’s hard 😅)" data-zh="避免酒精：前 1-2 天減少飲酒（雖然很難 😅）"><strong data-en="Avoid alcohol:" data-zh="避免酒精：">避免酒精：</strong>前 1-2 天減少飲酒（雖然很難 😅）</li>
+<li data-en="Adequate sleep: fatigue worsens altitude sickness" data-zh="充足睡眠：疲勞會加重高山反應"><strong data-en="Adequate sleep:" data-zh="充足睡眠：">充足睡眠：</strong>疲勞會加重高山反應</li>
+<li data-en="Symptoms to watch: headache, nausea, fatigue, insomnia → rest and descend" data-zh="注意症狀：頭痛、噁心、疲勞、失眠 → 下降休息"><strong data-en="Watch for symptoms:" data-zh="注意症狀：">注意症狀：</strong>頭痛、噁心、疲勞、失眠 → 下降休息</li>
+</ul>
+<p class="altitude-reassure" data-en="💡 Good news: most Austrian ski bases are at 1,000-1,500m, only briefly reaching 2,500m+ at peaks, with low risk. Taiwanese who have climbed Hehuan Mountain (3,417m) will have no problem." data-zh="💡好消息：大部分奧地利雪場基地在 1,000-1,500m，只有滑到山頂時才會短暫到 2,500m+，不會長時間停留，風險較低。台灣人如果有爬過合歡山（3,417m），這裡完全沒問題。">💡 <strong data-en="Good news:" data-zh="好消息：">好消息：</strong>大部分奧地利雪場基地在 1,000-1,500m，只有滑到山頂時才會短暫到 2,500m+，不會長時間停留，風險較低。台灣人如果有爬過合歡山（3,417m），這裡完全沒問題。</p>
+</div>
+</div>
+</div></div>
+</section><section class="section section-alt collapsible-section collapsed" id="snow-conditions">
+<div class="container"><div class="section-toggle-bar" data-target="snow-conditions"><span class="toggle-chevron">▸</span><span class="toggle-title" data-en="Christmas &amp; New Year Snow Conditions" data-zh="聖誕跨年雪況分析">聖誕跨年雪況分析</span></div><div class="section-collapsible-content">
+<p class="section-intro" data-en="Historical snow conditions, snow depth, and reliability comparisons for late December to early January across regions, helping you choose the least risky ski resorts." data-zh="12月下旬～1月初各地區的歷史雪況、積雪深度與可靠度比較，幫助你選擇最不會「踩雷」的雪場。">12月下旬～1月初各地區的歷史雪況、積雪深度與可靠度比較，幫助你選擇最不會「踩雷」的雪場。</p>
+<!-- Snow Reliability Ranking -->
+<div class="snow-ranking">
+<h3 class="snow-section-h3" data-en="🏔️ Snow reliability ranking during Christmas" data-zh="🏔️ 聖誕期間雪況可靠度排行">🏔️ 聖誕期間雪況可靠度排行</h3>
+<div class="snow-rank-grid">
+<div class="snow-rank-card rank-excellent">
+<div class="rank-badge">⭐⭐⭐⭐⭐</div>
+<h4 data-en="Extremely reliable" data-zh="極度可靠">極度可靠</h4>
+<div class="rank-resorts">
+<span class="rank-resort-tag">Sölden 🇦🇹<br/><small data-en="Glacier Guarantee ・ 3,340m" data-zh="冰川保證・3,340m">冰川保證・3,340m</small></span>
+<span class="rank-resort-tag">St. Anton 🇦🇹<br/><small data-en="Alps' highest snowfall" data-zh="阿爾卑斯最大降雪">阿爾卑斯最大降雪</small></span>
+</div>
+<p class="rank-desc" data-en="Snow depth at the end of December 100-200cm, almost 100% fully open. Sölden has glaciers skiing from October, St. Anton is Austria's snowiest area (annual average 300-750cm)." data-zh="12月底積雪 100-200cm，幾乎 100% 全面開放。Sölden 有冰川從10月即可滑雪，St. Anton 是奧地利降雪量最大的區域（年均 300-750cm）。">12月底積雪 100-200cm，幾乎 100% 全面開放。Sölden 有冰川從10月即可滑雪，St. Anton 是奧地利降雪量最大的區域（年均 300-750cm）。</p>
+</div>
+<div class="snow-rank-card rank-good">
+<div class="rank-badge">⭐⭐⭐⭐</div>
+<h4 data-en="Very reliable" data-zh="非常可靠">非常可靠</h4>
+<div class="rank-resorts">
+<span class="rank-resort-tag">Niseko 🇯🇵<br/><small data-en="World-class powder snow" data-zh="世界級粉雪">世界級粉雪</small></span>
+<span class="rank-resort-tag">Myoko 🇯🇵<br/><small data-en="Annual snowfall 15m+" data-zh="年降雪15m+">年降雪15m+</small></span>
+<span class="rank-resort-tag">Saalbach 🇦🇹<br/><small data-en="90% snowmaking coverage" data-zh="90%造雪覆蓋">90%造雪覆蓋</small></span>
+<span class="rank-resort-tag">Gudauri 🇬🇪<br/><small data-en="High-altitude natural snow" data-zh="高海拔天然雪">高海拔天然雪</small></span>
+</div>
+<p class="rank-desc" data-en="Snow depth at the end of December 60-150cm. Hokkaido, Japan usually has sufficient snow before Christmas. In 2024, Hakuba set a 13-year record for December snowfall (278cm)." data-zh="12月底積雪 60-150cm。日本北海道通常聖誕前已有充足降雪，2024年 Hakuba 創下13年來最大12月降雪紀錄（278cm）。">12月底積雪 60-150cm。日本北海道通常聖誕前已有充足降雪，2024年 Hakuba 創下13年來最大12月降雪紀錄（278cm）。</p>
+</div>
+<div class="snow-rank-card rank-moderate">
+<div class="rank-badge">⭐⭐⭐</div>
+<h4 data-en="Generally reliable" data-zh="大致可靠">大致可靠</h4>
+<div class="rank-resorts">
+<span class="rank-resort-tag">SkiWelt 🇦🇹<br/><small data-en="Lower altitude" data-zh="較低海拔">較低海拔</small></span>
+<span class="rank-resort-tag">Hakuba 🇯🇵<br/><small data-en="Early season is highly variable" data-zh="早季變數大">早季變數大</small></span>
+<span class="rank-resort-tag">Bansko 🇧🇬<br/><small data-en="Relies on artificial snow" data-zh="需靠造雪">需靠造雪</small></span>
+<span class="rank-resort-tag" data-en="Korean ski areas 🇰🇷 mainly artificial snow" data-zh="韓國雪場 🇰🇷人造雪為主">韓國雪場 🇰🇷<br/><small data-en="Mainly artificial snow" data-zh="人造雪為主">人造雪為主</small></span>
+</div>
+<p class="rank-desc" data-en="Snow depth at the end of December 30-80cm. These resorts may be partially open, relying on snowmaking systems. Warm winters may have poor snow conditions." data-zh="12月底積雪 30-80cm。這些雪場可能部分開放，依賴造雪系統補充。暖冬年份可能遇到雪況不佳的情況。">12月底積雪 30-80cm。這些雪場可能部分開放，依賴造雪系統補充。暖冬年份可能遇到雪況不佳的情況。</p>
+</div>
+<div class="snow-rank-card rank-risky">
+<div class="rank-badge">⭐⭐</div>
+<h4 data-en="Has risks" data-zh="有風險">有風險</h4>
+<div class="rank-resorts">
+<span class="rank-resort-tag">Zakopane 🇵🇱</span>
+<span class="rank-resort-tag">Borovets 🇧🇬</span>
+<span class="rank-resort-tag" data-en="Some North American ski resorts 🇺🇸" data-zh="北美部分雪場 🇺🇸">北美部分雪場 🇺🇸</span>
+</div>
+<p class="rank-desc" data-en="Low altitude or areas heavily affected by climate change. Historic snow season deviation in North American Rockies 2025-26, unstable snow conditions during Christmas." data-zh="低海拔或氣候變遷影響較大的區域。2025-26 年北美洛磯山脈雪季歷史性偏差，聖誕期間雪況不穩定。">低海拔或氣候變遷影響較大的區域。2025-26 年北美洛磯山脈雪季歷史性偏差，聖誕期間雪況不穩定。</p>
+</div>
+</div>
+</div>
+<!-- Detailed Snow Data Table -->
+<div class="snow-data-table">
+<h3 class="snow-section-h3" data-en="📊 Snow condition data for each resort during Christmas" data-zh="📊 各雪場聖誕期間雪況數據">📊 各雪場聖誕期間雪況數據</h3>
+<div class="table-scroll">
+<table class="compare-table snow-table">
+<thead>
+<tr>
+<th data-en="Ski resort" data-zh="雪場">雪場</th>
+<th data-en="Country" data-zh="國家">國家</th>
+<th data-en="Highest elevation" data-zh="最高海拔">最高海拔</th>
+<th data-en="Average snow depth at end of December" data-zh="12月底平均積雪(山頂)">12月底平均積雪<br/>(山頂)</th>
+<th data-en="Snowmaking coverage" data-zh="造雪覆蓋率">造雪覆蓋率</th>
+<th data-en="Christmas reliability" data-zh="聖誕可靠度">聖誕可靠度</th>
+<th data-en="Best months" data-zh="最佳月份">最佳月份</th>
+</tr>
+</thead>
+<tbody>
+<tr class="snow-row-excellent">
+<td><strong>Sölden</strong></td>
+<td data-en="🇦🇹 Austria" data-zh="🇦🇹 奧地利">🇦🇹 奧地利</td>
+<td>3,340m</td>
+<td>80-150cm</td>
+<td data-en="70% + glacier" data-zh="70% + 冰川">70% + 冰川</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td data-en="November-April" data-zh="11月-4月">11月-4月</td>
+</tr>
+<tr class="snow-row-excellent">
+<td><strong>St. Anton</strong></td>
+<td data-en="🇦🇹 Austria" data-zh="🇦🇹 奧地利">🇦🇹 奧地利</td>
+<td>2,811m</td>
+<td>100-200cm</td>
+<td data-en="Partial" data-zh="部分">部分</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td data-en="January-March" data-zh="1月-3月">1月-3月</td>
+</tr>
+<tr class="snow-row-good">
+<td><strong>Saalbach</strong></td>
+<td data-en="🇦🇹 Austria" data-zh="🇦🇹 奧地利">🇦🇹 奧地利</td>
+<td>2,096m</td>
+<td>60-100cm</td>
+<td>90%</td>
+<td>⭐⭐⭐⭐</td>
+<td data-en="January-March" data-zh="1月-3月">1月-3月</td>
+</tr>
+<tr class="snow-row-moderate">
+<td><strong>SkiWelt</strong></td>
+<td data-en="🇦🇹 Austria" data-zh="🇦🇹 奧地利">🇦🇹 奧地利</td>
+<td>1,957m</td>
+<td>50-80cm</td>
+<td>90%</td>
+<td>⭐⭐⭐</td>
+<td data-en="January-February" data-zh="1月-2月">1月-2月</td>
+</tr>
+<tr class="snow-row-good">
+<td><strong>Niseko</strong></td>
+<td data-en="🇯🇵 Japan" data-zh="🇯🇵 日本">🇯🇵 日本</td>
+<td>1,308m</td>
+<td>100-150cm</td>
+<td data-en="Not required" data-zh="不需要">不需要</td>
+<td>⭐⭐⭐⭐</td>
+<td data-en="January-February" data-zh="1月-2月">1月-2月</td>
+</tr>
+<tr class="snow-row-good">
+<td><strong>Myoko</strong></td>
+<td data-en="🇯🇵 Japan" data-zh="🇯🇵 日本">🇯🇵 日本</td>
+<td>1,500m</td>
+<td>100-150cm</td>
+<td data-en="Not required" data-zh="不需要">不需要</td>
+<td>⭐⭐⭐⭐</td>
+<td data-en="January-February" data-zh="1月-2月">1月-2月</td>
+</tr>
+<tr class="snow-row-moderate">
+<td><strong>Hakuba</strong></td>
+<td data-en="🇯🇵 Japan" data-zh="🇯🇵 日本">🇯🇵 日本</td>
+<td>1,831m</td>
+<td>50-100cm</td>
+<td data-en="Partial" data-zh="部分">部分</td>
+<td>⭐⭐⭐</td>
+<td data-en="January" data-zh="1月">1月</td>
+</tr>
+<tr class="snow-row-good">
+<td><strong>Nozawa Onsen</strong></td>
+<td data-en="🇯🇵 Japan" data-zh="🇯🇵 日本">🇯🇵 日本</td>
+<td>1,650m</td>
+<td>80-120cm</td>
+<td data-en="Not required" data-zh="不需要">不需要</td>
+<td>⭐⭐⭐⭐</td>
+<td data-en="January-February" data-zh="1月-2月">1月-2月</td>
+</tr>
+<tr class="snow-row-good">
+<td><strong>Furano</strong></td>
+<td data-en="🇯🇵 Japan" data-zh="🇯🇵 日本">🇯🇵 日本</td>
+<td>1,074m</td>
+<td>80-120cm</td>
+<td data-en="Partial" data-zh="部分">部分</td>
+<td>⭐⭐⭐⭐</td>
+<td data-en="January-February" data-zh="1月-2月">1月-2月</td>
+</tr>
+<tr class="snow-row-moderate">
+<td><strong>Yongpyong</strong></td>
+<td data-en="🇰🇷 South Korea" data-zh="🇰🇷 韓國">🇰🇷 韓國</td>
+<td>1,450m</td>
+<td data-en="7-10cm natural snow" data-zh="7-10cm 天然">7-10cm 天然</td>
+<td>100%</td>
+<td>⭐⭐⭐</td>
+<td data-en="January-February" data-zh="1月-2月">1月-2月</td>
+</tr>
+<tr class="snow-row-moderate">
+<td><strong>High1</strong></td>
+<td data-en="🇰🇷 South Korea" data-zh="🇰🇷 韓國">🇰🇷 韓國</td>
+<td>1,345m</td>
+<td data-en="10-15cm natural" data-zh="10-15cm 天然">10-15cm 天然</td>
+<td>100%</td>
+<td>⭐⭐⭐</td>
+<td data-en="January-February" data-zh="1月-2月">1月-2月</td>
+</tr>
+<tr class="snow-row-moderate">
+<td><strong>Bansko</strong></td>
+<td data-en="🇧🇬 Bulgaria" data-zh="🇧🇬 保加利亞">🇧🇬 保加利亞</td>
+<td>2,560m</td>
+<td data-en="38cm top depth" data-zh="38cm 頂部">38cm 頂部</td>
+<td>75%</td>
+<td>⭐⭐⭐</td>
+<td data-en="January-March" data-zh="1月-3月">1月-3月</td>
+</tr>
+<tr class="snow-row-good">
+<td><strong>Gudauri</strong></td>
+<td data-en="🇬🇪 Georgia" data-zh="🇬🇪 喬治亞">🇬🇪 喬治亞</td>
+<td>3,279m</td>
+<td>60-100cm</td>
+<td data-en="Not required" data-zh="不需要">不需要</td>
+<td>⭐⭐⭐⭐</td>
+<td data-en="January-March" data-zh="1月-3月">1月-3月</td>
+</tr>
+<tr class="snow-row-moderate">
+<td><strong>Jasná</strong></td>
+<td data-en="🇸🇰 Slovakia" data-zh="🇸🇰 斯洛伐克">🇸🇰 斯洛伐克</td>
+<td>2,024m</td>
+<td>40-60cm</td>
+<td>60%</td>
+<td>⭐⭐⭐</td>
+<td data-en="January-February" data-zh="1月-2月">1月-2月</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Key Insights -->
+<div class="snow-insights">
+<h3 class="snow-section-h3" data-en="💡 Key tips for Christmas skiing" data-zh="💡 聖誕滑雪的關鍵提醒">💡 聖誕滑雪的關鍵提醒</h3>
+<div class="snow-insight-grid">
+<div class="snow-insight-card">
+<div class="insight-icon">🌡️</div>
+<h4 data-en="Climate change impact" data-zh="氣候變遷影響">氣候變遷影響</h4>
+<p data-en="In recent years, December snowfall at low-altitude Alpine areas (below 1,500m) has declined. Choosing high-altitude resorts (2,000m+) is the best strategy to reduce risk." data-zh="近年來阿爾卑斯山低海拔地區（1,500m以下）的12月積雪量持續下降。選擇高海拔雪場（2,000m+）是降低風險的最佳策略。">近年來阿爾卑斯山低海拔地區（1,500m以下）的12月積雪量持續下降。選擇<strong data-en="High-altitude ski resort" data-zh="高海拔雪場">高海拔雪場</strong>（2,000m+）是降低風險的最佳策略。</p>
+</div>
+<div class="snow-insight-card">
+<div class="insight-icon">🏭</div>
+<h4 data-en="Snowmaking system is insurance" data-zh="造雪系統是保險">造雪系統是保險</h4>
+<p data-en="Austria’s main ski areas have 90% snowmaking coverage, ensuring basic skiing even with insufficient natural snow. Korean ski areas rely 100% on snowmaking, resulting in harder snow." data-zh="奧地利主要雪場的造雪覆蓋率達90%，即使天然雪不足也能保證基本滑行。韓國雪場則100%依賴造雪，雪質較硬。">奧地利主要雪場的造雪覆蓋率達 <strong>90%</strong>，即使天然雪不足也能保證基本滑行。韓國雪場則<strong data-en="100% reliant on snowmaking" data-zh="100%依賴造雪">100%依賴造雪</strong>，雪質較硬。</p>
+</div>
+<div class="snow-insight-card">
+<div class="insight-icon">📅</div>
+<h4 data-en="Christmas vs January" data-zh="聖誕 vs 一月">聖誕 vs 一月</h4>
+<p data-en="Best snow conditions at almost all resorts are in January. Christmas period is “early season.” If snow quality is priority, plan to extend trip into early January." data-zh="幾乎所有雪場的最佳雪況都在1月。聖誕期間是「早季」，如果雪況是首要考量，建議行程安排跨到1月初。">幾乎所有雪場的<strong data-en="Best snow conditions are in January" data-zh="最佳雪況都在1月">最佳雪況都在1月</strong>。聖誕期間是「早季」，如果雪況是首要考量，建議行程安排<strong data-en="Crossing into early January" data-zh="跨到1月初">跨到1月初</strong>。</p>
+</div>
+<div class="snow-insight-card">
+<div class="insight-icon">🇯🇵</div>
+<h4 data-en="Japanese powder snow advantage" data-zh="日本粉雪優勢">日本粉雪優勢</h4>
+<p data-en="Japan Hokkaido’s snowfall is world-class (annual average 14-18m), with extremely light dry powder snow (Japow). Even in late December, Niseko and Myoko usually have enough snow." data-zh="日本北海道的降雪量全球頂級（年均14-18m），且雪質為極輕的乾粉雪（Japow）。即使12月下旬，Niseko 和 Myoko 通常已有充足積雪。">日本北海道的降雪量全球頂級（年均14-18m），且雪質為極輕的<strong data-en="Dry powder snow (Japow)" data-zh="乾粉雪（Japow）">乾粉雪（Japow）</strong>。即使12月下旬，Niseko 和 Myoko 通常已有充足積雪。</p>
+</div>
+<div class="snow-insight-card">
+<div class="insight-icon">⚠️</div>
+<h4 data-en="2025-26 North America alert" data-zh="2025-26 北美警訊">2025-26 北美警訊</h4>
+<p data-en="In 2025-26, North American Rockies experienced historic low snowfall, most ski areas had below-average snow. Choosing North American resorts involves higher uncertainty." data-zh="2025-26 年北美洛磯山脈經歷了歷史性的低雪量，多數雪場積雪遠低於平均。選擇北美雪場需承擔更高的不確定性。">2025-26 年北美洛磯山脈經歷了<strong data-en="Historically low snowfall" data-zh="歷史性的低雪量">歷史性的低雪量</strong>，多數雪場積雪遠低於平均。選擇北美雪場需承擔更高的不確定性。</p>
+</div>
+<div class="snow-insight-card">
+<div class="insight-icon">🎯</div>
+<h4 data-en="Safest choice" data-zh="最安全的選擇">最安全的選擇</h4>
+<p data-en="Safest Christmas skiing choices: Sölden (glacier) or St. Anton (heavy snowfall). For value for money: Nozawa Onsen or Furano (Japanese powder snow + cheap)." data-zh="聖誕滑雪最安全的選擇：Sölden（冰川）或St. Anton（大降雪）。追求CP值：Nozawa Onsen或Furano（日本粉雪＋便宜）。">聖誕滑雪最安全的選擇：<strong data-en="Sölden (glacier)" data-zh="Sölden（冰川）">Sölden（冰川）</strong>或 <strong data-en="St. Anton (heavy snowfall)" data-zh="St. Anton（大降雪）">St. Anton（大降雪）</strong>。追求CP值：<strong>Nozawa Onsen</strong> 或 <strong>Furano</strong>（日本粉雪＋便宜）。</p>
+</div>
+</div>
+</div>
+</div></div>
+</section></div><div class="category-group" data-category="travel" id="cat-travel"><div class="category-header"><h2 class="category-title" data-en="🏙️ City &amp; Travel" data-zh="🏙️ 城市旅遊">🏙️ 城市旅遊</h2></div><section class="section section-alt collapsible-section collapsed" id="cities">
+<div class="container"><div class="section-toggle-bar" data-target="cities"><span class="toggle-chevron">▸</span><span class="toggle-title" data-en="City attractions: must-visit cities in Central Europe" data-zh="城市景點：中歐必訪城市">城市景點：中歐必訪城市</span></div><div class="section-collapsible-content">
+<p class="section-intro" data-en="Each city has a unique Christmas atmosphere and cultural experience. Below includes local names, must-visit spots, and Christmas market info." data-zh="每座城市都有獨特的聖誕氛圍與文化體驗。以下包含各城市的當地名稱（鄉土名情）、必訪景點與聖誕市集資訊。">每座城市都有獨特的聖誕氛圍與文化體驗。以下包含各城市的當地名稱（鄉土名情）、必訪景點與聖誕市集資訊。</p>
+<div class="city-cards">
+<div class="city-card"><div class="city-header vienna"><h3 data-en="Vienna" data-zh="維也納">維也納</h3><span class="city-local-name">Wien</span><span class="city-country" data-en="Austria Österreich" data-zh="奧地利 Österreich">奧地利 Österreich</span></div>
+<div class="city-body"><p class="city-desc" data-en="City of music, with magnificent Habsburg palaces and world-class opera house. Café culture is a UNESCO intangible cultural heritage." data-zh="音樂之都，擁有華麗的哈布斯堡王朝宮殿、世界級歌劇院。咖啡館文化為UNESCO非物質文化遺產。">音樂之都，擁有華麗的哈布斯堡王朝宮殿、世界級歌劇院。咖啡館文化為UNESCO非物質文化遺產。</p>
+<div class="attraction-list">
+<div class="attraction"><strong data-en="Schönbrunn Palace" data-zh="美泉宮">美泉宮</strong><span class="local-name">Schloss Schönbrunn</span><p data-en="Habsburg Summer Palace, UNESCO World Heritage. Christmas market held at the palace square." data-zh="哈布斯堡夏宮，UNESCO世界遺產。聖誕市集在宮前廣場舉行。">哈布斯堡夏宮，UNESCO世界遺產。聖誕市集在宮前廣場舉行。</p></div>
+<div class="attraction"><strong data-en="St. Stephen's Cathedral" data-zh="聖史蒂芬大教堂">聖史蒂芬大教堂</strong><span class="local-name">Stephansdom</span><p data-en="Vienna landmark, Gothic architectural masterpiece. Climb the south tower for city views." data-zh="維也納地標，哥德式建築傑作。登南塔俯瞰全城。">維也納地標，哥德式建築傑作。登南塔俯瞰全城。</p></div>
+<div class="attraction"><strong data-en="Hofburg Palace" data-zh="霍夫堡皇宮">霍夫堡皇宮</strong><span class="local-name">Hofburg</span><p data-en="Habsburg Winter Palace, houses the Princess Sisi Museum." data-zh="哈布斯堡冬宮，內有西西公主博物館。">哈布斯堡冬宮，內有西西公主博物館。</p></div>
+<div class="attraction"><strong data-en="Naschmarkt" data-zh="納許市場">納許市場</strong><span class="local-name">Naschmarkt</span><p data-en="Vienna's largest open-air market, a treasure trove of international cuisine." data-zh="維也納最大露天市場，各國美食寶庫。">維也納最大露天市場，各國美食寶庫。</p></div>
+</div>
+<div class="city-christmas"><h4 data-en="Christmas market" data-zh="聖誕市集">聖誕市集</h4><p data-en="Rathausplatz Christmas market is one of Europe's largest. Market in front of Schönbrunn Palace runs until early January." data-zh="市政廳廣場 (Rathausplatz) 聖誕市集為全歐最大之一。美泉宮前也有市集至1月初。">市政廳廣場 (Rathausplatz) 聖誕市集為全歐最大之一。美泉宮前也有市集至1月初。</p></div>
+<div class="city-meta"><span data-en="Recommended stay: 1.5-2 days" data-zh="建議停留：1.5-2天">建議停留：1.5-2天</span><span data-en="Cost of living: upper-mid" data-zh="物價：中高">物價：中高</span></div>
+</div>
+</div>
+<div class="city-card"><div class="city-header salzburg"><h3 data-en="Salzburg" data-zh="薩爾茲堡">薩爾茲堡</h3><span class="city-local-name">Salzburg</span><span class="city-country" data-en="Austria Österreich" data-zh="奧地利 Österreich">奧地利 Österreich</span></div>
+<div class="city-body"><p class="city-desc" data-en="Mozart's hometown, filming location of the movie 'Nanni Nanni Nanni'. Old town is a UNESCO World Heritage site, transit hub to major ski resorts." data-zh="莫札特故鄉，《乃乃乃》電影取景地。舊城區為UNESCO世界遺產，前往各大雪場的中繼站。">莫札特故鄉，《乃乃乃》電影取景地。舊城區為UNESCO世界遺產，前往各大雪場的中繼站。</p>
+<div class="attraction-list">
+<div class="attraction"><strong data-en="Salzburg Fortress" data-zh="薩爾茲堡要塞">薩爾茲堡要塞</strong><span class="local-name">Festung Hohensalzburg</span><p data-en="One of Central Europe's best-preserved castles, take the lift to the top for a city view." data-zh="中歐保存最完好的城堡之一，搭纜車登頂俯瞰全城。">中歐保存最完好的城堡之一，搭纜車登頂俯瞰全城。</p></div>
+<div class="attraction"><strong data-en="Mirabell Palace" data-zh="米拉貝爾宮">米拉貝爾宮</strong><span class="local-name">Schloss Mirabell</span><p data-en="Baroque garden, filming location of “Do-Re-Mi” from “The Sound of Music.”" data-zh="巴洛克花園，《乃乃乃》「Do-Re-Mi」拍攝地。">巴洛克花園，《乃乃乃》「Do-Re-Mi」拍攝地。</p></div>
+<div class="attraction"><strong data-en="Mozart's birthplace" data-zh="莫札特出生地">莫札特出生地</strong><span class="local-name">Mozarts Geburtshaus</span><p data-en="No. 9 Getreidegasse, Mozart's yellow birth house from 1756." data-zh="蓋特萊德巷9號，莫札特1756年出生的黃色小樓。">蓋特萊德巷9號，莫札特1756年出生的黃色小樓。</p></div>
+</div>
+<div class="city-christmas"><h4 data-en="Christmas market" data-zh="聖誕市集">聖誕市集</h4><p data-en="Cathedral Square (Domplatz) Christmas Market is acclaimed as the most atmospheric in all Austria." data-zh="大教堂廣場 (Domplatz) 聖誕市集被譽為全奧地利最有氣氛。">大教堂廣場 (Domplatz) 聖誕市集被譽為全奧地利最有氣氛。</p></div>
+<div class="city-meta"><span data-en="Recommended stay: 0.5-1 days" data-zh="建議停留：0.5-1天">建議停留：0.5-1天</span><span data-en="Price level: medium" data-zh="物價：中">物價：中</span><span data-en="Distance to resort: 1-1.5hr" data-zh="距雪場：1-1.5hr">距雪場：1-1.5hr</span></div>
+</div>
+</div>
+<div class="city-card"><div class="city-header prague"><h3 data-en="Prague" data-zh="布拉格">布拉格</h3><span class="city-local-name">Praha</span><span class="city-country" data-en="Czech Republic" data-zh="捷克 Česko">捷克 Česko</span></div>
+<div class="city-body"><p class="city-desc" data-en="City of a hundred towers, Europe's best-preserved medieval cityscape. Prices are 40-50% cheaper than Western Europe. Currency: Czech koruna (CZK)." data-zh="百塔之城，歐洲保存最完整的中世紀城市景觀。物價比西歐便宜40-50%。捷克克朗 (CZK) 為貨幣。">百塔之城，歐洲保存最完整的中世紀城市景觀。物價比西歐便宜40-50%。捷克克朗 (CZK) 為貨幣。</p>
+<div class="attraction-list">
+<div class="attraction"><strong data-en="Prague Castle" data-zh="布拉格城堡">布拉格城堡</strong><span class="local-name">Pražský hrad</span><p data-en="World's largest ancient castle complex, including St. Vitus Cathedral and Golden Lane." data-zh="世界最大古城堡群，含聖維特大教堂、黃金巷。">世界最大古城堡群，含聖維特大教堂、黃金巷。</p></div>
+<div class="attraction"><strong data-en="Charles Bridge" data-zh="查理大橋">查理大橋</strong><span class="local-name">Karlův most</span><p data-en="Gothic stone bridge built in 1357, 30 Baroque saint statues. Most beautiful at dawn." data-zh="1357年建造的哥德式石橋，30座巴洛克聖人雕像。清晨最美。">1357年建造的哥德式石橋，30座巴洛克聖人雕像。清晨最美。</p></div>
+<div class="attraction"><strong data-en="Old Town Square Astronomical Clock" data-zh="舊城廣場天文鐘">舊城廣場天文鐘</strong><span class="local-name">Staroměstský orloj</span><p data-en="Built in 1410, must-see mechanical doll show every hour." data-zh="1410年製造，每整點機械人偶表演必看。">1410年製造，每整點機械人偶表演必看。</p></div>
+</div>
+<div class="city-christmas"><h4 data-en="Christmas market" data-zh="聖誕市集">聖誕市集</h4><p data-en="Old Town Square market open until 1/6, one of Europe's longest-running. Must-try Trdelník (chimney cake)." data-zh="舊城廣場市集營業至1/6，歐洲營業最久之一。必嘗 Trdelník（煙囪捲）。">舊城廣場市集營業至1/6，歐洲營業最久之一。必嘗 Trdelník（煙囪捲）。</p></div>
+<div class="city-meta"><span data-en="Recommended stay: 1-2 days" data-zh="建議停留：1-2天">建議停留：1-2天</span><span data-en="Cost of living: Low (half of Western Europe)" data-zh="物價：低（西歐一半）">物價：低（西歐一半）</span></div>
+</div>
+</div>
+<div class="city-card"><div class="city-header budapest"><h3 data-en="Budapest" data-zh="布達佩斯">布達佩斯</h3><span class="city-local-name">Budapest</span><span class="city-country" data-en="Hungary Magyarország" data-zh="匈牙利 Magyarország">匈牙利 Magyarország</span></div>
+<div class="city-body"><p class="city-desc" data-en="Danube Pearl, famous for thermal baths. Soaking in hot springs after skiing is a great treat. Currency is Hungarian Forint (HUF)." data-zh="多瑙河明珠，以溫泉浴場聞名。滑雪後泡溫泉是絕佳享受。匈牙利福林 (HUF) 為貨幣。">多瑙河明珠，以溫泉浴場聞名。滑雪後泡溫泉是絕佳享受。匈牙利福林 (HUF) 為貨幣。</p>
+<div class="attraction-list">
+<div class="attraction"><strong data-en="Parliament Building" data-zh="國會大廈">國會大廈</strong><span class="local-name">Országház</span><p data-en="Neo-Gothic architecture, the most spectacular landmark by the Danube. Night lights reflecting on the river are stunning." data-zh="新哥德式建築，多瑙河畔最壯觀地標。夜間燈光倒映河面極壯觀。">新哥德式建築，多瑙河畔最壯觀地標。夜間燈光倒映河面極壯觀。</p></div>
+<div class="attraction"><strong data-en="Fisherman's Bastion" data-zh="漁人堡">漁人堡</strong><span class="local-name">Halászbástya</span><p data-en="New Romanesque viewpoint overlooking the Danube and Parliament building panorama." data-zh="新羅馬式觀景台，俯瞰多瑙河與國會大廈全景。">新羅馬式觀景台，俯瞰多瑙河與國會大廈全景。</p></div>
+<div class="attraction"><strong data-en="Széchenyi Thermal Bath" data-zh="塞切尼溫泉浴場">塞切尼溫泉浴場</strong><span class="local-name">Széchenyi fürdő</span><p data-en="One of Europe's largest thermal spas, winter steam creates a magical atmosphere." data-zh="歐洲最大溫泉浴場之一，冬天蒸氣繚繞非常夢幻。">歐洲最大溫泉浴場之一，冬天蒸氣繚繞非常夢幻。</p></div>
+</div>
+<div class="city-christmas"><h4 data-en="Christmas market" data-zh="聖誕市集">聖誕市集</h4><p data-en="Vörösmarty Square market is the largest, must try Gulyás (stewed beef) and Forralt bor (mulled wine)." data-zh="Vörösmarty 廣場市集最大，必嘗 Gulyás（燉牛肉）和 Forralt bor（熱紅酒）。">Vörösmarty 廣場市集最大，必嘗 Gulyás（燉牛肉）和 Forralt bor（熱紅酒）。</p></div>
+<div class="city-meta"><span data-en="Recommended stay: 1-2 days" data-zh="建議停留：1-2天">建議停留：1-2天</span><span data-en="Cost of living: low" data-zh="物價：低">物價：低</span></div>
+</div>
+</div>
+<div class="city-card"><div class="city-header munich"><h3 data-en="Munich" data-zh="慕尼黑">慕尼黑</h3><span class="city-local-name">München</span><span class="city-country" data-en="Germany Deutschland" data-zh="德國 Deutschland">德國 Deutschland</span></div>
+<div class="city-body"><p class="city-desc" data-en="Bavaria's capital, beer culture city. Major European aviation hub, best gateway to Austrian ski areas." data-zh="巴伐利亞首府，啤酒文化之都。歐洲重要航空樞紐，進入奧地利滑雪區的最佳門戶。">巴伐利亞首府，啤酒文化之都。歐洲重要航空樞紐，進入奧地利滑雪區的最佳門戶。</p>
+<div class="attraction-list">
+<div class="attraction"><strong data-en="Maria Square" data-zh="瑪利亞廣場">瑪利亞廣場</strong><span class="local-name">Marienplatz</span><p data-en="Munich's heart, New Town Hall Glockenspiel plays daily at 11am and 12pm." data-zh="慕尼黑心臟，新市政廳鐘琴每天11點和12點演奏。">慕尼黑心臟，新市政廳鐘琴每天11點和12點演奏。</p></div>
+<div class="attraction"><strong data-en="Royal Beer Hall" data-zh="皇家啤酒屋">皇家啤酒屋</strong><span class="local-name">Hofbräuhaus</span><p data-en="Founded in 1589, must try Bavarian white sausage with wheat beer." data-zh="1589年創立，必嘗巴伐利亞白香腸配白啤酒。">1589年創立，必嘗巴伐利亞白香腸配白啤酒。</p></div>
+<div class="attraction"><strong data-en="Nymphenburg Palace" data-zh="寧芬堡宮">寧芬堡宮</strong><span class="local-name">Schloss Nymphenburg</span><p data-en="Bavarian royal summer palace, Baroque architecture with vast gardens." data-zh="巴伐利亞王室夏宮，巴洛克建築與廣闊花園。">巴伐利亞王室夏宮，巴洛克建築與廣闊花園。</p></div>
+</div>
+<div class="city-christmas"><h4 data-en="Christmas market" data-zh="聖誕市集">聖誕市集</h4><p data-en="Maria Square Christkindlmarkt is one of Germany’s oldest Christmas markets. Must-try Lebkuchen and Glühwein." data-zh="瑪利亞廣場 Christkindlmarkt 是德國最古老聖誕市集之一。必嘗 Lebkuchen 和 Glühwein。">瑪利亞廣場 Christkindlmarkt 是德國最古老聖誕市集之一。必嘗 Lebkuchen 和 Glühwein。</p></div>
+<div class="city-meta"><span data-en="Recommended stay: 1 day" data-zh="建議停留：1天">建議停留：1天</span><span data-en="Cost of living: upper-mid" data-zh="物價：中高">物價：中高</span><span data-en="Distance to ski area: 1.5-2 hours" data-zh="距雪場：1.5-2hr">距雪場：1.5-2hr</span></div>
+</div>
+</div>
+</div>
+<div class="additional-cities">
+<h3 data-en="Other nearby cities" data-zh="其他順路城市">其他順路城市</h3>
+<div class="mini-city-grid">
+<div class="mini-city"><h4 data-en="Bratislava" data-zh="布拉提斯拉瓦Bratislava">布拉提斯拉瓦 <span>Bratislava</span></h4><p class="mini-country" data-en="Slovakia Slovensko" data-zh="斯洛伐克 Slovensko">斯洛伐克 Slovensko</p><p data-en="Only 60km from Vienna, 1-hour train. One of Europe's cheapest capitals. Bratislavský hrad overlooks the Danube. Modrý kostolík is a must-see. Day trip from Vienna possible." data-zh="距維也納僅60km，火車1小時。歐洲最便宜首都之一。布拉提斯拉瓦城堡 (Bratislavský hrad) 俯瞰多瑙河。藍色教堂 (Modrý kostolík) 必拍。可從維也納當日來回。">距維也納僅60km，火車1小時。歐洲最便宜首都之一。布拉提斯拉瓦城堡 (Bratislavský hrad) 俯瞰多瑙河。藍色教堂 (Modrý kostolík) 必拍。可從維也納當日來回。</p></div>
+<div class="mini-city"><h4 data-en="Hallstatt" data-zh="哈修塔特Hallstatt">哈修塔特 <span>Hallstatt</span></h4><p class="mini-country" data-en="Austria Österreich" data-zh="奧地利 Österreich">奧地利 Österreich</p><p data-en="UNESCO World Heritage, “world’s most beautiful small town.” Colorful lakeside wooden houses look even more magical in winter. Salt mine (Salzwelten) and Skywalk are must-visits. About 1.5 hours from Salzburg." data-zh="UNESCO世界遺產，「世界最美小鎮」。湖畔彩色木屋冬季更夢幻。鹽礦 (Salzwelten) 和天空步道 (Skywalk) 必訪。從薩爾茲堡約1.5小時。">UNESCO世界遺產，「世界最美小鎮」。湖畔彩色木屋冬季更夢幻。鹽礦 (Salzwelten) 和天空步道 (Skywalk) 必訪。從薩爾茲堡約1.5小時。</p></div>
+<div class="mini-city"><h4 data-en="Innsbruck" data-zh="因斯布魯克Innsbruck">因斯布魯克 <span>Innsbruck</span></h4><p class="mini-country" data-en="Austria Österreich" data-zh="奧地利 Österreich">奧地利 Österreich</p><p data-en="Alpine town, Golden Roof (Goldenes Dachl) landmark. Nordkettenbahnen lift goes from city to 2,300m. Gateway to St. Anton or Sölden." data-zh="阿爾卑斯山城，黃金屋頂 (Goldenes Dachl) 為地標。北山纜車 (Nordkettenbahnen) 從市區直達2,300m。前往 St. Anton 或 Sölden 必經之地。">阿爾卑斯山城，黃金屋頂 (Goldenes Dachl) 為地標。北山纜車 (Nordkettenbahnen) 從市區直達2,300m。前往 St. Anton 或 Sölden 必經之地。</p></div>
+<div class="mini-city"><h4 data-en="Vaduz" data-zh="瓦杜茲Vaduz">瓦杜茲 <span>Vaduz</span></h4><p class="mini-country" data-en="Liechtenstein" data-zh="列支敦斯登 Liechtenstein">列支敦斯登 Liechtenstein</p><p data-en="The sixth smallest country capital in the world. Vaduz Castle (Schloss Vaduz) is a national symbol. Only 30 minutes by bus from Feldkirch, Austria, good for collecting passport stamps along the way." data-zh="世界第六小國首都。瓦杜茲城堡 (Schloss Vaduz) 為國家象徵。從奧地利 Feldkirch 搭公車僅30分鐘，順路蒐集護照章。">世界第六小國首都。瓦杜茲城堡 (Schloss Vaduz) 為國家象徵。從奧地利 Feldkirch 搭公車僅30分鐘，順路蒐集護照章。</p></div>
+</div>
+</div>
+</div></div>
+</section><section class="section section-alt collapsible-section collapsed" id="christmas-markets">
+<div class="container"><div class="section-toggle-bar" data-target="christmas-markets"><span class="toggle-chevron">▸</span><span class="toggle-title" data-en="Christmas Market Special Zone" data-zh="聖誕市集專區">聖誕市集專區</span></div><div class="section-collapsible-content">
+<p class="section-desc" data-en="European Christmas markets are one of the biggest highlights of winter travel, with aromas of mulled wine, grilled sausages, and gingerbread filling medieval squares" data-zh="歐洲聖誕市集是冬季旅行的最大亮點之一，熱紅酒、烤香腸、薑餅的香氣瀰漫在中世紀廣場上">歐洲聖誕市集是冬季旅行的最大亮點之一，熱紅酒、烤香腸、薑餅的香氣瀰漫在中世紀廣場上</p>
+<div class="xmas-city-grid">
+<div class="xmas-city-card">
+<div class="xmas-city-header" style="background: linear-gradient(135deg, #c62828, #b71c1c);">
+<h3 data-en="🇦🇹 Vienna Wien" data-zh="🇦🇹 維也納 Wien">🇦🇹 維也納 Wien</h3>
+<span class="xmas-count" data-en="4 major markets" data-zh="4大市集">4大市集</span>
+</div>
+<div class="xmas-city-body">
+<div class="xmas-market">
+<strong data-en="Rathausplatz in front of City Hall" data-zh="Rathausplatz 市政廳前">Rathausplatz 市政廳前</strong>
+<span class="xmas-tag xmas-must" data-en="Must-visit" data-zh="必去">必去</span>
+<p data-en="Vienna's largest, 150+ stalls, giant Christmas tree. Mid-November to 12/26" data-zh="維也納最大、150+攤位、巨型聖誕樹。11月中~12/26">維也納最大、150+攤位、巨型聖誕樹。11月中~12/26</p>
+</div>
+<div class="xmas-market">
+<strong data-en="Schönbrunn Palace" data-zh="Schönbrunn 美泉宮">Schönbrunn 美泉宮</strong>
+<p data-en="Palace backdrop, mainly handicrafts. Mid-November to 1/6" data-zh="皇宮背景、手工藝品為主。11月中~1/6">皇宮背景、手工藝品為主。11月中~1/6</p>
+</div>
+<div class="xmas-market">
+<strong data-en="Stephansplatz St. Stephen" data-zh="Stephansplatz 聖史蒂芬">Stephansplatz 聖史蒂芬</strong>
+<p data-en="In front of the cathedral, medium size. Mid-November to 12/26" data-zh="大教堂前、規模中等。11月中~12/26">大教堂前、規模中等。11月中~12/26</p>
+</div>
+<div class="xmas-market">
+<strong data-en="Spittelberg Alley Market" data-zh="Spittelberg 小巷市集">Spittelberg 小巷市集</strong>
+<span class="xmas-tag xmas-local" data-en="Local favorite" data-zh="在地最愛">在地最愛</span>
+<p data-en="Cozy market in narrow alleys, most atmospheric. Mid-Nov to 12/23" data-zh="窄巷中的溫馨市集、最有氛圍。11月中~12/23">窄巷中的溫馨市集、最有氛圍。11月中~12/23</p>
+</div>
+<div class="xmas-must-try" data-en="🍷 Must try Punsch (sweeter and more varied than Glühwein)" data-zh="🍷 必喝Punsch（比 Glühwein 更甜更多變化）">
+            🍷 必喝 <strong>Punsch</strong>（比 Glühwein 更甜更多變化）
+          </div>
+</div>
+</div>
+<div class="xmas-city-card">
+<div class="xmas-city-header" style="background: linear-gradient(135deg, #1565c0, #0d47a1);">
+<h3 data-en="🇨🇿 Prague" data-zh="🇨🇿 布拉格 Praha">🇨🇿 布拉格 Praha</h3>
+<span class="xmas-count" data-en="3 major markets" data-zh="3大市集">3大市集</span>
+</div>
+<div class="xmas-city-body">
+<div class="xmas-market">
+<strong data-en="Old Town Square" data-zh="Old Town Square 老城廣場">Old Town Square 老城廣場</strong>
+<span class="xmas-tag xmas-must" data-en="Must-visit" data-zh="必去">必去</span>
+<p data-en="One of Europe's most beautiful Christmas markets, giant Christmas tree + nativity scene. 12/1~1/6" data-zh="全歐洲最美聖誕市集之一、巨型聖誕樹+馬槽。12/1~1/6">全歐洲最美聖誕市集之一、巨型聖誕樹+馬槽。12/1~1/6</p>
+</div>
+<div class="xmas-market">
+<strong data-en="Wenceslas Square 瓦茨拉夫廣場" data-zh="Wenceslas Square 瓦茨拉夫廣場">Wenceslas Square 瓦茨拉夫廣場</strong>
+<p data-en="More commercial but convenient and large scale. 12/1~1/6" data-zh="較商業化但方便、規模大。12/1~1/6">較商業化但方便、規模大。12/1~1/6</p>
+</div>
+<div class="xmas-market">
+<strong>Náměstí Míru</strong>
+<span class="xmas-tag xmas-local" data-en="Local favorite" data-zh="在地最愛">在地最愛</span>
+<p data-en="Fewer tourists, cheaper prices, more authentic. December" data-zh="遊客少、價格較便宜、更道地。12月">遊客少、價格較便宜、更道地。12月</p>
+</div>
+<div class="xmas-must-try" data-en="🥐 Must-try Trdelník chimney cake (baked dough roll + sugar + cinnamon)" data-zh="🥐 必吃Trdelník煙囪蛋糕（烤麵團捲+糖+肉桂）">
+            🥐 必吃 <strong>Trdelník</strong> 煙囪蛋糕（烤麵團捲+糖+肉桂）
+          </div>
+</div>
+</div>
+<div class="xmas-city-card">
+<div class="xmas-city-header" style="background: linear-gradient(135deg, #2e7d32, #1b5e20);">
+<h3 data-en="🇭🇺 Budapest" data-zh="🇭🇺 布達佩斯 Budapest">🇭🇺 布達佩斯 Budapest</h3>
+<span class="xmas-count" data-en="3 major markets" data-zh="3大市集">3大市集</span>
+</div>
+<div class="xmas-city-body">
+<div class="xmas-market">
+<strong>Vörösmarty tér</strong>
+<span class="xmas-tag xmas-must" data-en="Must-visit" data-zh="必去">必去</span>
+<p data-en="Budapest’s largest, Hungarian handicrafts. Mid-November ~ 1/1" data-zh="布達佩斯最大、匈牙利手工藝品。11月中~1/1">布達佩斯最大、匈牙利手工藝品。11月中~1/1</p>
+</div>
+<div class="xmas-market">
+<strong data-en="St. Stephen's Basilica" data-zh="St. Stephen's Basilica 聖伊什特萬">St. Stephen's Basilica 聖伊什特萬</strong>
+<span class="xmas-tag xmas-must" data-en="Most beautiful" data-zh="最美">最美</span>
+<p data-en="3D light projection on church facade, ice rink. Mid-Nov to 1/1" data-zh="教堂外牆3D光雕投影、溜冰場。11月中~1/1">教堂外牆3D光雕投影、溜冰場。11月中~1/1</p>
+</div>
+<div class="xmas-market">
+<strong data-en="Next to Fővám tér Central Market" data-zh="Fővám tér 中央市場旁">Fővám tér 中央市場旁</strong>
+<span class="xmas-tag xmas-local" data-en="Local favorite" data-zh="在地最愛">在地最愛</span>
+<p data-en="More local, cheaper prices. December" data-zh="較在地、價格便宜。12月">較在地、價格便宜。12月</p>
+</div>
+<div class="xmas-must-try" data-en="🫓 Must-try Lángos (fried dough + sour cream + cheese)" data-zh="🫓 必吃Lángos蘭戈什（炸麵餅+酸奶油+起司）">
+            🫓 必吃 <strong>Lángos</strong> 蘭戈什（炸麵餅+酸奶油+起司）
+          </div>
+</div>
+</div>
+<div class="xmas-city-card">
+<div class="xmas-city-header" style="background: linear-gradient(135deg, #6a1b9a, #4a148c);">
+<h3 data-en="🇦🇹 Salzburg" data-zh="🇦🇹 薩爾茲堡 Salzburg">🇦🇹 薩爾茲堡 Salzburg</h3>
+<span class="xmas-count" data-en="2 major markets + special events" data-zh="2大市集+特別活動">2大市集+特別活動</span>
+</div>
+<div class="xmas-city-body">
+<div class="xmas-market">
+<strong>Dom &amp; Residenzplatz</strong>
+<span class="xmas-tag xmas-must" data-en="Must-visit" data-zh="必去">必去</span>
+<p data-en="One of Europe's oldest Christmas markets, in front of the cathedral. Mid-November to 1/1" data-zh="歐洲最古老的聖誕市集之一、大教堂前。11月中~1/1">歐洲最古老的聖誕市集之一、大教堂前。11月中~1/1</p>
+</div>
+<div class="xmas-market">
+<strong>Mirabellplatz</strong>
+<p data-en="Next to Mirabell Palace Gardens, smaller but exquisite. Mid-Nov to 1/1" data-zh="米拉貝爾宮花園旁、較小但精緻。11月中~1/1">米拉貝爾宮花園旁、較小但精緻。11月中~1/1</p>
+</div>
+<div class="xmas-market xmas-special">
+<strong data-en="🎭 12/5 Krampus Run demon parade" data-zh="🎭 12/5 Krampus Run 惡魔遊行">🎭 12/5 Krampus Run 惡魔遊行</strong>
+<span class="xmas-tag xmas-must" data-en="Must-see" data-zh="必看">必看</span>
+<p data-en="On St. Nicholas Eve, hundreds of 'Krampus' demons parade the streets, a unique Austrian tradition!" data-zh="聖尼古拉斯節前夕，數百隻「Krampus」惡魔在街上遊行，奧地利獨有的傳統！">聖尼古拉斯節前夕，數百隻「Krampus」惡魔在街上遊行，奧地利獨有的傳統！</p>
+</div>
+<div class="xmas-must-try" data-en="🍫 Must-try Mozartkugel chocolate balls" data-zh="🍫 必吃Mozartkugel莫札特巧克力球">
+            🍫 必吃 <strong>Mozartkugel</strong> 莫札特巧克力球
+          </div>
+</div>
+</div>
+<div class="xmas-city-card">
+<div class="xmas-city-header" style="background: linear-gradient(135deg, #e65100, #bf360c);">
+<h3 data-en="🇩🇪 Munich" data-zh="🇩🇪 慕尼黑 München">🇩🇪 慕尼黑 München</h3>
+<span class="xmas-count" data-en="2 major markets" data-zh="2大市集">2大市集</span>
+</div>
+<div class="xmas-city-body">
+<div class="xmas-market">
+<strong>Marienplatz Christkindlmarkt</strong>
+<span class="xmas-tag xmas-must" data-en="Must-visit" data-zh="必去">必去</span>
+<p data-en="One of Germany's oldest Christmas markets, in front of the New Town Hall. Late November to 12/24" data-zh="德國最古老聖誕市集之一、新市政廳前。11月底~12/24">德國最古老聖誕市集之一、新市政廳前。11月底~12/24</p>
+</div>
+<div class="xmas-market">
+<strong>Tollwood Winter Festival</strong>
+<span class="xmas-tag xmas-local" data-en="Alternative" data-zh="另類">另類</span>
+<p data-en="More modern, organic food, live music. Late Nov ~ 12/31" data-zh="更現代、有機食品、音樂表演。11月底~12/31">更現代、有機食品、音樂表演。11月底~12/31</p>
+</div>
+<div class="xmas-must-try" data-en="🍪 Must-eat Lebkuchen Nuremberg gingerbread + Glühwein hot mulled wine" data-zh="🍪 必吃Lebkuchen紐倫堡薑餅 +Glühwein熱紅酒">
+            🍪 必吃 <strong>Lebkuchen</strong> 紐倫堡薑餅 + <strong>Glühwein</strong> 熱紅酒
+          </div>
+</div>
+</div>
+</div>
+<h3 class="sub-section-h3" data-en="🍽️ Must-try Christmas market foods guide" data-zh="🍽️ 聖誕市集必吃美食圖鑑">🍽️ 聖誕市集必吃美食圖鑑</h3>
+<div class="xmas-food-grid">
+<div class="xmas-food-card">
+<div class="food-emoji">🍷</div>
+<h4 data-en="Glühwein (mulled wine)" data-zh="Glühwein 熱紅酒">Glühwein 熱紅酒</h4>
+<p class="food-origin" data-en="Germany/Austria" data-zh="德國/奧地利">德國/奧地利</p>
+<p data-en="Hot mulled wine with cinnamon, cloves, and orange peel. Cups can be taken home as souvenirs!" data-zh="加肉桂、丁香、柳橙皮的熱紅酒。杯子可帶走當紀念品！">加肉桂、丁香、柳橙皮的熱紅酒。杯子可帶走當紀念品！</p>
+<div class="food-price" data-eur="3" data-eur-max="5">NT$105~175</div>
+</div>
+<div class="xmas-food-card">
+<div class="food-emoji">🥐</div>
+<h4 data-en="Trdelník chimney cake" data-zh="Trdelník 煙囪蛋糕">Trdelník 煙囪蛋糕</h4>
+<p class="food-origin" data-en="Czech Republic" data-zh="捷克">捷克</p>
+<p data-en="Baked dough roll wrapped with sugar and cinnamon, can add chocolate or ice cream. Crispy outside, soft inside." data-zh="烤麵團捲裹糖和肉桂，可加巧克力或冰淇淋。外酥內軟。">烤麵團捲裹糖和肉桂，可加巧克力或冰淇淋。外酥內軟。</p>
+<div class="food-price" data-eur="3" data-eur-max="5">NT$105~175</div>
+</div>
+<div class="xmas-food-card">
+<div class="food-emoji">🫓</div>
+<h4 data-en="Lángos" data-zh="Lángos 蘭戈什">Lángos 蘭戈什</h4>
+<p class="food-origin" data-en="Hungary" data-zh="匈牙利">匈牙利</p>
+<p data-en="Fried dough cake with sour cream and cheese. Hungarian national snack, best served hot." data-zh="炸麵餅配酸奶油和起司。匈牙利國民小吃，熱騰騰最好吃。">炸麵餅配酸奶油和起司。匈牙利國民小吃，熱騰騰最好吃。</p>
+<div class="food-price" data-eur="3" data-eur-max="5">NT$105~175</div>
+</div>
+<div class="xmas-food-card">
+<div class="food-emoji">🌭</div>
+<h4 data-en="Bratwurst grilled sausage" data-zh="Bratwurst 烤香腸">Bratwurst 烤香腸</h4>
+<p class="food-origin" data-en="Germany/Austria" data-zh="德國/奧地利">德國/奧地利</p>
+<p data-en="Various grilled sausages in bread with mustard sauce. Simple but satisfying." data-zh="各式烤香腸夾麵包，配芥末醬。簡單但滿足。">各式烤香腸夾麵包，配芥末醬。簡單但滿足。</p>
+<div class="food-price" data-eur="4" data-eur-max="6">NT$140~210</div>
+</div>
+<div class="xmas-food-card">
+<div class="food-emoji">🥔</div>
+<h4 data-en="Kartoffelpuffer (potato pancakes)" data-zh="Kartoffelpuffer 薯餅">Kartoffelpuffer 薯餅</h4>
+<p class="food-origin" data-en="Germany/Austria" data-zh="德國/奧地利">德國/奧地利</p>
+<p data-en="Potato pancakes with apple sauce or sour cream. Crispy and delicious." data-zh="炸馬鈴薯餅配蘋果醬或酸奶油。酥脆可口。">炸馬鈴薯餅配蘋果醬或酸奶油。酥脆可口。</p>
+<div class="food-price" data-eur="4" data-eur-max="6">NT$140~210</div>
+</div>
+<div class="xmas-food-card">
+<div class="food-emoji">🍪</div>
+<h4 data-en="Lebkuchen gingerbread" data-zh="Lebkuchen 薑餅">Lebkuchen 薑餅</h4>
+<p class="food-origin" data-en="Germany" data-zh="德國">德國</p>
+<p data-en="Traditional Christmas gingerbread, heart shape is classic. Can write messages as gifts." data-zh="傳統聖誕薑餅，心型最經典。可以寫字當禮物。">傳統聖誕薑餅，心型最經典。可以寫字當禮物。</p>
+<div class="food-price" data-eur="2" data-eur-max="4">NT$70~140</div>
+</div>
+<div class="xmas-food-card">
+<div class="food-emoji">🌰</div>
+<h4 data-en="Maroni roasted chestnuts" data-zh="Maroni 烤栗子">Maroni 烤栗子</h4>
+<p class="food-origin" data-en="Various countries" data-zh="各國">各國</p>
+<p data-en="Winter street classic, warm hands and stomach in a paper bag." data-zh="冬季街頭經典，紙袋裝著暖手又暖胃。">冬季街頭經典，紙袋裝著暖手又暖胃。</p>
+<div class="food-price" data-eur="3" data-eur-max="5">NT$105~175</div>
+</div>
+<div class="xmas-food-card">
+<div class="food-emoji">🍰</div>
+<h4 data-en="Kaiserschmarrn Emperor pancake" data-zh="Kaiserschmarrn 皇帝煎餅">Kaiserschmarrn 皇帝煎餅</h4>
+<p class="food-origin" data-en="Austria" data-zh="奧地利">奧地利</p>
+<p data-en="Shredded sweet pancakes sprinkled with powdered sugar, served with apple sauce. Austria's national dessert." data-zh="撕碎的甜煎餅灑糖粉，配蘋果醬。奧地利國民甜點。">撕碎的甜煎餅灑糖粉，配蘋果醬。奧地利國民甜點。</p>
+<div class="food-price" data-eur="5" data-eur-max="8">NT$175~280</div>
+</div>
+</div>
+</div></div>
+</section><section class="section collapsible-section collapsed" id="food-guide">
+<div class="container"><div class="section-toggle-bar" data-target="food-guide"><span class="toggle-chevron">▸</span><span class="toggle-title" data-en="Food guide" data-zh="美食指南">美食指南</span></div><div class="section-collapsible-content">
+<p class="section-desc" data-en="Complete guide from ski resort mountain huts to city restaurants for Central European winter cuisine" data-zh="從雪場山頂小屋到城市餐廳，中歐冬季美食完全攻略">從雪場山頂小屋到城市餐廳，中歐冬季美食完全攻略</p>
+<h3 class="sub-section-h3" data-en="🏔️ Austrian mountain hut (Hütte) culture" data-zh="🏔️ 奧地利山頂小屋 Hütte 文化">🏔️ 奧地利山頂小屋 Hütte 文化</h3>
+<div class="hutte-intro">
+<p data-en="Skiing in Austria, lunch must be at a mountain hut (Hütte, pronounced 'Hoot'). This is the essence of Austrian ski culture—take off your ski boots in a wooden cabin surrounded by snowy mountains, enjoy a hot drink and a plate of steaming Käsespätzle, with stunning Alpine views outside the window." data-zh="在奧地利滑雪，午餐一定要在山頂小屋（Hütte，發音「虎特」）用餐。這是奧地利滑雪文化的精髓——在雪山環繞的木屋裡，脫下雪靴，喝杯熱飲，吃一盤熱騰騰的 Käsespätzle，窗外就是壯闘的阿爾卑斯山景。">在奧地利滑雪，午餐一定要在山頂小屋（<strong>Hütte</strong>，發音「虎特」）用餐。這是奧地利滑雪文化的精髓——在雪山環繞的木屋裡，脫下雪靴，喝杯熱飲，吃一盤熱騰騰的 Käsespätzle，窗外就是壯闘的阿爾卑斯山景。</p>
+</div>
+<div class="hutte-food-grid">
+<div class="hutte-food-card">
+<div class="hutte-rank">No.1</div>
+<h4>Käsespätzle<br/><small data-en="Cheese dumplings" data-zh="起司麵疙瘩">起司麵疙瘩</small></h4>
+<p data-en="Austrian version of Mac &amp; Cheese. Handmade dumplings with melted Alpine cheese and fried onions. The ultimate comfort food after skiing." data-zh="奧地利版 Mac &amp; Cheese。手工麵疙瘩配融化的阿爾卑斯起司和炸洋蔥。滑雪後的終極comfort food。">奧地利版 Mac &amp; Cheese。手工麵疙瘩配融化的阿爾卑斯起司和炸洋蔥。滑雪後的終極comfort food。</p>
+<div class="hutte-price" data-eur="12" data-eur-max="16">NT$420~560</div>
+</div>
+<div class="hutte-food-card">
+<div class="hutte-rank">No.2</div>
+<h4>Kaiserschmarrn<br/><small data-en="Emperor pancake" data-zh="皇帝煎餅">皇帝煎餅</small></h4>
+<p data-en="Shredded fluffy sweet pancakes dusted with powdered sugar, served with apple or plum jam. Said to be the Austro-Hungarian emperor's favorite." data-zh="撕碎的蓬鬆甜煎餅，灑上糖粉，配蘋果醬或李子醬。據說是奧匈帝國皇帝的最愛。">撕碎的蓬鬆甜煎餅，灑上糖粉，配蘋果醬或李子醬。據說是奧匈帝國皇帝的最愛。</p>
+<div class="hutte-price" data-eur="10" data-eur-max="14">NT$350~490</div>
+</div>
+<div class="hutte-food-card">
+<div class="hutte-rank">No.3</div>
+<h4>Gulaschsuppe<br/><small data-en="Hungarian goulash soup" data-zh="匈牙利燉牛肉湯">匈牙利燉牛肉湯</small></h4>
+<p data-en="Paprika beef stew with bread. A bowl on a cold mountaintop warms you from stomach to heart." data-zh="紅椒粉燉牛肉湯，配麵包。在寒冷的山頂喝一碗，從胃暖到心。">紅椒粉燉牛肉湯，配麵包。在寒冷的山頂喝一碗，從胃暖到心。</p>
+<div class="hutte-price" data-eur="8" data-eur-max="12">NT$280~420</div>
+</div>
+<div class="hutte-food-card">
+<div class="hutte-rank">No.4</div>
+<h4>Germknödel<br/><small data-en="Yeast dumplings" data-zh="酵母丸子">酵母丸子</small></h4>
+<p data-en="Steamed dough dumplings filled with plum jam, topped with butter and poppy seeds. A unique sweet and savory taste." data-zh="蒸麵團丸子，內餡是李子醬，外面淋奶油和罌粟籽。甜鹹交織的獨特口感。">蒸麵團丸子，內餡是李子醬，外面淋奶油和罌粟籽。甜鹹交織的獨特口感。</p>
+<div class="hutte-price" data-eur="8" data-eur-max="12">NT$280~420</div>
+</div>
+<div class="hutte-food-card">
+<div class="hutte-rank">No.5</div>
+<h4>Wiener Schnitzel<br/><small data-en="Viennese schnitzel" data-zh="維也納炸豬排">維也納炸豬排</small></h4>
+<p data-en="Breaded and fried thin pork schnitzel (traditionally veal), served with potato salad or fries. Austria's national dish." data-zh="裹麵包粉炸的薄豬排（正統用小牛肉），配馬鈴薯沙拉或薯條。奧地利國菜。">裹麵包粉炸的薄豬排（正統用小牛肉），配馬鈴薯沙拉或薯條。奧地利國菜。</p>
+<div class="hutte-price" data-eur="14" data-eur-max="20">NT$490~700</div>
+</div>
+<div class="hutte-food-card">
+<div class="hutte-rank">No.6</div>
+<h4>Tiroler Gröstl<br/><small data-en="Tyrolean fried potatoes" data-zh="提洛爾炒馬鈴薯">提洛爾炒馬鈴薯</small></h4>
+<p data-en="Potatoes, bacon, and onions fried together, topped with a fried egg. A Tyrol classic." data-zh="馬鈴薯、培根、洋蔥一起炒，上面放一顆煎蛋。提洛爾地區的經典。">馬鈴薯、培根、洋蔥一起炒，上面放一顆煎蛋。提洛爾地區的經典。</p>
+<div class="hutte-price" data-eur="12" data-eur-max="16">NT$420~560</div>
+</div>
+</div>
+<div class="hutte-drinks">
+<h4 data-en="🍺 Must-try drinks on the mountain" data-zh="🍺 山上必喝飲品">🍺 山上必喝飲品</h4>
+<div class="drink-row">
+<div class="drink-item" data-en="Ski Wasser raspberry syrup + sparkling water, a refreshing pink drink NT$105~140" data-zh="Ski Wasser滑雪水覆盆子糖漿+氣泡水，粉紅色的清爽飲料NT$105~140">
+<strong>Ski Wasser</strong> 滑雪水<br/>
+<small data-en="Raspberry syrup + sparkling water, a refreshing pink drink" data-zh="覆盆子糖漿+氣泡水，粉紅色的清爽飲料">覆盆子糖漿+氣泡水，粉紅色的清爽飲料</small>
+<div data-eur="3" data-eur-max="4">NT$105~140</div>
+</div>
+<div class="drink-item">
+<strong>Almdudler</strong><br/>
+<small data-en="Austrian national soda, herbal flavor, similar to ginger ale" data-zh="奧地利國民汽水，草本風味，類似薑汁汽水">奧地利國民汽水，草本風味，類似薑汁汽水</small>
+<div data-eur="3" data-eur-max="4">NT$105~140</div>
+</div>
+<div class="drink-item" data-en="Jagertee hunter’s tea (black tea + rum + honey), perfect to warm up after skiing NT$140~210" data-zh="Jagertee獵人茶紅茶+蘭姆酒+蜂蜜，滑雪後暖身神器NT$140~210">
+<strong>Jagertee</strong> 獵人茶<br/>
+<small data-en="Black tea + rum + honey, a warming magic drink after skiing" data-zh="紅茶+蘭姆酒+蜂蜜，滑雪後暖身神器">紅茶+蘭姆酒+蜂蜜，滑雪後暖身神器</small>
+<div data-eur="4" data-eur-max="6">NT$140~210</div>
+</div>
+<div class="drink-item" data-en="Weißbier wheat beer classic in Austria/Germany, perfect with sausages on the summit NT$140~210" data-zh="Weißbier小麥啤酒奧地利/德國經典，在山頂配香腸絕配NT$140~210">
+<strong>Weißbier</strong> 小麥啤酒<br/>
+<small data-en="Classic Austria/Germany, perfect with sausage on the summit" data-zh="奧地利/德國經典，在山頂配香腸絕配">奧地利/德國經典，在山頂配香腸絕配</small>
+<div data-eur="4" data-eur-max="6">NT$140~210</div>
+</div>
+</div>
+</div>
+<h3 class="sub-section-h3" data-en="🌍 Must-try dishes from various countries" data-zh="🌍 各國必吃料理">🌍 各國必吃料理</h3>
+<div class="country-food-grid">
+<div class="country-food-card">
+<h4 data-en="🇦🇹 Austria Österreich" data-zh="🇦🇹 奧地利 Österreich">🇦🇹 奧地利 Österreich</h4>
+<ul class="food-list">
+<li data-en="Wiener Schnitzel — Vienna fried cutlet, national dish, a must-eat" data-zh="Wiener Schnitzel維也納炸排 — 國菜，必吃"><strong>Wiener Schnitzel</strong> 維也納炸排 — 國菜，必吃</li>
+<li data-en="Tafelspitz boiled beef — emperor’s favorite clear stew" data-zh="Tafelspitz水煮牛肉 — 皇帝最愛的清燉牛肉"><strong>Tafelspitz</strong> 水煮牛肉 — 皇帝最愛的清燉牛肉</li>
+<li data-en="Sachertorte — chocolate cake with apricot jam" data-zh="Sachertorte薩赫蛋糕 — 巧克力蛋糕+杏桃醬"><strong>Sachertorte</strong> 薩赫蛋糕 — 巧克力蛋糕+杏桃醬</li>
+<li data-en="Apfelstrudel — Puff pastry apple roll with vanilla sauce" data-zh="Apfelstrudel蘋果捲 — 酥皮蘋果捲配香草醬"><strong>Apfelstrudel</strong> 蘋果捲 — 酥皮蘋果捲配香草醬</li>
+<li data-en="Knödel dough dumplings — large dumplings in various flavors" data-zh="Knödel麵團丸子 — 各種口味的大丸子"><strong>Knödel</strong> 麵團丸子 — 各種口味的大丸子</li>
+</ul>
+</div>
+<div class="country-food-card">
+<h4 data-en="🇨🇿 Czech Republic" data-zh="🇨🇿 捷克 Česko">🇨🇿 捷克 Česko</h4>
+<ul class="food-list">
+<li data-en="Svíčková creamy beef stew — national dish, served with dumplings" data-zh="Svíčková奶油燉牛肉 — 國菜，配麵團丸子"><strong>Svíčková</strong> 奶油燉牛肉 — 國菜，配麵團丸子</li>
+<li data-en="Vepřo-knedlo-zelo roast pork + dumplings + sauerkraut" data-zh="Vepřo-knedlo-zelo烤豬肉+丸子+酸菜"><strong>Vepřo-knedlo-zelo</strong> 烤豬肉+丸子+酸菜</li>
+<li data-en="Trdelník chimney cake — street must-eat dessert" data-zh="Trdelník煙囪蛋糕 — 街頭必吃甜點"><strong>Trdelník</strong> 煙囪蛋糕 — 街頭必吃甜點</li>
+<li data-en="Bramboráky potato pancakes — served with sour cream" data-zh="Bramboráky馬鈴薯煎餅 — 配酸奶油"><strong>Bramboráky</strong> 馬鈴薯煎餅 — 配酸奶油</li>
+<li data-en="Pilsner Urquell — the world's first Pilsner beer" data-zh="Pilsner Urquell— 世界第一款皮爾森啤酒"><strong>Pilsner Urquell</strong> — 世界第一款皮爾森啤酒</li>
+</ul>
+</div>
+<div class="country-food-card">
+<h4 data-en="🇭🇺 Hungary Magyarország" data-zh="🇭🇺 匈牙利 Magyarország">🇭🇺 匈牙利 Magyarország</h4>
+<ul class="food-list">
+<li data-en="Gulyás Hungarian beef stew — national dish with paprika flavor" data-zh="Gulyás匈牙利燉牛肉 — 國菜，紅椒粉風味"><strong>Gulyás</strong> 匈牙利燉牛肉 — 國菜，紅椒粉風味</li>
+<li data-en="Lángos — fried dough with sour cream and cheese" data-zh="Lángos蘭戈什 — 炸麵餅+酸奶油+起司"><strong>Lángos</strong> 蘭戈什 — 炸麵餅+酸奶油+起司</li>
+<li data-en="Chicken Paprikash — chicken stewed with paprika" data-zh="Chicken Paprikash紅椒雞 — 紅椒粉燉雞"><strong>Chicken Paprikash</strong> 紅椒雞 — 紅椒粉燉雞</li>
+<li data-en="Dobos Torte — caramel chocolate layered cake" data-zh="Dobos Torte多博什蛋糕 — 焦糖巧克力層蛋糕"><strong>Dobos Torte</strong> 多博什蛋糕 — 焦糖巧克力層蛋糕</li>
+<li data-en="Forralt bor Hungarian mulled red wine — sweeter than German version" data-zh="Forralt bor匈牙利熱紅酒 — 比德國版更甜"><strong>Forralt bor</strong> 匈牙利熱紅酒 — 比德國版更甜</li>
+</ul>
+</div>
+<div class="country-food-card">
+<h4 data-en="🇩🇪 Germany" data-zh="🇩🇪 德國 Deutschland">🇩🇪 德國 Deutschland</h4>
+<ul class="food-list">
+<li data-en="Schweinshaxe roast pork knuckle — crispy outside, tender inside, served with sauerkraut" data-zh="Schweinshaxe烤豬腳 — 外酥內嫩，配酸菜"><strong>Schweinshaxe</strong> 烤豬腳 — 外酥內嫩，配酸菜</li>
+<li data-en="Weisswurst white sausage — traditional Munich breakfast" data-zh="Weisswurst白香腸 — 慕尼黑早餐傳統"><strong>Weisswurst</strong> 白香腸 — 慕尼黑早餐傳統</li>
+<li data-en="Bretzel pretzel — savory large bread" data-zh="Bretzel蝴蝶餅 — 鹹味大麵包"><strong>Bretzel</strong> 蝴蝶餅 — 鹹味大麵包</li>
+<li data-en="Lebkuchen gingerbread — Christmas tradition" data-zh="Lebkuchen薑餅 — 聖誕節傳統"><strong>Lebkuchen</strong> 薑餅 — 聖誕節傳統</li>
+<li data-en="Stollen Christmas bread — dried fruit, nuts, powdered sugar bread" data-zh="Stollen聖誕麵包 — 果乾堅果糖粉麵包"><strong>Stollen</strong> 聖誕麵包 — 果乾堅果糖粉麵包</li>
+</ul>
+</div>
+</div>
+<h3 class="sub-section-h3" data-en="💰 Dining budget strategy" data-zh="💰 用餐預算策略">💰 用餐預算策略</h3>
+<div class="budget-food-grid">
+<div class="budget-food-card budget-save">
+<h4 data-en="🥫 Ultra-saving mode" data-zh="🥫 極省模式">🥫 極省模式</h4>
+<div class="budget-food-price" data-en="NT$350~525/day" data-eur="10" data-eur-max="15" data-zh="NT$350~525/天">NT$350~525/天</div>
+<ul>
+<li data-en="Supermarket self-catering (Spar, Billa, Lidl)" data-zh="超市採購自煮（Spar、Billa、Lidl）">超市採購自煮（Spar、Billa、Lidl）</li>
+<li data-en="Bakery breakfast (Semmel bread + coffee)" data-zh="麵包店早餐（Semmel 麵包+咖啡）">麵包店早餐（Semmel 麵包+咖啡）</li>
+<li data-en="Bring sandwiches up the mountain" data-zh="帶三明治上山">帶三明治上山</li>
+</ul>
+</div>
+<div class="budget-food-card budget-mid">
+<h4 data-en="🍽️ Balanced mode" data-zh="🍽️ 均衡模式">🍽️ 均衡模式</h4>
+<div class="budget-food-price" data-en="NT$875~1,400/day" data-eur="25" data-eur-max="40" data-zh="NT$875~1,400/天">NT$875~1,400/天</div>
+<ul>
+<li data-en="Self-cooked breakfast + mountain hut lunch + supermarket dinner" data-zh="自煮早餐+山頂小屋午餐+超市晚餐">自煮早餐+山頂小屋午餐+超市晚餐</li>
+<li data-en="Lunch at a Hütte with a main dish" data-zh="午餐在 Hütte 吃一道主菜">午餐在 Hütte 吃一道主菜</li>
+<li data-en="Occasionally dine out to experience local cuisine" data-zh="偶爾外食體驗當地料理">偶爾外食體驗當地料理</li>
+</ul>
+</div>
+<div class="budget-food-card budget-full">
+<h4 data-en="🥩 Enjoyment mode" data-zh="🥩 享受模式">🥩 享受模式</h4>
+<div class="budget-food-price" data-en="NT$1,750~2,800/day" data-eur="50" data-eur-max="80" data-zh="NT$1,750~2,800/天">NT$1,750~2,800/天</div>
+<ul>
+<li data-en="Hotel breakfast + mountain-top restaurant lunch + restaurant dinner" data-zh="飯店早餐+山頂餐廳午餐+餐廳晚餐">飯店早餐+山頂餐廳午餐+餐廳晚餐</li>
+<li data-en="Experience eating out every meal" data-zh="每餐都外食體驗">每餐都外食體驗</li>
+<li data-en="Includes drinks and desserts" data-zh="含酒水和甜點">含酒水和甜點</li>
+</ul>
+</div>
+</div>
+</div></div>
+</section></div><div class="category-group" data-category="logistics" id="cat-logistics"><div class="category-header"><h2 class="category-title" data-en="💰 Budget &amp; Itinerary" data-zh="💰 預算行程">💰 預算行程</h2></div><section class="section collapsible-section collapsed" id="accommodation">
+<div class="container"><div class="section-toggle-bar" data-target="accommodation"><span class="toggle-chevron">▸</span><span class="toggle-title" data-en="Accommodation In-Depth Comparison" data-zh="住宿深度比較">住宿深度比較</span></div><div class="section-collapsible-content">
+<p class="section-desc" data-en="Ski resort accommodation analysis + best city stay areas recommended, Christmas peak season price reference" data-zh="雪場住宿類型解析＋城市最佳住宿區域推薦，聖誕旺季價格參考">雪場住宿類型解析＋城市最佳住宿區域推薦，聖誕旺季價格參考</p>
+<h3 class="sub-section-h3" data-en="🏔️ Ski resort accommodation comparison" data-zh="🏔️ 雪場住宿類型比較">🏔️ 雪場住宿類型比較</h3>
+<div class="accom-type-grid">
+<div class="accom-type-card">
+<div class="accom-icon">🏨</div>
+<h4 data-en="Hotel 3-4★" data-zh="Hotel 3-4★ 飯店">Hotel 3-4★ 飯店</h4>
+<div class="accom-price" data-en="NT$2,800~10,500/night" data-eur="80" data-eur-max="300" data-zh="NT$2,800~10,500/晚">NT$2,800~10,500/晚</div>
+<div class="accom-pros" data-en="Pros: includes breakfast, ski storage, some with spa/pool, comprehensive service" data-zh="優點：含早餐、Ski Storage、有些含Spa/泳池、服務完善"><strong data-en="Advantages:" data-zh="優點：">優點：</strong>含早餐、Ski Storage、有些含Spa/泳池、服務完善</div>
+<div class="accom-cons" data-en="Cons: Christmas peak prices double, smaller space, no self-catering" data-zh="缺點：聖誕旺季價格翻倍、空間較小、不能自煮"><strong data-en="Disadvantages:" data-zh="缺點：">缺點：</strong>聖誕旺季價格翻倍、空間較小、不能自煮</div>
+<div class="accom-tip" data-en="💡 Suitable for: travelers seeking comfort and hassle-free trips" data-zh="💡 適合：追求舒適、不想操心的旅客">💡 適合：追求舒適、不想操心的旅客</div>
+</div>
+<div class="accom-type-card accom-recommended">
+<div class="accom-badge" data-en="🏆 Highly recommended" data-zh="🏆 最推薦">🏆 最推薦</div>
+<div class="accom-icon">🏠</div>
+<h4 data-en="Apartment" data-zh="Apartment 公寓">Apartment 公寓</h4>
+<div class="accom-price" data-en="NT$2,800~7,000/night (2-4 people)" data-eur="80" data-eur-max="200" data-zh="NT$2,800~7,000/晚(2-4人)">NT$2,800~7,000/晚(2-4人)</div>
+<div class="accom-pros" data-en="Advantages: kitchen for self-cooking saves meal costs, spacious, cost-effective when shared, living room for gatherings" data-zh="優點：有廚房可自煮省餐費、空間大、多人分攤划算、有客廳可聚會"><strong data-en="Advantages:" data-zh="優點：">優點：</strong>有廚房可自煮省餐費、空間大、多人分攤划算、有客廳可聚會</div>
+<div class="accom-cons" data-en="Cons: self-cleaning required, usually no breakfast, must book in advance" data-zh="缺點：需自行打掃、通常無早餐、需提前預訂"><strong data-en="Disadvantages:" data-zh="缺點：">缺點：</strong>需自行打掃、通常無早餐、需提前預訂</div>
+<div class="accom-tip" data-en="💡 Suitable for: large group trips, travelers wanting to save on meals" data-zh="💡 適合：多人團體旅行、想省餐費的旅客">💡 適合：多人團體旅行、想省餐費的旅客</div>
+</div>
+<div class="accom-type-card">
+<div class="accom-icon">🏡</div>
+<h4 data-en="Pension/B&amp;B guesthouse" data-zh="Pension/B&amp;B 民宿">Pension/B&amp;B 民宿</h4>
+<div class="accom-price" data-en="NT$1,750~4,200/night" data-eur="50" data-eur-max="120" data-zh="NT$1,750~4,200/晚">NT$1,750~4,200/晚</div>
+<div class="accom-pros" data-en="Pros: family-run with warmth, includes breakfast, affordable, local culture experience" data-zh="優點：家庭經營有溫度、含早餐、價格親民、體驗在地文化"><strong data-en="Advantages:" data-zh="優點：">優點：</strong>家庭經營有溫度、含早餐、價格親民、體驗在地文化</div>
+<div class="accom-cons" data-en="Disadvantages: basic facilities, smaller rooms, possible language barrier" data-zh="缺點：設施較基本、房間較小、可能語言不通"><strong data-en="Disadvantages:" data-zh="缺點：">缺點：</strong>設施較基本、房間較小、可能語言不通</div>
+<div class="accom-tip" data-en="💡 Suitable for: budget-conscious, wanting to experience Austrian family atmosphere" data-zh="💡 適合：預算有限、想體驗奧地利家庭氛圍">💡 適合：預算有限、想體驗奧地利家庭氛圍</div>
+</div>
+<div class="accom-type-card">
+<div class="accom-icon">🛏️</div>
+<h4 data-en="Hostel" data-zh="Hostel 青年旅館">Hostel 青年旅館</h4>
+<div class="accom-price" data-en="NT$1,050~1,750/bed" data-eur="30" data-eur-max="50" data-zh="NT$1,050~1,750/床位">NT$1,050~1,750/床位</div>
+<div class="accom-pros" data-en="Advantages: cheapest, meet travelers from various countries, usually shared kitchen" data-zh="優點：最便宜、認識各國旅客、通常有共用廚房"><strong data-en="Advantages:" data-zh="優點：">優點：</strong>最便宜、認識各國旅客、通常有共用廚房</div>
+<div class="accom-cons" data-en="Cons: no privacy, noisy, need own lock, few options near ski area" data-zh="缺點：無隱私、吵雜、需自備鎖、雪場附近選擇少"><strong data-en="Disadvantages:" data-zh="缺點：">缺點：</strong>無隱私、吵雜、需自備鎖、雪場附近選擇少</div>
+<div class="accom-tip" data-en="💡 Suitable for: solo backpackers, extreme budget travelers" data-zh="💡 適合：獨旅背包客、極度省預算">💡 適合：獨旅背包客、極度省預算</div>
+</div>
+</div>
+<h3 class="sub-section-h3" data-en="⛷️ Ski-in/Ski-out vs shuttle" data-zh="⛷️ Ski-in/Ski-out vs 接駁">⛷️ Ski-in/Ski-out vs 接駁</h3>
+<div class="sio-comparison">
+<div class="sio-card sio-yes">
+<h4>🎿 Ski-in/Ski-out</h4>
+<p data-en="Ski directly from the doorstep to the piste and back home after skiing." data-zh="從住宿門口直接滑到雪道，滑完直接滑回家。">從住宿門口直接滑到雪道，滑完直接滑回家。</p>
+<ul>
+<li data-en="✅ Avoid daily hassle of moving gear and taking transport" data-zh="✅ 省去每天搬裝備搭車的麻煩">✅ 省去每天搬裝備搭車的麻煩</li>
+<li data-en="✅ Extra 1-2 hours skiing time" data-zh="✅ 多出 1-2 小時滑雪時間">✅ 多出 1-2 小時滑雪時間</li>
+<li data-en="✅ Easy to return to the room for rest at noon" data-zh="✅ 中午可以輕鬆回房休息">✅ 中午可以輕鬆回房休息</li>
+<li data-en="❌ Prices 30-50% higher" data-zh="❌ 價格貴 30-50%">❌ 價格貴 30-50%</li>
+<li data-en="❌ Fewer options" data-zh="❌ 選擇較少">❌ 選擇較少</li>
+</ul>
+<div class="sio-verdict" data-en="Suitable for: ski-focused trips, ample budget" data-zh="適合：滑雪為主的行程、預算充裕">適合：滑雪為主的行程、預算充裕</div>
+</div>
+<div class="sio-card sio-no">
+<h4 data-en="🚌 Shuttle/walking required" data-zh="🚌 需搭接駁/步行">🚌 需搭接駁/步行</h4>
+<p data-en="Stay in town or a bit farther, take the free Ski Bus or walk to the lift station." data-zh="住在鎮上或稍遠處，搭免費 Ski Bus 或步行到纜車站。">住在鎮上或稍遠處，搭免費 Ski Bus 或步行到纜車站。</p>
+<ul>
+<li data-en="✅ Much cheaper prices" data-zh="✅ 價格便宜很多">✅ 價格便宜很多</li>
+<li data-en="✅ Many accommodation options" data-zh="✅ 住宿選擇多">✅ 住宿選擇多</li>
+<li data-en="✅ Convenient restaurants and shops in town" data-zh="✅ 鎮上餐廳商店方便">✅ 鎮上餐廳商店方便</li>
+<li data-en="❌ Need to move gear daily" data-zh="❌ 每天需搬裝備">❌ 每天需搬裝備</li>
+<li data-en="❌ Limited by bus schedule" data-zh="❌ 受巴士時刻表限制">❌ 受巴士時刻表限制</li>
+</ul>
+<div class="sio-verdict" data-en="Suitable for: budget-conscious, mixed skiing and sightseeing trips" data-zh="適合：預算有限、滑雪＋觀光混合行程">適合：預算有限、滑雪＋觀光混合行程</div>
+</div>
+</div>
+<p class="sio-note" data-en="💡Money-saving tip: Most Austrian resorts have free Ski Bus. Staying in town and taking a 5-10 min bus to lifts can save over 30%. SkiWelt and Saalbach have especially good Ski Bus systems." data-zh="💡省錢秘訣：大部分奧地利雪場都有免費 Ski Bus，住在鎮上搭巴士 5-10 分鐘到纜車站，價格可以省 30% 以上。SkiWelt 和 Saalbach 的 Ski Bus 系統特別完善。">💡 <strong data-en="Money-saving tips:" data-zh="省錢秘訣：">省錢秘訣：</strong>大部分奧地利雪場都有免費 Ski Bus，住在鎮上搭巴士 5-10 分鐘到纜車站，價格可以省 30% 以上。SkiWelt 和 Saalbach 的 Ski Bus 系統特別完善。</p>
+<h3 class="sub-section-h3" data-en="💰 Christmas peak season accommodation prices at ski resorts" data-zh="💰 各雪場聖誕旺季住宿價格">💰 各雪場聖誕旺季住宿價格</h3>
+<div class="table-scroll">
+<table class="styled-table">
+<thead>
+<tr>
+<th data-en="Ski resort" data-zh="雪場">雪場</th>
+<th data-en="Pension guesthouse" data-zh="Pension 民宿">Pension 民宿</th>
+<th data-en="Apartment (2-4 people)" data-zh="Apartment 公寓(2-4人)">Apartment 公寓<br/><small data-en="(2-4 people)" data-zh="(2-4人)">(2-4人)</small></th>
+<th>Hotel 3★</th>
+<th>Ski Bus</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>SkiWelt</strong></td>
+<td data-eur="60" data-eur-max="90">NT$2,100~3,150</td>
+<td data-eur="100" data-eur-max="160">NT$3,500~5,600</td>
+<td data-eur="100" data-eur-max="140">NT$3,500~4,900</td>
+<td data-en="Free ✅" data-zh="免費 ✅">免費 ✅</td>
+</tr>
+<tr>
+<td><strong>Saalbach</strong></td>
+<td data-eur="70" data-eur-max="100">NT$2,450~3,500</td>
+<td data-eur="120" data-eur-max="180">NT$4,200~6,300</td>
+<td data-eur="120" data-eur-max="170">NT$4,200~5,950</td>
+<td data-en="Free ✅" data-zh="免費 ✅">免費 ✅</td>
+</tr>
+<tr>
+<td><strong>Sölden</strong></td>
+<td data-eur="80" data-eur-max="120">NT$2,800~4,200</td>
+<td data-eur="130" data-eur-max="200">NT$4,550~7,000</td>
+<td data-eur="140" data-eur-max="200">NT$4,900~7,000</td>
+<td data-en="Free ✅" data-zh="免費 ✅">免費 ✅</td>
+</tr>
+<tr>
+<td><strong>St. Anton</strong></td>
+<td data-eur="90" data-eur-max="140">NT$3,150~4,900</td>
+<td data-eur="150" data-eur-max="250">NT$5,250~8,750</td>
+<td data-eur="160" data-eur-max="250">NT$5,600~8,750</td>
+<td data-en="Free ✅" data-zh="免費 ✅">免費 ✅</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 class="sub-section-h3" data-en="🏙️ Recommended city accommodation areas" data-zh="🏙️ 城市住宿推薦區域">🏙️ 城市住宿推薦區域</h3>
+<div class="city-accom-grid">
+<div class="city-accom-card">
+<h4 data-en="🇦🇹 Vienna Wien" data-zh="🇦🇹 維也納 Wien">🇦🇹 維也納 Wien</h4>
+<div class="city-area">
+<span class="area-badge best" data-en="🏆 Most convenient" data-zh="🏆 最方便">🏆 最方便</span>
+<strong data-en="Innere Stadt (District 1)" data-zh="Innere Stadt (1區)">Innere Stadt (1區)</strong>
+<p data-en="Next to St. Stephen's Cathedral, walking distance to all attractions. NT$4,200~7,000/night" data-zh="聖史蒂芬大教堂旁，步行到所有景點。NT$4,200~7,000/晚">聖史蒂芬大教堂旁，步行到所有景點。<span data-en="Hokkaido" data-eur="120" data-eur-max="200" data-zh="NT$4,200~7,000/晚">NT$4,200~7,000/晚</span></p>
+</div>
+<div class="city-area">
+<span class="area-badge value" data-en="💰 High value for money" data-zh="💰 CP值高">💰 CP值高</span>
+<strong data-en="Mariahilf (District 6)" data-zh="Mariahilf (6區)">Mariahilf (6區)</strong>
+<p data-en="Shopping street Mariahilfer Straße, many food options. NT$2,450~4,200/night" data-zh="購物街 Mariahilfer Straße，美食多。NT$2,450~4,200/晚">購物街 Mariahilfer Straße，美食多。<span data-en="NT$2,450~4,200/night" data-eur="70" data-eur-max="120" data-zh="NT$2,450~4,200/晚">NT$2,450~4,200/晚</span></p>
+</div>
+<div class="city-area">
+<span class="area-badge budget" data-en="🎯 Affordable" data-zh="🎯 平價">🎯 平價</span>
+<strong data-en="Leopoldstadt (District 2)" data-zh="Leopoldstadt (2區)">Leopoldstadt (2區)</strong>
+<p data-en="Near Prater Ferris wheel, convenient subway. NT$2,100~3,500/night" data-zh="近 Prater 摩天輪，地鐵方便。NT$2,100~3,500/晚">近 Prater 摩天輪，地鐵方便。<span data-en="NT$2,100~3,500/night" data-eur="60" data-eur-max="100" data-zh="NT$2,100~3,500/晚">NT$2,100~3,500/晚</span></p>
+</div>
+</div>
+<div class="city-accom-card">
+<h4 data-en="🇨🇿 Prague" data-zh="🇨🇿 布拉格 Praha">🇨🇿 布拉格 Praha</h4>
+<div class="city-area">
+<span class="area-badge best" data-en="🏆 Next to Christmas market" data-zh="🏆 聖誕市集旁">🏆 聖誕市集旁</span>
+<strong data-en="NT$4,200~7,000/night" data-zh="Staré Město 老城區">Staré Město 老城區</strong>
+<p data-en="Old Town Square Christmas market within walking distance. NT$2,800~5,250/night" data-zh="老城廣場聖誕市集步行可達。NT$2,800~5,250/晚">老城廣場聖誕市集步行可達。<span data-en="NT$2,800~5,250/night" data-eur="80" data-eur-max="150" data-zh="NT$2,800~5,250/晚">NT$2,800~5,250/晚</span></p>
+</div>
+<div class="city-area">
+<span class="area-badge value" data-en="💰 Local feel" data-zh="💰 在地感">💰 在地感</span>
+<strong>Vinohrady</strong>
+<p data-en="Locals' favorite, many cafes, convenient metro. NT$1,750~2,800/night" data-zh="在地人最愛，咖啡廳多，地鐵方便。NT$1,750~2,800/晚">在地人最愛，咖啡廳多，地鐵方便。<span data-en="NT$1,750~2,800/night" data-eur="50" data-eur-max="80" data-zh="NT$1,750~2,800/晚">NT$1,750~2,800/晚</span></p>
+</div>
+<div class="city-area">
+<span class="area-badge budget" data-en="🎯 Castle view" data-zh="🎯 城堡景">🎯 城堡景</span>
+<strong data-en="Malá Strana Lesser Town" data-zh="Malá Strana 小城區">Malá Strana 小城區</strong>
+<p data-en="Next to Charles Bridge, below the castle. NT$2,450~4,200/night" data-zh="查理大橋旁，城堡下方。NT$2,450~4,200/晚">查理大橋旁，城堡下方。<span data-en="NT$2,450~4,200/night" data-eur="70" data-eur-max="120" data-zh="NT$2,450~4,200/晚">NT$2,450~4,200/晚</span></p>
+</div>
+</div>
+<div class="city-accom-card">
+<h4 data-en="🇭🇺 Budapest" data-zh="🇭🇺 布達佩斯 Budapest">🇭🇺 布達佩斯 Budapest</h4>
+<div class="city-area">
+<span class="area-badge best" data-en="🏆 Most central" data-zh="🏆 最中心">🏆 最中心</span>
+<strong>District V Belváros</strong>
+<p data-en="Parliament building, Danube riverside. NT$2,450~4,550/night" data-zh="國會大廈、多瑙河畔。NT$2,450~4,550/晚">國會大廈、多瑙河畔。<span data-en="NT$2,450~4,550/night" data-eur="70" data-eur-max="130" data-zh="NT$2,450~4,550/晚">NT$2,450~4,550/晚</span></p>
+</div>
+<div class="city-area">
+<span class="area-badge value" data-en="💰 Highly recommended" data-zh="💰 最推薦">💰 最推薦</span>
+<strong>District VI Terézváros</strong>
+<p data-en="Andrássy Avenue, best value for money. NT$1,750~3,150/night" data-zh="安德拉什大道，性價比最高。NT$1,750~3,150/晚">安德拉什大道，性價比最高。<span data-en="NT$1,750~3,150/night" data-eur="50" data-eur-max="90" data-zh="NT$1,750~3,150/晚">NT$1,750~3,150/晚</span></p>
+</div>
+<div class="city-area">
+<span class="area-badge budget" data-en="🎯 Nightlife" data-zh="🎯 夜生活">🎯 夜生活</span>
+<strong>District VII Erzsébetváros</strong>
+<p data-en="Ruins bar district, popular with young people. NT$1,575~2,800/night" data-zh="廢墟酒吧區，年輕人最愛。NT$1,575~2,800/晚">廢墟酒吧區，年輕人最愛。<span data-en="NT$1,575~2,800/night" data-eur="45" data-eur-max="80" data-zh="NT$1,575~2,800/晚">NT$1,575~2,800/晚</span></p>
+</div>
+</div>
+<div class="city-accom-card">
+<h4 data-en="🇩🇪 Munich" data-zh="🇩🇪 慕尼黑 München">🇩🇪 慕尼黑 München</h4>
+<div class="city-area">
+<span class="area-badge best" data-en="🏆 Next to Christmas market" data-zh="🏆 聖誕市集旁">🏆 聖誕市集旁</span>
+<strong data-en="Altstadt (Old Town)" data-zh="Altstadt 老城區">Altstadt 老城區</strong>
+<p data-en="Marienplatz Christmas market within walking distance. NT$4,200~7,000/night" data-zh="Marienplatz 聖誕市集步行可達。NT$4,200~7,000/晚">Marienplatz 聖誕市集步行可達。<span data-en="Hokkaido" data-eur="120" data-eur-max="200" data-zh="NT$4,200~7,000/晚">NT$4,200~7,000/晚</span></p>
+</div>
+<div class="city-area">
+<span class="area-badge value" data-en="💰 Near the station" data-zh="💰 近車站">💰 近車站</span>
+<strong>Ludwigsvorstadt</strong>
+<p data-en="Next to central station, transport hub. NT$2,800~4,550/night" data-zh="中央車站旁，交通樞紐。NT$2,800~4,550/晚">中央車站旁，交通樞紐。<span data-en="NT$2,800~4,550/night" data-eur="80" data-eur-max="130" data-zh="NT$2,800~4,550/晚">NT$2,800~4,550/晚</span></p>
+</div>
+</div>
+</div>
+<div class="accom-tips-box">
+<h4 data-en="🔑 Money-saving tips for accommodation" data-zh="🔑 住宿省錢秘訣">🔑 住宿省錢秘訣</h4>
+<div class="tips-grid">
+<div class="tip-item">
+<strong data-en="📅 Book early" data-zh="📅 提早訂">📅 提早訂</strong>
+<p data-en="Book Christmas peak season at least 3-6 months in advance; earlier is cheaper" data-zh="聖誕旺季至少提前 3-6 個月訂，越早越便宜">聖誕旺季至少提前 3-6 個月訂，越早越便宜</p>
+</div>
+<div class="tip-item">
+<strong data-en="🍳 Choose one with a kitchen" data-zh="🍳 選有廚房的">🍳 選有廚房的</strong>
+<p data-en="4-person apartment self-catering, save NT$700-1,000 per person per day on meals" data-zh="4人公寓自煮，每人每天可省 NT$700-1,000 餐費">4人公寓自煮，每人每天可省 NT$700-1,000 餐費</p>
+</div>
+<div class="tip-item">
+<strong data-en="🚌 Not staying by the piste" data-zh="🚌 不住雪道旁">🚌 不住雪道旁</strong>
+<p data-en="Stay in town and take free Ski Bus, save 30% on lodging" data-zh="住鎮上搭免費 Ski Bus，住宿費省 30%">住鎮上搭免費 Ski Bus，住宿費省 30%</p>
+</div>
+<div class="tip-item">
+<strong data-en="🔄 Booking.com free cancellation" data-zh="🔄 Booking.com 免費取消">🔄 Booking.com 免費取消</strong>
+<p data-en="Book free cancellation first, switch if you find cheaper options" data-zh="先訂免費取消方案，找到更便宜的再換">先訂免費取消方案，找到更便宜的再換</p>
+</div>
+</div>
+</div>
+</div></div>
+</section><section class="section collapsible-section collapsed" id="itinerary">
+<div class="container"><div class="section-toggle-bar" data-target="itinerary"><span class="toggle-chevron">▸</span><span class="toggle-title" data-en="Itinerary Options" data-zh="行程方案">行程方案</span></div><div class="section-collapsible-content">
+<p class="section-intro" data-en="Based on different holiday lengths and budgets, three itinerary options are provided. All plans follow the principle of 'no backtracking' and are most cost-effective with open-jaw tickets." data-zh="根據不同假期長度與預算，提供三種行程方案。所有方案以「不走回頭路」為原則，搭配 Open-jaw 機票最划算。">根據不同假期長度與預算，提供三種行程方案。所有方案以「不走回頭路」為原則，搭配 Open-jaw 機票最划算。</p>
+<div class="itinerary-tabs">
+<button class="tab-btn active" data-en="Plan A: Classic 3 Countries (10 days)" data-tab="route1" data-zh="方案A：經典三國 (10天)">方案A：經典三國 (10天)</button>
+<button class="tab-btn" data-en="Plan B: Deep 5 Countries (16 days)" data-tab="route2" data-zh="方案B：深度五國 (16天)">方案B：深度五國 (16天)</button>
+<button class="tab-btn" data-en="Plan C: Budget 2 Cities (8 days)" data-tab="route3" data-zh="方案C：精省雙城 (8天)">方案C：精省雙城 (8天)</button>
+</div>
+<div class="itinerary-content">
+<div class="itinerary-panel active" id="route1">
+<div class="route-header"><h3 data-en="Plan A: Classic Three-Country Ski Tour" data-zh="方案A：經典三國滑雪之旅">方案A：經典三國滑雪之旅</h3><div class="route-meta"><span class="route-days" data-en="10 days (PTO/leave 4 days)" data-zh="10天（請假4天）">10天（請假4天）</span><span class="route-leave">12/25~1/3</span><span class="route-countries" data-en="Germany → Austria → Czech Republic" data-zh="德國 → 奧地利 → 捷克">德國 → 奧地利 → 捷克</span></div></div>
+<div class="route-flow"><div class="route-arrow" data-en="Munich MUC in → Prague PRG out" data-zh="慕尼黑 MUC 進 → 布拉格 PRG 出">慕尼黑 MUC 進 → 布拉格 PRG 出</div></div>
+<div class="timeline">
+<div class="timeline-item flight-day"><div class="day">D1</div><div class="content" data-en="12/25 (Fri) Taipei → Munich (direct flight about 13hr) arrive in the evening, head to city for check-in" data-zh="12/25 (五)台北 → 慕尼黑（直飛約13hr）傍晚抵達，前往市區入住"><strong data-en="12/25 (Fri)" data-zh="12/25 (五)">12/25 (五)</strong> 台北 → 慕尼黑（直飛約13hr）<br/>傍晚抵達，前往市區入住</div></div>
+<div class="timeline-item city-day"><div class="day">D2</div><div class="content" data-en="12/26 (Sat) Munich day trip to Marienplatz and Hofbräuhaus. Afternoon train to Salzburg (1.5hr)" data-zh="12/26 (六)慕尼黑一日遊瑪利亞廣場、皇家啤酒屋。下午搭火車前往薩爾茲堡（1.5hr）"><strong data-en="12/26 (Sat)" data-zh="12/26 (六)">12/26 (六)</strong> 慕尼黑一日遊<br/>瑪利亞廣場、皇家啤酒屋。下午搭火車前往薩爾茲堡（1.5hr）</div></div>
+<div class="timeline-item city-day"><div class="day">D3</div><div class="content" data-en="12/27 (Sun) Salzburg half day → transfer to ski area; morning visit fortress and old town, afternoon bus to ski area (1-1.5hr)" data-zh="12/27 (日)薩爾茲堡半日 → 前往雪場上午遊覽要塞與舊城，下午搭巴士前往雪場（1-1.5hr）"><strong data-en="12/27 (Sun)" data-zh="12/27 (日)">12/27 (日)</strong> 薩爾茲堡半日 → 前往雪場<br/>上午遊覽要塞與舊城，下午搭巴士前往雪場（1-1.5hr）</div></div>
+<div class="timeline-item ski-day"><div class="day">D4</div><div class="content" data-en="12/28 (Mon) Ski Day 1" data-zh="12/28 (一)滑雪 Day 1"><strong data-en="12/28 (Mon)" data-zh="12/28 (一)">12/28 (一)</strong> 滑雪 Day 1</div></div>
+<div class="timeline-item ski-day"><div class="day">D5</div><div class="content" data-en="12/29 (Tue) Ski Day 2" data-zh="12/29 (二)滑雪 Day 2"><strong data-en="12/29 (Tue)" data-zh="12/29 (二)">12/29 (二)</strong> 滑雪 Day 2</div></div>
+<div class="timeline-item ski-day"><div class="day">D6</div><div class="content" data-en="12/30 (Wed) Ski Day 3" data-zh="12/30 (三)滑雪 Day 3"><strong data-en="12/30 (Wed)" data-zh="12/30 (三)">12/30 (三)</strong> 滑雪 Day 3</div></div>
+<div class="timeline-item ski-day"><div class="day">D7</div><div class="content" data-en="12/31 (Thu) Ski Day 4 + New Year's Eve Party" data-zh="12/31 (四)滑雪 Day 4 + 跨年派對"><strong data-en="12/31 (Thu)" data-zh="12/31 (四)">12/31 (四)</strong> 滑雪 Day 4 + 跨年派對</div></div>
+<div class="timeline-item ski-day"><div class="day">D8</div><div class="content" data-en="1/1 (Fri) Ski Day 5 afternoon transfer to Vienna (2.5-3hr)" data-zh="1/1 (五)滑雪 Day 5下午搭車前往維也納（2.5-3hr）"><strong data-en="1/1 (Fri)" data-zh="1/1 (五)">1/1 (五)</strong> 滑雪 Day 5<br/>下午搭車前往維也納（2.5-3hr）</div></div>
+<div class="timeline-item city-day"><div class="day">D9</div><div class="content" data-en="1/2 (Sat) Vienna → Prague (4hr train). Morning quick tour of Vienna, afternoon train to Prague" data-zh="1/2 (六)維也納 → 布拉格（火車4hr）上午快速遊覽維也納，下午搭火車前往布拉格"><strong data-en="1/2 (Sat)" data-zh="1/2 (六)">1/2 (六)</strong> 維也納 → 布拉格（火車4hr）<br/>上午快速遊覽維也納，下午搭火車前往布拉格</div></div>
+<div class="timeline-item flight-day"><div class="day">D10</div><div class="content" data-en="1/3 (Sun) Half day in Prague → Fly back to Taipei" data-zh="1/3 (日)布拉格半日 → 飛回台北"><strong data-en="1/3 (Sun)" data-zh="1/3 (日)">1/3 (日)</strong> 布拉格半日 → 飛回台北</div></div>
+</div>
+</div>
+<div class="itinerary-panel" id="route2">
+<div class="route-header"><h3 data-en="Plan B: In-depth Five-Country Exploration Tour" data-zh="方案B：深度五國探索之旅">方案B：深度五國探索之旅</h3><div class="route-meta"><span class="route-days" data-en="16 days (8 days PTO/leave)" data-zh="16天（請假8天）">16天（請假8天）</span><span class="route-leave">12/19~1/3</span><span class="route-countries" data-en="Germany → Austria → Hungary → Slovakia → Czech Republic" data-zh="德國 → 奧地利 → 匈牙利 → 斯洛伐克 → 捷克">德國 → 奧地利 → 匈牙利 → 斯洛伐克 → 捷克</span></div></div>
+<div class="route-flow"><div class="route-arrow" data-en="Munich MUC in → Prague PRG out" data-zh="慕尼黑 MUC 進 → 布拉格 PRG 出">慕尼黑 MUC 進 → 布拉格 PRG 出</div></div>
+<div class="timeline">
+<div class="timeline-item flight-day"><div class="day">D1</div><div class="content" data-en="12/19 (Sat) Taipei → Munich (early departure, cheaper tickets)" data-zh="12/19 (六)台北 → 慕尼黑（提早出發，機票較便宜）"><strong data-en="12/19 (Sat)" data-zh="12/19 (六)">12/19 (六)</strong> 台北 → 慕尼黑（提早出發，機票較便宜）</div></div>
+<div class="timeline-item city-day"><div class="day">D2</div><div class="content" data-en="12/20 (Sun) Munich day trip + Christmas market" data-zh="12/20 (日)慕尼黑一日遊＋聖誕市集"><strong data-en="12/20 (Sun)" data-zh="12/20 (日)">12/20 (日)</strong> 慕尼黑一日遊＋聖誕市集</div></div>
+<div class="timeline-item city-day"><div class="day">D3</div><div class="content" data-en="12/21 (Mon) Munich → Salzburg → ski area" data-zh="12/21 (一)慕尼黑 → 薩爾茲堡 → 雪場"><strong data-en="12/21 (Mon)" data-zh="12/21 (一)">12/21 (一)</strong> 慕尼黑 → 薩爾茲堡 → 雪場</div></div>
+<div class="timeline-item ski-day"><div class="day">D4-8</div><div class="content" data-en="12/22-26 Ski 5 days (including White Christmas)" data-zh="12/22-26滑雪5天（含白色聖誕）"><strong>12/22-26</strong> 滑雪5天（含白色聖誕）</div></div>
+<div class="timeline-item city-day"><div class="day">D9</div><div class="content" data-en="12/27 (Sun) ski area → Vienna (2.5-3hr)" data-zh="12/27 (日)雪場 → 維也納（2.5-3hr）"><strong data-en="12/27 (Sun)" data-zh="12/27 (日)">12/27 (日)</strong> 雪場 → 維也納（2.5-3hr）</div></div>
+<div class="timeline-item city-day"><div class="day">D10</div><div class="content" data-en="12/28 (Mon) Vienna day trip" data-zh="12/28 (一)維也納一日遊"><strong data-en="12/28 (Mon)" data-zh="12/28 (一)">12/28 (一)</strong> 維也納一日遊</div></div>
+<div class="timeline-item city-day"><div class="day">D11</div><div class="content" data-en="12/29 (Tue) Vienna → Budapest (train 2.5hr)" data-zh="12/29 (二)維也納 → 布達佩斯（火車2.5hr）"><strong data-en="12/29 (Tue)" data-zh="12/29 (二)">12/29 (二)</strong> 維也納 → 布達佩斯（火車2.5hr）</div></div>
+<div class="timeline-item city-day"><div class="day">D12</div><div class="content" data-en="12/30 (Wed) Budapest day trip" data-zh="12/30 (三)布達佩斯一日遊"><strong data-en="12/30 (Wed)" data-zh="12/30 (三)">12/30 (三)</strong> 布達佩斯一日遊</div></div>
+<div class="timeline-item city-day"><div class="day">D13</div><div class="content" data-en="12/31 (Thu) Budapest New Year's Eve (Danube fireworks)" data-zh="12/31 (四)布達佩斯跨年（多瑙河畔煙火）"><strong data-en="12/31 (Thu)" data-zh="12/31 (四)">12/31 (四)</strong> 布達佩斯跨年（多瑙河畔煙火）</div></div>
+<div class="timeline-item city-day"><div class="day">D14</div><div class="content" data-en="1/1 (Fri) Budapest → Half-day tour in Bratislava" data-zh="1/1 (五)布達佩斯 → 布拉提斯拉瓦半日遊"><strong data-en="1/1 (Fri)" data-zh="1/1 (五)">1/1 (五)</strong> 布達佩斯 → 布拉提斯拉瓦半日遊</div></div>
+<div class="timeline-item city-day"><div class="day">D15</div><div class="content" data-en="1/2 (Sat) Bratislava → Prague (4hr)" data-zh="1/2 (六)布拉提斯拉瓦 → 布拉格（4hr）"><strong data-en="1/2 (Sat)" data-zh="1/2 (六)">1/2 (六)</strong> 布拉提斯拉瓦 → 布拉格（4hr）</div></div>
+<div class="timeline-item flight-day"><div class="day">D16</div><div class="content" data-en="1/3 (Sun) Half day in Prague → Fly back to Taipei" data-zh="1/3 (日)布拉格半日 → 飛回台北"><strong data-en="1/3 (Sun)" data-zh="1/3 (日)">1/3 (日)</strong> 布拉格半日 → 飛回台北</div></div>
+</div>
+</div>
+<div class="itinerary-panel" id="route3">
+<div class="route-header"><h3 data-en="Plan C: Budget-friendly two-city ski trip" data-zh="方案C：精省雙城滑雪之旅">方案C：精省雙城滑雪之旅</h3><div class="route-meta"><span class="route-days" data-en="8 days (4 days PTO/leave)" data-zh="8天（請假4天）">8天（請假4天）</span><span class="route-leave">12/26~1/2</span><span class="route-countries" data-en="Austria" data-zh="奧地利">奧地利</span></div></div>
+<div class="route-flow"><div class="route-arrow" data-en="Vienna VIE in/out (cheapest round-trip ticket)" data-zh="維也納 VIE 進出（來回票最便宜）">維也納 VIE 進出（來回票最便宜）</div></div>
+<div class="timeline">
+<div class="timeline-item flight-day"><div class="day">D1</div><div class="content" data-en="12/26 (Sat) Taipei → Vienna (departing on the evening of 12/25)" data-zh="12/26 (六)台北 → 維也納（12/25晚班機出發）"><strong data-en="12/26 (Sat)" data-zh="12/26 (六)">12/26 (六)</strong> 台北 → 維也納（12/25晚班機出發）</div></div>
+<div class="timeline-item city-day"><div class="day">D2</div><div class="content" data-en="12/27 (Sun) Vienna half day → head to ski area" data-zh="12/27 (日)維也納半日 → 前往雪場"><strong data-en="12/27 (Sun)" data-zh="12/27 (日)">12/27 (日)</strong> 維也納半日 → 前往雪場</div></div>
+<div class="timeline-item ski-day"><div class="day">D3</div><div class="content" data-en="12/28 (Mon) Ski Day 1" data-zh="12/28 (一)滑雪 Day 1"><strong data-en="12/28 (Mon)" data-zh="12/28 (一)">12/28 (一)</strong> 滑雪 Day 1</div></div>
+<div class="timeline-item ski-day"><div class="day">D4</div><div class="content" data-en="12/29 (Tue) Ski Day 2" data-zh="12/29 (二)滑雪 Day 2"><strong data-en="12/29 (Tue)" data-zh="12/29 (二)">12/29 (二)</strong> 滑雪 Day 2</div></div>
+<div class="timeline-item ski-day"><div class="day">D5</div><div class="content" data-en="12/30 (Wed) Ski Day 3" data-zh="12/30 (三)滑雪 Day 3"><strong data-en="12/30 (Wed)" data-zh="12/30 (三)">12/30 (三)</strong> 滑雪 Day 3</div></div>
+<div class="timeline-item ski-day"><div class="day">D6</div><div class="content" data-en="12/31 (Thu) Ski Day 4 + New Year's Eve" data-zh="12/31 (四)滑雪 Day 4 + 跨年"><strong data-en="12/31 (Thu)" data-zh="12/31 (四)">12/31 (四)</strong> 滑雪 Day 4 + 跨年</div></div>
+<div class="timeline-item ski-day"><div class="day">D7</div><div class="content" data-en="1/1 (Fri) Ski Day 5 → Return to Vienna" data-zh="1/1 (五)滑雪 Day 5 → 回維也納"><strong data-en="1/1 (Fri)" data-zh="1/1 (五)">1/1 (五)</strong> 滑雪 Day 5 → 回維也納</div></div>
+<div class="timeline-item flight-day"><div class="day">D8</div><div class="content" data-en="1/2 (Sat) Vienna → Taipei" data-zh="1/2 (六)維也納 → 台北"><strong data-en="1/2 (Sat)" data-zh="1/2 (六)">1/2 (六)</strong> 維也納 → 台北</div></div>
+</div>
+</div>
+</div>
+</div></div>
+</section><section class="section section-alt collapsible-section collapsed" id="map">
+<div class="container"><div class="section-toggle-bar" data-target="map"><span class="toggle-chevron">▸</span><span class="toggle-title" data-en="Interactive Map" data-zh="互動地圖">互動地圖</span></div><div class="section-collapsible-content">
+<p class="section-intro" data-en="Blue marks cities, white marks ski resorts. Click for details." data-zh="藍色標記為城市，白色標記為雪場。點擊查看詳細資訊。">藍色標記為城市，白色標記為雪場。點擊查看詳細資訊。</p>
+<div id="mainMap" style="height:550px;border-radius:12px;margin-bottom:2rem;"></div>
+<div class="transport-table">
+<h3 data-en="Travel time and cost between cities" data-zh="城市間交通時間與費用">城市間交通時間與費用</h3>
+<table>
+<thead><tr><th data-en="Route" data-zh="路線">路線</th><th data-en="Transportation" data-zh="交通方式">交通方式</th><th data-en="Time" data-zh="時間">時間</th><th data-en="Cost" data-zh="費用">費用</th></tr></thead>
+<tbody>
+<tr><td data-en="Vienna → Salzburg" data-zh="維也納 → 薩爾茲堡">維也納 → 薩爾茲堡</td><td data-en="ÖBB train" data-zh="ÖBB 火車">ÖBB 火車</td><td>2.5 hr</td><td class="price-cell" data-eur="30"><span class="price-val">€24-36</span></td></tr>
+<tr><td data-en="Salzburg → Innsbruck" data-zh="薩爾茲堡 → 因斯布魯克">薩爾茲堡 → 因斯布魯克</td><td data-en="ÖBB train" data-zh="ÖBB 火車">ÖBB 火車</td><td>2 hr</td><td class="price-cell" data-eur="25"><span class="price-val">€20-30</span></td></tr>
+<tr><td data-en="Vienna → Budapest" data-zh="維也納 → 布達佩斯">維也納 → 布達佩斯</td><td>RegioJet</td><td>2.5-3 hr</td><td class="price-cell" data-eur="15"><span class="price-val">€11-20</span></td></tr>
+<tr><td data-en="Vienna → Bratislava" data-zh="維也納 → 布拉提斯拉瓦">維也納 → 布拉提斯拉瓦</td><td data-en="Train/ferry" data-zh="火車/渡船">火車/渡船</td><td>1 hr</td><td class="price-cell" data-eur="12"><span class="price-val">€10-15</span></td></tr>
+<tr><td data-en="Vienna → Prague" data-zh="維也納 → 布拉格">維也納 → 布拉格</td><td>RegioJet</td><td>4-4.5 hr</td><td class="price-cell" data-eur="22"><span class="price-val">€15-30</span></td></tr>
+<tr><td data-en="Vienna → Munich" data-zh="維也納 → 慕尼黑">維也納 → 慕尼黑</td><td data-en="DB/ÖBB train" data-zh="DB/ÖBB 火車">DB/ÖBB 火車</td><td>4-4.5 hr</td><td class="price-cell" data-eur="32"><span class="price-val">€24-40</span></td></tr>
+<tr><td data-en="Munich → Innsbruck" data-zh="慕尼黑 → 因斯布魯克">慕尼黑 → 因斯布魯克</td><td data-en="DB train" data-zh="DB 火車">DB 火車</td><td>2 hr</td><td class="price-cell" data-eur="20"><span class="price-val">€15-25</span></td></tr>
+<tr><td data-en="Salzburg → Ski area" data-zh="薩爾茲堡 → 雪場">薩爾茲堡 → 雪場</td><td data-en="Bus/train" data-zh="巴士/火車">巴士/火車</td><td>1-1.5 hr</td><td class="price-cell" data-eur="19"><span class="price-val">€13-25</span></td></tr>
+</tbody>
+</table>
+</div>
+</div></div>
+</section><section class="section collapsible-section collapsed" id="budget">
+<div class="container"><div class="section-toggle-bar" data-target="budget"><span class="toggle-chevron">▸</span><span class="toggle-title" data-en="Budget Estimate" data-zh="預算估算">預算估算</span></div><div class="section-collapsible-content">
+<p class="section-intro" data-en="Estimated cost per person (in euros, currency can be switched using the button above)." data-zh="一人預估費用（以歐元為基準，可用上方貨幣切換鈕轉換）。">一人預估費用（以歐元為基準，可用上方貨幣切換鈕轉換）。</p>
+<div class="budget-cards">
+<div class="budget-card">
+<h3 data-en="Budget plan (Option C / 8 days)" data-zh="精省型（方案C / 8天）">精省型（方案C / 8天）</h3>
+<div class="budget-total" data-eur-high="2700" data-eur-low="2100"><span class="price-val">€2,100 ~ €2,700</span></div>
+<table class="budget-table">
+<tr><td data-en="Flight (with transfer)" data-zh="機票（轉機）">機票（轉機）</td><td class="price-cell" data-eur="1060"><span class="price-val">~€1,060</span></td></tr>
+<tr><td data-en="Lift ticket 5 days SkiWelt" data-zh="纜車票 5天 SkiWelt">纜車票 5天 SkiWelt</td><td class="price-cell" data-eur="372"><span class="price-val">€372</span></td></tr>
+<tr><td data-en="7 nights accommodation (mixed type)" data-zh="住宿 7晚（混合型）">住宿 7晚（混合型）</td><td class="price-cell" data-eur="420"><span class="price-val">€350-500</span></td></tr>
+<tr><td data-en="Transportation (train/bus)" data-zh="交通（火車/巴士）">交通（火車/巴士）</td><td class="price-cell" data-eur="70"><span class="price-val">€50-90</span></td></tr>
+<tr><td data-en="Food and drink" data-zh="餐飲">餐飲</td><td class="price-cell" data-eur="210"><span class="price-val">€170-250</span></td></tr>
+<tr><td data-en="Ski equipment rental 5 days" data-zh="雪具租借 5天">雪具租借 5天</td><td class="price-cell" data-eur="150"><span class="price-val">€120-180</span></td></tr>
+<tr><td data-en="Tickets/Other" data-zh="門票/其他">門票/其他</td><td class="price-cell" data-eur="70"><span class="price-val">€50-90</span></td></tr>
+</table>
+</div>
+<div class="budget-card recommended">
+<div class="budget-badge" data-en="Recommended" data-zh="推薦">推薦</div>
+<h3 data-en="Standard plan (Option A / 10 days)" data-zh="標準型（方案A / 10天）">標準型（方案A / 10天）</h3>
+<div class="budget-total" data-eur-high="3600" data-eur-low="2700"><span class="price-val">€2,700 ~ €3,600</span></div>
+<table class="budget-table">
+<tr><td data-en="Flight (Open-jaw transfer)" data-zh="機票（Open-jaw 轉機）">機票（Open-jaw 轉機）</td><td class="price-cell" data-eur="1200"><span class="price-val">~€1,200</span></td></tr>
+<tr><td data-en="5-day lift pass Saalbach" data-zh="纜車票 5天 Saalbach">纜車票 5天 Saalbach</td><td class="price-cell" data-eur="425"><span class="price-val">€425</span></td></tr>
+<tr><td data-en="Accommodation 9 nights (mixed type)" data-zh="住宿 9晚（混合型）">住宿 9晚（混合型）</td><td class="price-cell" data-eur="600"><span class="price-val">€500-700</span></td></tr>
+<tr><td data-en="Transportation (train/bus)" data-zh="交通（火車/巴士）">交通（火車/巴士）</td><td class="price-cell" data-eur="130"><span class="price-val">€100-160</span></td></tr>
+<tr><td data-en="Food and drink" data-zh="餐飲">餐飲</td><td class="price-cell" data-eur="320"><span class="price-val">€260-380</span></td></tr>
+<tr><td data-en="Ski equipment rental 5 days" data-zh="雪具租借 5天">雪具租借 5天</td><td class="price-cell" data-eur="150"><span class="price-val">€120-180</span></td></tr>
+<tr><td data-en="Tickets/Other" data-zh="門票/其他">門票/其他</td><td class="price-cell" data-eur="110"><span class="price-val">€80-140</span></td></tr>
+</table>
+</div>
+<div class="budget-card">
+<h3 data-en="Luxury Type (Plan B / 16 days)" data-zh="豪華型（方案B / 16天）">豪華型（方案B / 16天）</h3>
+<div class="budget-total" data-eur-high="5400" data-eur-low="4000"><span class="price-val">€4,000 ~ €5,400</span></div>
+<table class="budget-table">
+<tr><td data-en="Airfare (Open-jaw direct flight)" data-zh="機票（Open-jaw 直飛）">機票（Open-jaw 直飛）</td><td class="price-cell" data-eur="1400"><span class="price-val">~€1,400</span></td></tr>
+<tr><td data-en="Lift ticket 5 days St. Anton" data-zh="纜車票 5天 St. Anton">纜車票 5天 St. Anton</td><td class="price-cell" data-eur="450"><span class="price-val">€450</span></td></tr>
+<tr><td data-en="Accommodation 15 nights (medium)" data-zh="住宿 15晚（中等）">住宿 15晚（中等）</td><td class="price-cell" data-eur="1050"><span class="price-val">€900-1,200</span></td></tr>
+<tr><td data-en="Transportation (train/bus)" data-zh="交通（火車/巴士）">交通（火車/巴士）</td><td class="price-cell" data-eur="240"><span class="price-val">€200-280</span></td></tr>
+<tr><td data-en="Food and drink" data-zh="餐飲">餐飲</td><td class="price-cell" data-eur="530"><span class="price-val">€440-620</span></td></tr>
+<tr><td data-en="Ski equipment rental 5 days" data-zh="雪具租借 5天">雪具租借 5天</td><td class="price-cell" data-eur="150"><span class="price-val">€120-180</span></td></tr>
+<tr><td data-en="Tickets/Other" data-zh="門票/其他">門票/其他</td><td class="price-cell" data-eur="180"><span class="price-val">€140-220</span></td></tr>
+</table>
+</div>
+</div>
+<div class="budget-tips">
+<h3 data-en="Money-saving tips" data-zh="省錢小撇步">省錢小撇步</h3>
+<div class="tips-grid">
+<div class="tip" data-en="Accommodation: choose apartment-style (Ferienwohnung) at ski areas for self-catering, 40-50% cheaper than hotels. In cities, pick hostels or Airbnb." data-zh="住宿：雪場選公寓式住宿（Ferienwohnung）可自炊，比飯店便宜40-50%。城市選青旅或Airbnb。"><strong data-en="Accommodation" data-zh="住宿">住宿</strong>：雪場選公寓式住宿（Ferienwohnung）可自炊，比飯店便宜40-50%。城市選青旅或Airbnb。</div>
+<div class="tip" data-en="Food: cooking yourself from supermarkets is cheapest. Austrian SPAR and BILLA have rich ingredients. Restaurants in Budapest and Prague cost only half of Austria’s." data-zh="餐飲：超市自煮最省。奧地利 SPAR、BILLA 食材豐富。布達佩斯和布拉格餐廳僅奧地利一半價。"><strong data-en="Food and drink" data-zh="餐飲">餐飲</strong>：超市自煮最省。奧地利 SPAR、BILLA 食材豐富。布達佩斯和布拉格餐廳僅奧地利一半價。</div>
+<div class="tip" data-en="Transport: book ÖBB and RegioJet Sparschiene discount tickets early, starting at €9.90" data-zh="交通：提早預訂 ÖBB 和 RegioJet 的 Sparschiene 優惠票，最低€9.90起。"><strong data-en="Transportation" data-zh="交通">交通</strong>：提早預訂 ÖBB 和 RegioJet 的 Sparschiene 優惠票，最低€9.90起。</div>
+<div class="tip" data-en="Ski gear: renting locally at the resort is more convenient than bringing your own. Booking online in advance usually offers 10-20% discount." data-zh="雪具：在雪場當地租借比帶過去方便。提前網路預訂通常有10-20%折扣。"><strong data-en="Ski equipment" data-zh="雪具">雪具</strong>：在雪場當地租借比帶過去方便。提前網路預訂通常有10-20%折扣。</div>
+</div>
+</div>
+</div></div>
+</section></div></main>
+<!-- Trip Series Navigation -->
+<section class="ts-section">
+<div class="container">
+<h3 class="ts-title" data-en="Ski Trip Series" data-zh="滑雪旅行系列">滑雪旅行系列</h3>
+<div class="ts-grid">
+<a class="ts-card" href="/trip/2024/2324-jp-ski/">
+<div class="ts-year">2024</div>
+<div class="ts-info">
+<h4 data-en="Fukushima Ski Trip" data-zh="福島滑雪之旅">福島滑雪之旅</h4>
+<p>Listel Ski Fantasia · Inawashiro · Aizu · Nikko · Tokyo</p>
+<span class="ts-meta" data-en="9 Days · 8 People · Listel Ski Fantasia" data-zh="9 天 · 8 人 · Listel Ski Fantasia">9 天 · 8 人 · Listel Ski Fantasia</span>
+</div>
+<span class="ts-arrow">→</span>
+</a>
+<a class="ts-card" href="/trip/2025/2425-jp-ski/">
+<div class="ts-year">2025 (I)</div>
+<div class="ts-info">
+<h4 data-en="Hokkaido Kiroro Ski Trip" data-zh="北海道 Kiroro 滑雪之旅">北海道 Kiroro 滑雪之旅</h4>
+<p>Kiroro Snow World · Otaru · Sapporo · Teine</p>
+<span class="ts-meta" data-en="11 Days · 8 People · Kiroro Snow World" data-zh="11 天 · 8 人 · Kiroro Snow World">11 天 · 8 人 · Kiroro Snow World</span>
+</div>
+<span class="ts-arrow">→</span>
+</a>
+<a class="ts-card" href="/trip/2025/2526-jp-ski/">
+<div class="ts-year">2025 (II)</div>
+<div class="ts-info">
+<h4 data-en="Niigata Ski Trip" data-zh="新潟滑雪團">新潟滑雪團</h4>
+<p>Naeba · Joetsu Kokusai · Echigo-Yuzawa · Tokyo</p>
+<span class="ts-meta" data-en="11 Days · 9 People · Naeba + Joetsu Kokusai" data-zh="11 天 · 9 人 · 苗場 + 上越國際">11 天 · 9 人 · 苗場 + 上越國際</span>
+</div>
+<span class="ts-arrow">→</span>
+</a>
+<div class="ts-card ts-card--active">
+<div class="ts-year">2026</div>
+<div class="ts-info">
+<h4 data-en="EU Ski + City Travel" data-zh="歐洲滑雪＋城市旅遊">歐洲滑雪＋城市旅遊</h4>
+<p>Austria · Christmas Markets · Central Europe</p>
+<span class="ts-meta" data-en="Planning · Austria Top 4 Resorts" data-zh="規劃中 · 奧地利四大雪場">規劃中 · 奧地利四大雪場</span>
+</div>
+<span class="ts-badge" data-en="Current" data-zh="目前">目前</span>
+</div>
+</div>
+</div>
+</section>
+<footer>
+<div class="container">
+<p data-en="2026 Europe Ski + City Tour Planning | Data updated: April 2026" data-zh="2026 歐洲滑雪＋城市旅遊規劃 | 資料更新：2026年4月">2026 歐洲滑雪＋城市旅遊規劃 | 資料更新：2026年4月</p>
+<p data-en="Prices are for reference only; actual prices are subject to official website announcements. Map: OpenStreetMap" data-zh="價格僅供參考，實際以各官方網站公告為準。地圖：OpenStreetMap">價格僅供參考，實際以各官方網站公告為準。地圖：OpenStreetMap</p>
+</div>
+</footer>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="app.js"></script>
+<script src="comparison.js"></script>
+<script src="redesign.js"></script>
+<script src="three_resort.js"></script></body>
+</html>
