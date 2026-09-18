@@ -313,3 +313,10 @@ header[id], section[id], div[id] { scroll-margin-top: 72px; }
 @media (max-width: 680px) {
   .pass-verdict { grid-template-columns: 1fr; }
 }
+
+/* ===== Tower e-ticket QR codes ===== */
+.ticket-qr { display: flex; gap: 16px; margin-top: 14px; flex-wrap: wrap; }
+.tqr-item { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 12px; padding: 12px 12px 10px; text-align: center; }
+.tqr-item img { width: 180px; max-width: 40vw; height: auto; display: block; margin: 0 auto; }
+.tqr-ref { font-size: 12px; margin-top: 8px; color: var(--color-text-light); font-variant-numeric: tabular-nums; letter-spacing: 0.02em; }
+.tqr-pdf { display: inline-block; margin-top: 10px; font-size: 13px; font-weight: 600; color: var(--color-accent-2); }
