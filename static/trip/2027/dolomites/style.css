@@ -57,9 +57,27 @@ a { color: var(--accent); }
 
 /* day cards */
 .day { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.4rem; margin-bottom: 1.2rem; scroll-margin-top: 70px; }
-.day-head { display: flex; align-items: baseline; gap: 0.8rem; margin-bottom: 0.4rem; }
+.day-head { display: flex; align-items: baseline; gap: 0.8rem; margin-bottom: 0.4rem; flex-wrap: wrap; }
 .day-num { background: var(--accent); color: #fff; font-size: 0.8rem; font-weight: 700; border-radius: 999px; padding: 0.25rem 0.8rem; white-space: nowrap; }
 .day-head h3 { margin: 0; font-size: 1.25rem; }
+
+/* difficulty badges */
+.diff { font-size: 0.78rem; font-weight: 700; border-radius: 999px; padding: 0.22rem 0.75rem; white-space: nowrap; margin-left: auto; }
+.diff.t1 { background: #e2f0dd; color: #2f6b2f; }
+.diff.t2 { background: #f0ead0; color: #7a6a1f; }
+.diff.t3 { background: #f7e3d3; color: #9a4d16; }
+.diff.vf { background: #e0e8f7; color: #2f4d9a; }
+
+/* elevation profiles */
+.profile { margin: 0.8rem 0 0.2rem; background: #faf9f6; border: 1px solid var(--line); border-radius: 10px; padding: 0.6rem 0.6rem 0.1rem; }
+.profile svg { width: 100%; height: auto; display: block; }
+.profile-note { font-size: 0.78rem; color: var(--muted); margin: 0 0 0.4rem; text-align: right; }
+
+/* harder-variant boxes */
+.variant { background: #f4f7f5; border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: 0 10px 10px 0; padding: 0.8rem 1rem; margin: 0.8rem 0; font-size: 0.93rem; }
+.variant-title { font-weight: 700; margin-bottom: 0.3rem; }
+.variant ul { margin: 0.3em 0 0; padding-left: 1.2em; color: var(--muted); }
+.variant strong { color: var(--ink); }
 .day-desc { margin: 0.4em 0; }
 .hike-facts { list-style: none; display: flex; gap: 0.6rem; flex-wrap: wrap; padding: 0; margin: 0.6em 0; }
 .hike-facts li { background: var(--bg); border: 1px solid var(--line); border-radius: 999px; padding: 0.2rem 0.8rem; font-size: 0.88rem; }
