@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🏔️ 多洛米蒂 2027 · Puez-Odle 縱走</title>
+  <meta name="description" content="2027 年夏季多洛米蒂 9 天健行：刀鋒山 Seceda、Puez-Odle 山屋縱走、入門 via ferrata，每晚有床有熱水澡。" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22><text y=%2248%22 font-size=%2248%22>🏔️</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== TOP BAR ===== -->
+  <div class="topbar">
+    <div class="topbar-inner">
+      <span class="topbar-brand">🏔️ Dolomites 2027</span>
+      <nav class="topbar-nav">
+        <a href="#overview">總覽</a>
+        <a href="#itinerary">逐日行程</a>
+        <a href="#booking">訂房狀態</a>
+        <a href="#map">地圖</a>
+        <a href="#logistics">實用資訊</a>
+        <a href="#todo">訂房時程</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <header class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <div class="hero-eyebrow">2027 年夏季 · 9 天（含交通）</div>
+      <h1>多洛米蒂 Puez-Odle 縱走</h1>
+      <p class="hero-sub">刀鋒山 Seceda × 山屋縱走 × 入門 Via Ferrata</p>
+      <div class="hero-meta">
+        <span class="hero-chip">🥾 5 天健行</span>
+        <span class="hero-chip">🧗 1 天入門 VF</span>
+        <span class="hero-chip">🛏️ 每晚有床有熱水澡</span>
+        <span class="hero-chip">⛰️ 刀鋒山 Seceda</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== OVERVIEW ===== -->
+    <section id="overview" class="section">
+      <h2>路線總覽</h2>
+      <p class="lede">以 <strong>Val Gardena</strong> 為基地的 Puez-Odle 環線：第一天就上<strong>刀鋒山 Seceda</strong>，接著四天山屋縱走穿越 Puez 高原，最後在 Passo Gardena 加一條入門 via ferrata。全程無需露營，每晚都是山屋或旅館。</p>
+      <div class="stat-grid">
+        <div class="stat"><div class="stat-num">9</div><div class="stat-label">天（含交通）</div></div>
+        <div class="stat"><div class="stat-num">~55km</div><div class="stat-label">健行總里程</div></div>
+        <div class="stat"><div class="stat-num">2,751m</div><div class="stat-label">最高點（Piz Duleda 可選）</div></div>
+        <div class="stat"><div class="stat-num">TMB −</div><div class="stat-label">難度（比 TMB 輕鬆）</div></div>
+      </div>
+      <div class="callout warn">
+        <strong>⚠️ 兩個風險點（2026-09-19 查核）</strong>
+        <ul>
+          <li><strong>Rifugio Firenze</strong>：省政府已批准拆除重建（€10.45M），2027 年夏季能否營業未知——出發前務必寫信確認，備案為 Rifugio Stevia 或當天往返。</li>
+          <li><strong>Hotel Cir（Passo Gardena）</strong>：2026 年夏季整棟關閉，2027 年是否重開未知——該晚以 Alpin Hotel Frara 為主計畫。</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== ITINERARY ===== -->
+    <section id="itinerary" class="section">
+      <h2>逐日行程</h2>
+
+      <article class="day" id="day1">
+        <div class="day-head"><span class="day-num">Day 1</span><h3>抵達 Ortisei</h3></div>
+        <p class="day-desc">飛抵 Innsbruck（或慕尼黑），火車＋巴士進 Val Gardena。下午在 Ortisei 採買、租 VF 裝備、吃頓好的。</p>
+        <div class="stay">
+          <div class="stay-top"><span class="stay-name">Hotel Angelo Engel（Ortisei，4★）</span><span class="badge ok">✅ 現在可訂</span></div>
+          <p class="stay-detail">市中心、有泳池。備選：Mountain Spa Resort Hotel Albion。走一般飯店通路（官網／Booking.com），2027 夏季房源約 12 個月前釋出。</p>
+        </div>
+      </article>
+
+      <article class="day" id="day2">
+        <div class="day-head"><span class="day-num">Day 2</span><h3>刀鋒山 Seceda ⛰️</h3></div>
+        <p class="day-desc">Ortisei 纜車上 Seceda（2,518m），沿著刀鋒稜線走到 Rifugio Firenze。輕鬆的一天，專心拍照。</p>
+        <ul class="hike-facts"><li>🥾 約 3 小時</li><li>📈 緩上緩下</li><li>📸 刀鋒稜線經典機位</li></ul>
+        <div class="stay">
+          <div class="stay-top"><span class="stay-name">Rifugio Firenze／Regensburger Hütte（2,037m）</span><span class="badge risk">⚠️ 2027 營業成疑</span></div>
+          <p class="stay-detail">僅 email 預訂：<strong>info@rifugiofirenze.com</strong>（+39 0471 796307，僅營業季）。私人房 BB €60／半食宿 €85；淋浴 €3.50／次。<strong>請先寫信確認 2027 是否營業</strong>；若關閉，備案為 Rifugio Stevia 或改 Ortisei 當天往返。</p>
+        </div>
+      </article>
+
+      <article class="day" id="day3">
+        <div class="day-head"><span class="day-num">Day 3</span><h3>Firenze → Rifugio Puez</h3></div>
+        <p class="day-desc">經 Forcella de Sieles（2,505m）進入 Puez 高原。Sieles 有一小段約 100m 繩索輔助，剛好當 VF 前的熱身。</p>
+        <ul class="hike-facts"><li>🥾 約 4–5 小時</li><li>📈 +500m 左右</li><li>🌙 月球地貌高原</li></ul>
+        <div class="stay">
+          <div class="stay-top"><span class="stay-name">Rifugio Puez（2,475m，CAI）</span><span class="badge closed">🔴 尚未開放</span></div>
+          <p class="stay-detail">僅線上預訂 <strong>booking.rifugiopuez.it</strong>；info@rifugiopuez.it。押金 <strong>€40／人／晚</strong>，10 天前取消退押金（扣 €10）。45 床全通鋪；投幣淋浴 €4／2.5 分鐘；<strong>山上只收現金</strong>。</p>
+        </div>
+      </article>
+
+      <article class="day" id="day4">
+        <div class="day-head"><span class="day-num">Day 4</span><h3>Puez 高原 → Rifugio Genova</h3></div>
+        <p class="day-desc">穿越 Puez 高原，Odle／Geisler 群峰一路相伴，經 Forcella Nives 下到 Genova。</p>
+        <ul class="hike-facts"><li>🥾 約 5 小時 · 10km</li><li>📈 +565m／📉 −745m</li></ul>
+        <div class="stay">
+          <div class="stay-top"><span class="stay-name">Rifugio Genova／Schlüterhütte（2,297m，CAI）</span><span class="badge closed">🔴 尚未開放</span></div>
+          <p class="stay-detail">官網表單 schlueterhuette.com 或 <strong>info@schlueterhuette.com</strong>（+39 0472 670072）。預計 2027/4–5 寫信詢問。雙人／三人房＋通鋪；投幣淋浴 €3／5 分鐘；<strong>只收現金</strong>。</p>
+        </div>
+      </article>
+
+      <article class="day" id="day5">
+        <div class="day-head"><span class="day-num">Day 5</span><h3>Genova → Rifugio Gardenacia</h3></div>
+        <p class="day-desc">全程最長的一天：下到 Val di Longiarù 田園風光，再爬上 Gardenacia 高原。晚上有全程最舒服的住宿等著。</p>
+        <ul class="hike-facts"><li>🥾 約 6 小時 · 16km</li><li>📈 +750m／📉 −900m</li></ul>
+        <div class="stay">
+          <div class="stay-top"><span class="stay-name">Rifugio Gardenacia（2,050m，私人）</span><span class="badge closed">🔴 尚未開放</span></div>
+          <p class="stay-detail">官網 gardenacia.it 或 <strong>info@gardenacia.it</strong>（+39 0471 840128）。預計 2027/3 寫信。2／3／4 人房、共用衛浴投幣淋浴；<strong>有芬蘭桑拿（窗景）</strong>；只能纜車＋步行 40 分鐘抵達。</p>
+        </div>
+      </article>
+
+      <article class="day" id="day6">
+        <div class="day-head"><span class="day-num">Day 6</span><h3>入門 Via Ferrata：Gran Cir 🧗</h3></div>
+        <p class="day-desc">下到 Passo Gardena，搭 Dantercepies 纜車，走 <strong>Gran Cir／Piz da Cir VF</strong>——標準入門線，約 2.5–3 小時來回。第一次建議請半天嚮導（約 €150／人起）。</p>
+        <ul class="hike-facts"><li>🧗 入門級（約 2A）</li><li>🪖 裝備在 Selva／Corvara 租，約 €20–30／天</li><li>🧤 記得帶手套＋零錢</li></ul>
+        <div class="stay">
+          <div class="stay-top"><span class="stay-name">Alpin Hotel Frara（Passo Gardena）</span><span class="badge closed">🔴 尚未開放</span></div>
+          <p class="stay-detail"><strong>info@alpinhotelfrara.com</strong>（+39 0471 795225）。預計 2026 年底–2027 年初寫信。14 天前免費取消；全部房間獨立衛浴＋免費熱水淋浴；有桑拿。</p>
+        </div>
+      </article>
+
+      <article class="day" id="day7">
+        <div class="day-head"><span class="day-num">Day 7</span><h3>緩衝日</h3></div>
+        <p class="day-desc">天氣備用日。好天氣可加走 <strong>Piccolo Cir</strong>（更短的入門 VF），或在 Corvara 休息、吃 Kaiserschmarrn。</p>
+        <div class="stay">
+          <div class="stay-top"><span class="stay-name">Sporthotel Panorama（Corvara，4★）</span><span class="badge ok">✅ 現在可訂</span></div>
+          <p class="stay-detail">備選：Hotel Col Alto（Corvara，4★ Superior）。走一般飯店通路，隨時可訂。</p>
+        </div>
+      </article>
+
+      <article class="day" id="day8">
+        <div class="day-head"><span class="day-num">Day 8–9</span><h3>下山返家</h3></div>
+        <p class="day-desc">Day 8 下山回 Innsbruck（或威尼斯），Day 9 飛回倫敦。九天用完，五天年假達陣。</p>
+      </article>
+    </section>
+
+    <!-- ===== BOOKING STATUS ===== -->
+    <section id="booking" class="section">
+      <h2>住宿訂房狀態</h2>
+      <p class="lede">查核日期：2026-09-19。山屋幾乎都要寫信人工預訂，且 2027 夏季目前都還沒開放。</p>
+      <div class="table-wrap">
+      <table class="booking-table">
+        <thead><tr><th>夜</th><th>住宿</th><th>狀態</th><th>訂房方式</th><th>備註</th></tr></thead>
+        <tbody>
+          <tr><td>N1</td><td>Hotel Angelo Engel（Ortisei）</td><td><span class="badge ok">✅ 可訂</span></td><td>官網／Booking.com</td><td>備選 Albion；無搶房壓力</td></tr>
+          <tr class="risk-row"><td>N2</td><td>Rifugio Firenze</td><td><span class="badge risk">⚠️ 營業成疑</span></td><td>info@rifugiofirenze.com</td><td>拆除重建已批准，先寫信確認；備案 Rifugio Stevia</td></tr>
+          <tr><td>N3</td><td>Rifugio Puez</td><td><span class="badge closed">🔴 未開放</span></td><td>booking.rifugiopuez.it</td><td>押金 €40／人／晚；只收現金</td></tr>
+          <tr><td>N4</td><td>Rifugio Genova</td><td><span class="badge closed">🔴 未開放</span></td><td>info@schlueterhuette.com</td><td>2027/4–5 寫信；只收現金</td></tr>
+          <tr><td>N5</td><td>Rifugio Gardenacia</td><td><span class="badge closed">🔴 未開放</span></td><td>info@gardenacia.it</td><td>2027/3 寫信；有桑拿</td></tr>
+          <tr><td>N6</td><td>Alpin Hotel Frara</td><td><span class="badge closed">🔴 未開放</span></td><td>info@alpinhotelfrara.com</td><td>2026年底–2027年初寫信；14天前免費取消</td></tr>
+          <tr><td>N7</td><td>Sporthotel Panorama（Corvara）</td><td><span class="badge ok">✅ 可訂</span></td><td>官網／Booking.com</td><td>備選 Col Alto；隨時可訂</td></tr>
+        </tbody>
+      </table>
+      </div>
+    </section>
+
+    <!-- ===== MAP ===== -->
+    <section id="map" class="section">
+      <h2>路線地圖</h2>
+      <p class="lede">示意圖：標記各夜住宿位置（精確導航請用 Tabacco／Kompass 紙本地圖＋離線 GPX）。</p>
+      <div id="route-map"></div>
+    </section>
+
+    <!-- ===== LOGISTICS ===== -->
+    <section id="logistics" class="section">
+      <h2>實用資訊</h2>
+      <div class="info-grid">
+        <div class="info-card">
+          <h3>✈️ 交通</h3>
+          <ul>
+            <li><strong>Innsbruck（INN）</strong>：火車經 Brenner 到 Bressanone 約 1h，再轉巴士進 Val Gardena</li>
+            <li>備案：慕尼黑機場＋火車；或威尼斯＋巴士（適合順遊）</li>
+            <li>南蒂羅爾境內查 <strong>suedtirolmobil</strong> 時刻表</li>
+          </ul>
+        </div>
+        <div class="info-card">
+          <h3>🧗 Via Ferrata</h3>
+          <ul>
+            <li>Gran Cir：入門級，Dantercepies 纜車上，2.5–3h 來回</li>
+            <li>裝備租借：Selva／Corvara 戶外店，整套約 €20–30／天</li>
+            <li>第一次建議請半天嚮導（約 €150／人起）；八月熱門線要早出發</li>
+          </ul>
+        </div>
+        <div class="info-card">
+          <h3>🚿 淋浴實況</h3>
+          <ul>
+            <li>多數山屋有熱水淋浴，但多為<strong>投幣式</strong>（€3–5）——帶零錢＋快乾毛巾＋夾腳拖</li>
+            <li>Puez、Genova <strong>只收現金</strong>，山上多備歐元現金</li>
+            <li>Gardenacia 有桑拿；Frara 房間獨立衛浴免費熱水</li>
+          </ul>
+        </div>
+        <div class="info-card">
+          <h3>🍽️ 山屋花費</h3>
+          <ul>
+            <li>半食宿約 €70–90／人／晚（含早餐＋三道式晚餐）</li>
+            <li>午餐不含（可買 packed lunch）；飲料另計</li>
+            <li>6 晚山屋＋旅館約 €500–650／人</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TODO / TIMELINE ===== -->
+    <section id="todo" class="section">
+      <h2>訂房時程</h2>
+      <ol class="timeline">
+        <li><strong>現在（2026 秋）</strong>：寫信給 Rifugio Firenze 確認 2027 是否營業（info@rifugiofirenze.com）；可先訂 Ortisei／Corvara 飯店（無壓力）</li>
+        <li><strong>2026 年底–2027 年初</strong>：寫信訂 Alpin Hotel Frara（Passo Gardena）；追蹤 Hotel Cir 是否重開</li>
+        <li><strong>2027 年 1 月</strong>：去 booking.rifugiopuez.it 確認 Puez 開放 2027 日期（押金 €40／人／晚）；決定八月 vs 九月初</li>
+        <li><strong>2027 年 3 月</strong>：寫信訂 Gardenacia</li>
+        <li><strong>2027 年 4–5 月</strong>：寫信訂 Genova；預約 VF 嚮導；買 DAV／CAI 會員（山屋折扣約 €10–15／晚）</li>
+      </ol>
+      <div class="callout">
+        <strong>月份還沒定：</strong>八月＝人最多、最貴，山屋 1–2 月就要搶完；九月初＝人少有彈性，但要確認高山屋關門日期（多在 9/20 前後）。
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>🏔️ Dolomites 2027 · Puez-Odle 縱走規劃 · 資料查核於 2026-09-19，出發前請再確認山屋營業狀態</p>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin="anonymous"></script>
+  <script src="app.js"></script>
+</body>
+</html>
