@@ -26,8 +26,8 @@
       { id: 'B', name: { zh: 'Maison Rostang 午餐（已訂位）', en: 'Maison Rostang lunch (booked)' }, desc: { zh: '二星 · 12:15 · 2 位 · €85–105', en: '2 stars · 12:15 · 2 guests · €85–105' }, lat: 48.88143, lng: 2.2985, time: '12:15', meal: true },
       { id: 'C', name: { zh: '古監獄 Conciergerie', en: 'Conciergerie' }, desc: { zh: '中世紀王宮監獄 · 免費 · 15:00', en: 'Medieval palace-prison · free · 15:00' }, lat: 48.85608, lng: 2.34615, time: '15:00', highlight: true },
       { id: 'T', name: { zh: '聖母院登塔（已訂位）', en: 'Notre-Dame tower (booked)' }, desc: { zh: '遺產日限定 · 免費 · 17:15 · 約 50 分', en: 'Heritage-days only · free · 17:15 · ~50 min' }, lat: 48.8526, lng: 2.3505, time: '17:15' },
-      { id: 'D', name: { zh: '巴黎聖母院', en: 'Notre-Dame de Paris' }, desc: { zh: '免費 · 18:30 預約時段', en: 'Free · 18:30 reserved slot' }, lat: 48.8530, lng: 2.3499, time: '18:30', highlight: true },
-      { id: 'E0', name: { zh: '塞納河日落散步', en: 'Seine sunset stroll' }, desc: { zh: 'Square du Vert-Galant · 18:45–20:00', en: 'Square du Vert-Galant · 18:45–20:00' }, lat: 48.8574, lng: 2.3424, time: '18:45' },
+      { id: 'D', name: { zh: '巴黎聖母院', en: 'Notre-Dame de Paris' }, desc: { zh: '免費 · 現場排隊入場（預約已售罄）', en: 'Free · walk-in queue (slots sold out)' }, lat: 48.8530, lng: 2.3499, time: '~18:15', highlight: true },
+      { id: 'E0', name: { zh: '塞納河日落散步', en: 'Seine sunset stroll' }, desc: { zh: 'Square du Vert-Galant · 19:15–20:20', en: 'Square du Vert-Galant · 19:15–20:20' }, lat: 48.8574, lng: 2.3424, time: '19:15' },
       { id: 'E', name: { zh: 'Semilla 晚餐（已訂位）', en: 'Semilla dinner (booked)' }, desc: { zh: '現代法式 · 20:30 · 2 位 · 已訂位', en: 'Modern French · 20:30 · 2 guests · booked' }, lat: 48.8536, lng: 2.3357, time: '20:30', meal: true },
       { id: 'F', name: { zh: '回旅館', en: 'Back to hotel' }, desc: { zh: 'Hotel Elysa-Luxembourg', en: 'Hotel Elysa-Luxembourg' }, lat: 48.8462, lng: 2.3422, time: '22:30', stay: true }
     ],
