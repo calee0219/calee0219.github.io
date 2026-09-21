@@ -4,7 +4,7 @@
 title: "Jupyter 設定"
 subtitle: "技術筆記"
 summary: ""
-authors: ["Chia-An Lee"]
+authors: ["calee"]
 tags: ["note", "python", "jupyter"]
 categories: ["coding"]
 date: 2021-08-09T07:48:37+08:00

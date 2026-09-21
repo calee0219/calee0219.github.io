@@ -2,7 +2,7 @@
 title: "倫敦旅遊建議"
 subtitle: ""
 summary: "分享在倫敦生活的旅遊建議，包含安全、交通、住宿、美食等實用資訊。"
-authors: ["Chia-An Lee"]
+authors: ["calee"]
 tags: ["London", "UK", "Trip"]
 categories: ["experience"]
 date: 2024-07-20T08:18:29+08:00

@@ -6,7 +6,7 @@
 title: 'Chia-An Lee'
 
 # Website URL
-baseURL: 'https://calee0219.github.io/'
+baseURL: 'https://calee.xyz/'
 
 # Enter a copyright notice to display in the site footer.
 copyright: 'Chia-An Lee'
@@ -27,6 +27,14 @@ cascade:
       path: /slides/**
       kind: page
     outputs: [HTML, present]
+  - target:
+      path: /tags/**
+      kind: term
+    private: true
+  - target:
+      path: /tags
+      kind: taxonomy
+    private: true
 
 ############################
 ## ADVANCED

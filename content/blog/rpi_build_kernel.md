@@ -4,7 +4,7 @@
 title: "在 RPI 4 (4G) 上更新 Ubuntu 18.04 Server 的 kernel 版本"
 subtitle: ""
 summary: ""
-authors: ["Chia-An Lee"]
+authors: ["calee"]
 tags: ["note", "rpi", "kernel"]
 categories: ["linux"]
 date: 2020-07-26T22:44:04+08:00

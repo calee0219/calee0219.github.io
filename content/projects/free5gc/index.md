@@ -3,7 +3,7 @@
 
 title: "free5gc"
 summary: "Open source 5G core network base on 3GPP R15"
-authors: ["Chia-An Lee"]
+authors: ["calee"]
 tags: []
 categories: []
 date: 2021-07-12T15:24:30+08:00

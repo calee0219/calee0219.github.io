@@ -2,7 +2,7 @@
 title: "Coding Interview 流程整理"
 subtitle: "Coding Interview 流程整理與注意事項"
 summary: ""
-authors: ["Chia-An Lee"]
+authors: ["calee"]
 tags: ["interview", "Google", "Meta", "Booking.com"]
 categories: ["experience", "interview"]
 date: 2022-07-25T15:59:25+08:00

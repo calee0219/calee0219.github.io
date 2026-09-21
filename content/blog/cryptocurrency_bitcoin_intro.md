@@ -4,7 +4,7 @@
 title: "比特幣簡介"
 subtitle: "加密貨幣"
 summary: ""
-authors: ["Chia-An Lee"]
+authors: ["calee"]
 tags: ["introduction", "crypto currency", "block chain", "bitcoin"]
 categories: ["crypto currency"]
 date: 2021-08-09T07:48:37+08:00

@@ -4,7 +4,7 @@
 title: "notpng"
 subtitle: "技術筆記"
 summary: ""
-authors: ["Chia-An Lee"]
+authors: ["calee"]
 tags: ["note"]
 categories: ["linux"]
 date: 2021-08-09T07:45:37+08:00

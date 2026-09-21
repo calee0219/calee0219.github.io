@@ -2,7 +2,7 @@
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
 title: "L25GC: A Low Latency 5G Core Network based on High-Performance NFV Platforms"
-authors: ["Vivek Jain", "Hao-Tse Chu", "Shixiong Qi", "Chia-An Lee", "Hung-Cheng Chang", "Cheng-Ying Hsieh", "K. K. Ramakrishnan", "Jyh-Cheng Chen"]
+authors: ["Vivek Jain", "Hao-Tse Chu", "Shixiong Qi", "calee", "Hung-Cheng Chang", "Cheng-Ying Hsieh", "K. K. Ramakrishnan", "Jyh-Cheng Chen"]
 date: 2022-08-23T00:00:00+08:00
 doi: ""
 

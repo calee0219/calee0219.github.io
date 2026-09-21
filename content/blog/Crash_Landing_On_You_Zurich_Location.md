@@ -2,7 +2,7 @@
 title: "愛的迫降 蘇黎世 拍照位置"
 subtitle: "사랑의불시착취리히사진촬영장소"
 summary: "紀錄韓劇《愛的迫降》在蘇黎世的拍攝位置，方便旅遊時朝聖。"
-authors: ["Chia-An Lee"]
+authors: ["calee"]
 tags: ["Zurich"]
 categories: ["trip"]
 date: 2024-08-28T08:18:29+08:00

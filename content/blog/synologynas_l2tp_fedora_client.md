@@ -4,7 +4,7 @@
 title: "Fedora 連線至 Synology L2TP/IPSec VPN"
 subtitle: ""
 summary: ""
-authors: ["Chia-An Lee"]
+authors: ["calee"]
 tags: ["tech","NetworkManager","vpn"]
 categories: ["linux"]
 date: 2021-06-08T07:48:37+08:00

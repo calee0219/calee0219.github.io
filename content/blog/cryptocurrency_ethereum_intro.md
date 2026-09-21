@@ -1,10 +1,10 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "以太坊 相關資源連結"
+title: "以太坊 簡介"
 subtitle: "加密貨幣"
 summary: ""
-authors: ["Chia-An Lee"]
+authors: ["calee"]
 tags: ["introduction", "crypto currency", "block chain", "ethereum"]
 categories: ["crypto currency"]
 date: 2021-08-09T07:48:37+08:00

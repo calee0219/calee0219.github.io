@@ -2,7 +2,7 @@
 title: "PPPoE Line 無法連線問題"
 subtitle: "MTU 與 MSS 問題"
 summary: "解決 PPPoE 撥接後網路無法連線的問題，探討 MTU 與 MSS 設定對網路的影響。"
-authors: ["Chia-An Lee"]
+authors: ["calee"]
 tags: ["Linux", "PPPoE", "NAT"]
 categories: ["network"]
 date: 2022-09-08T08:46:29+08:00

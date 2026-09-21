@@ -10,17 +10,17 @@ authors:
 superuser: true
 
 # Role/position
-role: Master student in CS NYCU, major in networking
+role: Production Engineer at Meta
 
 # Organizations/Affiliations
 organizations:
+- name: Meta
+  url: "https://meta.com/"
 - name: National Yang Ming Chiao Tung University
   url: "https://www.nycu.edu.tw/"
-- name: free5GC
-  url: "https://free5gc.org/"
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include networking and infrastructure
+bio: Production Engineer at Meta. My interests include infrastructure, SRE, and networking.
 
 interests:
 - Infrastructure

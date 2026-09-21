@@ -10,8 +10,8 @@ hugoblox:
     name: "Chia-An Lee"
     type: person
     tagline: "Production Engineer at Meta"
-    description: "Interested in networking, study on 5G, cooperate with free5GC."
-    organization: "National Yang Ming Chiao Tung University"
+    description: "Production Engineer at Meta based in London. Interests include infrastructure, SRE, and networking."
+    organization: "Meta"
     social:
       twitter: ""
 

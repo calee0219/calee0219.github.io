@@ -4,7 +4,7 @@
 title: "MariaDB (MySQL)"
 subtitle: "技術筆記"
 summary: ""
-authors: ["Chia-An Lee"]
+authors: ["calee"]
 tags: ["note", "db", "mariadb", "mysql"]
 categories: ["db"]
 date: 2021-08-09T07:48:37+08:00

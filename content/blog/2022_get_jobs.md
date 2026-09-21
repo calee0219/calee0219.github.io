@@ -2,7 +2,7 @@
 title: "2022 求職心得"
 subtitle: ""
 summary: ""
-authors: ["Chia-An Lee"]
+authors: ["calee"]
 tags: ["Google", "Meta", "Amazon", "Shopee", "Booking.com", "Synology", "CyCarrier"]
 categories: ["experience", "interview"]
 date: 2022-07-02T08:46:29+08:00

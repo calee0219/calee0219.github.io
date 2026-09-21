@@ -2,7 +2,7 @@
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
 title: "TDOH_2017 Introduce CVE-2017-9993"
-authors: ["Chia-An Lee"]
+authors: ["calee"]
 date: 2017-10-14T03:18:47+08:00
 doi: ""
 

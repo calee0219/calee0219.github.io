@@ -2,7 +2,7 @@
 title: "Go Module 雜談"
 subtitle: ""
 summary: ""
-authors: ["Chia-An Lee"]
+authors: ["calee"]
 tags: ["intro", "go", "language"]
 categories: ["coding"]
 date: 2020-10-15T00:34:57Z

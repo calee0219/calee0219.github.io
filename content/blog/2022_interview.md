@@ -4,7 +4,7 @@
 title: "2022 求職經驗"
 subtitle: ""
 summary: ""
-authors: ["Chia-An Lee"]
+authors: ["calee"]
 tags: ["WNC", "Alpha", "PEGATRON", "Google", "Meta", "Amazon", "Shopee", "Booking.com", "Synology", "CyCarrier"]
 categories: ["experience", "interview"]
 date: 2021-02-19T16:19:05+08:00

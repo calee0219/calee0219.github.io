@@ -2,7 +2,7 @@
 title: "倫敦/倫敦近郊冰場"
 subtitle: ""
 summary: "整理倫敦及近郊全年與冬季限定的溜冰場資訊，包含 Queen House、Lee Valley、Alexandra Palace 等場地。"
-authors: ["Chia-An Lee"]
+authors: ["calee"]
 tags: ["Ice Skating", "Ice Rink", "Winter"]
 categories: ["sport"]
 date: 2025-08-24T08:18:29+08:00

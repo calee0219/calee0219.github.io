@@ -4,7 +4,7 @@
 title: "單機多節點 POA 實作"
 subtitle: "加密貨幣"
 summary: ""
-authors: ["Chia-An Lee"]
+authors: ["calee"]
 tags: ["introduction", "crypto currency", "block chain", "ethereum"]
 categories: ["crypto currency"]
 date: 2021-08-09T07:48:37+08:00
